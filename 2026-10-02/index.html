@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-02</title>
+<meta name="description" content="상시 일하는 AI 에이전트 시대, CFO와 감독당국도 바빠짐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 2일 (금)">
+<meta property="og:description" content="상시 일하는 AI 에이전트 시대, CFO와 감독당국도 바빠짐">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-02/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-02/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 2일 (금)</div>
+    <h1>상시 일하는 AI 에이전트 시대, CFO와 감독당국도 바빠짐</h1>
+    <p class="overview">OpenAI·Google·Anthropic이 같은 주에 &#39;오래, 혼자 일하는&#39; 에이전트와 프런티어 모델, 정부용 상용 서비스를 내놓으며 에이전트 경쟁이 본격화됨. 재무 쪽에서는 CFO가 AI 전략을 이끄는 쪽으로 역할이 커지고 있으나, 신한은행 해킹과 ESMA 감독 우선순위가 보여 주듯 리스크·통제가 함께 핵심 과제로 떠오름.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 2분 · 탐색 4회 · 검색어 18개 · 출처 21곳 → 후보 9건</span>
+      <span class="chip">✨ 엄선 6건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. IBM 조사: CFO 62%가 AI 전략 주도, 준비 완료는 6%</div>
+<div class="r">CFO 역할 확대와 &#39;준비 완료 6%&#39; 격차가 재무 실무와 AI를 함께 아는 이 독자의 커리어 포지셔닝을 수치로 뒷받침해 줌.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🤖 OpenAI, 상시 가동 개인 에이전트 &#39;Dots&#39; 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🛡️ 구글 Gemini 4 Argon 공개, 사이버 방어팀에 먼저 제공</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🏛️ Claude for Government 정식 출시, 사용량 기반 과금 도입</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📊 IBM 조사: CFO 62%가 AI 전략 주도, 준비 완료는 6%</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🚨 신한은행 해킹으로 2만5천명 정보 유출, 금감원 긴급조사</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🇪🇺 ESMA, 2027년부터 AI·토큰화 감독 최우선 과제로</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🤖 OpenAI</span>
+        <span>TechCrunch · 9/29</span>
+<span class="tag">#AI 에이전트</span><span class="tag">#DevDay</span><span class="tag">#GPT-6 Astra</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/" target="_blank" rel="noopener">OpenAI, 상시 가동 개인 에이전트 &#39;Dots&#39; 공개</a></h3>
+<p class="orig">OpenAI launches Dots, its bubbly agentic avatar</p>      <p class="summary">OpenAI가 DevDay 2026에서 GPT-6 Astra 기반의 상시 가동(always-on) 개인 에이전트 &#39;Dots&#39;를 공개함. 사용자가 일일이 지시하지 않아도 정해 준 목표를 계속 수행하는 방식이라, 묻고 답하는 챗봇에서 &#39;맡겨 두는 동료&#39;로 넘어가는 변화임.</p>
+      <ul class="points"><li>GPT-6 Astra 기반, 9월 30일부터 순차 제공</li><li>ChatGPT Pro·Business Premium 대상, ChatGPT·Codex에서 실행</li><li>Slack·Teams 연동 예정, Microsoft Agent 365 보안 통제 연동</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트가 실험 단계를 지나 기업 협업툴과 보안 통제(Agent 365)에 붙는 단계로 들어섬. 기업 입장에서는 이제 &#39;누가, 어떤 권한으로, 무엇을 했는지&#39;를 남기는 거버넌스가 도입 조건이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>상시 에이전트가 돌아가면 &#39;에이전트 행동 로그를 감사할 수 있는가&#39;가 바로 감사·내부통제(ICFR) 이슈가 됨.</span></p>
+<ul><li>월말 결산 체크리스트를 에이전트 작업 단위로 나눠 보기</li><li>에이전트 권한·로그 설계를 내부통제 관점으로 정리</li><li>Codex로 간단한 대사(reconciliation) 에이전트 시제품 만들기</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">Internal Controls</span><span class="skill">Access Governance</span><span class="skill">Codex</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.nbcnews.com/tech/tech-news/openai-launches-dots-ai-agents-safety-questions-rcna600338" target="_blank" rel="noopener">NBC News: Dots와 안전성 논란 ↗</a><a href="https://thenextweb.com/news/openai-dots-always-on-ai-agents-cloud-computers-devday" target="_blank" rel="noopener">TNW: Dots 클라우드 컴퓨터 구조 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🛡️ Google DeepMind</span>
+        <span>Google Blog · 9/30</span>
+<span class="tag">#Gemini</span><span class="tag">#프런티어 모델</span><span class="tag">#사이버보안</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">구글 Gemini 4 Argon 공개, 사이버 방어팀에 먼저 제공</a></h3>
+<p class="orig">Gemini 4 Argon: our next era of frontier intelligence</p>      <p class="summary">Google이 긴 다단계 작업용 프런티어 모델 Gemini 4 Argon을 발표하고, 우선 Fairwind 프로그램에 속한 신뢰할 수 있는 사이버 방어 조직에만 공개함. 한 번에 낼 수 있는 출력 토큰(output token) 한도를 64K에서 100만 개로 크게 늘린 것이 핵심 변화임.</p>
+      <ul class="points"><li>출력 한도 64K → 100만 토큰으로 확대</li><li>DeepSWE v1.1 77.9%, AutomationBench 51.3%(1위)</li><li>도입가 입력 $2/출력 $10(100만 토큰당), 이후 $4/$20</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 강력한 모델을 일반에 바로 풀지 않고 방어자부터 주는 &#39;단계적 공개(staged release)&#39;가 업계 표준으로 굳어지는 흐름임. Google은 주요 활용처로 금융 리서치(financial research)를 직접 꼽음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>출력 100만 토큰이면 긴 재무 리서치 보고서나 공시 분석을 한 번에 뽑아내는 작업이 현실적인 테스트 대상이 됨.</span></p>
+<ul><li>공개되면 연차보고서 비교 분석 품질을 직접 테스트</li><li>도입가와 정가로 나눠 토큰 비용 시뮬레이션 해 보기</li><li>프롬프트 인젝션(prompt injection) 개념을 정리해 두기</li></ul><div class="skills"><span class="skill">LLM Evaluation</span><span class="skill">Long-context</span><span class="skill">Prompt Injection</span><span class="skill">Token Cost</span></div>      </div>
+      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://betanews.com/article/gemini-4-argon-cyber-defenders-fairwind/" target="_blank" rel="noopener">BetaNews: Fairwind 우선 공개 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🏛️ Anthropic</span>
+        <span>ExecutiveBiz · 10/1</span>
+<span class="tag">#Anthropic</span><span class="tag">#공공 AI</span><span class="tag">#FedRAMP</span>      </div>
+      <h3><a href="https://www.executivebiz.com/articles/claude-for-government-fedramp-high-general-availability" target="_blank" rel="noopener">Claude for Government 정식 출시, 사용량 기반 과금 도입</a></h3>
+<p class="orig">Anthropic makes Claude for Government generally available in FedRAMP High</p>      <p class="summary">Anthropic이 7월부터 공개 베타로 운영하던 Claude for Government를 미국 연방·주 정부 기관 대상으로 정식 출시(GA)함. 과금 방식을 좌석당(per-seat)에서 선불 잔액을 차감하는 사용량 기반(usage-based)으로 바꾸고, 지출 상한(spending ceiling)도 둘 수 있게 함.</p>
+      <ul class="points"><li>FedRAMP High 환경, 10월 1일 정식 출시</li><li>Claude Code 포함, CLI·Microsoft 365 연동은 얼리 액세스</li><li>GSA OneGov 사용자당 $1 가격은 10월 31일까지 연장</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 보안 요건이 가장 까다로운 공공 부문에서 AI를 상용으로 쓰기 시작했다는 신호임. AI 비용을 사용자 수가 아니라 사용량 기준으로 예산 관리하는 모델이 확산되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>사용자별·모델별 달러 상한과 부서별 잔액 배분 기능은 사실상 &#39;AI 비용 예산통제(FinOps)&#39;라서 FP&amp;A 경험이 바로 쓰이는 영역임.</span></p>
+<ul><li>좌석제와 사용량제 TCO 비교표를 엑셀로 만들어 보기</li><li>부서별 AI 비용 배부(allocation) 규칙 설계해 보기</li><li>호주 정부 IRAP 인증과 FedRAMP 차이 정리</li></ul><div class="skills"><span class="skill">AI FinOps</span><span class="skill">Cost Allocation</span><span class="skill">Budget Control</span><span class="skill">Compliance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.executivebiz.com/articles/claude-for-government-fedramp-high-general-availability" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📊 IBM Institute for Business Value</span>
+        <span>Fortune · 9/30</span>
+<span class="tag">#CFO</span><span class="tag">#재무 혁신</span><span class="tag">#IBM</span>      </div>
+      <h3><a href="https://fortune.com/2026/09/30/ai-giving-cfo-bigger-slice-c-suite-new-ibm-data-shows/" target="_blank" rel="noopener">IBM 조사: CFO 62%가 AI 전략 주도, 준비 완료는 6%</a></h3>
+<p class="orig">AI is giving CFOs a bigger slice of the C-suite, new IBM data shows</p>      <p class="summary">IBM IBV가 Oxford Economics와 함께 33개 지역, 26개 산업의 CFO 1,500명을 조사한 결과, 62%가 전사 기술·AI 전략까지 이끌고 있다고 답함. 그러나 재무 조직이 혁신 준비를 마쳤다(transformation-ready)고 본 곳은 6%에 그쳐, 역할 확대와 실행 역량 사이에 큰 격차가 있음.</p>
+      <ul class="points"><li>AI-first CFO 기업, 매출 성장률 23% 더 높음(2022-24)</li><li>IBM 자체 재무: 견적-수금(Q2C) 90% 무인 자동화(touchless)</li><li>IBM 3년간 생산성 $4.5B 개선, 현금전환 속도 54% 향상</li></ul>
+<p class="why"><b>💡 왜 중요?</b> CFO가 AI 투자·가드레일의 책임자가 되면서 재무팀에 &#39;AI를 아는 재무 인력&#39; 수요가 구조적으로 생김. 응답자 56%는 2030년까지 AI의 재무·윤리 가드레일 책임이 커질 것으로 봄.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>&#39;준비 완료 6%&#39; 격차를 메울 사람이 바로 재무 실무와 AI를 함께 아는 인재이며, 이게 이력서의 핵심 포지셔닝 문장이 될 수 있음.</span></p>
+<ul><li>Q2C 프로세스 자동화 지점을 단계별로 매핑해 보기</li><li>AR 데이터로 현금전환 예측 미니 프로젝트 만들기</li><li>링크드인 소개에 &#39;Finance × AI&#39; 수치 사례 추가</li></ul><div class="skills"><span class="skill">Quote-to-Cash</span><span class="skill">Finance Transformation</span><span class="skill">Process Mining</span><span class="skill">FP&amp;A</span></div>      </div>
+      <div class="links">
+        <a href="https://fortune.com/2026/09/30/ai-giving-cfo-bigger-slice-c-suite-new-ibm-data-shows/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🚨 신한은행</span>
+        <span>한국일보 · 10/1</span>
+<span class="tag">#보안사고</span><span class="tag">#은행</span><span class="tag">#AI 리스크</span>      </div>
+      <h3><a href="https://www.hankookilbo.com/news/article/A2026100115320000186" target="_blank" rel="noopener">신한은행 해킹으로 2만5천명 정보 유출, 금감원 긴급조사</a></h3>
+<p class="orig">신한은행 해킹에 2만5000명 개인정보 유출… 금감원 긴급 현장조사</p>      <p class="summary">신한은행의 대출모집인용 모바일 조회 서비스가 공격당해 약 2만5천 명의 대출 신청 관련 정보가 유출되었고, 금융감독원이 긴급 현장조사에 들어감. 일부 매체(CBC뉴스)와 보안 전문가는 무작위 값을 자동으로 대입하는 AI 에이전트 기반 공격 가능성을 제기했으나, 공식 조사 결과로 확인된 것은 아님.</p>
+      <ul class="points"><li>주민번호 66건, CI 97건, 연소득·대출한도 등 유출</li><li>로그인 없는 &#39;간편조회&#39; 서비스가 공격 경로로 쓰임</li><li>신한은행 전액 보상 약속, 금감원 2개 검사국 투입</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 로그인이 필요 없는 주변 서비스도 자동화 공격에 털릴 수 있다는 점에서 금융권 IT 통제 범위를 다시 보게 만드는 사건임. 공격 쪽 AI가 방어 쪽보다 빠르게 발전한다는 경고가 현실 사례로 나타남.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>이번 사건은 IT 일반통제(ITGC)와 접근통제 실패가 고객 피해와 재무 손실로 이어지는 교과서 같은 사례라, 감사·리스크 AI 면접 소재로 바로 쓸 수 있음.</span></p>
+<ul><li>사건을 ITGC 접근통제 관점에서 1장으로 분석</li><li>API 무작위 대입 탐지용 이상탐지 모델 실습</li><li>보상 비용의 충당부채(provision) 처리 검토</li></ul><div class="skills"><span class="skill">ITGC</span><span class="skill">Anomaly Detection</span><span class="skill">Cyber Risk</span><span class="skill">Rate Limiting</span></div>      </div>
+      <div class="links">
+        <a href="https://www.hankookilbo.com/news/article/A2026100115320000186" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://cbci.co.kr/news/articleView.html?idxno=611843" target="_blank" rel="noopener">CBC뉴스: AI 에이전트 공격 가능성 보도 ↗</a><a href="https://nocutnews.co.kr/news/6586449" target="_blank" rel="noopener">노컷뉴스: 유출 항목 상세 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🇪🇺 ESMA (유럽증권시장청)</span>
+        <span>ESMA · 9/23</span>
+<span class="tag">#금융규제</span><span class="tag">#EU</span><span class="tag">#AI 거버넌스</span>      </div>
+      <h3><a href="https://www.esma.europa.eu/node/235270" target="_blank" rel="noopener">ESMA, 2027년부터 AI·토큰화 감독 최우선 과제로</a></h3>
+<p class="orig">ESMA sets new supervisory priority on digital innovation from 2027</p>      <p class="summary">EU 증권감독기구 ESMA가 2027년부터 디지털 혁신을 EU 공통 전략감독 우선과제(USSP)로 정하고, 피감독 회사의 AI 활용과 토큰화(tokenisation)를 먼저 들여다보기로 함. 회원국 감독당국(NCA)과 함께 감독 역량을 키우고 기업들의 기술 활용 실태를 모니터링할 계획임.</p>
+      <ul class="points"><li>2027년부터 USSP &#39;Innovation With Investor Safeguards&#39; 시작</li><li>1차 초점: AI 활용과 토큰화, 프런티어 AI도 언급</li><li>2025년부터 운영 중인 사이버·운영 복원력 USSP와 병행</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 금융사의 AI 사용이 &#39;권고&#39; 수준을 넘어 실제 감독 점검 대상이 된다는 뜻임. 앞으로 AI 모델 문서화와 제3자(third-party) 의존 리스크 관리가 컴플라이언스 실무의 핵심이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>감독당국이 &#39;AI를 어디에 어떻게 쓰는지 문서화하라&#39;고 요구하는 흐름이라, AI 사용 현황표(AI inventory)를 설계할 줄 알면 리스크·컴플라이언스 직무에서 경쟁력이 생김.</span></p>
+<ul><li>가상 금융사 AI 사용 현황표(AI inventory) 만들기</li><li>ESMA 팩트시트와 ASIC AI 보고서 비교 정리</li><li>모델 리스크 관리(MRM) 기본 프레임 학습</li></ul><div class="skills"><span class="skill">AI Governance</span><span class="skill">Model Risk Management</span><span class="skill">RegTech</span><span class="skill">Tokenisation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.esma.europa.eu/node/235270" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.esma.europa.eu/sites/default/files/2026-09/Union_strategic_supervisory_priorities_-_factsheet.pdf" target="_blank" rel="noopener">ESMA USSP 팩트시트(PDF) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>이번 주 AI 업계의 키워드는 &#39;사람이 지켜보지 않아도 오래 일하는 AI&#39;였음. Dots는 상시 가동되고, Argon은 한 번에 100만 토큰을 출력하며, Claude for Government는 사용량 상한으로 비용을 통제함. 재무 쪽에서는 이게 곧 권한, 로그, 비용 배부, 감독 대응 같은 통제 문제로 이어지고, 신한은행 사건은 통제가 비었을 때 어떤 일이 생기는지 보여 줌. 재무·회계 출신 AI 전공자에게는 &#39;AI를 만드는 사람&#39;보다 &#39;AI가 안전하고 감사 가능하게 돌아가도록 설계하는 사람&#39;이 더 희소한 포지션이 될 가능성이 큼.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>IBM 사례 기반으로 Q2C 자동화 지점 맵 1장 그려 보기</li><li>신한은행 사건을 ITGC 관점에서 분석해 노션에 정리</li><li>AI 사용 현황표(AI inventory) 템플릿을 엑셀로 만들기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">Touchless Processing (무인 자동처리)</span> — 사람이 손대지 않고 시스템이 처음부터 끝까지 거래를 처리하는 비율을 말함. IBM은 견적부터 수금까지(Quote-to-Cash) 과정의 90%를 이렇게 처리한다고 밝혔으며, 재무 자동화 성과를 보여 주는 대표 지표임.</p></section><div class="hashtags">#FinAI #AIAgents #CFO #AIGovernance #핀테크 #재무자동화 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-02 · 검색 2분 · 탐색 4회 · 검색어 18개 · 출처 21곳 → 후보 9건 → 엄선 6건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
