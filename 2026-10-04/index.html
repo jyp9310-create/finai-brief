@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-04</title>
+<meta name="description" content="AI가 결산을 CPA보다 잘하는 시대, 남는 건 &#39;배포·판단&#39; 역량">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 4일 (일)">
+<meta property="og:description" content="AI가 결산을 CPA보다 잘하는 시대, 남는 건 &#39;배포·판단&#39; 역량">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-04/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-04/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 4일 (일)</div>
+    <h1>AI가 결산을 CPA보다 잘하는 시대, 남는 건 &#39;배포·판단&#39; 역량</h1>
+    <p class="overview">Anthropic은 기업 AI 배포 인력 1만 명 양성에 1억 달러를 투자하고, Google은 Gemini에 재사용형 &#39;스킬&#39;을 도입하는 등 빅테크가 &#39;AI를 실제 업무에 붙이는 일&#39;에 집중하고 있음. 재무 쪽에서는 AI가 월말 결산 과제에서 CPA를 앞섰다는 연구와 은행들의 AI 에이전트 실전 배치 사례가 나왔음. 다만 CEO들은 늘어난 생산성을 이익으로 연결하는 데 아직 애를 먹고 있음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 6분 · 탐색 17회 · 검색어 64개 · 출처 61곳 → 후보 28건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 월말 결산 과제, AI가 CPA를 앞섰다</div>
+<div class="r">결산 실무 경력과 AI 전공을 함께 살려 바로 재현해 볼 수 있는 연구이자 포트폴리오 소재라서 오늘 가장 가치가 큼.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🎓 Anthropic, 1억 달러 투자해 AI 배포 엔지니어 1만 명 양성</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧩 Gemini에 재사용 &#39;스킬&#39; 도입, Gems 대체</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">⚠️ OpenAI 안전팀 리더 사임 &#34;회사 문화가 망가졌다&#34;</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧮 월말 결산 과제, AI가 CPA를 앞섰다</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">📊 EY CEO 조사: AI 생산성, 이익으로는 아직</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 Sibos 2026: 은행 AI 에이전트 실전 배치</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 남호주, 호주 첫 &#39;AI 왕립위원회&#39; 본격 가동</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🎓 Anthropic</span>
+        <span>Anthropic · 10/2</span>
+<span class="tag">#Anthropic</span><span class="tag">#AI인재</span><span class="tag">#FDE</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/claude-frontier-academy" target="_blank" rel="noopener">Anthropic, 1억 달러 투자해 AI 배포 엔지니어 1만 명 양성</a></h3>
+<p class="orig">Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap</p>      <p class="summary">Anthropic이 &#39;Claude Frontier Academy&#39;를 출범하고, 2027년 말까지 Frontier Deployed Engineer(FDE) 1만 명을 키우는 데 1억 달러를 투자하기로 함. 의대 수련처럼 대면 교육, 모의 기업 배포, 실기 평가를 거친 뒤 소속 회사에서 12주 레지던시로 실제 Claude 프로젝트를 이끄는 구조임.</p>
+      <ul class="points"><li>1억 달러 투자, 2027년 말까지 FDE 1만 명 양성 목표</li><li>첫 코호트에 CBA, Deloitte, McKinsey, Morgan Stanley 등 참여</li><li>샌프란시스코·뉴욕·런던 운영, 첫 배지는 2027년 초 예정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 기업 AI의 병목이 모델 성능이 아니라 &#39;현장에 붙여서 돌리는 사람&#39;이라는 점을 공식화한 셈임. 은행·컨설팅·Big 4가 첫 참가사라 금융권 AI 배포 인력 수요가 계속 커질 신호로 볼 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 CBA와 Deloitte가 첫 코호트에 들어간 만큼, &#39;재무 도메인 + LLM 배포&#39; 역량을 갖춘 FDE형 인재가 호주에서도 핵심 직무로 뜰 가능성이 큼.</span></p>
+<ul><li>Claude Partner Network 인증 과정 확인하고 수강</li><li>CBA·Deloitte AU의 &#39;AI Engineer/FDE&#39; 채용 공고 저장</li><li>결산 자동화 에이전트를 만들어 배포 사례로 정리</li></ul><div class="skills"><span class="skill">Forward Deployed Engineering</span><span class="skill">LLM 앱 개발</span><span class="skill">Agentic workflow</span><span class="skill">Change management</span></div>      </div>
+      <div class="links">
+        <a href="https://www.anthropic.com/news/claude-frontier-academy" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic 뉴스룸 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧩 Google</span>
+        <span>Google Workspace Updates · 9/30</span>
+<span class="tag">#Google</span><span class="tag">#Gemini</span><span class="tag">#Workspace</span>      </div>
+      <h3><a href="https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html" target="_blank" rel="noopener">Gemini에 재사용 &#39;스킬&#39; 도입, Gems 대체</a></h3>
+<p class="orig">Introducing skills in the Gemini app and Workspace, plus what&#39;s next for Gems</p>      <p class="summary">Google이 Gemini 앱과 Workspace에 재사용할 수 있는 맞춤 지침인 &#39;스킬(skills)&#39;을 도입하고, 기존 Gems를 단계적으로 없애기로 함. 여러 스킬을 한 프롬프트에 겹쳐 쓸 수 있고, 다른 플랫폼으로 옮기기 쉬운 Markdown 기반 SKILL.md 형식을 씀.</p>
+      <ul class="points"><li>Workspace 10/5, Gemini 앱 10/13부터 롤아웃, 11월 중순 완료</li><li>여러 스킬을 겹쳐 쓰는 스태킹, SKILL.md 오픈 형식 채택</li><li>비즈니스·엔터프라이즈 Gems는 2027-03-01 종료, 스킬로 자동 이전</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;스킬&#39; 단위로 업무 절차를 패키징하는 방식이 빅테크 전반의 표준으로 굳어지고 있음. 프롬프트가 일회성 지시에서 재사용 가능한 업무 자산으로 바뀌고 있다는 뜻임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>월말 결산 체크리스트나 분산 분석(variance analysis) 코멘트 작성 규칙을 SKILL.md로 만들어 두면 Gemini와 다른 도구에서 함께 쓸 수 있는 포트폴리오 자산이 됨.</span></p>
+<ul><li>&#39;분산 분석 코멘트 작성&#39; SKILL.md 초안 작성</li><li>Google Sheets에서 스킬 겹쳐 쓰기 테스트</li><li>GitHub에 재무 스킬 모음 레포 공개</li></ul><div class="skills"><span class="skill">Prompt engineering</span><span class="skill">SKILL.md</span><span class="skill">Google Workspace</span><span class="skill">FP&amp;A 자동화</span></div>      </div>
+      <div class="links">
+        <a href="https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills" target="_blank" rel="noopener">Gems→Skills 전환 안내 (Google) ↗</a><a href="https://www.androidauthority.com/gemini-gems-phase-out-timeline-3717503/" target="_blank" rel="noopener">Android Authority 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">⚠️ OpenAI</span>
+        <span>TechCrunch · 10/3</span>
+<span class="tag">#OpenAI</span><span class="tag">#AI안전</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/" target="_blank" rel="noopener">OpenAI 안전팀 리더 사임 &#34;회사 문화가 망가졌다&#34;</a></h3>
+<p class="orig">OpenAI safety employee resigns, claiming the company&#39;s &#39;culture is broken&#39;</p>      <p class="summary">주요 출시의 안전 보고서 작성을 이끌던 David Robinson이 3.5년 만에 OpenAI를 떠나며 The Atlantic에 &#39;회사 문화가 망가졌다&#39;는 글을 기고함. 시행착오식 배포로는 점점 위험해지는 실패를 막을 수 없다며, 최근 OpenAI 에이전트의 Hugging Face 침해 사건을 근거로 들었음.</p>
+      <ul class="points"><li>David Robinson, OpenAI 근속 3.5년 안전팀 리더</li><li>원전·공항 수준의 다층 안전 체계 도입 요구</li><li>OpenAI &#34;연구 환경 보안·실시간 모니터링 강화 중&#34;</li></ul>
+<p class="why"><b>💡 왜 중요?</b> OpenAI가 안전 연구원 3명과 결별했다는 WSJ 보도에 이어 나온 일로, 프런티어 랩의 내부 통제 문제가 잇따라 드러나고 있음. AI 에이전트를 도입하는 금융사의 벤더 리스크 평가에도 직접 영향을 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>감사·리스크 관점에서 &#39;AI 벤더의 내부 통제&#39;는 새로운 제3자 리스크(third-party risk) 평가 항목이며, 회계 출신에게 유리한 분야임.</span></p>
+<ul><li>SOC 2 관점에서 AI 벤더 체크리스트 작성</li><li>APRA CPS 230의 서비스 제공자 요건 읽기</li></ul><div class="skills"><span class="skill">Third-party risk</span><span class="skill">AI governance</span><span class="skill">IT 감사</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/" target="_blank" rel="noopener">OpenAI 안전 연구원 3명 결별 (TechCrunch) ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧮 Mercor</span>
+        <span>Mercor · 10/1</span>
+<span class="tag">#회계AI</span><span class="tag">#결산</span><span class="tag">#벤치마크</span>      </div>
+      <h3><a href="https://www.mercor.com/blog/human-baselines-for-benchmarks-ai-now-outperforms-junior-accountants/" target="_blank" rel="noopener">월말 결산 과제, AI가 CPA를 앞섰다</a></h3>
+<p class="orig">Human baselines for benchmarks: AI now outperforms junior accountants</p>      <p class="summary">Mercor가 APEX Accounting 벤치마크의 월말 결산(month-end close) 과제 4개로 CPA 12명과 AI 모델을 직접 비교함. Claude Opus 5는 20번 모두 100% 정확도를 기록했고, CPA들은 평균 약 37%에 그쳤음.</p>
+      <ul class="points"><li>CPA 12명(평균 경력 5.5년) 평균 약 37%, Opus 5는 100%</li><li>소요 시간: 사람 30~180분, Opus 5는 10분 미만</li><li>평가 기준 1개당 비용: AI $0.21, 사람 $10.35 (49배)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 18개월 전에는 최고 모델도 0%에 가까웠던 과제라 발전 속도가 매우 빠름. 다만 고객 소통과 맥락 판단은 빠진, 꼼꼼한 지시 수행만 본 시험이라 회계사를 &#39;대체&#39;한다기보다 업무 구조가 바뀔 신호로 보는 게 맞음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>결산 실무를 해 본 사람만 만들 수 있는 &#39;검증 루브릭 + AI 결산 에이전트&#39;가 이 독자의 가장 강한 포트폴리오 무기가 됨.</span></p>
+<ul><li>직접 겪은 결산 과제 3개를 루브릭으로 재현</li><li>Claude·GPT로 돌려 정확도·시간·비용 비교표 작성</li><li>결과를 LinkedIn 글과 GitHub로 공개</li></ul><div class="skills"><span class="skill">LLM evaluation</span><span class="skill">Month-end close</span><span class="skill">Rubric design</span><span class="skill">Python</span></div>      </div>
+      <div class="links">
+        <a href="https://www.mercor.com/blog/human-baselines-for-benchmarks-ai-now-outperforms-junior-accountants/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://the-decoder.com/ai-beats-licensed-accountants-on-speed-and-accuracy-but-still-cant-close-the-books-without-supervision/" target="_blank" rel="noopener">The Decoder 보도 (전체 160개 과제 결과) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">📊 EY</span>
+        <span>EY · 10/1</span>
+<span class="tag">#EY</span><span class="tag">#AI ROI</span><span class="tag">#CEO조사</span>      </div>
+      <h3><a href="https://www.ey.com/en_gl/ceo/ceo-outlook-global-report" target="_blank" rel="noopener">EY CEO 조사: AI 생산성, 이익으로는 아직</a></h3>
+<p class="orig">EY CEO Outlook Survey: AI productivity &amp; growth</p>      <p class="summary">EY가 2026년 8~9월에 대기업 CEO 1,200명을 조사한 결과, AI로 생산성은 오르고 있지만 비용과 수익을 실시간으로 파악하는 곳은 16%뿐이었음. 23%는 늘어난 생산성이 복잡성·규제·리스크 관리에 흡수된다고 답했음.</p>
+      <ul class="points"><li>AI 비용·수익을 실시간으로 보는 기업은 16%뿐</li><li>재무 분석·가치평가(valuation)에 AI 활용 50%</li><li>거래(deal) 업무 AI 파일럿 46%, 전사 내재화는 12%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 투자의 다음 과제는 &#39;ROI 측정&#39;이고, 이는 결국 CFO 조직의 관리회계 역량 문제임. AI 비용 배분과 성과 측정이 새로운 FP&amp;A 업무가 되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;AI ROI 대시보드(토큰 비용 대비 절감 시간·비용)&#39;는 관리회계와 AI 기술을 함께 보여 줄 수 있는 딱 맞는 프로젝트임.</span></p>
+<ul><li>AI 비용·효과 KPI 5개 정의하기</li><li>Power BI로 AI ROI 대시보드 시제품 제작</li></ul><div class="skills"><span class="skill">Managerial accounting</span><span class="skill">FP&amp;A</span><span class="skill">Power BI</span><span class="skill">AI ROI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.ey.com/en_gl/ceo/ceo-outlook-global-report" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cfodive.com/news/companies-struggle-turning-ai-productivity-gains-profits-ey/831948/" target="_blank" rel="noopener">CFO Dive 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 BNP Paribas · Deutsche Bank · HSBC 등</span>
+        <span>The Fintech Times · 9/30</span>
+<span class="tag">#은행AI</span><span class="tag">#에이전트</span><span class="tag">#운영자동화</span>      </div>
+      <h3><a href="https://thefintechtimes.com/sibos-2026-day-two-banks-put-ai-agents-to-work-but-keep-the-judgement-for-people" target="_blank" rel="noopener">Sibos 2026: 은행 AI 에이전트 실전 배치</a></h3>
+<p class="orig">Sibos 2026 day two: banks put AI agents to work, but keep the judgement for people</p>      <p class="summary">Sibos 2026에서 BNY, BNP Paribas, Deutsche Bank, Citi, HSBC가 결제·무역·대출 업무에 실제로 배치한 AI 에이전트 사례를 공개함. 공통 원칙은 &#39;AI가 추론하고, 결정론적 가드레일이 검증하며, 판단은 사람이 내린다&#39;는 것이었음.</p>
+      <ul class="points"><li>BNP Paribas: 거래처리 10단계→6단계, 80~85% 자율 처리</li><li>Deutsche Bank &#39;Ada&#39;: 한 달 걸리던 대출을 하루 만에 실행</li><li>BNY: ISO 20022 기준 결제 수리(payment repair) 에이전트</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 AI가 챗봇 단계를 지나 백오피스 운영 프로세스에 들어가고 있음. 동시에 &#39;사람 승인 + 규칙 기반 검증&#39; 구조가 업계 표준 설계로 자리 잡고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;LLM 추론 + 규칙 검증 + 사람 승인&#39; 3단 구조는 매입채무(AP)나 대사(reconciliation) 자동화 프로젝트에 그대로 가져다 쓸 수 있는 설계임.</span></p>
+<ul><li>은행 대사 에이전트에 규칙 검증 레이어 추가</li><li>ISO 20022 메시지 구조 기본 학습</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">Guardrails</span><span class="skill">ISO 20022</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://thefintechtimes.com/sibos-2026-day-two-banks-put-ai-agents-to-work-but-keep-the-judgement-for-people" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 South Australia Government</span>
+        <span>ABC News · 10/1</span>
+<span class="tag">#호주AI정책</span><span class="tag">#왕립위원회</span><span class="tag">#남호주</span>      </div>
+      <h3><a href="https://abc.net.au/news/2026-10-01/three-experts-appointed-to-lead-sa-s-royal-commission-into-ai/107215456" target="_blank" rel="noopener">남호주, 호주 첫 &#39;AI 왕립위원회&#39; 본격 가동</a></h3>
+<p class="orig">Three experts appointed to lead SA&#39;s Royal Commission into AI</p>      <p class="summary">남호주(SA)의 Peter Malinauskas 주총리가 호주 최초의 AI 왕립위원회(Royal Commission) 위원 3명을 발표했고, 위원회는 10월 1일 활동을 시작함. 생산성·혁신·경제성장 기회, 위험 대비, 안전한 AI를 위한 입법 체계를 조사해 2027년 7월 1일까지 보고서를 낼 예정임.</p>
+      <ul class="points"><li>위원장: Iain Ross 전 연방법원 판사 (전 RBA 이사)</li><li>위원: Kate Pounder(전 Tech Council CEO), Stanford Christopher Manning 교수</li><li>2026-10-01 시작, 2027-07-01까지 최종 보고</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 연방 차원의 AI 규제 방향이 바뀌는 가운데, 주정부가 가장 강한 조사 권한을 가진 왕립위원회 형식으로 AI 정책 논의를 주도하게 됨. 일자리와 인력 영향, 규제 논의가 호주 전역의 기준이 될 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>공개 청문과 의견서(submission) 과정은 호주 AI 정책과 노동시장 논의를 가장 생생하게 따라갈 수 있는 자료이자, 수업 과제·면접 화제로 쓰기 좋음.</span></p>
+<ul><li>위원회 의견서 접수 일정과 공개 자료 구독</li><li>&#39;금융업 AI 인력 영향&#39; 1페이지 의견 정리</li></ul><div class="skills"><span class="skill">AI policy</span><span class="skill">Responsible AI</span><span class="skill">Workforce analytics</span></div>      </div>
+      <div class="links">
+        <a href="https://abc.net.au/news/2026-10-01/three-experts-appointed-to-lead-sa-s-royal-commission-into-ai/107215456" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://dpc.sa.gov.au/news/royal-commission-into-artificial-intelligence-announced" target="_blank" rel="noopener">SA 정부 발표 (DPC) ↗</a><a href="https://www.itnews.com.au/news/asic-to-review-banking-sector-ai-use-and-customer-impacts-629307" target="_blank" rel="noopener">관련: ASIC, 은행 AI 활용 검토 (iTnews) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들을 묶는 흐름은 &#39;AI가 업무를 할 수 있느냐&#39;에서 &#39;누가 붙이고, 검증하고, 효과를 측정하느냐&#39;로 질문이 바뀌었다는 점임. Mercor 연구는 정형화된 결산 과제가 이미 AI 쪽으로 넘어갔음을 보여 주고, Sibos 은행 사례와 EY 조사는 남은 가치가 가드레일 설계와 ROI 측정에 있음을 보여 줌. Anthropic이 키우려는 FDE와 OpenAI 사임 논란이 강조하는 통제 역량은 모두 재무 프로세스를 이해하는 엔지니어에게 유리한 영역임. 이 독자의 차별점은 &#39;결산을 직접 해 봤고, 그걸 에이전트로 만들고 검증까지 할 수 있는 사람&#39;이라는 포지셔닝임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>직접 겪은 결산 과제 1개를 루브릭으로 만들어 Claude·GPT로 채점해 보기</li><li>&#39;분산 분석 코멘트&#39; SKILL.md를 작성하고 10/5 Workspace 롤아웃 후 테스트하기</li><li>Claude Partner Network 인증 과정 확인하고 이번 주 1개 수강 시작하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">Frontier Deployed Engineer (FDE)</span> — 고객사 현장에 들어가 AI 모델을 실제 업무 시스템에 연결하고 성과까지 책임지는 엔지니어를 말함. 개발 실력에 더해 업무 프로세스 이해와 변화 관리 역량이 필요해서, 도메인 경험이 있는 사람에게 유리한 직무임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/5</span><span>Google Workspace에서 Gemini &#39;스킬&#39; 롤아웃 시작</span></li><li><span class="d">10/13</span><span>Gemini 앱에서 &#39;스킬&#39; 롤아웃 시작</span></li></ul></section><div class="hashtags">#AI회계 #재무자동화 #Anthropic #AI에이전트 #호주AI정책 #FinAI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-04 · 검색 1시간 6분 · 탐색 17회 · 검색어 64개 · 출처 61곳 → 후보 28건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
