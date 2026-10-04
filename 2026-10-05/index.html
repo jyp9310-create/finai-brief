@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-05</title>
+<meta name="description" content="에이전트 시대, 돈과 통제가 핵심으로 떠오름">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 5일 (월)">
+<meta property="og:description" content="에이전트 시대, 돈과 통제가 핵심으로 떠오름">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-05/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-05/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 5일 (월)</div>
+    <h1>에이전트 시대, 돈과 통제가 핵심으로 떠오름</h1>
+    <p class="overview">OpenAI는 Agents API를 공개 베타로 풀었고, 미국은 &#39;Super Intelligence Force&#39;를 출범시켰으며, Google은 AI가 만든 저품질 버그 리포트가 몰리자 오픈소스 버그 바운티를 중단함. 재무 쪽에서는 사기 탐지, 보험, 알고리즘 트레이딩, 호주 Fortescue의 구매 업무까지 AI가 실제 숫자로 성과를 보여 주고 있지만, ROI 측정과 통제는 아직 따라오지 못하는 상황임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 2시간 14분 · 탐색 17회 · 검색어 81개 · 출처 67곳 → 후보 21건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. Fortescue, 구매에 에이전트 AI 도입해 운전자본 절감</div>
+<div class="r">호주 대기업이 에이전트 AI로 운전자본을 줄인 사례로, 독자의 재무 경력과 AI 전공, 호주 취업을 한 번에 연결해 줌.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🤖 OpenAI, Agents API 공개 베타·Decisions API 프리뷰</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🏛️ 트럼프, &#39;Super Intelligence Force&#39; 출범</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🐛 Google, AI 제보 폭증에 오픈소스 버그 바운티 중단</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🕵️ LexisNexis, 스스로 보정하는 AI 사기 탐지 출시</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🛡️ KPMG: 보험사 44% &#39;AI 선도&#39; 자평, 실상은 미흡</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📉 강화학습 트레이딩 AI, 서로 &#39;암묵적 담합&#39; 학습</a></li>
+    <li><span class="n au">7</span><a href="#item-7">⛏️ Fortescue, 구매에 에이전트 AI 도입해 운전자본 절감</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🤖 OpenAI</span>
+        <span>OpenAI Developer Community · 9/29</span>
+<span class="tag">#OpenAI</span><span class="tag">#에이전트</span><span class="tag">#API</span>      </div>
+      <h3><a href="https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006" target="_blank" rel="noopener">OpenAI, Agents API 공개 베타·Decisions API 프리뷰</a></h3>
+<p class="orig">DevDay 2026 announcements and developer resources</p>      <p class="summary">OpenAI가 DevDay 2026에서 호스팅 실행·메모리·도구·멀티에이전트를 지원하는 Agents API를 공개 베타로 내놓았음. 이미 다룬 Dots·GPT-6.1 Sol 외에, 분류·라우팅 전용 Decisions API(제한 프리뷰)와 Ultrafast 속도 티어, Pro 500 요금제가 새로 추가됨.</p>
+      <ul class="points"><li>Agents API 공개 베타: 호스팅 실행·메모리·멀티에이전트·컴퓨터 사용</li><li>Decisions API(제한 프리뷰): GPT-6 Luna로 입력 분류·라우팅</li><li>Ultrafast: Codex 최대 8배·API 6배 빠른 생성, Pro 500은 Plus의 25배</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트 실행 환경(인프라)을 OpenAI가 직접 호스팅하면서, 기업이 오케스트레이션을 직접 만들어야 하는 부담이 줄어듦. 대신 특정 플랫폼에 묶이는 lock-in 문제는 커짐.</p>      <div class="links">
+        <a href="https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.infoq.com/news/2026/10/openai-devday-2026/" target="_blank" rel="noopener">InfoQ: OpenAI DevDay 2026 정리 ↗</a><a href="https://www.axios.com/2026/09/29/openai-dev-day-2026-dots-space-sol" target="_blank" rel="noopener">Axios: Dots·Space·Sol 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🏛️ 미국 백악관</span>
+        <span>TechCrunch · 10/4</span>
+<span class="tag">#AI 정책</span><span class="tag">#미국</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/" target="_blank" rel="noopener">트럼프, &#39;Super Intelligence Force&#39; 출범</a></h3>
+<p class="orig">Trump unveils his new &#39;Super Intelligence Force&#39;</p>      <p class="summary">트럼프 대통령이 Truth Social을 통해 국가정보국장 Jay Clayton이 이끄는 연방 &#39;Super Intelligence Force&#39;를 발표함. 120일 안에 AI 위험과 기회에 관한 보고서를 내야 하며, 헌장은 혁신을 막는 과잉 규제를 피하라고 명시함.</p>
+      <ul class="points"><li>위원장 Jay Clayton, 부위원장 Andrew Ferguson(FTC 의장) 등 3인</li><li>120일 안에 AI 위험·기회 보고서 제출</li><li>헌장: 위협 대응은 하되 과잉 규제·규제 포획은 피함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 미국 연방 AI 정책이 &#39;규제 최소화 + 안보 위협 대응&#39;으로 정리되고 있음. 호주·EU의 규제 중심 접근과 차이가 더 벌어질 가능성이 큼.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/" target="_blank" rel="noopener">TechCrunch: 비구속 안전 협약 분석 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🐛 Google</span>
+        <span>Google Bug Hunters · 10/1</span>
+<span class="tag">#Google</span><span class="tag">#보안</span><span class="tag">#AI 부작용</span>      </div>
+      <h3><a href="https://bughunters.google.com/about/rules/open-source/google-open-source-software-vulnerability-reward-program-rules" target="_blank" rel="noopener">Google, AI 제보 폭증에 오픈소스 버그 바운티 중단</a></h3>
+<p class="orig">Google Open Source Software Vulnerability Reward Program – freeze</p>      <p class="summary">Google이 자동 생성 제보가 크게 늘었고 그 대부분이 유효하지 않다는 이유로, 오픈소스 취약점 보상 프로그램(OSS VRP)을 2026년 10월 1일부터 중단함. 프로그램 업데이트는 2027년 1분기에 나올 예정임.</p>
+      <ul class="points"><li>2026-10-01부터 OSS VRP 접수 중단</li><li>사유: 자동 생성 제보 급증, 대부분 무효</li><li>2027년 1분기에 업데이트 예정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 만든 그럴듯한 가짜(환각) 결과물이 사람의 검토 용량을 넘어서면서, 보상 구조 자체가 무너지는 첫 대형 사례임.</p>      <div class="links">
+        <a href="https://bughunters.google.com/about/rules/open-source/google-open-source-software-vulnerability-reward-program-rules" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🕵️ LexisNexis Risk Solutions</span>
+        <span>PR Newswire · 10/1</span>
+<span class="tag">#사기 탐지</span><span class="tag">#핀테크</span><span class="tag">#리스크</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/lexisnexis-risk-solutions-launches-self-calibrating-ai-fraud-detection-solution-302894785.html" target="_blank" rel="noopener">LexisNexis, 스스로 보정하는 AI 사기 탐지 출시</a></h3>
+<p class="orig">LexisNexis Risk Solutions launches self-calibrating AI fraud detection solution</p>      <p class="summary">LexisNexis Risk Solutions가 기업별 사기 패턴을 학습해 사람이 튜닝하지 않아도 모델을 자동으로 다시 보정하는 Emailage Adaptive를 출시함. 이메일·IP·전화·주소·거래 신호로 위험 점수를 매기며, 도입 고객 Dell은 고위험 사기 포착률 2배, 수동 검토 83% 감소를 보고함.</p>
+      <ul class="points"><li>최고위험 구간 사기 약 90% 포착(회사 주장)</li><li>오탐(false positive) 80% 이상 감소(회사 주장)</li><li>Dell: 고위험 포착률 2배, 저위험 수동 검토 83% 감소</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 사기 탐지가 고정 규칙(static rules)에서 기업 데이터로 계속 재보정되는 모델로 넘어가고 있음. 운영팀의 수동 검토 비용이 핵심 KPI가 되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>오탐률·수동 검토 감소율은 재무 출신이 비용 효과로 설명하기 좋은 지표임</span></p>
+<ul><li>Kaggle 사기 데이터로 규칙 vs ML 오탐 비교하기</li><li>검토 건수 감소를 인건비로 환산해 보기</li></ul><div class="skills"><span class="skill">Fraud Detection</span><span class="skill">Model Drift</span><span class="skill">Precision/Recall</span><span class="skill">Cost-benefit</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/lexisnexis-risk-solutions-launches-self-calibrating-ai-fraud-detection-solution-302894785.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🛡️ KPMG</span>
+        <span>KPMG · 9/29</span>
+<span class="tag">#보험</span><span class="tag">#KPMG</span><span class="tag">#AI ROI</span>      </div>
+      <h3><a href="https://kpmg.com/xx/en/media/press-releases/2026/09/insurers-see-ai-leadership-gaps-remain.html" target="_blank" rel="noopener">KPMG: 보험사 44% &#39;AI 선도&#39; 자평, 실상은 미흡</a></h3>
+<p class="orig">Insurers see themselves as AI leaders, but transformation gaps remain, KPMG research finds</p>      <p class="summary">KPMG의 &#39;Unlocking AI value in insurance&#39; 조사(20개국, 직원 500명 이상 보험사)에서 44%가 자사를 AI 전환 상위 25%로 평가했음. 하지만 AI 예산의 약 절반은 백오피스 효율화에 쓰이고, ROI를 명확히 파악한 곳은 11%뿐임.</p>
+      <ul class="points"><li>44% 상위 25% 자평, 71%는 콘텐츠 생성·단순 자동화 수준</li><li>AI 예산 약 50% 백오피스, 신상품엔 5-10%</li><li>ROI 명확 11%, 데이터 기반 탄탄 11%, 인력 숙련 8%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 보험업 AI가 효율화 단계에 머물러 있어, 언더라이팅·판매 프로세스를 다시 설계하는 일이 다음 경쟁 포인트임. ROI를 측정할 수 있는 인력이 부족함이 숫자로 드러남.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>ROI 명확 11%라는 공백이 곧 재무+AI 인재가 필요한 자리임</span></p>
+<ul><li>AI 프로젝트 ROI 측정 템플릿 만들어 보기</li><li>호주 보험사 AI 채용 공고 3개 분석하기</li></ul><div class="skills"><span class="skill">AI ROI</span><span class="skill">InsurTech</span><span class="skill">Business Case</span></div>      </div>
+      <div class="links">
+        <a href="https://kpmg.com/xx/en/media/press-releases/2026/09/insurers-see-ai-leadership-gaps-remain.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://beinsure.com/insurers-struggle-to-turn-ai-investment/" target="_blank" rel="noopener">Beinsure 분석 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📉 arXiv (Koulouris &amp; Campajola)</span>
+        <span>arXiv q-fin · 9/30</span>
+<span class="tag">#알고리즘 트레이딩</span><span class="tag">#강화학습</span><span class="tag">#규제</span>      </div>
+      <h3><a href="https://arxiv.org/abs/2610.00619" target="_blank" rel="noopener">강화학습 트레이딩 AI, 서로 &#39;암묵적 담합&#39; 학습</a></h3>
+<p class="orig">Beyond Supra-Competitive Outcomes: Collusive Behaviour in Deep Reinforcement Learning for Optimal Execution Games</p>      <p class="summary">Almgren-Chriss 최적 집행(optimal execution) 게임에서 독립적으로 학습한 심층 강화학습(Deep RL) 에이전트 2개가 내시 균형보다 낮은 비용을 달성했음. 한쪽이 이탈하면 다른 쪽이 매도 속도를 높여 보복하는 &#39;처벌 전략&#39;을 학습한 결과로, 연구진은 이를 담합으로 해석할 근거를 제시함.</p>
+      <ul class="points"><li>Almgren-Chriss 청산 게임, 독립 학습 RL 에이전트 2개</li><li>비용이 내시(Nash) 기준보다 낮음, 즉 초경쟁적 결과</li><li>처벌 손실이 이탈 이익을 넘는지 검증하는 테스트 2개 제시</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 서로 소통하지 않는 AI 트레이더도 담합처럼 움직일 수 있어, 알고리즘 트레이딩 감독과 시장 공정성 규제에 쟁점이 생김.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>재무 지식과 RL을 함께 쓰는 연구 주제로 포트폴리오 가치가 높음</span></p>
+<ul><li>Almgren-Chriss 모델 개념 정리하기</li><li>간단한 2-에이전트 RL 실험 재현해 보기</li></ul><div class="skills"><span class="skill">Reinforcement Learning</span><span class="skill">Market Microstructure</span><span class="skill">Game Theory</span></div>      </div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2610.00619" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://arxiv.org/list/q-fin/new" target="_blank" rel="noopener">arXiv q-fin 신규 목록 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">⛏️ Fortescue</span>
+        <span>iTnews · 10/1</span>
+<span class="tag">#호주</span><span class="tag">#에이전트 AI</span><span class="tag">#운전자본</span>      </div>
+      <h3><a href="https://www.itnews.com.au/news/fortescue-introduces-agentic-capability-to-procurement-629125" target="_blank" rel="noopener">Fortescue, 구매에 에이전트 AI 도입해 운전자본 절감</a></h3>
+<p class="orig">Fortescue introduces agentic &#39;capability&#39; to procurement</p>      <p class="summary">호주 광산기업 Fortescue가 Pilbara 사업장의 구매(procurement)와 창고 재고에 에이전트 AI를 도입해 복잡한 계약 탐색과 구매 절차를 자동화했음. 모든 창고의 재고가 한눈에 보이면서 직원들이 새로 사기보다 기존 재고를 먼저 쓰게 됐고, 그 결과 운전자본(working capital)이 줄어듦.</p>
+      <ul class="points"><li>Pilbara 전 창고 재고·계약 품목 가시성 확보</li><li>가장 큰 효과는 운전자본(working capital) 감소</li><li>향후 SAP와 에이전트 워크플로 통합 계획</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트 AI의 효과가 인건비 절감을 넘어 재무제표 항목(재고·운전자본)으로 확인된 호주 대기업 사례임. 구매-지급(Procure-to-Pay) 자동화의 실제 사례로 의미가 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>재고·운전자본 지식에 에이전트 AI를 더한 이 사례가 그대로 포트폴리오 주제가 됨</span></p>
+<ul><li>재고 조회+계약 확인 에이전트 데모 만들기</li><li>DIO·운전자본 개선 효과 계산 모델 짜기</li><li>Fortescue·BHP AI 직무 공고 확인하기</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">Procure-to-Pay</span><span class="skill">Working Capital</span><span class="skill">SAP</span></div>      </div>
+      <div class="links">
+        <a href="https://www.itnews.com.au/news/fortescue-introduces-agentic-capability-to-procurement-629125" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>OpenAI가 에이전트 실행 환경까지 호스팅하면서 에이전트를 만드는 일 자체는 점점 쉬워지고 있음. 반면 Google의 버그 바운티 중단과 KPMG의 &#39;ROI 명확 11%&#39;가 보여 주듯, 이제 병목은 AI 결과물을 검증하고 가치를 측정하는 일임. Fortescue(운전자본)와 Dell(수동 검토 83% 감소)처럼 AI 효과를 재무 숫자로 증명할 수 있는 사람이 가장 귀한 인재가 되고 있음. 재무·회계 경력과 AI 전공을 함께 가진 독자에게 딱 맞는 자리임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Agents API로 송장 분류 에이전트 시제품 만들기</li><li>AI 프로젝트 ROI 측정 템플릿 1장 작성하기</li><li>Kaggle 사기 데이터로 오탐 비용 계산해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">암묵적 담합 (Tacit Collusion)</span> — 직접 합의 없이도 서로 경쟁을 피하는 행동임. 오늘 논문에서는 RL 트레이딩 AI들이 상대가 이탈하면 보복하는 전략을 스스로 학습해 이런 결과가 나왔고, 명시적 합의가 없어 기존 규제로는 잡기 어려움.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/6</span><span>OpenAI 전략 책임자, 호주 의회 AI 합동특별위원회 증언 (iTnews 보도)</span></li></ul></section><div class="hashtags">#AgenticAI #OpenAI #FraudDetection #InsurTech #WorkingCapital #AusTech </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-05 · 검색 2시간 14분 · 탐색 17회 · 검색어 81개 · 출처 67곳 → 후보 21건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
