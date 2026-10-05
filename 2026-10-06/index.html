@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-06</title>
+<meta name="description" content="AI는 &#39;신뢰·통제&#39; 경쟁으로…은행은 오케스트레이션 인재 찾음">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 6일 (화)">
+<meta property="og:description" content="AI는 &#39;신뢰·통제&#39; 경쟁으로…은행은 오케스트레이션 인재 찾음">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-06/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-06/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 6일 (화)</div>
+    <h1>AI는 &#39;신뢰·통제&#39; 경쟁으로…은행은 오케스트레이션 인재 찾음</h1>
+    <p class="overview">OpenAI의 EU 텍스트 워터마크, 뉴욕시의회 AI 4사 선서 증언 등 AI 업계 화두가 성능에서 투명성·통제로 옮겨 가고 있음. 금융권도 같은 흐름이어서 은행은 에이전트 오케스트레이션·AI 거버넌스 인재 채용을 늘리고, 감독기관은 감사 지침을 내놓고, 한국에서는 AI 에이전트로 의심되는 해킹에 비상이 걸림.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 2시간 50분 · 탐색 6회 · 검색어 20개 · 출처 23곳 → 후보 2건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 은행 AI 채용 49%↑, &#39;에이전트 오케스트레이션&#39; 급증</div>
+<div class="r">은행이 실제로 어떤 AI 역량에 돈을 쓰는지 수치로 보여 줘서, 재무 경력과 AI 석사를 묶은 이력서 방향을 바로 잡을 수 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🔏 OpenAI, EU서 ChatGPT 글에 워터마크 도입</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧠 Reflection, 501B 오픈웨이트 모델 &#39;Beam&#39; 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">⚖️ AI 4사 임원, 뉴욕시의회에서 선서 증언</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📈 은행 AI 채용 49%↑, &#39;에이전트 오케스트레이션&#39; 급증</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔍 싱가포르 ACRA, 감사인용 AI 활용 지침 발표</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🚨 AI 에이전트 의심 해킹에 은행권 7곳 피해</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 CBA 엔지니어 20명, Claude FDE 레지던시 참가</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🔏 OpenAI</span>
+        <span>OpenAI · 10/5</span>
+<span class="tag">#워터마크</span><span class="tag">#EU AI Act</span><span class="tag">#OpenAI</span>      </div>
+      <h3><a href="https://openai.com/index/eu-text-provenance/" target="_blank" rel="noopener">OpenAI, EU서 ChatGPT 글에 워터마크 도입</a></h3>
+<p class="orig">OpenAI will start watermarking ChatGPT&#39;s text in the EU</p>      <p class="summary">OpenAI가 EU 사용자를 대상으로 ChatGPT·Codex가 만든 텍스트에 보이지 않는 워터마크(textGrain)를 넣기로 하고, 앞으로 몇 주에 걸쳐 적용함. 8월 2일 시행된 EU AI Act 투명성 규정에 대응하는 조치이며, API 개발자는 전 세계 어디서나 지금 바로 켤 수 있음(기본값은 꺼짐).</p>
+      <ul class="points"><li>textGrain: 단어 선택을 미세 조정해 탐지기가 식별</li><li>초기 탐지율 약 92%, 단어 10% 동의어 교체 시 66%</li><li>짧은 글·수학 답·번역문은 탐지 어려움, API는 선택 적용</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 생성 AI 결과물의 출처 표시(provenance)가 규제 의무가 되면서 대형 모델사가 실제 기술 해법을 내놓은 첫 사례임. 한계도 함께 공개해 워터마크만으로는 충분하지 않다는 점이 드러남.</p>      <div class="links">
+        <a href="https://openai.com/index/eu-text-provenance/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://cdn.openai.com/pdf/e9508624-d767-41b6-a26d-e34ca798ada6/textgrain-entropy-calibrated-watermarking-for-language-model-text.pdf" target="_blank" rel="noopener">textGrain 기술 보고서(PDF) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧠 Reflection AI</span>
+        <span>Reflection AI Blog · 10/5</span>
+<span class="tag">#오픈웨이트</span><span class="tag">#MoE</span><span class="tag">#Reflection AI</span>      </div>
+      <h3><a href="https://reflection.ai/blog/introducing-beam" target="_blank" rel="noopener">Reflection, 501B 오픈웨이트 모델 &#39;Beam&#39; 공개</a></h3>
+<p class="orig">Introducing Beam: Reflection&#39;s 501B open-weight model</p>      <p class="summary">Reflection AI가 전체 501B·활성 23B 파라미터의 텍스트 전용 MoE(전문가 혼합) 모델 Beam을 공개함. GLM-5.2와 비슷한 추론 성능을 추론 연산 3-4배 적게 쓰고 낸다고 주장하며, 가중치는 이번 달 Apache 2.0 라이선스로 공개할 예정임.</p>
+      <ul class="points"><li>501B 전체/23B 활성, 23.8T 토큰 학습, 1M 컨텍스트</li><li>GB300 GPU 1.05만 개로 4주간 1억 회 이상 RL 롤아웃</li><li>누적 투자 약 $47억, 투자 전 기업가치 $250억</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 중국 모델이 앞서 가던 대형 오픈웨이트 시장에 미국 스타트업이 효율을 앞세워 도전함. 성능 주장은 아직 독립 검증 전임.</p>      <div class="links">
+        <a href="https://reflection.ai/blog/introducing-beam" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">⚖️ New York City Council</span>
+        <span>New York City Council · 10/5</span>
+<span class="tag">#AI 규제</span><span class="tag">#AI 안전</span><span class="tag">#청문회</span>      </div>
+      <h3><a href="https://council.nyc.gov/press/2026/09/28/3266/" target="_blank" rel="noopener">AI 4사 임원, 뉴욕시의회에서 선서 증언</a></h3>
+<p class="orig">New York City Council Announces Anthropic, OpenAI, Google, and Meta to Publicly Testify Under Oath</p>      <p class="summary">10월 5일 뉴욕시의회 전체위원회(의원 51명 전원) 청문회에서 Anthropic·OpenAI·Google·Meta 임원이 선서한 뒤 AI 위험에 대해 증언함. 외부 검증 의무화, 내부고발자 보상, AI 에이전트 피해자 소송권 등 법안이 논의됨.</p>
+      <ul class="points"><li>Anthropic Logan Graham, OpenAI Morgan Dwyer 등 출석</li><li>Menin 의장 법안: 외부 검증·강제 중단 장치 없으면 배포 금지</li><li>3사는 소환장 발부 경고를 받은 뒤 출석으로 입장을 바꿈</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트가 정부 데이터베이스를 손상시켰다는 보고 이후 지방정부까지 프런티어 AI 기업을 직접 규제하려 나섬. 외부 검증·중단 장치 의무화가 규제 표준이 될지 주목됨.</p>      <div class="links">
+        <a href="https://council.nyc.gov/press/2026/09/28/3266/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html" target="_blank" rel="noopener">CNBC 청문회 보도 ↗</a><a href="https://qz.com/anthropic-openai-google-meta-nyc-council-ai-hearing-100526" target="_blank" rel="noopener">Quartz 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📈 Draup (CNBC·PYMNTS 보도)</span>
+        <span>PYMNTS · 10/2</span>
+<span class="tag">#은행 채용</span><span class="tag">#AI 에이전트</span><span class="tag">#AI 거버넌스</span>      </div>
+      <h3><a href="https://pymnts.com/news/artificial-intelligence/2026/bank-ai-job-postings-jump-49percent-agents-go-work" target="_blank" rel="noopener">은행 AI 채용 49%↑, &#39;에이전트 오케스트레이션&#39; 급증</a></h3>
+<p class="orig">Bank AI Job Postings Jump 49% as Agents Go to Work</p>      <p class="summary">채용 분석 기업 Draup 자료에 따르면 JPMorgan·Citi·Capital One 등 대형 은행의 AI 관련 채용공고가 올해 49% 늘어 139,819건이 됨. 은행이 챗봇에서 AI 에이전트로 넘어가면서 에이전트 오케스트레이션(여러 에이전트를 묶어 운영하는 기술)과 책임 있는 AI·거버넌스 역량 수요가 급증함.</p>
+      <ul class="points"><li>에이전트 오케스트레이션 언급 108건→1,967건(+1,721%)</li><li>Responsible AI +657%, AI 거버넌스 +394%, 리스크 관리 +359%</li><li>프레임워크: LangGraph +679%, LlamaIndex +291%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 AI 인력 수요의 중심이 모델 개발자에서 트레이딩·컴플라이언스·백오피스에 에이전트를 실제로 배치하는 엔지니어와 통제 인력으로 옮겨 감. 거버넌스 관련 수요가 모델 개발 수요의 약 2배임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>재무 실무 이해 + LangGraph 에이전트 구현 + AI 거버넌스, 이 세 가지 조합이 지금 은행이 가장 찾는 인재상임.</span></p>
+<ul><li>LangGraph로 &#39;매출채권(AR) 대사&#39; 멀티에이전트 만들기</li><li>이력서에 &#39;agent orchestration&#39; 프로젝트 넣기</li><li>호주 4대 은행 공고에서 거버넌스 키워드 확인하기</li></ul><div class="skills"><span class="skill">LangGraph</span><span class="skill">Agent Orchestration</span><span class="skill">Responsible AI</span><span class="skill">Model Risk Management</span></div>      </div>
+      <div class="links">
+        <a href="https://pymnts.com/news/artificial-intelligence/2026/bank-ai-job-postings-jump-49percent-agents-go-work" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://draup.com/ai-information" target="_blank" rel="noopener">Draup 소개 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔍 ACRA (싱가포르 회계기업규제청)</span>
+        <span>ACRA · 10/2</span>
+<span class="tag">#감사</span><span class="tag">#AI 지침</span><span class="tag">#싱가포르</span>      </div>
+      <h3><a href="https://acra.gov.sg/news-events/news-announcements/audit-practice-guidance-no-1-of-2026-using-artificial-intelligence-responsibly" target="_blank" rel="noopener">싱가포르 ACRA, 감사인용 AI 활용 지침 발표</a></h3>
+<p class="orig">Audit Practice Guidance No. 1 of 2026: Using Artificial Intelligence Responsibly</p>      <p class="summary">싱가포르 회계감독기관 ACRA가 감사인이 일상 업무에서 AI를 책임 있게 쓰기 위한 실무 지침을 발표함. 실제 사고 사례와 스스로 점검할 질문을 통해 무결성·전문가적 판단·책임성·투명성·데이터 기밀성을 다룸.</p>
+      <ul class="points"><li>5대 원칙: 무결성·전문가 판단·책임성·투명성·데이터 보안</li><li>실제 사고 사례 + 자기 점검 질문 형식의 실무형 지침</li><li>ACRA 회계 역량 프레임워크·ISCA AI Fluency 과정과 연계</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감사 감독기관이 AI 사용 원칙을 &#39;현장 실무&#39; 수준으로 구체화한 사례로, 호주 ASIC·AUASB 등 아시아태평양 감독기관의 참고 기준이 될 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>감사 AI 도구를 만들 때 이 5대 원칙을 설계 요구사항으로 바꾸면 Big 4가 바로 이해하는 포트폴리오가 됨.</span></p>
+<ul><li>지침 PDF의 점검 질문을 체크리스트로 정리하기</li><li>감사 AI 데모에 근거 로그·사람 검토 단계 넣기</li><li>ISCA AI Fluency 과정 커리큘럼 살펴보기</li></ul><div class="skills"><span class="skill">Audit Analytics</span><span class="skill">AI Governance</span><span class="skill">Explainability</span><span class="skill">Data Confidentiality</span></div>      </div>
+      <div class="links">
+        <a href="https://acra.gov.sg/news-events/news-announcements/audit-practice-guidance-no-1-of-2026-using-artificial-intelligence-responsibly" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🚨 금융위원회·국내 은행권</span>
+        <span>Tech Times · 10/5</span>
+<span class="tag">#금융보안</span><span class="tag">#AI 에이전트</span><span class="tag">#한국</span>      </div>
+      <h3><a href="https://www.techtimes.com/articles/328541/20261005/open-source-ai-agent-hacked-seven-south-korean-banks-exposing-65000-records.htm" target="_blank" rel="noopener">AI 에이전트 의심 해킹에 은행권 7곳 피해</a></h3>
+<p class="orig">Open-Source AI Agent Hacked Seven South Korean Banks, Exposing 65,000 Records</p>      <p class="summary">9월 28일부터 약 1주일 동안 오픈소스 자율 침투 도구 ARTEX AI로 의심되는 공격에 신한·KB국민·하나 등 금융회사 7곳이 뚫려 6.5만 명 이상의 정보가 노출됐다는 보도가 나옴. 금융위원회는 24시간 비상대응에 들어가 사이버 위기경보를 &#39;관심&#39;에서 &#39;주의&#39;로 올리고 인증·접근통제 강화를 지시함.</p>
+      <ul class="points"><li>신한 약 2.5만 건, 예가람저축은행 약 4만 건 노출</li><li>우리·NH농협은 공격 차단, 서버에서 중국어 흔적 발견</li><li>금융위: 경보 &#39;주의&#39; 상향, 2단계로 CEO·이사회 책임 강화</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트가 공격 속도와 규모를 키우면서 은행의 AI 리스크가 &#39;내부 활용 통제&#39;에서 &#39;외부 AI 공격 방어&#39;로 넓어짐. 국내 경영진 책임 강화 논의로도 이어지고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 리스크 관리는 이제 내부 모델 통제뿐 아니라 AI 공격 대응까지 포함하며, 한국·호주 은행 모두 이 역량을 찾고 있음.</span></p>
+<ul><li>사례를 IT 일반통제(ITGC) 접근통제 관점에서 분석하기</li><li>APRA CPS 234와 금융위 조치 비교표 만들기</li></ul><div class="skills"><span class="skill">Cyber Risk</span><span class="skill">ITGC</span><span class="skill">Agentic AI Security</span></div>      </div>
+      <div class="links">
+        <a href="https://www.techtimes.com/articles/328541/20261005/open-source-ai-agent-hacked-seven-south-korean-banks-exposing-65000-records.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.newsis.com/view/NISX20261002_0003813064" target="_blank" rel="noopener">뉴시스: AI 해킹 먹잇감 된 은행권 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 Commonwealth Bank of Australia</span>
+        <span>CommBank Newsroom · 10/3</span>
+<span class="tag">#CBA</span><span class="tag">#FDE</span><span class="tag">#AI 인재</span>      </div>
+      <h3><a href="https://www.commbank.com.au/articles/newsroom/2026/10/commbank-engineers-anthropic-claude-frontier-academy.html" target="_blank" rel="noopener">CBA 엔지니어 20명, Claude FDE 레지던시 참가</a></h3>
+<p class="orig">CommBank engineers deepen expertise through Anthropic&#39;s Claude Frontier Academy</p>      <p class="summary">CBA가 Anthropic Claude Frontier Academy의 FDE(Frontier Deployed Engineer) 레지던시에 1기 엔지니어 20명을 보낸다고 발표함. 10/4에 다룬 Academy 출범 소식의 호주 후속으로, CBA 참가 규모와 프로그램 구조(4일 집중 과정 + 12주 레지던시)가 새로 확인됨.</p>
+      <ul class="points"><li>1기 20명: 4일 집중 과정 후 12주 레지던시</li><li>요구사항→설계→테스트→보안·컴플라이언스→배포까지 실습</li><li>10-11월 샌프란시스코·뉴욕·런던에서 첫 과정 시작</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 최대 은행이 AI를 실제 운영 환경에 배포하는 엔지니어(FDE)를 별도 직무 역량으로 키우기 시작함. 호주 금융권 AI 인재 수요가 &#39;모델 활용&#39;에서 &#39;규제 환경에서의 배포&#39;로 옮겨 가고 있음을 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>FDE 커리큘럼(요구사항→보안 검토→컴플라이언스→운영 배포)이 바로 재무 경력 + AI 석사가 목표로 할 직무 설명서임.</span></p>
+<ul><li>CBA·Anthropic FDE 공고의 요구 역량 정리하기</li><li>재무 사례 하나를 설계→보안검토→배포 순서로 만들기</li><li>Melbourne CBA 테크 밋업·채용 행사 찾아보기</li></ul><div class="skills"><span class="skill">Forward Deployed Engineering</span><span class="skill">Claude API</span><span class="skill">Compliance-by-design</span><span class="skill">Solution Design</span></div>      </div>
+      <div class="links">
+        <a href="https://www.commbank.com.au/articles/newsroom/2026/10/commbank-engineers-anthropic-claude-frontier-academy.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.anthropic.com/news/claude-frontier-academy" target="_blank" rel="noopener">Anthropic: Claude Frontier Academy ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 소식에는 공통점이 있음. AI 업계 화두가 모델 성능에서 출처 표시, 외부 검증, 통제로 옮겨 가고 있음(워터마크, 뉴욕 청문회). 금융권도 같은 방향이어서 은행 채용은 거버넌스·오케스트레이션 쪽으로 몰리고, 감독기관은 감사 AI 원칙을 실무 수준으로 내놓고, 한국에서는 AI 공격 방어가 새 과제로 떠오름. 재무·감사 실무를 아는 AI 석사생에게는 &#39;에이전트를 만들고, 통제를 설계하고, 감사 가능하게 남기는&#39; 능력이 가장 차별화된 무기임. 포트폴리오도 정확도만 보여 주기보다 근거 로그, 사람 검토, 접근통제까지 갖춘 형태로 만드는 게 좋음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>LangGraph로 AR 대사 2-에이전트 데모 만들기</li><li>ACRA 지침 점검 질문을 체크리스트로 정리하기</li><li>CBA·NAB AI 공고 3개 키워드 비교하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">에이전트 오케스트레이션(Agent Orchestration)</span> — 여러 AI 에이전트가 역할을 나눠 한 업무를 함께 처리하게 조율하는 기술임. 예를 들어 &#39;자료 수집 에이전트 → 대사 에이전트 → 검토 에이전트&#39; 순서로 일을 넘기고, 각 단계의 권한과 사람 승인 지점을 설계하는 것이며, LangGraph가 대표 도구임.</p></section><div class="hashtags">#AI워터마크 #오픈웨이트 #에이전트오케스트레이션 #AI감사 #금융보안 #커먼웰스은행 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-06 · 검색 2시간 50분 · 탐색 6회 · 검색어 20개 · 출처 23곳 → 후보 2건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
