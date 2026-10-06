@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-07</title>
+<meta name="description" content="오픈웨이트 1T 모델 등장, 은행 AI 감독은 강화">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 7일 (수)">
+<meta property="og:description" content="오픈웨이트 1T 모델 등장, 은행 AI 감독은 강화">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-07/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-07/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 7일 (수)</div>
+    <h1>오픈웨이트 1T 모델 등장, 은행 AI 감독은 강화</h1>
+    <p class="overview">Mistral이 1조 파라미터 모델을 공개하고 Anthropic은 보안 검증 프로그램을 확대함. 재무 쪽에서는 AI 에이전트가 모기지·결제 운영에 들어가고, ASIC은 은행 AI 사용 검토에 착수함.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 25분 · 탐색 14회 · 검색어 60개 · 출처 61곳 → 후보 18건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. ASIC, 은행의 고객 대상 AI 사용 검토</div>
+<div class="r">호주 은행 AI 규제 방향은 멜버른에서 재무+AI 커리어를 노리는 독자에게 가장 직접적임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🇫🇷 Mistral Large 4, 1조 파라미터 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🛡️ Anthropic, 사이버 검증 프로그램 확대</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📢 ChatGPT 이미지 생성 옆에 시각 광고</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏠 Valon, AI 모기지 서비싱에 1.5억 달러</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🏦 Finastra, 결제 오류 AI 수정 추천</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🧪 자산관리 AI 에이전트, 이해충돌 위험 수치화</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 ASIC, 은행의 고객 대상 AI 사용 검토</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🇫🇷 Mistral AI</span>
+        <span>TechCrunch · 10/6</span>
+<span class="tag">#Mistral</span><span class="tag">#오픈웨이트</span><span class="tag">#LLM</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/" target="_blank" rel="noopener">Mistral Large 4, 1조 파라미터 공개</a></h3>
+<p class="orig">Mistral&#39;s new 1T model aims to leapfrog closed and open rivals</p>      <p class="summary">Mistral이 1조(1T) 파라미터 멀티모달 모델 Mistral Large 4를 공개함. 현재는 가드레일 엔드포인트로만 쓸 수 있고, 안전성 테스트 후 약 3주 뒤 오픈웨이트(open weights)를 공개할 예정임.</p>
+      <ul class="points"><li>파라미터 1조 개, 별칭 &#39;Le Chonk&#39;</li><li>Nvidia GPU 약 4,000장으로 학습</li><li>오픈웨이트는 안전 테스트 후 약 3주 뒤</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 미국 폐쇄형과 중국 오픈 모델 사이 &#39;제3의 길&#39;을 내세워 유럽발 대안이 될지 시험대에 오름. 금융·보안 특화를 강조해 기업용 시장을 겨냥함.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🛡️ Anthropic</span>
+        <span>Anthropic · 10/6</span>
+<span class="tag">#Anthropic</span><span class="tag">#사이버보안</span><span class="tag">#Claude</span>      </div>
+      <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic, 사이버 검증 프로그램 확대</a></h3>
+<p class="orig">Expanding the Cyber Verification Program</p>      <p class="summary">Anthropic이 뉴스룸에 &#39;Expanding the Cyber Verification Program&#39;을 10월 6일자로 게시함. 2차 보도에 따르면 보안팀이 완화된 안전 제한을 신청해 취약점 점검에 Claude를 쓸 수 있음.</p>
+      <ul class="points"><li>10월 6일 Anthropic 뉴스룸 게시</li><li>Opus·Sonnet 대상 확대(2차 보도)</li><li>Mythos급 접근은 후속 단계(2차 보도)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 공격·방어 양면 사용(dual-use) 역량을 검증된 방어자에게 먼저 열어주는 접근 방식임. 세부 내용은 원문 페이지가 열리지 않아 2차 보도 기준임.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://news.bgov.com/ip-law/anthropic-makes-claude-mythos-5-available-for-security-scans" target="_blank" rel="noopener">Bloomberg Law 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📢 OpenAI</span>
+        <span>TechCrunch · 10/5</span>
+<span class="tag">#OpenAI</span><span class="tag">#광고</span><span class="tag">#ChatGPT</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/" target="_blank" rel="noopener">ChatGPT 이미지 생성 옆에 시각 광고</a></h3>
+<p class="orig">OpenAI launches visual ads that appear alongside image generation results</p>      <p class="summary">OpenAI가 ChatGPT 이미지 생성 결과 옆에 디스플레이 광고를 붙이기로 함. 10월 중 미국에서 일부 광고주 대상으로 시작됨.</p>
+      <ul class="points"><li>10월 중 미국 한정 롤아웃</li><li>광고는 표시되며 답변에 영향 없다고 밝힘</li><li>AppsFlyer·DoubleVerify 등 측정 파트너 확대</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 주간 이용자 약 12억 명 규모의 챗봇이 광고 수익 모델을 넓히는 중임. 구독 외 수익원 확보 경쟁을 보여줌.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏠 Valon</span>
+        <span>Ventureburn · 10/5</span>
+<span class="tag">#핀테크</span><span class="tag">#모기지</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://ventureburn.com/valon-raises-150m-ai-mortgage-servicing-platform" target="_blank" rel="noopener">Valon, AI 모기지 서비싱에 1.5억 달러</a></h3>
+<p class="orig">Valon raises $150M for AI-native mortgage servicing platform</p>      <p class="summary">Valon이 기업가치 23억 달러로 시리즈 D 1.5억 달러를 유치함. ValonOS의 AI 에이전트가 고객 소통, 납부금 배분, 에스크로(escrow) 분석을 맡음.</p>
+      <ul class="points"><li>가치 $2.3B, 이전의 2배</li><li>Ribbit Capital 신규, a16z 지속 참여</li><li>미국 모기지 6건 중 1건이 ValonOS 계약</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 규제 산업에서 AI 에이전트가 실제 대규모 운영에 투입된 사례임. 컴플라이언스 로직과 감사 추적을 내장한 점이 핵심임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>규제 업무에 AI 에이전트를 넣을 때 감사 추적(audit trail) 설계가 핵심임.</span></p>
+<ul><li>납부 배분 로직을 규칙+LLM 혼합으로 설계해 보기</li><li>에이전트 로그를 감사 증적 형태로 저장해 보기</li></ul><div class="skills"><span class="skill">agent workflow</span><span class="skill">audit trail</span><span class="skill">loan servicing</span></div>      </div>
+      <div class="links">
+        <a href="https://ventureburn.com/valon-raises-150m-ai-mortgage-servicing-platform" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🏦 Finastra</span>
+        <span>The Paypers · 10/1</span>
+<span class="tag">#결제</span><span class="tag">#Finastra</span><span class="tag">#HITL</span>      </div>
+      <h3><a href="https://thepaypers.com/fintech/news/finastra-launches-ai-repair-recommendations-for-payment-exceptions" target="_blank" rel="noopener">Finastra, 결제 오류 AI 수정 추천</a></h3>
+<p class="orig">Finastra launches AI-powered Repair Recommendations for payment exceptions</p>      <p class="summary">Finastra가 AI OperatorAssist에 실패 결제의 수정안을 제시하는 Repair Recommendations를 추가함. Swift, Fedwire, SEPA, UPI, Nexus 규칙으로 검증하며 최종 승인은 사람이 함.</p>
+      <ul class="points"><li>결제 불일치 원인 분석 후 수정안 제시</li><li>5개 결제망 규칙으로 검증</li><li>운영 담당자 승인 필수(human-in-the-loop)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 운영에서 AI가 자율 처리 대신 &#39;추천+사람 승인&#39; 형태로 자리잡는 흐름임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>예외 처리(exception handling)는 회계 대사 업무와 구조가 같음.</span></p>
+<ul><li>대사 불일치 수정안 추천 프로토타입 만들기</li></ul><div class="skills"><span class="skill">reconciliation</span><span class="skill">ISO 20022</span><span class="skill">HITL</span></div>      </div>
+      <div class="links">
+        <a href="https://thepaypers.com/fintech/news/finastra-launches-ai-repair-recommendations-for-payment-exceptions" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🧪 Swissi AI Journal</span>
+        <span>arXiv · 10/2</span>
+<span class="tag">#논문</span><span class="tag">#웰스매니지먼트</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://arxiv.org/abs/2610.02863" target="_blank" rel="noopener">자산관리 AI 에이전트, 이해충돌 위험 수치화</a></h3>
+<p class="orig">Multi-Agent AI as a Nested Principal-Agent Problem in Private Wealth Management</p>      <p class="summary">자산관리의 AI 에이전트 위임을 중첩 주인-대리인(principal-agent) 문제로 모델링한 논문임. 시뮬레이션에서 고객 부채 정보 누락 시 유동성 위반이 발생하고, 6개 시나리오에서 고객이 1,178~2,264유로 양보함.</p>
+      <ul class="points"><li>8개 시나리오, 4개 위임계약</li><li>부채 누락 시 유동성 위반 2건</li><li>운용사 이익 3,062~10,381유로</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트형 금융 AI의 인센티브 정렬과 감독 문제를 숫자로 보여줌. 스위스·독일·오스트리아 규정을 반영함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>AI 윤리·감사 과제로 쓸 만한 구조임.</span></p>
+<ul><li>논문 시나리오를 코드로 재현해 보기</li></ul><div class="skills"><span class="skill">agentic AI</span><span class="skill">governance</span></div>      </div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2610.02863" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 ASIC</span>
+        <span>iTnews · 9/30</span>
+<span class="tag">#ASIC</span><span class="tag">#은행</span><span class="tag">#규제</span>      </div>
+      <h3><a href="https://www.itnews.com.au/news/asic-to-review-banking-sector-ai-use-and-customer-impacts-629307" target="_blank" rel="noopener">ASIC, 은행의 고객 대상 AI 사용 검토</a></h3>
+<p class="orig">ASIC to review banking sector AI use and customer impacts</p>      <p class="summary">ASIC이 2026-27 은행 감독 서한(supervisory letter)에서 은행의 고객 대상 AI 사용을 공식 검토하겠다고 밝힘. 신규·예정 사용 사례를 중점 보며 APRA와 조율함.</p>
+      <ul class="points"><li>신규·예정 AI 사용 사례 중점 검토</li><li>5월 AI 사이버 위험 경고의 후속</li><li>APRA와 조율(기사 일부만 열람 가능)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 은행의 AI 도입에 감독 기준이 구체화되는 신호임. 기사 본문은 유료라 세부는 ASIC 서한 참조 필요.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 은행 AI 거버넌스·모델 리스크 직무와 직결됨.</span></p>
+<ul><li>ASIC 서한 PDF에서 AI 항목 읽고 요약하기</li><li>AI 거버넌스 직무 공고의 요건 비교하기</li></ul><div class="skills"><span class="skill">AI governance</span><span class="skill">model risk</span><span class="skill">regulatory compliance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.itnews.com.au/news/asic-to-review-banking-sector-ai-use-and-customer-impacts-629307" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://download.asic.gov.au/media/0tobhg1c/26-232mr-asic-supervisory-letter-banking-published-30-september-2026.pdf" target="_blank" rel="noopener">ASIC 은행 감독 서한 PDF ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 흐름은 모델 경쟁과 함께 &#39;운영에 들어간 AI의 통제&#39;로 모이고 있음. Valon과 Finastra는 규제·감사 추적과 사람 승인을 내장했고, 논문은 에이전트의 인센티브 충돌을 수치로 보여줌. ASIC 검토도 같은 맥락으로, 거버넌스·검증 역량이 재무 AI 직무의 차별점이 될 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>ASIC 서한의 AI 항목 요약하기</li><li>대사 불일치 수정 추천 프로토타입 구상하기</li><li>Mistral 오픈웨이트 공개일 확인하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">Human-in-the-loop (HITL)</span> — AI가 제안하고 사람이 최종 승인하는 방식임. Finastra의 결제 수정 추천이 대표 사례임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/8</span><span>한국 금융위원회 국정감사(AI 해킹 쟁점 예상)</span></li></ul></section><div class="hashtags">#AI #Mistral #ASIC #핀테크 #AI거버넌스 #금융AI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-07 · 검색 1시간 25분 · 탐색 14회 · 검색어 60개 · 출처 61곳 → 후보 18건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
