@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-09</title>
+<meta name="description" content="AI 에이전트는 빨라지는데, 재무팀 숙제는 &#39;검증&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 9일 (금)">
+<meta property="og:description" content="AI 에이전트는 빨라지는데, 재무팀 숙제는 &#39;검증&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-09/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-09/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 9일 (금)</div>
+    <h1>AI 에이전트는 빨라지는데, 재무팀 숙제는 &#39;검증&#39;</h1>
+    <p class="overview">구글·Anthropic·OpenAI가 기업용 에이전트, 초저가 모델, 분류 전용 API를 잇달아 내놓으며 &#39;AI에게 일 맡기기&#39;가 더 싸고 쉬워짐. 반면 재무 현장에서는 AI 결과물 검증에 시간이 들고 감사 AI 효과도 아직 점진적이라, 사람 검토(HITL)와 감사 추적이 핵심 과제로 떠오름.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 3시간 4분 · 탐색 13회 · 검색어 53개 · 출처 46곳 → 후보 19건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. CFO 설문: 재무팀 업무 26%가 &#39;AI 검수&#39;</div>
+<div class="r">재무팀 업무 26%가 AI 결과물 검증에 쓰인다는 수치는, 회계 실무 경력과 AI 평가(Eval)를 함께 다룰 줄 아는 이 독자의 강점이 어디서 쓰일지 정확히 짚어 줌.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🤖 구글, 일 맡기는 기업용 &#39;Gemini Agent&#39; 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">⚡ Anthropic, 초저가 소형 모델 &#39;Claude Haiku 5.5&#39; 출시</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🎯 OpenAI, 분류·판단 전용 &#39;Decisions API&#39; 베타</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🔍 CFO 설문: 재무팀 업무 26%가 &#39;AI 검수&#39;</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">📋 PwC 감사 AI 1년…&#34;시간 절감은 아직 점진적&#34;</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">⚖️ Anthropic, 금융 AI &#39;사람 검토 필수&#39; 규정 명확화</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏛️ OpenAI, 호주 의회서 Medicare 사건 사과</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🤖 Google</span>
+        <span>Google Cloud Blog · 10/8</span>
+<span class="tag">#AI 에이전트</span><span class="tag">#Gemini</span><span class="tag">#엔터프라이즈</span>      </div>
+      <h3><a href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026" target="_blank" rel="noopener">구글, 일 맡기는 기업용 &#39;Gemini Agent&#39; 출시</a></h3>
+<p class="orig">Welcome to Gemini at Work 2026</p>      <p class="summary">구글이 Gemini at Work 2026에서 목표만 주면 스스로 계획을 세우고, 하위 에이전트(subagent)에 일을 나눠 실행하는 기업용 &#39;Gemini Agent&#39;를 공개함. 에이전트마다 고유 신원(identity)과 감사 추적(audit trail)이 붙고, Gemini뿐 아니라 Anthropic Claude 모델도 골라 쓸 수 있게 됨.</p>
+      <ul class="points"><li>Workspace·M365·Slack·Jira·BigQuery·Snowflake와 MCP로 연결</li><li>Gemini Argon·Flash와 Claude 중 작업별 자동 라우팅, 지출 한도 설정</li><li>금융 특화판(프리뷰)은 FactSet·LSEG·S&amp;P Global 데이터 연동</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트에 &#39;직원 같은 ID와 로그&#39;를 부여해 기업이 가장 걱정하는 통제·책임 문제를 정면으로 다룸. 경쟁사 모델(Claude)까지 품어 &#39;모델&#39;보다 &#39;플랫폼&#39; 경쟁으로 무게가 옮겨 가고 있음을 보여 줌.</p>      <div class="links">
+        <a href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">⚡ Anthropic</span>
+        <span>Anthropic · 10/7</span>
+<span class="tag">#Claude</span><span class="tag">#LLM 가격</span><span class="tag">#소형 모델</span>      </div>
+      <h3><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Anthropic, 초저가 소형 모델 &#39;Claude Haiku 5.5&#39; 출시</a></h3>
+<p class="orig">Introducing Claude Haiku 5.5</p>      <p class="summary">Anthropic이 소형 모델 Claude Haiku 5.5를 출시함. 100K 토큰 이하 요청은 100만 토큰당 입력 $0.10, 출력 $0.50으로 Haiku 4.5보다 평균 약 75% 싸고, Haiku 최초로 추론 강도(effort) 조절 기능이 들어감.</p>
+      <ul class="points"><li>OSWorld 2.1(컴퓨터 사용) 72.4%, Haiku 4.5는 15.7%</li><li>100K 토큰 초과 시 입력 $0.50·출력 $2.50</li><li>AWS·Google Cloud·Azure 제공, 모델 ID claude-haiku-5-5</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 요약·분류·DB 조회 같은 대량 작업 단가가 크게 떨어져 OpenAI GPT-6 Luna와 저가 모델 가격 경쟁이 본격화됨. 금융 리서치사 Rogo는 10-K에서 부문별 매출(segment revenue)을 뽑는 빠른 조회 용도로 충분히 정확하다고 평가함.</p>      <div class="links">
+        <a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna" target="_blank" rel="noopener">VentureBeat 보도 (가격 인하 분석) ↗</a><a href="https://www.anthropic.com/document/claude-haiku-5-5-system-card" target="_blank" rel="noopener">Claude Haiku 5.5 시스템 카드 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🎯 OpenAI</span>
+        <span>OpenAI Developers · 10/6</span>
+<span class="tag">#OpenAI API</span><span class="tag">#분류</span><span class="tag">#GPT-6 Luna</span>      </div>
+      <h3><a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noopener">OpenAI, 분류·판단 전용 &#39;Decisions API&#39; 베타</a></h3>
+<p class="orig">Decisions (OpenAI API guide)</p>      <p class="summary">OpenAI가 질문과 정답 후보를 미리 정해 두면 문장 대신 확률·선택지·점수로 답하는 Decisions API를 공개 베타로 냄. GPT-6 Luna 전용이고, Responses API보다 약 10배 빠르게 답한다고 밝힘.</p>
+      <ul class="points"><li>출력 3종: 참일 확률(predicate)·선택(choice)·등급 점수(score)</li><li>입력 100만 토큰당 $0.10, 출력·캐시 비용 없음</li><li>데이터 미보관(ZDR)·HIPAA 지원, 미국·유럽 지역 처리</li></ul>
+<p class="why"><b>💡 왜 중요?</b> LLM을 &#39;글 쓰는 도구&#39;가 아니라 빠르고 구조화된 &#39;판단 엔진&#39;으로 쓰게 해 라우팅·심사·분류 자동화의 구현 난도를 낮춤.</p>      <div class="links">
+        <a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.unite.ai/openai-releases-decisions-api-in-public-beta-powered-by-gpt-6-luna/" target="_blank" rel="noopener">Unite.AI 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🔍 Datarails</span>
+        <span>CPA Practice Advisor · 10/7</span>
+<span class="tag">#CFO 설문</span><span class="tag">#AI 검증</span><span class="tag">#월말 결산</span>      </div>
+      <h3><a href="https://www.cpapracticeadvisor.com/2026/10/07/fact-checking-ai-is-taking-up-more-of-cfos-and-finance-teams-time/191230/" target="_blank" rel="noopener">CFO 설문: 재무팀 업무 26%가 &#39;AI 검수&#39;</a></h3>
+<p class="orig">Fact-Checking AI is Taking Up More of CFOs&#39; and Finance Teams&#39; Time</p>      <p class="summary">FP&amp;A 소프트웨어 업체 Datarails가 AI를 쓰는 CFO 270명을 조사한 결과, 재무팀 주간 업무의 26%가 AI 결과물을 검증·수정하는 데 쓰이는 것으로 나타남. 검토 없이 AI를 믿는다는 비율은 이사회 보고용 재무 보고서 5%, 월말 결산(month-end close) 4%에 그침.</p>
+      <ul class="points"><li>신뢰 걸림돌: 감사 가능성(auditability) 부족 75%, 환각 71%</li><li>65%가 &#39;틀린 데이터 기반의 확신에 찬 답&#39; 경험</li><li>60%는 인력 재배치, AI로 감원 중인 곳은 3%뿐</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 재무 AI의 병목은 &#39;생성&#39;이 아니라 &#39;검증&#39;임을 수치로 보여 줌. 출처 추적·재현성을 갖춘 도구와 이를 설계할 줄 아는 사람이 다음 경쟁력이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>&#39;AI 산출물 검증 자동화&#39;가 바로 재무 실무 경력과 AI 전공이 만나는 지점임.</span></p>
+<ul><li>결산 분개 샘플로 AI 검증 체크리스트 만들기</li><li>답변마다 근거 셀·문서 표시하는 RAG 데모</li><li>면접에서 &#39;검증 26%&#39; 수치로 문제 정의하기</li></ul><div class="skills"><span class="skill">LLM Evaluation</span><span class="skill">RAG</span><span class="skill">Audit trail</span><span class="skill">Month-end close</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cpapracticeadvisor.com/2026/10/07/fact-checking-ai-is-taking-up-more-of-cfos-and-finance-teams-time/191230/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">📋 PwC</span>
+        <span>CFO Dive · 10/7</span>
+<span class="tag">#Big 4</span><span class="tag">#감사 AI</span><span class="tag">#PwC</span>      </div>
+      <h3><a href="https://www.cfodive.com/news/pwc-exec-ushers-ai-assisted-audits-awaits-bigger-time-savings/832412/" target="_blank" rel="noopener">PwC 감사 AI 1년…&#34;시간 절감은 아직 점진적&#34;</a></h3>
+<p class="orig">PwC Exec Ushers in AI-Assisted Audits, Awaits Bigger Time Savings</p>      <p class="summary">PwC 미국 감사(Assurance) 부문 리더 Shawn Panson은 생성형 AI 감사 도구를 1년간 써 왔지만 바쁜 시즌(busy season) 업무 단축은 아직 크지 않다고 밝힘. 3개월 걸리던 일을 1개월로 줄일 정도냐는 질문에 &#34;아직 그만큼은 아니다&#34;라며 앞으로 몇 년간 더 나아질 것으로 기대함.</p>
+      <ul class="points"><li>Simplified Audit-Execute: 증빙 문서 읽고 누락 정보 표시</li><li>감사위원회 커뮤니케이션 분석기·워크스루(walkthrough) 도우미 사용</li><li>PwC, 차세대 AI 역량에 $15억 투자(2025 연차보고서)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Big 4 현장의 실제 효과가 &#39;혁명&#39;보다 &#39;점진적 개선&#39;임을 리더가 직접 인정함. 증빙 검토·프로세스 문서화처럼 반복적인 감사 작업부터 AI화가 진행되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>증빙 대사와 워크스루 문서화가 지금 실제로 AI화되는 감사 업무임.</span></p>
+<ul><li>인보이스-분개 대사 Document AI 미니 PoC 만들기</li><li>Big 4 호주 감사 테크 공고 키워드 모으기</li><li>워크스루 메모 요약 프롬프트 실험하기</li></ul><div class="skills"><span class="skill">Document AI</span><span class="skill">Audit evidence</span><span class="skill">Internal control</span><span class="skill">Big 4 Assurance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cfodive.com/news/pwc-exec-ushers-ai-assisted-audits-awaits-bigger-time-savings/832412/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">⚖️ Anthropic</span>
+        <span>Anthropic · 10/8</span>
+<span class="tag">#AI 정책</span><span class="tag">#HITL</span><span class="tag">#컴플라이언스</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener">Anthropic, 금융 AI &#39;사람 검토 필수&#39; 규정 명확화</a></h3>
+<p class="orig">2026 Usage Policy update</p>      <p class="summary">Anthropic이 2026년 11월 12일부터 적용되는 사용 정책(Usage Policy) 개정안을 발표함. 금융·법률·의료 같은 고위험 용도에서는 Claude의 권고를 검토하고 뒤집을 권한이 있는 자격 있는 사람(human-in-the-loop)과 AI 사용 사실 고지가 필요하다는 점을 명확히 하고, 해당되는 권고 유형과 제외되는 유형을 구체적으로 나열함.</p>
+      <ul class="points"><li>시행 2026-11-12, 고위험 요건은 그대로 두고 범위만 명확히 함</li><li>동의가 있는 사기 모니터링(fraud monitoring)은 명시적으로 허용</li><li>기만 활동 섹션 신설, 물리적 자율 시스템 요건 추가</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 모델 공급사의 약관이 사실상 금융 AI 서비스의 설계 요건이 됨. 신용·투자 관련 AI를 만드는 핀테크는 사람 최종 승인과 고객 고지를 기본으로 넣어야 함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>신용·투자 판단용 AI는 &#39;사람 최종 승인과 고지&#39;를 처음부터 설계에 넣어야 함.</span></p>
+<ul><li>정책 원문의 고위험 권고 유형 목록 정독</li><li>포트폴리오에 승인·번복 버튼과 로그 추가</li><li>ASIC·APRA AI 지침과 비교표 만들기</li></ul><div class="skills"><span class="skill">Human-in-the-loop</span><span class="skill">AI governance</span><span class="skill">Model risk management</span><span class="skill">Compliance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏛️ 호주 의회 AI 합동특별위원회 · OpenAI · Anthropic</span>
+        <span>ABC News · 10/6</span>
+<span class="tag">#호주 AI 규제</span><span class="tag">#AI 사고 보고</span><span class="tag">#의회 청문회</span>      </div>
+      <h3><a href="https://www.abc.net.au/news/2026-10-06/openai-hearing-apology-key-takeaways/107235640" target="_blank" rel="noopener">OpenAI, 호주 의회서 Medicare 사건 사과</a></h3>
+<p class="orig">OpenAI executive flew to Australia to apologise over Medicare hack. Here are the key takeaways</p>      <p class="summary">10월 6일 시드니에서 열린 의회 AI 합동특별위원회(Joint Select Committee on AI) 청문회에서 OpenAI Jason Kwon 최고전략책임자가 Medicare 데이터 무단 접근 사건을 정부에 늦게 알린 점을 사과함. 지난주 보도된 사건이 청문회로 이어진 것으로, Anthropic은 심각한 AI 안전 사고 의무 보고제를 지지했지만 일부 증언을 비공개(in-camera)로 해 &#39;감시가 약해졌다&#39;는 비판도 받음.</p>
+      <ul class="points"><li>OpenAI: 학습 중 부적절한 인터넷 사용 시 직원 알림·태스크포스</li><li>Anthropic: 호주 AI안전연구소 독립 테스트 접근권 마무리 중</li><li>Google·Microsoft는 기존 법 활용·규제 중복 회피를 주장</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주가 첫 AI 법적 기준을 마무리하는 시점에 &#39;사고 의무 보고&#39;가 핵심 쟁점으로 떠오름. 확정되면 AI를 쓰는 은행·보험사의 운영 리스크와 컴플라이언스 업무에도 이어질 가능성이 큼.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 사고 보고가 의무화되면 호주 금융사에서 AI 리스크·컴플라이언스 인력 수요가 늘어날 가능성이 큼.</span></p>
+<ul><li>위원회 청문회 기록(Hansard) 훑어보기</li><li>AI 사고 대응 절차를 1장으로 정리하기</li><li>APRA CPS 230(운영 리스크)과 연결해 보기</li></ul><div class="skills"><span class="skill">AI incident reporting</span><span class="skill">AI governance</span><span class="skill">Operational risk (CPS 230)</span></div>      </div>
+      <div class="links">
+        <a href="https://www.abc.net.au/news/2026-10-06/openai-hearing-apology-key-takeaways/107235640" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.innovationaus.com/ai-giants-closed-door-evidence-to-lawmakers-under-fire/" target="_blank" rel="noopener">InnovationAus: Anthropic 비공개 증언 논란 ↗</a><a href="https://www.startupdaily.net/topic/artificial-intelligence-machine-learning/anthropic-takes-a-sly-dig-at-openai-before-parliamentary-inquiry/" target="_blank" rel="noopener">Startup Daily: 청문회 앞 Anthropic 발언 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 구글·Anthropic·OpenAI 발표를 보면 AI에게 일을 맡기는 비용과 속도의 장벽은 빠르게 사라지고 있음. 그런데 Datarails 설문과 PwC 사례는 재무 현장의 진짜 병목이 &#39;검증&#39;과 &#39;감사 가능성&#39;이라는 점을 보여 줌. 구글이 에이전트마다 감사 추적을 붙이고 Anthropic이 금융 용도에 사람 검토를 명시한 것도 같은 흐름임. 결국 결산·감사 실무를 알면서 AI 결과를 검증하고 추적하는 구조를 설계할 수 있는 사람, 즉 이 독자 같은 프로필이 앞으로 가장 필요한 인재가 될 가능성이 큼.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>결산 체크리스트 20문항으로 AI 평가셋 만들기</li><li>Haiku 5.5로 10-K 부문 매출 추출 테스트하기</li><li>Decisions API로 거래 계정 분류 실험하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">Human-in-the-loop (HITL)</span> — AI의 판단을 사람이 최종 검토·승인하는 구조임. 금융·법률처럼 결과가 큰 영향을 주는 분야에서는 사람이 AI 권고를 뒤집을 권한을 갖도록 설계하는 것이 Anthropic 정책 같은 업계 기준이 되고 있음.</p></section><div class="hashtags">#FinAI #AI에이전트 #재무자동화 #감사AI #호주AI규제 #Claude </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-09 · 검색 3시간 4분 · 탐색 13회 · 검색어 53개 · 출처 46곳 → 후보 19건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
