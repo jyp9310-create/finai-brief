@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-10</title>
+<meta name="description" content="AI 에이전트, 은행 업무 속으로…규제·청문회도 빨라짐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 10일 (토)">
+<meta property="og:description" content="AI 에이전트, 은행 업무 속으로…규제·청문회도 빨라짐">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-10/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-10/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 10일 (토)</div>
+    <h1>AI 에이전트, 은행 업무 속으로…규제·청문회도 빨라짐</h1>
+    <p class="overview">AI 업계에서는 Anthropic이 사이버 방어 프로그램을 내놨고, OpenAI는 매출 수치 논란에 휩싸였으며, 텍스트 대신 &#39;결정&#39;을 출력하는 AI 모델에 대규모 투자금이 몰렸음. 금융 쪽에서는 BNY·DBS·Backbase가 은행 업무에 AI 에이전트를 실제로 투입하고 있고, 싱가포르 MAS와 호주 의회는 이를 통제할 규칙을 다듬는 중임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 43분 · 탐색 9회 · 검색어 42개 · 출처 38곳 → 후보 14건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. BNY 에이전트 140개, DBS 신용메모 에이전트 확대</div>
+<div class="r">DBS의 연차보고서 기반 신용메모 에이전트는 재무제표 분석 경력과 RAG·에이전트 기술을 한 포트폴리오로 묶기에 가장 좋은 실전 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🛡️ Anthropic, 사이버 미션 출범…인프라·오픈소스 방어</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">📉 OpenAI 연환산 매출 $500억…알려진 수치보다 $200억↓</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🎯 텍스트 대신 &#39;결정&#39; 내는 AI Jev, $75억 가치 인정</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 BNY 에이전트 140개, DBS 신용메모 에이전트 확대</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💬 Backbase, 감사추적 갖춘 대화형 뱅킹 에이전트 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📜 싱가포르 MAS, 금융사 AI 리스크 관리 지침 확정</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 호주 은행들 AI 청문회…Westpac &#39;연 15만 시간 절감&#39;</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🛡️ Anthropic</span>
+        <span>Anthropic · 10/8</span>
+<span class="tag">#Cybersecurity</span><span class="tag">#Claude</span><span class="tag">#OpenSource</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener">Anthropic, 사이버 미션 출범…인프라·오픈소스 방어</a></h3>
+<p class="orig">Introducing the Anthropic Cyber Mission</p>      <p class="summary">Anthropic이 사이버 방어 프로그램들을 묶은 &#39;Cyber Mission&#39;을 출범함. 전력·수도·교통 같은 핵심 인프라 보안업체에 최상위(frontier) 모델과 현장 엔지니어를 지원하고, 오픈소스 프로젝트를 무료로 자동 스캔해 주는 OSS Scanner를 새로 내놓음.</p>
+      <ul class="points"><li>CIDP 창립 파트너: Accenture·Deloitte·PwC·CrowdStrike 등 11곳</li><li>OSS Scanner: 무료·옵트인, PoC 익스플로잇과 수정안까지 제공</li><li>정탐률(true-positive) 90% 이상 기대, PSF·Apache 재단에 자금 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI의 해킹 능력이 퍼지는 가운데 프런티어 랩이 &#39;방어 측 우위&#39; 확보에 직접 나섰음. 이번 파트너에 Big 4 중 2곳(Deloitte·PwC)이 들어가 컨설팅 사이버 사업과의 결합도 깊어지고 있음.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic Newsroom ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">📉 OpenAI</span>
+        <span>TechCrunch (FT 보도 인용) · 10/8</span>
+<span class="tag">#OpenAI</span><span class="tag">#Revenue</span><span class="tag">#IPO</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/" target="_blank" rel="noopener">OpenAI 연환산 매출 $500억…알려진 수치보다 $200억↓</a></h3>
+<p class="orig">OpenAI&#39;s revenue is reportedly $20 billion less than previously projected</p>      <p class="summary">FT 보도에 따르면 OpenAI는 투자자들에게 연환산 매출(annualized revenue)이 약 $500억이라고 밝혔음. 그동안 돌던 $700억과는 차이가 큼. 투자자들이 Anthropic과 직접 비교하려고 매출 산정 방식을 맞추다 생긴 수치였고, IPO는 2027년 초로 미뤄진 것으로 전해짐.</p>
+      <ul class="points"><li>연환산 매출 약 $500억, 기존에 알려진 $700억보다 $200억 낮음</li><li>Anthropic은 클라우드 파트너 판매분 포함, OpenAI는 미포함</li><li>IPO 2027년 초로 연기 보도, 3월 라운드 $1,220억 조달</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 기업 가치를 매길 때 매출 인식 기준이 회사마다 달라 단순 비교가 어렵다는 점이 드러났음. IPO를 앞두고 공시 기준의 일관성이 핵심 쟁점이 될 것임.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🎯 TypeSafe AI</span>
+        <span>TypeSafe AI Blog · 10/9</span>
+<span class="tag">#Funding</span><span class="tag">#DecisionAI</span><span class="tag">#Startup</span>      </div>
+      <h3><a href="https://typesafe.ai/blog/series-ai" target="_blank" rel="noopener">텍스트 대신 &#39;결정&#39; 내는 AI Jev, $75억 가치 인정</a></h3>
+<p class="orig">Series A: TypeSafe AI raises $870M (Jev)</p>      <p class="summary">TypeSafe AI가 a16z 주도로 시리즈 A $8.7억을 유치해 기업가치 $75억을 인정받았음. 9월 15일 출시한 Jev는 문장 대신 보정된 확률(calibrated decision)을 출력하는 트랜스포머 모델로, 소프트웨어 안의 의사결정 자동화를 노림.</p>
+      <ul class="points"><li>시리즈 A $8.7억, 기업가치 $75억, a16z 주도·Sequoia·DCVC 참여</li><li>Jev: 텍스트 아닌 확률 출력, LLM보다 빠르고 토큰 적게 씀</li><li>포춘 500 기업의 1/3이 사용 주장, 공동창업자는 전 OpenAI 연구원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 자동화 작업에는 LLM 대신 결정에 특화된 모델을 쓰는 흐름이 생기고 있음. 승인·분류·심사처럼 정답이 정해진 업무의 비용 구조가 달라질 수 있음.</p>      <div class="links">
+        <a href="https://typesafe.ai/blog/series-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 BNY · DBS</span>
+        <span>PYMNTS · 10/9</span>
+<span class="tag">#AgenticAI</span><span class="tag">#Banking</span><span class="tag">#CreditAnalysis</span>      </div>
+      <h3><a href="https://pymnts.com/news/artificial-intelligence/2026/banks-put-ai-agents-through-performance-reviews" target="_blank" rel="noopener">BNY 에이전트 140개, DBS 신용메모 에이전트 확대</a></h3>
+<p class="orig">Banks Put AI Agents Through Performance Reviews</p>      <p class="summary">BNY는 계정과 사번을 받은 AI 에이전트 약 140개를 운영하면서 직원처럼 실적을 관리하고 있음. DBS는 150명 파일럿을 마친 뒤 8월에 신용(credit) 에이전트를 전 세계 직원 약 1,500명에게 배포해 신용메모 초안 작성을 자동화함.</p>
+      <ul class="points"><li>BNY 결제 검증 6분→30초 미만, 미결 결제 조사 약 80% 감소</li><li>DBS 에이전트 70개+ 업무, 신용메모 작성 시간 30%+ 절감 목표</li><li>FINRA 2026 보고서, 에이전트 감사가능성(auditability) 우려 명시</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행이 에이전트를 &#39;디지털 직원&#39;으로 보고 처리량·사이클타임 같은 KPI로 관리하기 시작했음. 사람 검토를 핵심 통제로 남겨 둔 채 백오피스와 신용심사에 실제로 투입하는 단계임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>연차보고서→신용메모 초안은 재무제표 분석 경력을 그대로 살릴 수 있는 프로젝트 주제임</span></p>
+<ul><li>ASX 상장사 연차보고서로 신용메모 RAG 만들기</li><li>에이전트 KPI(처리량·오류율) 대시보드 설계하기</li><li>FINRA 에이전트 가이드 핵심 쟁점 정리하기</li></ul><div class="skills"><span class="skill">RAG</span><span class="skill">Credit Analysis</span><span class="skill">Agent Evaluation</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://pymnts.com/news/artificial-intelligence/2026/banks-put-ai-agents-through-performance-reviews" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💬 Backbase</span>
+        <span>Backbase · 10/8</span>
+<span class="tag">#Fintech</span><span class="tag">#AgenticAI</span><span class="tag">#CustomerService</span>      </div>
+      <h3><a href="https://www.backbase.com/press/backbase-launches-conversational-banking-to-turn-customer-conversations-into-governed-banking-action" target="_blank" rel="noopener">Backbase, 감사추적 갖춘 대화형 뱅킹 에이전트 출시</a></h3>
+<p class="orig">Backbase launches Conversational Banking to turn customer conversations into governed banking action</p>      <p class="summary">은행 소프트웨어 기업 Backbase가 Conversational Banking을 정식 출시함. 고객이 말이나 글로 요청하면 AI 에이전트가 은행이 정한 권한 안에서 카드 정지, 결제 확인 같은 업무를 직접 처리하고, 복잡한 건은 맥락을 붙여 직원에게 넘김.</p>
+      <ul class="points"><li>10곳 이상 은행에서 운영 중, Meriwest·VeraBank 등</li><li>남아공 4대 은행 중 한 곳: 2,200만 건 처리, 셀프서비스 20%→70%</li><li>중요 요청은 고객 명시 확인 필수, 전체 감사추적(audit trail) 기록</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 단순 챗봇을 넘어 &#39;행동하는 에이전트&#39;가 은행 고객 창구에 들어오고 있음. 권한 통제와 감사추적을 기본 기능으로 넣은 점이 규제 산업에서의 차별점임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트 권한 설계와 감사로그는 내부통제(ICFR) 감각이 바로 쓰이는 영역임</span></p>
+<ul><li>카드 정지 에이전트+감사로그 데모 만들기</li><li>봉쇄율·이관율 KPI 정의서 작성하기</li></ul><div class="skills"><span class="skill">Tool Calling</span><span class="skill">Audit Trail</span><span class="skill">Access Control</span><span class="skill">Conversational AI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.backbase.com/press/backbase-launches-conversational-banking-to-turn-customer-conversations-into-governed-banking-action" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://fintech.global/2026/10/08/backbase-bets-agentic-ai-can-rewrite-bank-service-economics" target="_blank" rel="noopener">FinTech Global 보도 ↗</a><a href="https://ffnews.com/news/embargoed-news-backbase-puts-agentic-ai-in-customers-hands-with-an-audit-trail-a-731530a5" target="_blank" rel="noopener">FF News 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📜 Monetary Authority of Singapore (MAS)</span>
+        <span>MAS · 10/7</span>
+<span class="tag">#Regulation</span><span class="tag">#AIGovernance</span><span class="tag">#RiskManagement</span>      </div>
+      <h3><a href="https://www.mas.gov.sg/news/media-releases/2026/mas-sets-out-supervisory-expectations-on-responsible-ai-adoption-by-financial-institutions" target="_blank" rel="noopener">싱가포르 MAS, 금융사 AI 리스크 관리 지침 확정</a></h3>
+<p class="orig">MAS Sets Out Supervisory Expectations on Responsible AI Adoption by Financial Institutions</p>      <p class="summary">싱가포르 통화청(MAS)이 모든 금융사와 모든 AI 기술에 적용되는 AI 리스크 관리 지침을 확정함. 이사회·경영진 책임, AI 전 생애주기 통제, 외부 AI 공급사에 대한 보증 확보를 요구하고, 에이전틱 AI 지침은 2027년에 별도로 의견을 받기로 함.</p>
+      <ul class="points"><li>시행 2027-10-07, 섹션 5~6은 2028-10-07까지 단계 적용</li><li>외부 벤더 AI라도 최종 책임은 금융사, 보증 확보 필수</li><li>저영향 AI는 기본 정책만, 리스크 비례 통제 허용</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 아시아 금융허브가 AI 거버넌스를 원칙에서 감독 기준으로 끌어올렸음. 호주 ASIC·APRA 등 역내 규제기관도 참고할 가능성이 큰 기준점임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 유스케이스 인벤토리와 중요도 평가는 감사·리스크 경력자가 가장 잘할 수 있는 일임</span></p>
+<ul><li>MAS 기준으로 AI 인벤토리 템플릿 만들기</li><li>ASIC REP 798과 요구사항 비교표 작성하기</li></ul><div class="skills"><span class="skill">AI Governance</span><span class="skill">Model Risk Management</span><span class="skill">Third-party Risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.mas.gov.sg/news/media-releases/2026/mas-sets-out-supervisory-expectations-on-responsible-ai-adoption-by-financial-institutions" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management-for-financial-institutions" target="_blank" rel="noopener">MAS 지침 원문 ↗</a><a href="https://blockhead.co/2026/10/08/mas-finalises-ai-risk-rules-for-financial-institutions-with-agentic-ai-guidance-to-follow-in-2027" target="_blank" rel="noopener">Blockhead 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Westpac · NAB · ANZ · ABA</span>
+        <span>ABC News · 10/9</span>
+<span class="tag">#호주</span><span class="tag">#Banking</span><span class="tag">#AIPolicy</span>      </div>
+      <h3><a href="https://www.abc.net.au/news/2026-10-09/asx-markets-business-live-news-9-october-2026/107246104" target="_blank" rel="noopener">호주 은행들 AI 청문회…Westpac &#39;연 15만 시간 절감&#39;</a></h3>
+<p class="orig">Westpac, ANZ, NAB appear before parliamentary inquiry into AI — as it happened</p>      <p class="summary">Westpac·NAB·ANZ의 AI 책임자들과 호주은행협회(ABA)가 의회 AI 합동 조사위원회에 나와 AI 활용 현황과 일자리 영향에 대해 증언함. Westpac은 모기지·신용심사에서 연 15만 시간을 줄였다고 밝혔고, 은행들은 AI가 일자리를 줄였다는 지적은 부인함.</p>
+      <ul class="points"><li>Westpac CAIO Dan Jermyn: 모기지·신용심사서 연 15만 시간 절감</li><li>NAB Peter Steel: AI 사기 막도록 빅테크 책임 &#39;상류&#39;로 확대 요구</li><li>ABA Simon Birmingham: 기술 말고 기준·행위 규제, AI 교육 확대</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 올해 안에 나올 법적 구속력 있는 AI 기준을 앞두고 4대 은행이 규제 방향에 의견을 밝힌 자리임. 일자리와 해외 이전(offshoring)이 &#39;사회적 허가(social license)&#39; 쟁점으로 떠오름.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 은행 AI 조직(Westpac CAIO, ANZ CDAO)이 무엇을 우선시하는지 보여 줘 취업 준비에 바로 쓸 수 있음</span></p>
+<ul><li>Westpac·ANZ·NAB AI 직무 공고 요건 비교하기</li><li>신용심사 자동화 시간절감 추정 모델 만들기</li><li>면접용으로 &#39;책임 있는 AI&#39; 은행 사례 정리하기</li></ul><div class="skills"><span class="skill">Credit Decisioning</span><span class="skill">Responsible AI</span><span class="skill">Scam Detection</span><span class="skill">Stakeholder Communication</span></div>      </div>
+      <div class="links">
+        <a href="https://www.abc.net.au/news/2026-10-09/asx-markets-business-live-news-9-october-2026/107246104" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://commbank.com.au/articles/newsroom/2026/10/commonwealth-bank-2026-evident-ai-index.html" target="_blank" rel="noopener">CommBank, Evident AI Index 아태 1위 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들의 공통점은 &#39;AI가 행동한다&#39;는 것과 &#39;그 행동을 통제할 수 있어야 한다&#39;는 것임. BNY는 에이전트에 사번과 KPI를 붙였고, Backbase는 감사추적을 기본 기능으로 넣었고, MAS는 벤더 AI도 금융사가 책임지라고 못 박았음. 호주 은행들도 의회에서 같은 질문(신뢰·책임·일자리)에 답해야 했음. 기술 구현 능력에 내부통제·감사 감각까지 갖춘 사람이 드물기 때문에, 재무회계 경력에 AI 석사를 더한 조합이 지금 시장에서 가장 희소한 프로필임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>연차보고서로 신용메모 초안 RAG 만들기</li><li>MAS 기준 AI 인벤토리 템플릿 작성하기</li><li>호주 은행 AI 직무 공고 3개 비교하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">셀프서비스 봉쇄율(Containment Rate)</span> — 고객 문의를 상담원 없이 셀프서비스로 끝낸 비율임. Backbase 사례에서는 20%에서 70%로 올랐고, 상담 비용 절감 효과를 재는 핵심 KPI로 쓰임.</p></section><div class="hashtags">#AgenticAI #AIinBanking #AIGovernance #FinAI #호주AI #Fintech </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-10 · 검색 1시간 43분 · 탐색 9회 · 검색어 42개 · 출처 38곳 → 후보 14건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
