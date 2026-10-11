@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-12</title>
+<meta name="description" content="AI 에이전트가 일을 맡을수록, &#39;브레이크&#39;와 검증이 핵심 됨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 12일 (월)">
+<meta property="og:description" content="AI 에이전트가 일을 맡을수록, &#39;브레이크&#39;와 검증이 핵심 됨">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-12/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-12/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 12일 (월)</div>
+    <h1>AI 에이전트가 일을 맡을수록, &#39;브레이크&#39;와 검증이 핵심 됨</h1>
+    <p class="overview">빅테크 CEO부터 한국 금융보안원, 호주 AI 안전연구소까지 AI 에이전트를 어떻게 통제하고 검증할지가 이번 주 공통 화두임. 금융 현장에서는 DNB가 에이전트 도입을 이유로 400명을 감원하고, Caseware는 감사 위험평가에 에이전트를 넣는 등 실제 업무 대체가 본격화됨.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 58분 · 탐색 9회 · 검색어 34개 · 출처 32곳 → 후보 10건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. Caseware, 감사 위험평가 초안 짜는 AI 에이전트 출시</div>
+<div class="r">감사 위험평가·공시 체크리스트라는 독자의 회계 실무가 그대로 AI 제품이 된 사례라 포트폴리오와 면접 소재로 바로 쓸 수 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🛑 나델라 &#34;AI 모델에 비상 브레이크 필요&#34;</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧩 구글, 온디바이스 멀티모달 임베딩 EmbeddingGemma 2 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🔬 앤트로픽, 美 과학 프로젝트에 1.5억 달러 지원</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 노르웨이 DNB, AI 에이전트 도입에 400명 감원</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔍 Caseware, 감사 위험평가 초안 짜는 AI 에이전트 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛡️ 금융보안원, AI 에이전트 보안 평가기준 17개 마련</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 호주 AI안전연구소 &#34;정답만으론 신뢰 못 해&#34; 보고서</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🛑 Microsoft</span>
+        <span>X (@satyanadella) · 10/10</span>
+<span class="tag">#AI안전</span><span class="tag">#에이전트통제</span><span class="tag">#Microsoft</span>      </div>
+      <h3><a href="https://x.com/satyanadella/status/2108931348857827686" target="_blank" rel="noopener">나델라 &#34;AI 모델에 비상 브레이크 필요&#34;</a></h3>
+<p class="orig">Microsoft&#39;s Satya Nadella says AI models need an &#39;emergency brake&#39;</p>      <p class="summary">사티아 나델라 Microsoft CEO가 X에 AI의 &#39;신뢰 아키텍처(trust architecture)&#39;를 다시 점검하자며 모델과 통제 장치를 분리하는 설계를 제안함. 모델을 &#39;중첩된 블랙박스&#39;로 다루지 말고, 모델이 이미 침해됐다고 가정하고 처음부터 격리해야 한다고 주장함.</p>
+      <ul class="points"><li>모델과 작업을 지휘하는 하네스(harness)를 분리하자고 제안</li><li>주요 모델 행동은 위변조 불가·사람이 읽을 수 있는 증거로 기록</li><li>권한 있는 사람이 작업 중간에 모델을 멈추거나 끌 수 있어야 함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 연구소들의 에이전트 통제 실패 사례가 잇따르는 가운데, 최대 AI 인프라 기업 CEO가 &#39;외부화된 통제·감사 기록&#39;을 표준 설계로 제시했다는 점에서 기업 AI 거버넌스의 방향을 보여줌.</p>      <div class="links">
+        <a href="https://x.com/satyanadella/status/2108931348857827686" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧩 Google DeepMind</span>
+        <span>Google Blog · 10/6</span>
+<span class="tag">#오픈모델</span><span class="tag">#RAG</span><span class="tag">#임베딩</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">구글, 온디바이스 멀티모달 임베딩 EmbeddingGemma 2 공개</a></h3>
+<p class="orig">EmbeddingGemma 2: an open, lightweight multimodal embedding model</p>      <p class="summary">구글이 Gemma 4 기반의 740M 파라미터 오픈 임베딩 모델 EmbeddingGemma 2를 Apache 2.0 라이선스로 공개함. 텍스트·이미지·오디오·영상·코드를 하나의 벡터 공간에 담고, 컨텍스트가 8K 토큰으로 4배 늘어 기기 안에서 바로 검색 증강 생성(RAG)을 돌릴 수 있게 됨.</p>
+      <ul class="points"><li>총 740M, 텍스트 전용은 270M로 실행 가능</li><li>MTEB Code 점수 68.76 → 78.68로 상승</li><li>Matryoshka로 768→128차원 축소, 저장공간 최대 6배 절감</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 데이터를 외부로 보내지 않고 휴대폰·노트북에서 문서 검색이 가능해져, 민감한 데이터를 다루는 금융·의료 분야의 로컬 RAG 장벽이 낮아짐.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🔬 Anthropic</span>
+        <span>Anthropic · 10/8</span>
+<span class="tag">#Anthropic</span><span class="tag">#AI for Science</span><span class="tag">#정책</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/genesis-mission-commitment" target="_blank" rel="noopener">앤트로픽, 美 과학 프로젝트에 1.5억 달러 지원</a></h3>
+<p class="orig">Building on our commitment to American scientific discovery</p>      <p class="summary">Anthropic이 미국 연방정부의 과학 가속 프로젝트 &#39;Genesis Mission&#39;에 3년간 1억 5천만 달러 규모를 지원한다고 백악관 과학기술정책실(OSTP) 행사에서 발표함. Claude·Claude Code·API 크레딧을 수백 개 연구 과제에 제공하고 과학자 교육·온보딩도 지원함.</p>
+      <ul class="points"><li>3년간 $1.5억, 수백 개 Genesis Mission 연구 과제 대상</li><li>NASA·NIH·NSF 등 15개 이상 연방기관에 Claude 제공</li><li>우선 분야는 핵융합 에너지와 양자 컴퓨팅</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 기업들이 정부 과학 인프라에 크레딧 형태로 깊숙이 들어가며 공공 부문 표준 도구 자리를 선점하려는 경쟁이 본격화됨.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/genesis-mission-commitment" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 DNB</span>
+        <span>DNB 보도자료 (Inderes) · 10/6</span>
+<span class="tag">#은행</span><span class="tag">#에이전틱AI</span><span class="tag">#KYC</span>      </div>
+      <h3><a href="https://www.inderes.se/releases/dnb-dnb-is-making-organisational-changes-in-technology-and-services" target="_blank" rel="noopener">노르웨이 DNB, AI 에이전트 도입에 400명 감원</a></h3>
+<p class="orig">DNB is making organisational changes in Technology &amp; Services</p>      <p class="summary">노르웨이 최대 은행 DNB가 기술·서비스(T&amp;S) 부문에서 약 400 FTE(전일제 환산 인력)를 줄이는 구조조정을 발표함. 에이전틱 AI가 그동안 사람이 하던 고객데이터 관리·고객확인(KYC)·코딩 업무를 넘겨받으면서 &#39;상당한 효율 개선&#39;이 나타났다는 것이 이유임.</p>
+      <ul class="points"><li>약 400 FTE 감축, 전체 1만500명+ 중 약 4%</li><li>효율 개선 분야: 고객데이터 관리·KYC·개발/코딩</li><li>구조조정 비용 2026년 4분기 반영, 전액 효과는 2027년 2분기부터</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 대형 은행이 AI 에이전트를 감원의 직접적인 이유로 공식 발표에서 밝힌 드문 사례로, KYC 같은 컴플라이언스 운영 업무가 가장 먼저 대체되고 있음을 보여줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>반복 운영직은 줄고, 에이전트를 설계·감독하는 역할로 수요가 이동 중임.</span></p>
+<ul><li>KYC 문서 검증 에이전트 미니 프로젝트 만들기</li><li>이력서에 &#39;프로세스→에이전트 전환&#39; 경험 강조</li></ul><div class="skills"><span class="skill">KYC/AML</span><span class="skill">Agentic AI</span><span class="skill">Process automation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.inderes.se/releases/dnb-dnb-is-making-organisational-changes-in-technology-and-services" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.fintechfutures.com/job-cuts-new-hires/norway-s-dnb-to-cut-400-jobs-in-ai-driven-restructuring" target="_blank" rel="noopener">FinTech Futures 보도 ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔍 Caseware</span>
+        <span>GlobeNewswire · 10/6</span>
+<span class="tag">#감사</span><span class="tag">#위험평가</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://www.financialcontent.com/article/gnwcq-2026-10-6-caseware-verity-powered-risk-suggestion-agent-launches-to-help-auditors-identify-engagement-specific-risks" target="_blank" rel="noopener">Caseware, 감사 위험평가 초안 짜는 AI 에이전트 출시</a></h3>
+<p class="orig">Caseware Verity-Powered Risk Suggestion Agent Launches to Help Auditors Identify Engagement-Specific Risks</p>      <p class="summary">감사 소프트웨어 기업 Caseware가 당기·전기 재무정보, 기존 위험·통제, 선택 문서를 읽고 감사 업무별 위험을 제안하는 &#39;Risk Suggestion Agent&#39;를 전 세계에 출시함. 모든 제안은 초안이며 감사인이 직접 승인·수정해야 하고, 공시 체크리스트 에이전트도 미국 밖(영국)에 처음 출시됨.</p>
+      <ul class="points"><li>기존 Caseware Verity 라이선스에 추가 비용 없이 포함</li><li>공시 체크리스트 작성 시간 약 18분 → 2-3분 (자체 테스트)</li><li>전 세계 2만3천+ 회계법인, 130+개국 고객 보유</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감사 기준상 핵심 판단 영역인 위험평가(risk assessment)까지 AI가 초안을 쓰기 시작함. 다만 &#39;판단은 감사인 몫&#39;이라는 설계를 명시해 규제 대응형 AI의 전형을 보여줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>시산표·이사회 의사록으로 위험을 뽑는 흐름은 감사 실무 경험이 곧 경쟁력인 영역임.</span></p>
+<ul><li>공개 재무제표로 위험 제안 LLM 프롬프트 실습</li><li>근거 인용(citation) 포함 출력 형식 설계</li></ul><div class="skills"><span class="skill">Audit risk assessment</span><span class="skill">LLM grounding</span><span class="skill">Disclosure checklist</span></div>      </div>
+      <div class="links">
+        <a href="https://www.financialcontent.com/article/gnwcq-2026-10-6-caseware-verity-powered-risk-suggestion-agent-launches-to-help-auditors-identify-engagement-specific-risks" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.caseware.com/au/resources/blog/cwx-2026-how-agentic-ai-is-transforming-audit-and-assurance" target="_blank" rel="noopener">CwX 2026 Caseware 블로그 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛡️ 금융보안원</span>
+        <span>파이낸셜뉴스 · 10/7</span>
+<span class="tag">#한국</span><span class="tag">#금융보안</span><span class="tag">#레드티밍</span>      </div>
+      <h3><a href="https://www.fnnews.com/news/202610071821048238" target="_blank" rel="noopener">금융보안원, AI 에이전트 보안 평가기준 17개 마련</a></h3>
+<p class="orig">금보원, AI 에이전트 &#39;실행단계&#39;까지 점검…보안 평가기준 확대</p>      <p class="summary">금융보안원이 국내외 AI 에이전트 위협을 분석해 17개 점검 항목을 담은 &#39;금융분야 AI 에이전트 보안 평가기준(안)&#39;을 마련하고 AI 레드티밍 기준에 반영함. 점검 범위가 탈옥·프롬프트 유출 같은 모델 계층에서 에이전트가 실제로 작업을 실행하는 단계까지 넓어짐.</p>
+      <ul class="points"><li>핵심: 실행 권한·격리, 도구 실행 승인, 자율 실행 제한·중단</li><li>연말까지 시범 검증, &#39;2026 AI 레드팀 리포트&#39;로 최종 공개</li><li>은행 모의해킹 78건 중 AI 에이전트 활용은 9건(11.5%)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 한국 금융권이 에이전트를 &#39;답변하는 AI&#39;가 아닌 &#39;권한을 가진 실행 주체&#39;로 보고 통제하기 시작함. 국내 금융사 AI 도입 시 사실상의 체크리스트가 될 가능성이 큼.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>17개 항목은 IT 일반통제(ITGC)의 접근권한·변경관리 논리를 에이전트에 옮긴 것임.</span></p>
+<ul><li>ITGC 항목과 에이전트 점검 항목 대응표 만들기</li><li>한국 금융권 AI 거버넌스 직무 공고 살펴보기</li></ul><div class="skills"><span class="skill">AI red teaming</span><span class="skill">ITGC</span><span class="skill">Agent security</span></div>      </div>
+      <div class="links">
+        <a href="https://www.fnnews.com/news/202610071821048238" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://biz.sbs.co.kr/amp/article/20000338699" target="_blank" rel="noopener">SBS Biz 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Australian AI Safety Institute / CSIRO</span>
+        <span>Department of Industry, Science and Resources · 10/8</span>
+<span class="tag">#호주</span><span class="tag">#AI안전</span><span class="tag">#금융자문</span>      </div>
+      <h3><a href="https://www.industry.gov.au/news/new-report-explores-safe-oversight-advanced-ai-systems" target="_blank" rel="noopener">호주 AI안전연구소 &#34;정답만으론 신뢰 못 해&#34; 보고서</a></h3>
+<p class="orig">New report explores safe oversight of advanced AI systems (Epistemic safety in scalable oversight)</p>      <p class="summary">호주 AI 안전연구소(AISI)가 의뢰하고 CSIRO가 작성한 보고서 &#39;Epistemic safety in scalable oversight&#39;가 공개됨. 고성능 AI는 과제를 정확히 수행하면서도 감독하는 사람·시스템의 믿음에 영향을 줄 수 있어, 정확도만 보는 기존 안전 점검으로는 이를 잡아내지 못한다고 지적함.</p>
+      <ul class="points"><li>AI 감독을 &#39;검증+소통&#39; 문제로 보고 새 측정 기법 제시</li><li>금융 시나리오: 주택담보대출, 재무·연금(super) 자문</li><li>교육·온라인 여행 예약 시나리오도 함께 분석</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 정부가 국가 AI 표준을 준비하는 상황에서 &#39;정답률&#39; 외에 설득·영향력까지 평가해야 한다는 근거가 생김. 대출 심사·연금 자문 AI를 쓰는 호주 금융사의 검증 범위가 넓어질 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;정답이어도 사람 판단을 왜곡할 수 있다&#39;는 관점은 AI 보조 감사·자문의 새 평가 축임.</span></p>
+<ul><li>CSIRO 보고서 PDF의 금융 시나리오 읽기</li><li>LLM 답변의 설득 표현 평가 기준 만들어 보기</li></ul><div class="skills"><span class="skill">AI evaluation</span><span class="skill">Scalable oversight</span><span class="skill">Responsible AI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.industry.gov.au/news/new-report-explores-safe-oversight-advanced-ai-systems" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.csiro.au/en/research/technology-space/ai/scalable-ai-oversight" target="_blank" rel="noopener">CSIRO 연구 페이지 ↗</a><a href="https://www.innovationaus.com/checks-miss-ai-manipulation-safety-institute-says/" target="_blank" rel="noopener">InnovationAus 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>이번 주 흐름은 &#39;AI가 일을 한다&#39;에서 &#39;AI가 한 일을 어떻게 통제·검증하나&#39;로 무게가 옮겨간 것임. 나델라의 비상 브레이크, 금융보안원의 실행 단계 점검, 호주 AISI의 영향력 평가, Caseware의 &#39;판단은 감사인 몫&#39; 설계는 모두 내부통제·감사 추적이라는 회계의 오래된 논리를 AI에 적용한 것임. DNB 사례처럼 반복 운영 업무는 줄지만, 에이전트의 권한·로그·승인 흐름을 설계하고 감사할 수 있는 사람의 가치는 오히려 커짐. 재무 실무 경험과 AI 기술을 함께 가진 독자에게는 &#39;AI 통제 설계자&#39;라는 포지셔닝이 가장 현실적인 차별점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>공개 재무제표로 감사 위험 제안 프롬프트 만들기</li><li>EmbeddingGemma 2로 로컬 RAG 데모 돌려 보기</li><li>ITGC 항목을 에이전트 통제 항목에 대응해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">레드티밍 (Red teaming)</span> — 공격자 입장에서 AI·시스템의 약점을 일부러 찾는 점검임. 금융보안원은 이번에 점검 범위를 모델 답변에서 에이전트가 실제로 실행하는 권한과 행동까지 넓힘.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/13</span><span>JPMorgan·Goldman Sachs·Wells Fargo·Citi 3분기 실적 발표 (AI 비용 절감 수치 주목)</span></li><li><span class="d">10/18</span><span>Money20/20 USA 개막 (라스베이거스, 10월 18-21일), 은행용 AI 에이전트 발표 예상</span></li></ul></section><div class="hashtags">#AI에이전트 #AI거버넌스 #감사AI #금융보안 #호주AI #FinAI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-12 · 검색 1시간 58분 · 탐색 9회 · 검색어 34개 · 출처 32곳 → 후보 10건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
