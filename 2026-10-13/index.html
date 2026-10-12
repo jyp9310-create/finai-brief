@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-13</title>
+<meta name="description" content="AI가 재무제표 초안 쓰고, 은행은 AI 효익을 금액으로 관리">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 13일 (화)">
+<meta property="og:description" content="AI가 재무제표 초안 쓰고, 은행은 AI 효익을 금액으로 관리">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-13/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-13/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 13일 (화)</div>
+    <h1>AI가 재무제표 초안 쓰고, 은행은 AI 효익을 금액으로 관리</h1>
+    <p class="overview">AI 쪽에서는 Meta가 첫 프런티어 모델 Muse Wonder를 내놨고, Anthropic은 오픈소스 무료 취약점 스캔을 시작함. 재무 쪽에서는 시산표로 재무제표 초안을 쓰는 에이전트, AI 시대의 경비 부정 경고, 회계 커리어 설문, CBA의 AI 효익 목표가 나옴. 공통점은 AI가 &#39;작성&#39;을 맡고 사람은 &#39;검토·통제&#39;를 맡는 구조로 바뀌고 있다는 것임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 2분 · 탐색 17회 · 검색어 89개 · 출처 75곳 → 후보 26건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. Inscope, 시산표로 재무제표 초안 자동 작성</div>
+<div class="r">시산표→재무제표 작성은 독자가 실무에서 해 본 일이라, AI 전공 지식으로 그대로 재현해 포트폴리오로 만들기 가장 좋은 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧠 Meta, 첫 프런티어 모델 Muse Wonder 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🛡️ Anthropic, 오픈소스 무료 취약점 스캔 시작</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🔁 Sakana·버클리, 스스로 학습하는 AI &#39;MASS&#39;</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📑 Inscope, 시산표로 재무제표 초안 자동 작성</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 AI 위조 시대, &#39;소액 경비 부정&#39; 경고</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🎓 호주 Z세대 94% &#34;AI로 회계 커리어 더 매력적&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 CBA, AI 효익 $4억 목표…Atlassian으로 관리</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧠 Meta (Meta Superintelligence Labs)</span>
+        <span>Meta AI Research Blog · 10/12</span>
+<span class="tag">#Meta</span><span class="tag">#프런티어 모델</span><span class="tag">#LLM API</span>      </div>
+      <h3><a href="https://research.meta.ai/blog/muse-wonder" target="_blank" rel="noopener">Meta, 첫 프런티어 모델 Muse Wonder 공개</a></h3>
+<p class="orig">Introducing Muse Wonder</p>      <p class="summary">Meta가 첫 프런티어급 모델 Muse Wonder와 상위 버전 Muse Wonder Full을 공개함. 경량 Muse Spark보다 크고 코딩·복잡한 작업에 강하며, 대화가 바뀌어도 맥락을 기억하는 &#39;액티브 메모리(Active Memory)&#39;를 내세움.</p>
+      <ul class="points"><li>Muse Wonder: Meta Model API·Muse Code로 바로 이용 가능</li><li>Wonder Full: Muse Code 구독자 전용, API로는 미제공</li><li>가격 입력 $4·출력 $20 / 100만 토큰 (TechCrunch 보도)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Meta가 Anthropic·OpenAI·Google과 같은 가격대(Opus 5.5·GPT-6 Sol급)로 프런티어 시장에 본격 들어옴. 다만 성능 비교는 Meta 자체 테스트 결과라 외부 검증이 필요함.</p>      <div class="links">
+        <a href="https://research.meta.ai/blog/muse-wonder" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/" target="_blank" rel="noopener">TechCrunch 보도 (가격·벤치마크) ↗</a><a href="https://research.meta.ai/static/muse-wonder-model-card" target="_blank" rel="noopener">Muse Wonder 모델 카드 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🛡️ Anthropic</span>
+        <span>Anthropic Research · 10/8</span>
+<span class="tag">#Anthropic</span><span class="tag">#AI 보안</span><span class="tag">#오픈소스</span>      </div>
+      <h3><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source" target="_blank" rel="noopener">Anthropic, 오픈소스 무료 취약점 스캔 시작</a></h3>
+<p class="orig">Launching an opt-in vulnerability-finding service for open-source software</p>      <p class="summary">Anthropic이 핵심 오픈소스 프로젝트에 자사 최상위 모델로 정기 보안 스캔을 무료 제공하는 옵트인(opt-in) 서비스 &#39;OSS Scanner&#39;를 출시함. 보고서마다 재현 코드(reproducer), 원인 설명, 가능하면 패치 후보까지 담김.</p>
+      <ul class="points"><li>6개월간 후보 취약점 29,000건+ 탐지, 약 6,000건 사람이 분류</li><li>치명·고위험 97건 중 85건(88%) 공개 기준 충족, 오탐 1건</li><li>wolfSSL 보고 74건 중 72건 유효, 5건은 CVE로 등록</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI의 취약점 탐지 능력(CyberGym 기준 20% 미만 → 85% 이상)이 급성장하면서, 방어 측도 같은 AI를 대규모로 쓰기 시작했다는 신호임.</p>      <div class="links">
+        <a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🔁 Sakana AI / UC Berkeley</span>
+        <span>Sakana AI · 10/8</span>
+<span class="tag">#연구</span><span class="tag">#자기개선</span><span class="tag">#멀티에이전트</span>      </div>
+      <h3><a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Sakana·버클리, 스스로 학습하는 AI &#39;MASS&#39;</a></h3>
+<p class="orig">Recursive Self-Improvement through Multi-Agent Self-Supervision</p>      <p class="summary">Sakana AI와 UC 버클리가 모델 하나가 실행자·워크플로 설계자·평가자를 모두 맡는 재귀적 자기개선(recursive self-improvement) 기법 MASS를 발표함. 가장 좋은 멀티에이전트 팀의 실행 기록으로 다시 LoRA 미세조정(fine-tuning)하는 방식임.</p>
+      <ul class="points"><li>기반 모델 Qwen3.6-27B, 기준 대비 승률 53.9% → 69.9%(2라운드)</li><li>출력 토큰당 점수 MLR-Bench 1.60배, DSBench 1.35배</li><li>Terminal-Bench 2.0(0.96배)·SWE-bench Verified(0.94배)는 개선 없음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 사람이 라벨링하지 않아도 모델이 스스로 학습 데이터를 만들고 평가하는 흐름임. 다만 일부 벤치마크에서는 성능이 오르지 않아 효과가 고르지 않음.</p>      <div class="links">
+        <a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://arxiv.org/abs/2610.12176" target="_blank" rel="noopener">arXiv 논문 2610.12176 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📑 Inscope</span>
+        <span>Inscope Blog · 10/6</span>
+<span class="tag">#재무보고</span><span class="tag">#AI 에이전트</span><span class="tag">#감사</span>      </div>
+      <h3><a href="https://www.inscope.co/post/introducing-the-agentic-first-draft-from-trial-balance-to-financial-statement" target="_blank" rel="noopener">Inscope, 시산표로 재무제표 초안 자동 작성</a></h3>
+<p class="orig">Introducing the Agentic First Draft: From Trial Balance to Financial Statement</p>      <p class="summary">재무보고 스타트업 Inscope가 시산표(Trial Balance, TB)와 전기 재무제표만 넣으면 당기 재무제표와 주석(footnotes) 초안을 만드는 &#39;Agentic First Draft&#39;를 출시함. 계정 매핑부터 엑셀 스케줄 작성까지 AI가 하고, 사람은 검토와 최종 책임을 맡는 구조임.</p>
+      <ul class="points"><li>입력: 시산표(TB)+전기 재무제표 → 당기 재무제표·주석 초안</li><li>AI 에이전트 Penny가 계정 매핑, 불확실 항목은 플래그 처리</li><li>엑셀 표준 수식·출처 링크 유지, 리뷰어 검토 단계는 필수</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계법인의 재무제표 작성(compilation)·감사 준비 업무가 &#39;직접 작성&#39;에서 &#39;AI 초안 검토&#39; 중심으로 바뀌고 있음. 결과를 추적할 수 있게(traceability) 만들고 사람 검토를 필수로 둔 설계는 감사 품질 규정을 고려한 것임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>결산·재무제표 작성 실무 경험을 그대로 &#39;계정 매핑 에이전트&#39; 포트폴리오로 만들 수 있음</span></p>
+<ul><li>샘플 시산표로 LLM 계정 매핑(COA mapping) 실습</li><li>신뢰도 낮은 매핑에 플래그·사유 다는 로직 구현</li><li>결과를 openpyxl로 수식 있는 엑셀로 출력</li></ul><div class="skills"><span class="skill">LLM Structured Output</span><span class="skill">COA Mapping</span><span class="skill">Human-in-the-loop</span><span class="skill">Python/openpyxl</span></div>      </div>
+      <div class="links">
+        <a href="https://www.inscope.co/post/introducing-the-agentic-first-draft-from-trial-balance-to-financial-statement" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/list/tech-news-inscope-launches-agentic-first-draft" target="_blank" rel="noopener">Accounting Today 보도 ↗</a><a href="https://techcrunch.com/2026/02/20/inscope-nabs-14-5m-to-solve-the-pain-of-financial-reporting/" target="_blank" rel="noopener">TechCrunch: Inscope $14.5M 시리즈A ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 Medius</span>
+        <span>CFO Dive · 10/9</span>
+<span class="tag">#경비 통제</span><span class="tag">#AI 사기</span><span class="tag">#설문</span>      </div>
+      <h3><a href="https://www.cfodive.com/news/cfo-warns-ignoring-shallowfakes-expense-reports/832659/" target="_blank" rel="noopener">AI 위조 시대, &#39;소액 경비 부정&#39; 경고</a></h3>
+<p class="orig">CFO warns against ignoring &#39;shallowfakes&#39; in expense reports</p>      <p class="summary">AP·경비 자동화 기업 Medius의 CFO 크리스 윌못이 작은 경비 부정(&#39;shallowfakes&#39;)도 그냥 넘기면 안 된다고 경고함. 자사 2026 Financial Census에서 재무 전문가 87%가 의심 청구를 넘긴 적이 있고, 93%가 AI 생성 사기(AI-generated fraud)를 우려한다고 답함.</p>
+      <ul class="points"><li>재무 전문가 2,000명+ 중 87%, 의심 청구 묵인 경험</li><li>93%, 향후 12개월 AI 생성 사기 우려 · 74% 소액 부정 흔함</li><li>미국 기업 송장 사기(invoice fraud) 연평균 손실 약 $168,000</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 생성형 AI로 그럴듯한 영수증·송장을 쉽게 만들 수 있게 되면서, 경비·매입채무(AP) 통제는 기술(이상 탐지)과 &#39;묵인하지 않는 문화&#39;가 함께 필요해짐.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>경비·AP 내부통제 경험에 이상 탐지(anomaly detection) ML을 얹으면 바로 보여 줄 수 있는 프로젝트가 됨</span></p>
+<ul><li>가상 경비 데이터로 Isolation Forest 이상 탐지</li><li>영수증 OCR에 중복·금액 규칙 결합해 보기</li><li>탐지 규칙을 내부통제(ICFR) 관점으로 문서화</li></ul><div class="skills"><span class="skill">Anomaly Detection</span><span class="skill">OCR</span><span class="skill">Internal Controls</span><span class="skill">Expense Audit</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cfodive.com/news/cfo-warns-ignoring-shallowfakes-expense-reports/832659/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.medius.com/media/xpcb5be1/medius-financial-census-2026.pdf" target="_blank" rel="noopener">Medius Financial Census 2026 (PDF) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🎓 Intuit</span>
+        <span>IT Brief Australia · 10/8</span>
+<span class="tag">#회계 커리어</span><span class="tag">#설문</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://itbrief.com.au/story/ai-makes-accounting-careers-more-attractive-to-gen-z" target="_blank" rel="noopener">호주 Z세대 94% &#34;AI로 회계 커리어 더 매력적&#34;</a></h3>
+<p class="orig">AI makes accounting careers more attractive to Gen Z</p>      <p class="summary">Intuit가 호주·영국의 18~24세 회계 지망생·주니어 2,000명+를 조사함(호주 1,000명). 호주 응답자의 94%가 AI 덕분에 회계·재무 커리어가 더 매력적이라고 했고, 83%는 AI가 모든 회계 직무의 필수 역량이 될 것이라고 봄.</p>
+      <ul class="points"><li>호주 18~24세 1,000명 중 94% &#34;AI로 회계 커리어 매력 상승&#34;</li><li>83% &#34;AI는 회계사 필수 역량&#34;, 53% 직장 선택에 큰 영향</li><li>우려: 데이터 보안 94%·정확성 77%·과의존 75%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> CA ANZ가 2035년까지 회계·감사·재무 인력 17,900명 부족을 예상하는 가운데, 기업의 AI 활용 수준이 채용 경쟁력이 되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>회계 실무 경험과 AI 전공을 함께 가진 사람은 호주 인력난 속에서 드문 프로필이므로 이를 전면에 내세워야 함</span></p>
+<ul><li>LinkedIn 헤드라인에 &#39;Finance + AI&#39; 명시</li><li>CPA Australia·CA ANZ 학생 행사 참석</li><li>AI 정확성·보안 검증 사례를 포트폴리오에 넣기</li></ul><div class="skills"><span class="skill">AI Literacy</span><span class="skill">Data Governance</span><span class="skill">CPA/CA ANZ</span></div>      </div>
+      <div class="links">
+        <a href="https://itbrief.com.au/story/ai-makes-accounting-careers-more-attractive-to-gen-z" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://securitybrief.com.au/story/ai-makes-accounting-careers-more-attractive-to-gen-z" target="_blank" rel="noopener">SecurityBrief Australia 동일 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 Commonwealth Bank of Australia / Atlassian</span>
+        <span>iTnews · 10/12</span>
+<span class="tag">#CBA</span><span class="tag">#AI ROI</span><span class="tag">#호주 은행</span>      </div>
+      <h3><a href="https://www.itnews.com.au/news/cba-uses-atlassian-tool-to-stay-focused-on-400m-ai-goal-629566" target="_blank" rel="noopener">CBA, AI 효익 $4억 목표…Atlassian으로 관리</a></h3>
+<p class="orig">CBA uses Atlassian tool to stay focused on $400m AI goal</p>      <p class="summary">CBA가 &#39;AI 뱅킹 세계 선도&#39;라는 목표를 팀 일상 업무와 연결하려고 Atlassian의 전략 포트폴리오 관리(SPM) 도구 Strategy Collection을 가동함. 지난 회계연도에 AI 효익 약 $2억을 거뒀고, 이번 회계연도 목표는 $4억임.</p>
+      <ul class="points"><li>지난 FY AI 효익 약 $2억 → 이번 FY 목표 $4억</li><li>첫 PoC는 12주 계획 중 8주 만에 중단, 3월 재착수</li><li>재착수 6주 만에 목표 9,000개+ 이전, 상위 20% 직원 교육</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 최대 은행이 AI 성과를 &#39;금액 목표&#39;로 정하고, 전사 목표와 팀 업무를 연결하는 체계로 추적하고 있음. AI 도입의 관심이 기술 시연에서 가치 측정(value realisation)으로 옮겨 가고 있다는 뜻임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 효익(benefit)을 측정·추적하는 일은 FP&amp;A·성과관리 경험이 바로 통하는 영역이라 호주 은행 취업의 연결고리가 됨</span></p>
+<ul><li>AI 효익 KPI(비용 절감·사기 손실 감소) 표 만들기</li><li>CBA 채용에서 &#39;AI value&#39;·&#39;benefits&#39; 직무 검색</li><li>SPM 개념(전략-업무 연결) 정리해 두기</li></ul><div class="skills"><span class="skill">AI ROI Measurement</span><span class="skill">FP&amp;A</span><span class="skill">Strategic Portfolio Management</span><span class="skill">Change Management</span></div>      </div>
+      <div class="links">
+        <a href="https://www.itnews.com.au/news/cba-uses-atlassian-tool-to-stay-focused-on-400m-ai-goal-629566" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽 소식은 Meta의 프런티어 모델 진입, Anthropic의 AI 취약점 탐지, 그리고 스스로 평가하며 학습하는 MASS였음. 공통 주제는 &#39;AI가 만들고, 검증 체계가 품질을 보장한다&#39;는 것임. 재무 쪽도 같음. Inscope는 AI 초안에 리뷰어 검토를 필수로 두고, Medius는 AI 위조에 맞서 통제를 강조하며, CBA는 AI 성과를 금액으로 추적함. 회계 실무를 해 본 AI 전공자의 강점은 모델을 잘 만드는 것만이 아니라, 결과를 검토할 수 있게 만드는 통제·추적 설계까지 할 수 있다는 점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Inscope 블로그 읽고 TB→재무제표 흐름 정리하기</li><li>샘플 시산표로 LLM 계정 매핑 실습하기</li><li>가상 경비 데이터로 이상 탐지 노트북 만들기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">시산표 (Trial Balance, TB)</span> — 모든 계정 잔액을 한 표에 모은 결산 기초 자료임. 차변·대변 합계가 맞는지 확인한 뒤, 이를 계정 매핑해 재무제표를 작성함.</p></section><div class="hashtags">#FinAI #AgenticAI #재무제표자동화 #CommBank #MetaAI #회계커리어 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-13 · 검색 1시간 2분 · 탐색 17회 · 검색어 89개 · 출처 75곳 → 후보 26건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
