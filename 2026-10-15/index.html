@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-15</title>
+<meta name="description" content="AI가 장부 안으로: Xero·Workday 회계 에이전트 본격화">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 15일 (목)">
+<meta property="og:description" content="AI가 장부 안으로: Xero·Workday 회계 에이전트 본격화">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-15/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-15/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 15일 (목)</div>
+    <h1>AI가 장부 안으로: Xero·Workday 회계 에이전트 본격화</h1>
+    <p class="overview">구글은 Gemini 4 Argon을 API와 앱으로 넓혔음. OpenAI는 GPT-6.1 Sol의 기본 컨텍스트를 늘렸고, Anthropic은 싱가포르에 사무소를 열며 아태 공략에 나섬. 재무 쪽에선 Xero·Workday가 회계 데이터를 직접 다루는 에이전트를 내놓았고 AICPA는 AI 감사 지침을 발간해 &#39;사람 승인·감독&#39;이 공통 키워드가 됨.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 48분 · 탐색 16회 · 검색어 99개 · 출처 84곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. Xero, Gemini 채팅에 실시간 회계 데이터 연결</div>
+<div class="r">호주 중소기업 회계의 표준 도구인 Xero가 AI 비서와 연결된 사례로, 독자의 회계 실무 경험을 AI 포트폴리오로 바로 연결할 수 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧠 구글 Gemini 4 Argon, 개발자 API·앱에 정식 개방</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">📏 OpenAI, GPT-6.1 Sol 기본 컨텍스트 500k로 확대</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🇸🇬 Anthropic, 싱가포르 사무소 개설·정부와 MOU</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📊 Xero, Gemini 채팅에 실시간 회계 데이터 연결</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🤖 Workday, 분개까지 하는 회계 &#39;오토파일럿&#39; 공개</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🔍 AICPA, 감사인용 AI 실무지침 51쪽 발간</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🕵️ 호주 Apate, AI 미끼로 사기범 정보 수집</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧠 Google</span>
+        <span>Google Blog · 10/13</span>
+<span class="tag">#Google</span><span class="tag">#Gemini</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/" target="_blank" rel="noopener">구글 Gemini 4 Argon, 개발자 API·앱에 정식 개방</a></h3>
+<p class="orig">Gemini 4 Argon is now available for developers / in the Gemini app</p>      <p class="summary">10/2 발표된 구글 최상위 모델 Gemini 4 Argon이 10/13부터 Gemini API 유료 티어(AI Studio·Android Studio)와 Gemini 앱(AI Pro·Ultra 구독자)에서 쓸 수 있게 됨. 앱에는 사용자가 자리를 비워도 작업을 이어가는 &#39;tasks&#39; 모드와 macOS 앱용 Antigravity 코딩 화면, 40개 이상의 앱 연결이 함께 추가됨.</p>
+      <ul class="points"><li>Gemini API 유료 티어·AI Studio·Android Studio에서 바로 사용 가능</li><li>AI Pro·Ultra 구독자는 Gemini 앱에서 Argon과 tasks 모드 이용</li><li>Instacart·Shopify 등 40개+ 앱 연결, macOS 앱에 Antigravity 탑재</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 발표 약 2주 만에 API와 소비자 앱으로 확대되면서 장기 작업(long-horizon) 에이전트 경쟁이 본격화됨. AI 사용 방식이 &#39;대화&#39;에서 &#39;맡겨 두는 백그라운드 작업&#39;으로 옮겨 가는 중임.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/" target="_blank" rel="noopener">Gemini 앱 Argon 공개 (Google) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">📏 OpenAI</span>
+        <span>X (Tibo Sottiaux, OpenAI) · 10/11</span>
+<span class="tag">#OpenAI</span><span class="tag">#Codex</span><span class="tag">#컨텍스트</span>      </div>
+      <h3><a href="https://x.com/thsottiaux/status/2109430343346581527" target="_blank" rel="noopener">OpenAI, GPT-6.1 Sol 기본 컨텍스트 500k로 확대</a></h3>
+<p class="orig">GPT-6.1 Sol default context raised to 500k tokens in Codex and ChatGPT Work</p>      <p class="summary">OpenAI 제품 책임자 Tibo Sottiaux가 Codex·ChatGPT Work에서 쓰는 GPT-6.1 Sol의 기본 컨텍스트 창(context window)을 272k에서 500k 토큰으로 늘렸다고 밝힘. 긴 작업 중 대화를 압축(compaction)하다 세부 정보가 빠지는 문제를 줄이려는 조치이며, 최대 1M 토큰까지 설정할 수 있음.</p>
+      <ul class="points"><li>기본 컨텍스트 272k → 500k 토큰, 약 80% 증가</li><li>최대 1M 토큰 지원, 필요에 따라 높이거나 낮출 수 있음</li><li>28일간 이어지는 Codex 성능 개선 캠페인의 7일차 업데이트임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트가 몇 시간짜리 작업을 할 때 압축 과정에서 맥락을 잃는 것이 큰 약점이었음. 기본값을 늘린 것은 장기 작업의 신뢰성을 두고 벌어지는 경쟁의 일부임.</p>      <div class="links">
+        <a href="https://x.com/thsottiaux/status/2109430343346581527" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216196" target="_blank" rel="noopener">AI타임스 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🇸🇬 Anthropic</span>
+        <span>Anthropic · 10/14</span>
+<span class="tag">#Anthropic</span><span class="tag">#APAC</span><span class="tag">#AI 안전</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/singapore-office-opening" target="_blank" rel="noopener">Anthropic, 싱가포르 사무소 개설·정부와 MOU</a></h3>
+<p class="orig">Anthropic opens Singapore office and signs MOU with the Government of Singapore</p>      <p class="summary">Anthropic이 아태 지역 다섯 번째 사무소를 싱가포르에 열고, 디지털개발정보부(MDDI)와 AI 안전·모델 평가·도입 연구 협력 MOU를 맺음. 금융 등 규제 산업이 Amazon Bedrock에서 Claude를 역내 추론(in-region inference)으로 쓸 수 있게 됐다는 내용도 함께 발표됨.</p>
+      <ul class="points"><li>아태 5번째 사무소, MOU는 Ben Mann·MDDI 상임비서관이 서명</li><li>GovTech 엔지니어 1,500명+ Claude Code 사용, DBS·GIC도 고객</li><li>Grab BriX 분기 4만 시간 절감, 인구 대비 사용량 121개국 중 2위</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 데이터를 지역 안에서 처리해야 하는 아태 금융사가 Claude를 도입하기 쉬워짐. 정부와의 모델 평가 협력은 각국 AI 안전 기관과 관계를 쌓으려는 경쟁의 연장선임.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/singapore-office-opening" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.com.au/story/anthropic-opens-singapore-office-in-asia-pacific-push" target="_blank" rel="noopener">IT Brief Australia 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📊 Xero</span>
+        <span>Xero Media Releases · 10/14</span>
+<span class="tag">#Xero</span><span class="tag">#Gemini</span><span class="tag">#중소기업 회계</span>      </div>
+      <h3><a href="https://www.xero.com/us/media-releases/xero-brings-real-time-financial-intelligence-to-google-gemini/" target="_blank" rel="noopener">Xero, Gemini 채팅에 실시간 회계 데이터 연결</a></h3>
+<p class="orig">Xero brings real-time financial intelligence to Google Gemini</p>      <p class="summary">Xero가 Google Gemini용 커넥티드 앱을 출시함. Gemini 채팅에서 손익계산서(P&amp;L), 재무상태표, 현금 포지션, 연체 매출채권(AR), 매입채무(AP)를 바로 조회하고 차트로 볼 수 있음. 청구서 발행·독촉 같은 데이터 변경은 사용자가 명시적으로 승인해야 하며, 정기 작업을 예약하는 Gemini Tasks 연동은 곧 추가될 예정임.</p>
+      <ul class="points"><li>Xero 에이전트 플랫폼 JAX 기반, P&amp;L·현금·연체 AR·AP 조회</li><li>청구서 발행·독촉 등 쓰기 작업은 사용자 확인 후에만 실행</li><li>Gemini Tasks 연동 예정: 매일 현금 요약, 연체 청구서 후속 처리</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계 SW가 자체 앱 화면을 벗어나 범용 AI 비서 안으로 들어가는 흐름임. 중소기업 고객 500만, 회계사·북키퍼 25만 명이 쓰는 생태계에서 &#39;대화로 장부 조회하기&#39;가 기본 방식이 될 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 중소기업 회계의 표준인 Xero가 에이전트화됨. 회계 실무 경력과 AI 전공을 결합하기 가장 좋은 지점임</span></p>
+<ul><li>Xero 데모 회사에 Gemini 연결해 AR 조회해 보기</li><li>Xero API로 연체 AR 알림 에이전트 만들기</li><li>쓰기 작업 승인(HITL) 흐름을 설계해 포트폴리오화</li></ul><div class="skills"><span class="skill">Xero API</span><span class="skill">AR aging</span><span class="skill">Human-in-the-loop</span><span class="skill">Connected apps</span></div>      </div>
+      <div class="links">
+        <a href="https://www.xero.com/us/media-releases/xero-brings-real-time-financial-intelligence-to-google-gemini/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🤖 Workday</span>
+        <span>Workday Newsroom · 10/13</span>
+<span class="tag">#Workday</span><span class="tag">#수익인식</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://newsroom.workday.com/2026-10-13-Workday-Launches-Autopilot-Agents-That-Get-Real-Work-Done-Across-HR,-Finance,-and-IT" target="_blank" rel="noopener">Workday, 분개까지 하는 회계 &#39;오토파일럿&#39; 공개</a></h3>
+<p class="orig">Workday Launches Autopilot Agents That Get Real Work Done Across HR, Finance, and IT</p>      <p class="summary">Workday가 Workday Rising 2026에서 지시 없이 백그라운드로 일하는 &#39;오토파일럿&#39; 에이전트를 공개함. Accounting Agent는 신규 계약서에서 핵심 조건을 뽑아 분개를 준비하고 수익인식(revenue recognition)·청구 일정을 추천함. 또 거래를 상시 테스트해, 기말에 몰아서 하던 감사 대응을 상시 통제로 바꾸는 것을 목표로 함.</p>
+      <ul class="points"><li>계약 조건 추출 → 분개 준비 → 수익인식·청구 일정 추천</li><li>거래를 백그라운드에서 상시 테스트해 이상을 표시하고 감사팀 안내</li><li>회계·급여 오토파일럿은 2027년 초 얼리어답터에게 제공 예정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 &#39;물어봐야 답하는 copilot&#39;에서 &#39;알아서 하는 autopilot&#39;으로 옮겨 감. 자동 실행·검토·사람 결재 범위를 고객이 정하고 모든 행동을 로그로 남기는 구조로, ERP 벤더가 내부통제 설계를 제품 안에 넣기 시작했다는 뜻임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>수익인식(IFRS 15) 5단계를 아는 회계 경력자가 이런 에이전트의 결과물을 검증하는 데 가장 유리함</span></p>
+<ul><li>계약서→IFRS 15 분개 추출 미니 에이전트 만들기</li><li>자동/검토/결재 3단계 권한표를 직접 설계해 보기</li></ul><div class="skills"><span class="skill">IFRS 15 / ASC 606</span><span class="skill">Continuous auditing</span><span class="skill">Agent governance</span><span class="skill">Workday Financials</span></div>      </div>
+      <div class="links">
+        <a href="https://newsroom.workday.com/2026-10-13-Workday-Launches-Autopilot-Agents-That-Get-Real-Work-Done-Across-HR,-Finance,-and-IT" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://cfodive.com/news/workday-brings-autopilots-finance-autonomous-ai-bet/832820" target="_blank" rel="noopener">CFO Dive 보도 ↗</a><a href="https://newsroom.workday.com/2026-10-13-Workdays-Trusted-Agent-Platform-Now-Delivers-Headless-Access-to-HR-and-Finance,-Letting-Customers-Build-and-Run-Lawful-AI-Agents" target="_blank" rel="noopener">Workday Trusted Agent Platform 발표 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🔍 AICPA</span>
+        <span>AICPA &amp; CIMA · 10/13</span>
+<span class="tag">#감사</span><span class="tag">#AICPA</span><span class="tag">#AI 거버넌스</span>      </div>
+      <h3><a href="https://www.aicpa-cima.com/news/article/aicpa-releases-guidance-to-help-auditors-address-the-use-of-ai-in-financial-reporting-and-auditing" target="_blank" rel="noopener">AICPA, 감사인용 AI 실무지침 51쪽 발간</a></h3>
+<p class="orig">AICPA releases guidance to help auditors address the use of AI in financial reporting and auditing</p>      <p class="summary">미국공인회계사회(AICPA)가 51쪽 분량의 실무지침(practice aid) &#39;AI Considerations for Financial Statement Auditors&#39;를 발간함. 1부는 피감사회사가 재무보고·내부통제에 AI를 쓰는 경우를, 2부는 감사인의 AI 도구 사용을 다루며 환각(hallucination)·설명가능성·편향 같은 새로운 위험과 그에 맞는 통제를 정리함.</p>
+      <ul class="points"><li>1부: 회사의 AI 사용 — 데이터 품질·환각·편향, 관련 통제</li><li>2부: 감사인의 AI 사용 — 품질관리, 팀 역량, 파트너 감독 책임</li><li>감사기준상 AI 사용 공시 의무 없음, 단 법·계약·펌 정책은 별도</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AICPA 최고감사책임자 Jennifer Burns는 &#39;감사와 감사 의견의 책임은 여전히 감사인에게 있다&#39;는 원칙을 재확인함. AI를 쓰는 기업을 감사할 때 위험을 어떻게 평가할지 구체화되기 시작했고, 위험평가·감사증거 평가 지침도 추가될 예정임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 통제 평가 역량은 Big 4 감사·리스크 자문 직무에서 바로 차별점이 됨</span></p>
+<ul><li>지침 1부 위험 목록으로 AI 통제 체크리스트 작성</li><li>호주 감사기준 ASA 315와 비교해 정리하기</li></ul><div class="skills"><span class="skill">Audit risk assessment</span><span class="skill">AI model risk</span><span class="skill">ICFR</span><span class="skill">ISA/ASA 315</span></div>      </div>
+      <div class="links">
+        <a href="https://www.aicpa-cima.com/news/article/aicpa-releases-guidance-to-help-auditors-address-the-use-of-ai-in-financial-reporting-and-auditing" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://cfodive.com/news/aicpa-issues-guidance-ai-assisted-auditing/832907" target="_blank" rel="noopener">CFO Dive 보도 ↗</a><a href="https://www.aicpa-cima.com/resources/article/explore-new-aicpa-guidance-on-artificial-intelligence-ai-and-the-financial-statement-audit" target="_blank" rel="noopener">AICPA 실무지침 자료 페이지 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🕵️ Apate.ai</span>
+        <span>TechCrunch · 10/14</span>
+<span class="tag">#사기 방지</span><span class="tag">#CBA</span><span class="tag">#호주 스타트업</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" target="_blank" rel="noopener">호주 Apate, AI 미끼로 사기범 정보 수집</a></h3>
+<p class="orig">Apate sends AI agents undercover to get scammed so they can gather fraud intelligence</p>      <p class="summary">맥쿼리대 연구에서 출발한 호주 스타트업 Apate.ai가 피해자로 위장한 수천 개의 AI 에이전트를 운영함. 에이전트는 전화·문자·이메일로 사기범과 대화를 이어가며 계좌, 암호화폐 지갑, 악성 사이트 정보를 빼냄. CBA·TPG Telecom 등이 고객이며 런던 사무소 개설과 미국 확장을 추진 중임.</p>
+      <ul class="points"><li>CBA, 공개 신고 기준 사기 피해액 76% 감소</li><li>누적 250만 건 대화로 사기범 시간 17년치를 소모시킴</li><li>TPG 약 59만 통 전환, 8월 $8.15M 시드 유치(누적 약 $10M)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 차단 위주였던 사기 대응이 AI로 위협 정보(threat intelligence)를 먼저 찾아 모으는 방식으로 진화함. 호주 대형 은행과 통신사가 구체적인 성과 수치를 공개했다는 점에서 보기 드문 사례임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>호주 은행의 사기 대응(fraud) 조직은 금융과 AI를 함께 아는 인재 수요가 큰 분야임</span></p>
+<ul><li>사기 메시지에서 계좌·지갑 추출 NER 실습하기</li><li>CBA·Apate 사례로 사기 탐지 포트폴리오 기획</li><li>Macquarie Kaafar 교수 연구 논문 찾아 읽기</li></ul><div class="skills"><span class="skill">Fraud analytics</span><span class="skill">Conversational AI</span><span class="skill">Threat intelligence</span><span class="skill">NER</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 모델 소식의 공통점은 &#39;오래, 백그라운드에서 일하는 에이전트&#39;임(Gemini tasks 모드, GPT-6.1 Sol 500k 컨텍스트). 재무 쪽에선 Xero와 Workday가 바로 이런 에이전트를 회계 데이터에 붙였고, 쓰기 작업은 사용자 확인과 자동/검토/결재 단계 설정으로 통제함. AICPA 지침도 &#39;감사 책임은 감사인에게 있다&#39;고 못박아, AI가 만든 분개와 리포트를 검증하고 통제를 설계할 사람이 필요하다는 신호를 줌. 회계 실무 경력에 AI 전공을 더한 독자에게는 &#39;에이전트 통제 설계·검증&#39; 역할이 가장 현실적인 진입점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Xero 데모 회사에 Gemini 연결해 AR 조회하기</li><li>AICPA 지침 1부로 AI 통제 체크리스트 만들기</li><li>IFRS 15 분개 추출 프롬프트 3개 테스트하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">오토파일럿 에이전트 (Autopilot agent)</span> — 사람이 묻지 않아도 백그라운드에서 알아서 일하는 AI임. 자동 실행·검토·사람 결재 범위를 미리 정해 두고 모든 행동을 로그로 남기는 방식으로 통제함.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/20</span><span>NVIDIA GTC Berlin 개막 (10/20~22)</span></li></ul></section><div class="hashtags">#AI에이전트 #Xero #Workday #AICPA #Gemini4 #핀테크 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-15 · 검색 1시간 48분 · 탐색 16회 · 검색어 99개 · 출처 84곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
