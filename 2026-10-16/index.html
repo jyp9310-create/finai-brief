@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-16</title>
+<meta name="description" content="AI 에이전트, 은행 대출·회계 SW로 확산…관건은 통제">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 16일 (금)">
+<meta property="og:description" content="AI 에이전트, 은행 대출·회계 SW로 확산…관건은 통제">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-16/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-16/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 16일 (금)</div>
+    <h1>AI 에이전트, 은행 대출·회계 SW로 확산…관건은 통제</h1>
+    <p class="overview">TD·JPMorgan·Intuit 사례를 보면 AI 에이전트가 대출 처리와 회계 소프트웨어 현장에 빠르게 들어오는 중임. 동시에 외부 에이전트 차단, 한국 금융권 AI 해킹 피해 확대, Anthropic의 외부 평가기관 상주 사례처럼 &#39;누가 어디까지 접근하고 누가 검증하나&#39;가 핵심 쟁점으로 떠오름.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 36분 · 탐색 17회 · 검색어 74개 · 출처 80곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. 인튜잇, 호주에 AI 플랫폼 &#39;Intuit Intelligence&#39; 출시</div>
+<div class="r">호주 회계 실무 현장에 바로 깔릴 AI 에이전트 도구라 재무회계 경력과 AI 전공을 함께 보여 줄 수 있는 가장 직접적인 소재임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🔍 앤트로픽, 외부 평가기관 METR에 &#39;직원급&#39; 접근 허용</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🦙 메타, 816B 오픈웨이트 &#39;Muse Spark Open&#39; 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🤖 구글, 로봇용 &#39;Gemini 4 Argon&#39; 개발자에 공개</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏠 TD은행, 모기지 업무에 에이전틱 AI 확대</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🚪 다이먼 &#34;검증 안 된 외부 AI 에이전트 차단&#34;</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛡️ &#39;AI 해킹&#39; 피해 금융사 16곳·약 10만 건으로 확대</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🧾 인튜잇, 호주에 AI 플랫폼 &#39;Intuit Intelligence&#39; 출시</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🔍 Anthropic</span>
+        <span>Anthropic · 10/15</span>
+<span class="tag">#AI안전</span><span class="tag">#외부감사</span><span class="tag">#Anthropic</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/an-update-on-independent-evaluators" target="_blank" rel="noopener">앤트로픽, 외부 평가기관 METR에 &#39;직원급&#39; 접근 허용</a></h3>
+<p class="orig">An update on independent evaluators</p>      <p class="summary">Anthropic이 비영리 평가기관 METR 연구자 6명에게 사내 장비, 사무실, 내부 도구 등 직원 수준의 접근 권한을 줌. METR은 Anthropic의 승인 없이 위험 평가를 공개할 수 있고, Anthropic은 고객 데이터처럼 미리 정한 범주에 대해서만 가림 처리(redaction)를 요구할 수 있음.</p>
+      <ul class="points"><li>METR 연구자 6명에게 노트북·사무실·내부 도구 제공</li><li>공개 거부권 포기, 고객 데이터·모델 구조 등만 가림 가능</li><li>평가자 3단계(Tier) 체계, 최상위 Tier 3는 METR뿐</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행에 감독관이 상주하는 방식(resident examiner)을 AI 연구소에 적용한 사례임. 앞으로 AI 감사·보증(assurance)의 기준점이 될 수 있음.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/an-update-on-independent-evaluators" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🦙 Meta</span>
+        <span>Meta AI Research · 10/15</span>
+<span class="tag">#오픈웨이트</span><span class="tag">#Meta</span><span class="tag">#LLM</span>      </div>
+      <h3><a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">메타, 816B 오픈웨이트 &#39;Muse Spark Open&#39; 공개</a></h3>
+<p class="orig">Introducing Muse Spark Open, The Most Capable US Open-Weight Model to Date</p>      <p class="summary">Meta가 전체 816B 파라미터 중 42B만 활성화되고 컨텍스트가 1M 토큰인 오픈웨이트 모델 Muse Spark Open을 공개하면서 &#39;미국 최고 성능의 오픈웨이트 모델&#39;이라고 주장함. API는 OpenRouter·Groq 등에서, 가중치는 Hugging Face 등에서 받을 수 있고, M5 Ultra Mac Studio 2대로 로컬 실행도 가능함.</p>
+      <ul class="points"><li>전체 816B·활성 42B 파라미터, 컨텍스트 1M 토큰</li><li>자체 Muse Model License, 상업 이용 조건은 제한적</li><li>Mac Studio(M5 Ultra) 2대, 약 1TB 메모리로 로컬 구동</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 데이터를 외부로 보내기 어려운 금융 같은 규제 산업에서 고성능 모델을 직접 호스팅(self-hosting)할 선택지가 늘어남. 다만 본문에 벤치마크 수치가 없어 별도 평가 보고서를 확인해야 함.</p>      <div class="links">
+        <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🤖 Google</span>
+        <span>Google Developers Blog · 10/13</span>
+<span class="tag">#로보틱스</span><span class="tag">#Gemini</span><span class="tag">#체화추론</span>      </div>
+      <h3><a href="https://developers.googleblog.com/en/gemini-4-argon-for-robotics/" target="_blank" rel="noopener">구글, 로봇용 &#39;Gemini 4 Argon&#39; 개발자에 공개</a></h3>
+<p class="orig">Gemini 4 Argon for Robotics</p>      <p class="summary">Google이 물리 세계를 추론하는(embodied reasoning) Gemini 4 Argon for Robotics를 발표하고 ERQA 벤치마크 87%로 다른 프론티어 모델을 앞섰다고 밝힘. 시뮬레이션으로 만든 데이터로 실제 로봇 성공률을 56%에서 75%로 끌어올렸고, Gemini API 유료 티어·AI Studio·Antigravity로 제공함.</p>
+      <ul class="points"><li>ERQA(체화 추론) 87%, 순수 추론만으로 달성</li><li>시뮬레이션 4,500+ 에피소드로 성공률 56%→75%</li><li>모델 ID gemini-4-argon, API 유료 티어로 제공</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프론티어 모델 경쟁이 텍스트·코드를 넘어 로봇과 물리 세계로 넓어지고 있음을 보여줌.</p>      <div class="links">
+        <a href="https://developers.googleblog.com/en/gemini-4-argon-for-robotics/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏠 TD Bank Group</span>
+        <span>TD Stories · 10/13</span>
+<span class="tag">#에이전틱AI</span><span class="tag">#모기지</span><span class="tag">#은행</span>      </div>
+      <h3><a href="https://stories.td.com/ca/en/news/2026-10-13-td-expands-agentic-ai-across-mortgage-operations-to-make-ban" target="_blank" rel="noopener">TD은행, 모기지 업무에 에이전틱 AI 확대</a></h3>
+<p class="orig">TD expands agentic AI across mortgage operations to make banking faster, simpler and more human</p>      <p class="summary">TD가 주택담보대출(Real Estate Secured Lending) 부문에 대출 실행(funding)과 담보 해지(discharge)를 처리하는 에이전틱 AI 2종을 추가함. 고객·부동산 정보를 사례 요약(case summary)으로 묶어 초기 검토 시간을 최대 절반으로 줄였고, 모든 산출물은 직원이 검토함.</p>
+      <ul class="points"><li>대출 실행 초기 검토 시간 최대 50% 단축</li><li>해지 명세서 자동 준비, 발행 전 직원 검토</li><li>5월 사전심사 에이전트는 15시간→3분 미만</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 대형 은행이 에이전트를 사전심사부터 실행·해지까지 대출 전 과정으로 넓히고 있음. 판단은 사람이 맡는 human-in-the-loop 설계가 표준으로 굳어지는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>서류 대조와 불일치 표시(flag)는 회계 증빙 검토와 구조가 같아 그대로 포트폴리오 프로젝트로 옮길 수 있음.</span></p>
+<ul><li>대출서류 PDF→사례 요약 에이전트 데모 만들기</li><li>불일치 탐지 정확도·검토 시간을 KPI로 측정하기</li><li>CBA·NAB 모기지 운영 직무 JD 키워드 비교하기</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">Document AI</span><span class="skill">Human-in-the-loop</span><span class="skill">Process automation</span></div>      </div>
+      <div class="links">
+        <a href="https://stories.td.com/ca/en/news/2026-10-13-td-expands-agentic-ai-across-mortgage-operations-to-make-ban" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🚪 JPMorgan Chase</span>
+        <span>PYMNTS · 10/14</span>
+<span class="tag">#AI에이전트</span><span class="tag">#오픈뱅킹</span><span class="tag">#JPMorgan</span>      </div>
+      <h3><a href="https://www.pymnts.com/news/artificial-intelligence/2026/jamie-dimon-slams-the-door-on-rogue-ai-agents/" target="_blank" rel="noopener">다이먼 &#34;검증 안 된 외부 AI 에이전트 차단&#34;</a></h3>
+<p class="orig">Jamie Dimon Slams the Door on Rogue AI Agents</p>      <p class="summary">JPMorgan CEO Jamie Dimon이 10월 13일 3분기 실적 발표에서 검증되지 않은 외부 AI 에이전트는 시스템에 들이지 않겠다고 밝힘. 외부 에이전트는 고객 대신 로그인하거나 송금·청구서 납부를 할 수 없고, Plaid 같은 승인된 커넥터를 통해 잔액을 읽기 전용(read-only)으로 조회하는 것만 가능함.</p>
+      <ul class="points"><li>&#34;rogue agent가 수천 개일 수 있다&#34; 경고, 책임 이전 강조</li><li>외부 에이전트는 Plaid 경유 잔액 조회만, 송금 불가</li><li>2025년 6월 데이터 요청 중 고객 거래 목적은 13%뿐</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트 커머스 시대에도 은행이 고객 데이터의 관문(gatekeeper) 역할을 지키겠다는 신호임. 오픈뱅킹 데이터 접근 수수료를 둘러싼 핀테크와의 갈등과도 맞물림.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트에 읽기와 쓰기 중 어떤 권한을 줄지, 사고 시 책임은 누구에게 있는지는 내부통제(ICFR)의 직무분리(SoD) 문제와 같은 구조임.</span></p>
+<ul><li>호주 CDR의 읽기·실행 권한 범위 정리하기</li><li>에이전트 권한표를 SoD 매트릭스로 작성하기</li></ul><div class="skills"><span class="skill">Open Banking</span><span class="skill">CDR</span><span class="skill">Access control</span><span class="skill">Third-party risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.pymnts.com/news/artificial-intelligence/2026/jamie-dimon-slams-the-door-on-rogue-ai-agents/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cp24.com/news/money/2026/10/14/as-wall-street-banks-finance-and-adopt-ai-risks-mount-on-both-fronts/" target="_blank" rel="noopener">CP24: 월가 은행 AI 리스크 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛡️ 금융위원회·금융감독원</span>
+        <span>세계일보 · 10/14</span>
+<span class="tag">#금융보안</span><span class="tag">#AI해킹</span><span class="tag">#금융위</span>      </div>
+      <h3><a href="https://www.segye.com/newsView/20261014521263" target="_blank" rel="noopener">&#39;AI 해킹&#39; 피해 금융사 16곳·약 10만 건으로 확대</a></h3>
+<p class="orig">금융권 &#39;AI 해킹&#39; 침해 금융사 16곳, 약 10만건 유출…금융당국 2차 긴급상황대응 회의</p>      <p class="summary">금융위·금감원이 10월 14일 제2차 긴급상황대응 회의에서 &#39;AI 해킹&#39; 피해 금융사가 16곳(신규 5곳 포함), 유출이 약 10만 건으로 늘었다고 밝힘. 새로 나온 대책은 AI 기반 위협수준 정보체계·취약점 탐지, 중소형사용 AI 공동 보안관제, &#39;AI 공격은 AI로 방어&#39;를 위한 망분리 규제 완화 추진임.</p>
+      <ul class="points"><li>피해 16곳: 은행·저축은행·캐피탈·가상자산사업자 등</li><li>성명·주민번호 등 약 10만 건 유출, 계좌·카드번호는 미확인</li><li>555곳 점검 결과 130곳 미흡, 대형사 점검 연 2회 이상으로</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 생성형 AI로 공격 비용이 낮아지면서 금융보안이 &#39;AI 공격 대 AI 방어&#39; 구도로 바뀌는 중임. 망분리 완화 같은 규제 변화가 금융권 AI 도입 속도를 좌우하게 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>미흡 사항으로 나온 보안패치 미적용, 지원 종료(EOS) 시스템, MFA 미도입은 감사인이 보는 IT 일반통제(ITGC) 항목이라 감사와 보안 AI 양쪽 역량을 갖춘 인력의 수요가 커짐.</span></p>
+<ul><li>130곳 미흡 사항을 ITGC 체크리스트로 매핑하기</li><li>공격표면 관리(ASM) 무료 도구 한 개 써 보기</li></ul><div class="skills"><span class="skill">ITGC</span><span class="skill">Attack Surface Management</span><span class="skill">SOC</span><span class="skill">망분리</span></div>      </div>
+      <div class="links">
+        <a href="https://www.segye.com/newsView/20261014521263" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.g-enews.com/article/Finance/2026/10/202610141543031039cd0bfacc1c_1" target="_blank" rel="noopener">글로벌이코노믹 보도 ↗</a><a href="https://www.sisajournal.com/news/articleView.html?idxno=390230" target="_blank" rel="noopener">시사저널 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🧾 Intuit</span>
+        <span>Intuit Investor Relations (Business Wire) · 10/14</span>
+<span class="tag">#회계SW</span><span class="tag">#QuickBooks</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://investors.intuit.com/news-events/press-releases/detail/1326/intuit-intelligence-now-available-internationally-fueling-success-for-businesses-and-accountants-on-one-unified-platform" target="_blank" rel="noopener">인튜잇, 호주에 AI 플랫폼 &#39;Intuit Intelligence&#39; 출시</a></h3>
+<p class="orig">Intuit Intelligence Now Available Internationally, Fueling Success for Businesses and Accountants on One Unified Platform</p>      <p class="summary">Intuit이 AI 플랫폼 Intuit Intelligence를 호주 등 해외 시장에 출시하고 QuickBooks Online·Online Advanced 고객에게 베타로 제공함. 소상공인용 자동화, 자율 청구서 발행, 대화형 맞춤 보고서와 회계사용 다수 고객 포트폴리오 인사이트·Firm Playbooks가 포함되며, 호주에서 Xero·MYOB와의 AI 에이전트 경쟁이 본격화됨.</p>
+      <ul class="points"><li>자율 청구서(Autonomous Invoicing): 발행·독촉까지 자동</li><li>회계사용 다수 고객 인사이트·Firm Playbooks·통합 인박스</li><li>자사 발표 수치: 월 13시간 절감, 자문 업무 시간 30%↑</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 회계 소프트웨어 3강(Xero·MYOB·QuickBooks)이 모두 AI 에이전트로 경쟁하게 됨. 회계법인과 중소기업 실무의 중심이 기장(bookkeeping)에서 검토·자문(advisory)으로 옮겨 가는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 회계법인과 SME 현장에 곧 깔릴 도구라, 직접 써 보고 Xero JAX·MYOB AI BAS와 비교한 경험이 호주 취업 면접에서 바로 차별점이 됨.</span></p>
+<ul><li>QuickBooks AU 체험판으로 현금흐름 보고서 만들기</li><li>Xero JAX·MYOB AI BAS와 기능 비교표 만들기</li><li>AI 청구서·보고서 검토 절차를 회계사 관점으로 정리하기</li></ul><div class="skills"><span class="skill">Accounting automation</span><span class="skill">AR/Invoicing</span><span class="skill">Cash flow forecasting</span><span class="skill">Xero/MYOB</span></div>      </div>
+      <div class="links">
+        <a href="https://investors.intuit.com/news-events/press-releases/detail/1326/intuit-intelligence-now-available-internationally-fueling-success-for-businesses-and-accountants-on-one-unified-platform" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.com.au/story/intuit-launches-ai-tools-for-australian-quickbooks-users" target="_blank" rel="noopener">IT Brief Australia 보도 ↗</a><a href="https://itwire.com/business-it-news/data/intuit-intelligence-lands-in-australia-as-quickbooks-takes-its-ai-agent-fight-to-xero-and-myob" target="_blank" rel="noopener">iTWire: Xero·MYOB와 경쟁 분석 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들의 공통점은 AI 에이전트가 &#39;실행 권한&#39;을 갖기 시작했다는 점임. TD는 대출 서류를 처리하고, Intuit은 청구서를 자동으로 발행·독촉함. 동시에 JPMorgan의 외부 에이전트 차단, 한국 금융권의 AI 해킹 피해, Anthropic의 외부 평가기관 상주는 모두 &#39;누가 어디까지 접근하고 누가 검증하나&#39;라는 통제 문제를 다룸. 직무분리(SoD), ITGC, 검토·승인 절차 같은 회계·감사 감각에 에이전트를 직접 구현하는 능력을 더하면, 호주 시장에서 희소한 &#39;AI 통제 설계자&#39; 포지션을 노릴 수 있음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>QuickBooks AU 체험판으로 AI 보고서 만들어 보기</li><li>TD식 대출서류 요약 에이전트 데모 설계하기</li><li>에이전트 권한 매트릭스를 SoD 표로 그려 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">Human-in-the-loop (HITL)</span> — AI 결과물을 사람이 검토·승인한 뒤에 쓰는 방식임. TD 모기지 에이전트처럼 AI는 자료 정리와 불일치 탐지를 맡고 최종 판단과 책임은 사람이 지는 구조로, 금융권 AI 규제 대응의 기본 설계가 되고 있음.</p></section><div class="hashtags">#AI에이전트 #FinAI #에이전틱AI #회계자동화 #금융보안 #호주핀테크 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-16 · 검색 1시간 36분 · 탐색 17회 · 검색어 74개 · 출처 80곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
