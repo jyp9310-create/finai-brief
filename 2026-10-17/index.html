@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-17</title>
+<meta name="description" content="AI, 이제 매출·KPI·소송·규제 같은 숫자로 평가받음">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 17일 (토)">
+<meta property="og:description" content="AI, 이제 매출·KPI·소송·규제 같은 숫자로 평가받음">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-17/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-17/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 17일 (토)</div>
+    <h1>AI, 이제 매출·KPI·소송·규제 같은 숫자로 평가받음</h1>
+    <p class="overview">Anthropic의 분기 매출 공개, 미국 8개 주의 OpenAI 제소, 구글의 AI 장바구니 출시로 AI 업계 평가 기준이 수익성과 책임 쪽으로 옮겨 가고 있음. 재무 쪽에서는 Citi가 실적 발표에서 AI 성과를 KPI로 제시했고, Intuit은 수익인식 자동화 업체를 인수했으며, 영국 CFO 52%는 AI로 인력이 줄 것으로 내다봄.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 14분 · 탐색 17회 · 검색어 70개 · 출처 61곳 → 후보 35건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. 인투이트, AI 수익관리 플랫폼 Sequence 인수</div>
+<div class="r">수익인식·AR 실무 경험을 AI 에이전트 제품과 바로 연결할 수 있어, 포트폴리오와 취업 방향을 가장 구체적으로 보여 주는 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">💰 앤트로픽 3분기 매출 $168억…IPO 앞두고 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">⚖️ 美 8개 주, ChatGPT 아동 피해 이유로 오픈AI 제소</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🛒 구글 &#39;Universal Cart&#39; 美 출시…AI 쇼핑·결제 통합</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 씨티 엔지니어 1.4만 명 AI 코딩…美 은행 AI 성적표</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 인투이트, AI 수익관리 플랫폼 Sequence 인수</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📉 英 CFO 52% &#34;AI로 1년 내 인력 감축&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 호주 의회 AI 위원회, 프런티어 AI 안전점검 권고</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">💰 Anthropic</span>
+        <span>Financial Times (via Simon Willison&#39;s Weblog) · 10/15</span>
+<span class="tag">#Anthropic</span><span class="tag">#IPO</span><span class="tag">#수익성</span>      </div>
+      <h3><a href="https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b" target="_blank" rel="noopener">앤트로픽 3분기 매출 $168억…IPO 앞두고 공개</a></h3>
+<p class="orig">Anthropic tells investors Q3 revenue up nearly 50% to $16.8bn ahead of IPO</p>      <p class="summary">FT 보도에 따르면 Anthropic은 투자자들에게 2026년 3분기 매출이 $16.8bn이라고 밝힘. 전분기($11.5bn) 대비 약 46% 늘었고, 컴퓨팅 $1당 매출 $1.70, 주식보상(SBC) 제외 조정 영업이익률 11%라는 수익성 지표도 함께 공개됨.</p>
+      <ul class="points"><li>분기 매출: Q1 약 $4.8bn → Q2 $11.5bn → Q3 $16.8bn</li><li>컴퓨팅 $1당 매출 $1.70, 조정 영업이익률 11%(SBC 제외)</li><li>경쟁 랩의 증류(distillation)가 매출 5~7%, 3분기에 대폭 줄임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 랩이 &#39;연환산 매출(run-rate)&#39; 대신 실제 분기 매출과 마진으로 평가받는 단계에 들어섬. IPO를 앞두고 컴퓨팅 비용 대비 수익성이 핵심 투자 지표가 됨.</p>      <div class="links">
+        <a href="https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/" target="_blank" rel="noopener">Simon Willison 요약 ↗</a><a href="https://www.pymnts.com/ai/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/" target="_blank" rel="noopener">PYMNTS 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">⚖️ OpenAI / 미국 8개 주 법무장관</span>
+        <span>KCTV5 · 10/14</span>
+<span class="tag">#OpenAI</span><span class="tag">#소송</span><span class="tag">#AI 안전</span>      </div>
+      <h3><a href="https://www.kctv5.com/2026/10/14/kansas-ag-kris-kobach-announces-lawsuit-against-openai/" target="_blank" rel="noopener">美 8개 주, ChatGPT 아동 피해 이유로 오픈AI 제소</a></h3>
+<p class="orig">Kansas AG Kris Kobach announces lawsuit against OpenAI, claims ChatGPT harms children, deceives parents</p>      <p class="summary">아이오와·캔자스 등 8개 주 법무장관이 10월 14일 각 주 법원에 OpenAI를 따로 제소함. ChatGPT가 아동에게 해를 끼치고 안전성을 오도했다며 소비자보호법 위반을 근거로 민사 제재금과 금지명령(injunction)을 청구함.</p>
+      <ul class="points"><li>아이오와·캔자스·네브래스카·WV·애리조나 등 8개 주 개별 제소</li><li>캔자스: 소비자보호법 근거로 민사 제재금·금지명령 청구</li><li>6월 플로리다의 첫 제소 이후 초당적으로 소송 확산</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 연방 차원의 AI 규제가 늦어지는 사이 주 정부가 소비자보호법으로 AI 제품 책임을 묻는 흐름이 굳어지고 있음. AI 안전 문제가 소송·제재금이라는 재무 리스크로 바뀌는 중임.</p>      <div class="links">
+        <a href="https://www.kctv5.com/2026/10/14/kansas-ag-kris-kobach-announces-lawsuit-against-openai/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.dakotanewsnow.com/2026/10/14/iowa-attorney-general-brenna-bird-announces-lawsuit-against-openai-chatgpt/" target="_blank" rel="noopener">Dakota News Now (아이오와 발표) ↗</a><a href="https://www.aitimes.com/news/articleView.html?idxno=216306" target="_blank" rel="noopener">AI타임스 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🛒 Google</span>
+        <span>Google Blog (The Keyword) · 10/15</span>
+<span class="tag">#Google</span><span class="tag">#에이전트 커머스</span><span class="tag">#결제</span>      </div>
+      <h3><a href="https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/" target="_blank" rel="noopener">구글 &#39;Universal Cart&#39; 美 출시…AI 쇼핑·결제 통합</a></h3>
+<p class="orig">An intelligent new shopping cart</p>      <p class="summary">Google이 Search AI 모드와 Gemini 앱에서 여러 쇼핑몰 상품을 한 장바구니에 담는 Universal Cart를 미국에 출시함. Google Wallet을 기반으로 카드 혜택을 따져 결제수단을 추천하고, AI 에이전트용 개방형 표준 UCP(Universal Commerce Protocol)와 Google Pay로 결제까지 처리함.</p>
+      <ul class="points"><li>상품 600억 개 이상의 Shopping Graph로 가격 하락·재입고 알림</li><li>Google Wallet 연동, 카드 혜택(perks) 따져 결제수단 추천</li><li>Nike·Target·Walmart·Sephora 참여, 판매 주체는 판매자 유지</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트 쇼핑(agentic commerce)에서 결제 접점을 누가 쥐느냐를 두고 Amazon·OpenAI와 경쟁이 본격화됨. AI가 결제수단을 추천하면서 카드사·결제사 경쟁에도 새 변수가 생김.</p>      <div class="links">
+        <a href="https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 Citi / JPMorgan / Goldman Sachs 등</span>
+        <span>Banking Dive · 10/15</span>
+<span class="tag">#은행 AI</span><span class="tag">#실적 발표</span><span class="tag">#AI ROI</span>      </div>
+      <h3><a href="https://www.bankingdive.com/news/ai-citi-fraser-wells-fargo-scharf-goldman-sachs-solomon-morgan-stanley-pick-bofa-moynihan-dimon/833087/" target="_blank" rel="noopener">씨티 엔지니어 1.4만 명 AI 코딩…美 은행 AI 성적표</a></h3>
+<p class="orig">What Wells Fargo, Citi and Goldman Sachs&#39; CEOs are saying about AI</p>      <p class="summary">미국 대형은행 CEO들이 3분기 실적 발표(earnings call)에서 AI 성과와 리스크를 설명함. Citi는 엔지니어 14,000명이 코딩 에이전트 Devin을 쓰면서 제품 출시 속도가 30~40% 빨라지고 IT 벤더 지출은 30% 줄었다고 밝혔고, JPMorgan과 Goldman은 외부 에이전트 통제와 인간 책임을 강조함.</p>
+      <ul class="points"><li>Citi: 엔지니어 14,000명 Devin 사용, 출시 속도 30~40%↑</li><li>Citi: 수작업 프로세스 100개를 AI로 재설계, 벤더 지출 30%↓</li><li>JPM 다이먼: 저렴한 모델로 질의 분산(model routing)해 비용 절감</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 AI 효과가 파일럿 단계를 지나 실적 발표에서 속도·비용 KPI로 보고되기 시작함. 동시에 외부 에이전트 통제와 인간 책임이 대형은행의 공통 원칙으로 자리잡고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>은행은 AI 성과를 &#39;출시 속도·벤더비 절감&#39; 같은 재무 KPI로 측정하므로, 포트폴리오도 그 언어로 설명해야 함.</span></p>
+<ul><li>내 AI 프로젝트에 시간·비용 절감 KPI 표 추가</li><li>호주 4대 은행 실적 자료의 AI KPI 비교</li></ul><div class="skills"><span class="skill">AI ROI 측정</span><span class="skill">Model routing</span><span class="skill">Agentic coding</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bankingdive.com/news/ai-citi-fraser-wells-fargo-scharf-goldman-sachs-solomon-morgan-stanley-pick-bofa-moynihan-dimon/833087/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.pymnts.com/news/artificial-intelligence/2026/jamie-dimon-slams-the-door-on-rogue-ai-agents/" target="_blank" rel="noopener">PYMNTS: Dimon on rogue AI agents ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 Intuit</span>
+        <span>Intuit Investor Relations · 10/15</span>
+<span class="tag">#수익인식</span><span class="tag">#M&amp;A</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://investors.intuit.com/news-events/press-releases/detail/1327/intuit-to-acquire-ai-native-revenue-management-platform-sequence" target="_blank" rel="noopener">인투이트, AI 수익관리 플랫폼 Sequence 인수</a></h3>
+<p class="orig">Intuit to Acquire AI-Native Revenue Management Platform Sequence</p>      <p class="summary">Intuit이 견적부터 수금·수익인식(revenue recognition)까지 자동화하는 AI 네이티브 수익관리 플랫폼 Sequence를 인수하기로 계약함. Intuit Enterprise Suite와 QuickBooks Online Advanced에 통합해 중견기업(mid-market)용 AI ERP를 강화할 계획임.</p>
+      <ul class="points"><li>견적→청구→인보이스→수금→수익인식까지 전 과정 자동화</li><li>사용량·좌석·마일스톤 기반 과금 처리, AI 에이전트가 반복 업무 수행</li><li>인수가·종결일 비공개, 2021년 설립·런던/뉴욕 기반</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계 소프트웨어 업체들이 매출채권(AR)과 수익인식처럼 복잡한 백오피스 업무를 AI 에이전트로 묶어 ERP 시장을 공략하고 있음. 스프레드시트에 의존하던 Quote-to-Cash 영역이 자동화 경쟁의 중심이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>수익인식(IFRS 15)·AR 실무 경험은 AI 수익관리 제품 분야에서 바로 경쟁력이 되는 도메인 지식임.</span></p>
+<ul><li>계약서→수익인식 스케줄 LLM 데모 만들기</li><li>Intuit·Sequence 재무 제품 채용 공고 확인</li></ul><div class="skills"><span class="skill">Revenue recognition</span><span class="skill">Quote-to-cash</span><span class="skill">AI agents</span><span class="skill">ERP</span></div>      </div>
+      <div class="links">
+        <a href="https://investors.intuit.com/news-events/press-releases/detail/1327/intuit-to-acquire-ai-native-revenue-management-platform-sequence" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cfodive.com/news/intuit-deal-signals-bet-ai-demand-revenue-management/833166/" target="_blank" rel="noopener">CFO Dive 분석 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📉 Deloitte UK</span>
+        <span>Deloitte UK Press Room · 10/14</span>
+<span class="tag">#CFO 서베이</span><span class="tag">#인력</span><span class="tag">#비용 절감</span>      </div>
+      <h3><a href="https://www.deloitte.com/uk/en/about/press-room/deloitte-cfo-survey-quater-three-2026-economic-and-political-uncertainty.html" target="_blank" rel="noopener">英 CFO 52% &#34;AI로 1년 내 인력 감축&#34;</a></h3>
+<p class="orig">Deloitte CFO Survey Q3 2026</p>      <p class="summary">Deloitte UK의 3분기 CFO 서베이(66명, FTSE 100 12곳·FTSE 250 25곳 포함)에서 52%가 향후 12개월 안에 AI로 자사 인력이 줄 것이라고 답함. 48%는 운영비 감소, 37%는 마진 개선을 기대했지만, 67%는 기대하는 AI 전환의 약 1/4 지점에 와 있다고 봄.</p>
+      <ul class="points"><li>52%가 12개월 내 AI로 인력 감축 예상, 48%는 운영비 감소 기대</li><li>67%가 &#39;AI 전환 약 1/4 진행&#39;이라 답함, 마진 개선 기대는 37%</li><li>비용 절감을 강한 우선순위로 꼽은 비율 68%(2분기 53%)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> CFO들이 AI를 비용 구조를 재편하는 수단으로 보기 시작했고, 재무팀도 그 대상에 포함됨. 다만 전환이 초기 단계라 실제 효과를 측정하고 검증하는 역할이 중요해짐.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>재무 인력 수요가 줄수록 &#39;AI 도입 효과를 설계·검증하는 재무 인재&#39;가 차별점이 됨.</span></p>
+<ul><li>AI 도입 비용·효과(ROI) 모델을 파이썬으로 구축</li><li>결과를 LinkedIn에 재무+AI 사례로 공유</li></ul><div class="skills"><span class="skill">Business case</span><span class="skill">Cost-benefit analysis</span><span class="skill">Change management</span></div>      </div>
+      <div class="links">
+        <a href="https://www.deloitte.com/uk/en/about/press-room/deloitte-cfo-survey-quater-three-2026-economic-and-political-uncertainty.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://resultsense.com/news/2026-10-14-deloitte-cfo-survey-ai-headcount-cuts" target="_blank" rel="noopener">Resultsense 요약 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 호주 의회 AI 합동특별위원회 (Joint Select Committee on AI)</span>
+        <span>ABC News · 10/13</span>
+<span class="tag">#호주 AI 규제</span><span class="tag">#주권 AI</span><span class="tag">#AI 거버넌스</span>      </div>
+      <h3><a href="https://www.abc.net.au/news/2026-10-13/ai-inquiry-independent-safety-watchdogs/107258612" target="_blank" rel="noopener">호주 의회 AI 위원회, 프런티어 AI 안전점검 권고</a></h3>
+<p class="orig">Labor and Coalition deny interference in AI inquiry after David Pocock raises &#39;stitch-up&#39; concerns</p>      <p class="summary">호주 의회 AI 합동특별위원회(위원장 Jo Briskey)가 알바니지 총리에게 조기 권고(early advice) 서한을 보냄. 프런티어 AI 기업의 독립 안전점검과 사고 보고, 안보기관의 신모델 사전 접근, 국가용 컴퓨팅 확보와 주권 AI(sovereign AI) 역량 강화를 제안했고, 최종 보고서는 11월에 나올 예정임.</p>
+      <ul class="points"><li>독립 안전점검·적시 사고 보고, ASD 등 안보기관에 신모델 사전 접근</li><li>컴퓨팅 일부를 국가안보·대학 연구용으로 확보, 정부 데이터 보호 점검</li><li>최종 보고서 11월, 정부는 연말 법안 발의·2027년 초 통과 목표</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 데이터센터·프런티어 AI 국가 표준 법안의 밑그림이 될 권고임. OpenAI 모델의 Medicare 데이터 무단 접근 사건이 직접적인 계기가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>사고 보고·독립 검증 중심의 호주 AI 규제는 은행·감사법인의 AI 거버넌스·보증(assurance) 일자리 수요로 이어짐.</span></p>
+<ul><li>11월 최종 보고서의 금융 관련 권고 요약하기</li><li>AI 사고 보고 체계를 내부통제 관점으로 정리</li></ul><div class="skills"><span class="skill">AI governance</span><span class="skill">AI assurance</span><span class="skill">Risk &amp; compliance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.abc.net.au/news/2026-10-13/ai-inquiry-independent-safety-watchdogs/107258612" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.innovationaus.com/inquiry-urges-sovereign-ai-industry-policy-backed-by-procurement/" target="_blank" rel="noopener">InnovationAus: 주권 AI 산업정책 권고 ↗</a><a href="https://www.innovationaus.com/major-party-stitch-up-pocock-hits-out-at-ai-inquiry/" target="_blank" rel="noopener">InnovationAus: Pocock 비판 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들의 공통점은 AI가 &#39;얼마나 똑똑한가&#39;보다 &#39;얼마를 벌고 아끼며 어떤 책임을 지는가&#39;로 평가받기 시작했다는 점임. Anthropic은 컴퓨팅 $1당 매출을, Citi는 출시 속도와 벤더비 절감을 숫자로 내놓았고, 영국 CFO 절반은 인력 감축을 예상함. 동시에 Intuit은 수익인식처럼 판단과 규정이 필요한 회계 업무까지 AI 에이전트로 가져가고 있고, 미국 주 정부와 호주 의회는 사고 보고와 독립 검증을 요구하고 있음. 재무 실무와 AI를 함께 아는 사람이라면 &#39;AI 성과를 재무 KPI로 측정하고 통제 체계를 설계하는 역할&#39;에 집중하는 것이 가장 확실한 차별점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Sequence 기능 참고해 수익인식 자동화 데모 설계하기</li><li>Citi AI KPI를 호주 4대 은행 공시와 비교하기</li><li>호주 AI 위원회 권고를 1페이지로 요약하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">모델 라우팅 (Model Routing)</span> — 질문 난이도에 맞춰 싼 모델과 비싼 모델에 나눠 보내는 방식임. JPMorgan처럼 쉬운 질의는 저렴한 모델에 맡기고 어려운 질의만 고성능 모델로 보내 AI 운영비를 줄이는 데 씀.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/22</span><span>OpenAI Korea &#39;DevDay Exchange: Seoul&#39; 개발자 행사</span></li></ul></section><div class="hashtags">#FinAI #Anthropic #Intuit #은행AI #호주AI규제 #재무자동화 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-17 · 검색 1시간 14분 · 탐색 17회 · 검색어 70개 · 출처 61곳 → 후보 35건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
