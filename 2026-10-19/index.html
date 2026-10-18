@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-19</title>
+<meta name="description" content="AI가 회계사를 앞섰지만, 승부는 &#39;맥락·권한·검토&#39;에서 갈림">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 19일 (월)">
+<meta property="og:description" content="AI가 회계사를 앞섰지만, 승부는 &#39;맥락·권한·검토&#39;에서 갈림">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-19/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-19/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 19일 (월)</div>
+    <h1>AI가 회계사를 앞섰지만, 승부는 &#39;맥락·권한·검토&#39;에서 갈림</h1>
+    <p class="overview">AI 쪽에서는 Anthropic이 자사 고용 데이터를 공개했음. 주니어 채용은 줄고 에이전트 작업량은 사람의 6배가 됐으며, 이제 병목은 &#39;사람의 검토&#39;라는 분석임. 금융 쪽도 같은 흐름임: 회계 벤치마크에서는 맥락 데이터가 성능을 갈랐고, Schwab은 외부 에이전트 권한을 막았으며, G7은 AI발 사이버공격을 금융 안정 리스크로 다루기 시작함.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 93개 · 출처 82곳 → 후보 38건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. AI 회계 벤치마크: 성능을 가른 건 &#39;맥락&#39;</div>
+<div class="r">재무 실무 경력이 AI 회계의 핵심인 &#39;맥락 데이터&#39;와 바로 이어지고, 그대로 포트폴리오 프로젝트로 만들 수 있는 벤치마크라서임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">👥 앤트로픽 사내 분석: 주니어↓, 에이전트 시간은 사람의 6배</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🤝 앤트로픽, 지분 5%를 공익 펀드에 출연</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🧬 딥마인드, 에이전트로 항균 펩타이드 후보 발굴</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧮 AI 회계 벤치마크: 성능을 가른 건 &#39;맥락&#39;</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔐 슈왑, 외부 AI 에이전트 계좌 로그인 차단</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛡️ G7, AI 금융 사이버공격 대응 모의훈련 승인</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 CBA 코민 CEO &#34;AI 경제 가치, 호주에 남겨야&#34;</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">👥 Anthropic</span>
+        <span>Anthropic Research · 10/16</span>
+<span class="tag">#AI와 일자리</span><span class="tag">#에이전트</span><span class="tag">#Anthropic</span>      </div>
+      <h3><a href="https://www.anthropic.com/research/employment-at-anthropic" target="_blank" rel="noopener">앤트로픽 사내 분석: 주니어↓, 에이전트 시간은 사람의 6배</a></h3>
+<p class="orig">How employment is changing at Anthropic</p>      <p class="summary">Anthropic이 사내 커뮤니케이션·캘린더·채용 기록과 직원 17명 인터뷰를 바탕으로 AI 에이전트 도입 이후 자사 고용이 어떻게 바뀌었는지 분석해 공개함. 주니어 채용이 크게 줄고 에이전트 작업 시간이 사람의 6배까지 늘면서, 사람이 에이전트 결과물을 검토하는 시간이 새 병목(bottleneck)이 됨.</p>
+      <ul class="points"><li>기술 부서 주니어 비중 21%→14%, 기술직 채용 중 주니어 27%→9%</li><li>에이전트 작업 시간, 2026년 3월 사람 추월 → 8월엔 6배</li><li>엔지니어 1인당 커밋 5배, AP(매입채무) 등 비기술 직무 산출도 증가</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 랩 내부 데이터로 &#39;주니어 일자리 축소&#39;와 &#39;검토·판단 역량 중시&#39;가 함께 확인됨. 채용 기준이 특정 기술 스택보다 자율성(autonomy)·판단력(judgment)·AI 도구 활용 쪽으로 옮겨 가는 중임.</p>      <div class="links">
+        <a href="https://www.anthropic.com/research/employment-at-anthropic" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🤝 Anthropic</span>
+        <span>Anthropic News · 10/18</span>
+<span class="tag">#Anthropic</span><span class="tag">#지배구조</span><span class="tag">#IPO</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener">앤트로픽, 지분 5%를 공익 펀드에 출연</a></h3>
+<p class="orig">Anthropic Public Benefit Fund (announcement)</p>      <p class="summary">Anthropic이 주식 5%를 전액 출자 자회사(LLC) 형태의 &#39;Anthropic Public Benefit Fund&#39;에 출연한다고 발표함(주주 승인 조건). 기업가치가 기준선 대비 50% 오를 때마다 이사회가 2%씩 더 넣을 수 있고, 공동창업자 기부 서약과 직원 매칭까지 합치면 지분 약 20%가 공익 목적에 쓰이게 됨.</p>
+      <ul class="points"><li>지분 5% 출연, 가치 50% 오를 때마다 2% 추가 가능(이사회 결정)</li><li>창업자 서약·직원 매칭 포함 시 전체 지분 약 20%가 공익 목적</li><li>펀드 지분은 로비·정치 기부 금지, 지배구조는 &#39;수개월 내&#39; 공개</li></ul>
+<p class="why"><b>💡 왜 중요?</b> IPO가 거론되는 AI 랩이 성장 이익 일부를 사회에 환원하는 구조를 미리 설계한 사례임. 앞서 약속한 AI 일자리 영향 연구 $2억과 함께, AI 기업의 &#39;이익 분배&#39; 논의에서 기준점이 될 수 있음.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🧬 Google DeepMind</span>
+        <span>Google DeepMind Blog · 10/15</span>
+<span class="tag">#Google</span><span class="tag">#AI 과학</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://deepmind.google/blog/accelerating-antimicrobial-discovery/" target="_blank" rel="noopener">딥마인드, 에이전트로 항균 펩타이드 후보 발굴</a></h3>
+<p class="orig">Accelerating the search for antimicrobial peptides with Google Antigravity</p>      <p class="summary">Google DeepMind가 에이전트 개발 플랫폼 Antigravity를 &#39;과학 작업대&#39;로 활용해 Streptococcus pseudopneumoniae에서 항균 펩타이드 후보(97개 아미노산 박테리오신)를 찾아낸 과정을 공개함. 에이전트가 UniProt·BLAST·AlphaFold·Foldseek를 한 세션에서 오가며 신규성과 구조를 확인했고, 연구자와 3D 화면을 함께 보는 Biomolecular Structure Viewer도 새로 선보임.</p>
+      <ul class="points"><li>후보: UniProt A0A0U0D591, 97개 아미노산 박테리오신</li><li>에이전트가 ProtNLM·BLAST·AlphaFold DB·Foldseek를 연결해 분석</li><li>아직 습식 실험(wet-lab) 검증 중, 실제 효과는 미확인</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 코딩용 에이전트 플랫폼이 과학 연구 워크플로로 넓어지는 사례임. 여러 DB와 모델을 한 세션에서 엮는 방식은 다른 분야의 분석 업무에도 그대로 옮겨 쓸 수 있음.</p>      <div class="links">
+        <a href="https://deepmind.google/blog/accelerating-antimicrobial-discovery/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧮 Digits / Mercor</span>
+        <span>Digits Blog · 10/7</span>
+<span class="tag">#회계 AI</span><span class="tag">#벤치마크</span><span class="tag">#결산</span>      </div>
+      <h3><a href="https://digits.com/blog/ai-cant-close-books-from-outside/" target="_blank" rel="noopener">AI 회계 벤치마크: 성능을 가른 건 &#39;맥락&#39;</a></h3>
+<p class="orig">Breaking: AI Can&#39;t Close Your Books From the Outside (Yes, Including Jev)</p>      <p class="summary">Digits가 실제 거래 2,000건의 계정 분류 벤치마크를 공개함. 범용 LLM의 단발(one-shot) 최고점은 79.5%(GPT-6 Luna)로 외주 회계사(79.1%)와 비슷했고, 과거 장부를 볼 수 있는 에이전트는 88.9%, Digits 전용 AGL은 97.8%를 기록함. Accounting Today(10/16)는 이 결과를 Claude Opus 5가 월말 결산(month-end close) 과제에서 CPA 12명을 앞선 Mercor 테스트와 함께 다루며 &#39;맥락(context)&#39;을 핵심 변수로 정리함.</p>
+      <ul class="points"><li>Digits: 2,000건·84개 설정, 회계사 79.1% vs GPT-6 Luna 79.5%</li><li>장부 접근 에이전트(Claude Fable 5.1) 88.9%, Digits AGL 97.8%</li><li>Mercor: Opus 5 결산 과제 20회 모두 100%, CPA 평균 약 37%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 정확도에서는 AI가 사람과 동급 이상이 됐지만, 성능을 가른 건 모델보다 회사별 거래 이력·계정과목표 같은 맥락 데이터였음. 두 결과 모두 벤더가 직접 측정했고 고객 맥락이 빠진 단순화된 과제라는 한계가 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>회계 AI의 승부처는 모델이 아니라 회사별 맥락 데이터이고, 그 맥락을 아는 것이 바로 재무 실무 경력의 강점임.</span></p>
+<ul><li>공개 거래 데이터로 one-shot vs RAG 분류 비교하기</li><li>결산 과제 채점 루브릭(13~22항목) 직접 만들기</li><li>Mercor·Digits 평가 방법론을 노트로 정리하기</li></ul><div class="skills"><span class="skill">LLM Evaluation</span><span class="skill">RAG</span><span class="skill">계정과목표(CoA)</span><span class="skill">Month-end close</span></div>      </div>
+      <div class="links">
+        <a href="https://digits.com/blog/ai-cant-close-books-from-outside/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/news/ai-beats-human-accountants-at-monthly-close-transaction-categorization" target="_blank" rel="noopener">Accounting Today: 두 벤치마크 비교 ↗</a><a href="https://www.mercor.com/blog/human-baselines-for-benchmarks-ai-now-outperforms-junior-accountants/" target="_blank" rel="noopener">Mercor: AI가 주니어 회계사 추월 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔐 Charles Schwab</span>
+        <span>American Banker · 10/15</span>
+<span class="tag">#에이전트 금융</span><span class="tag">#증권</span><span class="tag">#권한 관리</span>      </div>
+      <h3><a href="https://www.americanbanker.com/news/schwab-blocks-unauthorized-ai-agents-points-clients-to-charley" target="_blank" rel="noopener">슈왑, 외부 AI 에이전트 계좌 로그인 차단</a></h3>
+<p class="orig">Schwab blocks unauthorized AI agents, points clients to Charley</p>      <p class="summary">Charles Schwab의 Rick Wurster CEO가 3분기 실적 발표에서, 고객 ID·비밀번호나 브라우저 자동화로 로그인하는 외부 AI 에이전트(메타 Muse 등)를 차단한다고 밝힘. 대신 자체 AI 비서 Charley를 AI 연결 창구로 키울 계획인데, 분석가들은 약 $4,930억 규모의 현금 스윕(cash sweep) 잔고를 지키려는 것이 진짜 동기라고 봄.</p>
+      <ul class="points"><li>외부 에이전트의 자격증명·브라우저 자동화 로그인을 차단함</li><li>Charley: 주소 변경 등 일부 기능만 가능, 거래까지 확장 예정, 송금은 불허</li><li>3분기 순이자수익 약 $34.8억, 현금 스윕 잔고 약 $4,930억</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트가 고객 대신 돈을 움직이는 시대에 &#39;누가 책임지나&#39;와 &#39;고객 접점을 누가 쥐나&#39;가 금융사의 핵심 쟁점이 됨. JPMorgan의 Dimon도 외부 에이전트가 &#39;너무 위험&#39;하다며 막겠다고 해 은행권 공통 대응으로 굳어지는 흐름임. 지난주 보도된 Dimon 발언에 이어, 이번엔 Schwab이 실제 차단과 자체 비서로의 유도라는 구체적 조치를 공개한 것이 새로운 점임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트 권한·인증·책임 설계가 금융 AI의 핵심 과제이고, 내부통제 경험이 바로 강점이 되는 영역임.</span></p>
+<ul><li>읽기·거래·송금별 에이전트 권한표 만들기</li><li>호주 CDR(소비자 데이터 권리)의 위임 접근 구조 공부하기</li></ul><div class="skills"><span class="skill">Delegated auth(OAuth)</span><span class="skill">Internal control</span><span class="skill">Consumer Data Right</span><span class="skill">Agentic commerce</span></div>      </div>
+      <div class="links">
+        <a href="https://www.americanbanker.com/news/schwab-blocks-unauthorized-ai-agents-points-clients-to-charley" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216373" target="_blank" rel="noopener">AI타임스: 미국 은행들 메타 Muse 차단 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛡️ G7 재무장관·중앙은행 총재</span>
+        <span>AI타임스 (Reuters 인용) · 10/17</span>
+<span class="tag">#금융 규제</span><span class="tag">#사이버 리스크</span><span class="tag">#G7</span>      </div>
+      <h3><a href="https://www.aitimes.com/news/articleView.html?idxno=216354" target="_blank" rel="noopener">G7, AI 금융 사이버공격 대응 모의훈련 승인</a></h3>
+<p class="orig">G7, AI 금융 사이버 공격 막는다…실전 모의훈련 승인</p>      <p class="summary">G7 재무장관·중앙은행 총재들이 10월 15일 방콕 회의 뒤, 프런티어 AI를 이용한 사이버공격에 대비하는 탁상 모의훈련(tabletop exercise)을 승인함. 당국이 AI 공격 시나리오를 짜서 탐지·차단·복구 속도를 점검하고 그 결과를 위기 대응 매뉴얼에 반영하며, 시나리오에 따라 민간 금융사도 참여할 수 있음.</p>
+      <ul class="points"><li>가타야마 사쓰키 일본 재무상 발표, 차관급 논의 후 장관급 승인</li><li>IMF: 2026년 취약점 악용 70% 이상이 공개 당일 이전 발생(+20%p)</li><li>FSB 베일리 의장, AI 모델 테스트 확대·안전 기준 강화를 촉구함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI발 공격을 금융 안정(financial stability) 리스크로 공식 다루기 시작했다는 신호임. 은행·보험사에 대한 운영 복원력(operational resilience) 요구가 AI 시나리오 중심으로 강화될 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>AI 리스크는 이제 운영 복원력·위기 대응의 영역이므로, 호주 APRA CPS 230과 연결해 이해해 두면 좋음.</span></p>
+<ul><li>APRA CPS 230 핵심 요구사항 한 장 요약하기</li><li>IMF GFSR 사이버 관련 수치 정리하기</li></ul><div class="skills"><span class="skill">Operational resilience</span><span class="skill">CPS 230</span><span class="skill">Cyber risk</span><span class="skill">Tabletop exercise</span></div>      </div>
+      <div class="links">
+        <a href="https://www.aitimes.com/news/articleView.html?idxno=216354" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.gulftoday.ae/business/2026/10/13/imf-warns-of-ai-market-correction-cyber-threats-to-financial-system" target="_blank" rel="noopener">IMF GFSR 사이버 경고 보도(Gulf Today) ↗</a><a href="https://www.cryptopolitan.com/g7-simulated-ai-cyberattacks-on-banks/" target="_blank" rel="noopener">Cryptopolitan: G7 모의훈련 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 Commonwealth Bank of Australia</span>
+        <span>CommBank Newsroom · 10/14</span>
+<span class="tag">#호주 은행</span><span class="tag">#AI 규제</span><span class="tag">#CBA</span>      </div>
+      <h3><a href="https://www.commbank.com.au/articles/newsroom/2026/10/agm-ceo-address.html" target="_blank" rel="noopener">CBA 코민 CEO &#34;AI 경제 가치, 호주에 남겨야&#34;</a></h3>
+<p class="orig">2026 Commonwealth Bank AGM: CEO&#39;s address</p>      <p class="summary">CBA의 Matt Comyn CEO가 10월 14일 주주총회(AGM)에서, AI 규제가 신뢰를 쌓고 글로벌 빅테크가 호주 법을 따르게 하며 AI가 만든 경제 가치를 더 많이 호주에 남기도록 해야 한다고 밝힘. 앱 내 AI 대화 서비스 CommBank Companion의 단계적 출시, 기업금융용 Banker Workbench, 사기범을 상대하는 AI 봇 등 활용 현황과 3년 $9,000만 규모의 직원 역량 프로그램도 소개함.</p>
+      <ul class="points"><li>CommBank Companion: 일부 고객 대상 단계적 출시, 개인·사업 재무 안내</li><li>사기범 응대 AI 봇, 2025년 8월 이후 35만 건 이상 대화</li><li>직원 재교육 3년 $9,000만, Evident AI Index 아태 1위·세계 4위</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 최대 은행이 AI 규제를 &#39;성장의 조건&#39;으로 공개 지지함. Reuters 보도대로 정부가 2027년 초 AI 법제화를 예고한 상황이라, 은행권 입장이 정책 설계에 영향을 줄 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>CBA는 기업금융(Business Banking)을 중심으로 AI를 넓히는 중이라, 재무 경력과 AI를 함께 쓸 수 있는 호주 최대 수요처임.</span></p>
+<ul><li>CBA AI 직무 공고 3개의 요구 역량 정리하기</li><li>CBA &#39;AI 도입 보고서&#39;(2월) 읽고 요약하기</li><li>Banker Workbench 같은 RM용 대시보드 기획하기</li></ul><div class="skills"><span class="skill">Responsible AI</span><span class="skill">Fraud detection</span><span class="skill">Banking analytics</span><span class="skill">AI governance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.commbank.com.au/articles/newsroom/2026/10/agm-ceo-address.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.thestar.com.my/tech/tech-news/2026/10/14/cba-chief-matt-comyn-says-australia-must-retain-economic-value-of-ai" target="_blank" rel="noopener">Reuters 보도(The Star 전재) ↗</a><a href="https://www.commbank.com.au/articles/newsroom/2026/02/cba-approach-to-adopting-ai-report-announcement.html" target="_blank" rel="noopener">CBA AI 도입 보고서 발표(2026.2) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>Anthropic 보고서와 회계 벤치마크가 같은 이야기를 함. 이제 AI는 정해진 과제를 사람보다 빠르고 정확하게 처리하지만, 회사별 맥락을 주고 결과를 검토·책임지는 일은 여전히 사람의 몫임. Schwab의 에이전트 차단과 G7 모의훈련도 &#39;에이전트에게 어디까지 권한을 줄지, 사고가 나면 어떻게 복구할지&#39;라는 통제 문제임. 그래서 재무·회계 경력에 AI 평가(evaluation)와 권한 설계 역량을 더하는 조합이 주니어 채용이 줄어드는 시장에서 오히려 차별점이 됨.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>공개 거래 데이터로 계정 분류 평가셋 만들기</li><li>Anthropic 고용 보고서의 채용 기준 메모하기</li><li>APRA CPS 230 요구사항 한 장으로 요약하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">현금 스윕(Cash sweep)</span> — 증권 계좌의 노는 현금을 은행 예금으로 자동 이동시키는 것임. 증권사는 이 예금에서 나오는 이자의 상당 부분을 수익으로 가져가기 때문에, AI 에이전트가 고객 현금을 고금리 상품으로 옮기면 이 수익이 위협받음.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/2</span><span>Westpac FY26 실적 발표 (AI 에이전트 비용 절감 효과 언급 주목)</span></li></ul></section><div class="hashtags">#FinAI #회계AI #AI에이전트 #AI일자리 #호주금융 #Anthropic </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-19 · 검색 1시간 1분 · 탐색 17회 · 검색어 93개 · 출처 82곳 → 후보 38건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
