@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-20</title>
+<meta name="description" content="AI가 결산에서 CPA를 넘어선 지금, 경쟁력은 &#39;검증&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 20일 (화)">
+<meta property="og:description" content="AI가 결산에서 CPA를 넘어선 지금, 경쟁력은 &#39;검증&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-20/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-20/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 20일 (화)</div>
+    <h1>AI가 결산에서 CPA를 넘어선 지금, 경쟁력은 &#39;검증&#39;</h1>
+    <p class="overview">AI 쪽에서는 엔비디아의 오픈 에이전트 모델, AWS의 탈(脫)CUDA 도구, AI 수학 결과를 검증하기 위한 $1,500만 기금이 함께 나옴. 재무 쪽에서는 결산·리스크 통제·거래 데이터처럼 정형화된 업무를 AI가 빠르게 가져가고 있고, 그만큼 사람의 역할은 맥락 파악·검증·거버넌스로 옮겨 가는 중임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 5분 · 탐색 17회 · 검색어 75개 · 출처 62곳 → 후보 30건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 월말결산 벤치마크, AI 100% vs CPA 평균 37%</div>
+<div class="r">결산 실무 경험을 AI 평가 루브릭으로 바꾸는 방법을 그대로 보여 주는 사례라서, 이 독자가 포트폴리오로 바로 옮길 수 있는 가치가 가장 큼.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🟩 엔비디아, 에이전트용 오픈 모델 Nemotron 3.5 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧮 OpenAI·Anthropic, AI 수학 검증에 $1,500만</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🔌 AWS, PyTorch를 Trainium에 그대로 TorchNeuron</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📒 월말결산 벤치마크, AI 100% vs CPA 평균 37%</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🛡️ Deloitte, 에이전트 기반 리스크 관리 &#39;Risk Clarity&#39;</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">💳 Spade, 은행용 거래 데이터 AI &#39;Predictions&#39; 출시</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 호주 AI안전연구소, 국제 위상에 비해 자원 부족 지적</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🟩 NVIDIA</span>
+        <span>NVIDIA Blog · 10/15</span>
+<span class="tag">#오픈모델</span><span class="tag">#에이전트</span><span class="tag">#로컬AI</span>      </div>
+      <h3><a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">엔비디아, 에이전트용 오픈 모델 Nemotron 3.5 공개</a></h3>
+<p class="orig">Nemotron 3.5 Super VL and Bolt: open models for enterprise and local agents</p>      <p class="summary">엔비디아가 기업용 에이전트 모델 Nemotron 3.5 Super VL(120B)과 PC에서 돌리는 로컬 에이전트 모델 Bolt 74B-A9B를 오픈 웨이트(open weights)로 공개함. 학습 데이터셋과 학습 레시피까지 함께 풀어서, 기업이 직접 미세조정(fine-tuning)해 자체 에이전트를 만들기 쉬워짐.</p>
+      <ul class="points"><li>Super VL: 120B 멀티모달, HF·OpenRouter·NIM으로 즉시 제공</li><li>Bolt 74B-A9B: 네이티브 2비트 양자화로 24GB 메모리에서 실행</li><li>EY·Ramp·Salesforce·CrowdStrike 등이 활용·연동 (자체 발표)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 성능 좋은 에이전트 모델을 클라우드 API 없이 사내나 PC에서 직접 돌릴 수 있게 됨. 데이터 반출이 까다로운 금융·회계 업계에는 현실적인 대안이 하나 더 생긴 셈임.</p>      <div class="links">
+        <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧮 Simons Foundation · OpenAI · Anthropic</span>
+        <span>Simons Foundation · 10/15</span>
+<span class="tag">#AI for Math</span><span class="tag">#검증</span><span class="tag">#연구지원</span>      </div>
+      <h3><a href="https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/" target="_blank" rel="noopener">OpenAI·Anthropic, AI 수학 검증에 $1,500만</a></h3>
+<p class="orig">Simons Foundation Launches $15M Effort To Help Mathematicians Navigate AI Era</p>      <p class="summary">Simons 재단이 Anthropic·OpenAI와 함께 수학자들의 AI 시대 적응을 돕는 $1,500만 규모 프로그램을 시작함. AI가 낸 결과를 연구자가 평가·검증하고 공동 기준을 만드는 일을 지원하며, 두 회사는 모델과 컴퓨트도 제공함.</p>
+      <ul class="points"><li>총 $1,500만, OpenAI·Anthropic 각 $500만 규모로 참여</li><li>재단이 공개 공모로 워크숍·검증 프로젝트에 자금 배분</li><li>수학 외 기초과학 연구자에게도 AI 도구·컴퓨트 제공</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 증명과 결과를 쏟아내면서 이제는 &#39;누가, 어떻게 검증하나&#39;가 병목이 됨. 경쟁하는 두 랩이 검증 인프라에 함께 돈을 낸 상징적인 사례임.</p>      <div class="links">
+        <a href="https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.euronews.com/2026/10/16/openai-tries-to-solve-mathematician-backlash-problem-by-pledging-5-million-to-math-foundat" target="_blank" rel="noopener">Euronews 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🔌 Amazon Web Services</span>
+        <span>About Amazon · 10/19</span>
+<span class="tag">#AI칩</span><span class="tag">#PyTorch</span><span class="tag">#Trainium</span>      </div>
+      <h3><a href="https://www.aboutamazon.com/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai" target="_blank" rel="noopener">AWS, PyTorch를 Trainium에 그대로 TorchNeuron</a></h3>
+<p class="orig">Amazon&#39;s TorchNeuron runs PyTorch on AWS Trainium chips</p>      <p class="summary">AWS가 기존 PyTorch 코드를 설정 한 줄만 바꿔 자사 AI 칩 Trainium에서 돌릴 수 있게 하는 TorchNeuron을 공개함. Apache 2.0 오픈소스로 풀고 PyTorch 본체에도 칩 중립 코드를 기여해, 엔비디아 GPU 종속을 줄이려는 것임.</p>
+      <ul class="points"><li>설정 1줄 변경, 코드 재작성 없이 Trainium2·3에서 실행</li><li>Apache 2.0 오픈소스, GitHub aws-neuron/torch-neuronx</li><li>Amazon: AI 개발자 85%가 PyTorch로 코드 작성</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 칩 경쟁의 핵심은 하드웨어보다 소프트웨어 생태계, 즉 CUDA 종속(lock-in)임. AWS가 정면으로 그 벽을 겨냥해 학습·추론 비용 경쟁에 불이 붙을 수 있음.</p>      <div class="links">
+        <a href="https://www.aboutamazon.com/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📒 Mercor · Digits</span>
+        <span>Mercor · 10/1</span>
+<span class="tag">#월말결산</span><span class="tag">#벤치마크</span><span class="tag">#회계AI</span>      </div>
+      <h3><a href="https://www.mercor.com/blog/human-baselines-for-benchmarks-ai-now-outperforms-junior-accountants/" target="_blank" rel="noopener">월말결산 벤치마크, AI 100% vs CPA 평균 37%</a></h3>
+<p class="orig">Human Baselines for Benchmarks: AI Now Outperforms Junior Accountants</p>      <p class="summary">Mercor가 CPA 12명과 Claude Opus 5에게 같은 월말결산(month-end close) 과제를 맡겼더니, AI는 20회 모두 100%를 받았고 사람 평균은 약 37%였음. Accounting Today가 10/16 이 결과를 Digits의 거래 분류 실험(사람 79.1% vs 단발 LLM 최고 약 79.5%)과 나란히 다루면서 업계에서 화제가 됨.</p>
+      <ul class="points"><li>CPA 12명(평균 경력 약 5.5년), APEX-Accounting 기반 4개 시나리오</li><li>Opus 5는 20회 모두 100%·회당 10분 미만, 사람은 30~180분</li><li>충족 기준 1개당 비용 $0.21 vs $10.35, 사람이 약 49배 비쌈</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 파일 탐색·계산·지시 이행 같은 정형 결산 작업에서는 프런티어 모델이 주니어 CPA를 이미 앞섬. 다만 벤더가 주도한 소규모 실험이고, 고객 맥락과 동료 도움을 차단한 조건이라 &#39;대체&#39;보다는 업무 재편 신호로 봐야 함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>이 실험의 핵심 자산은 결산 실무자가 만든 13~22개 항목짜리 채점 루브릭(rubric)이고, 내 경력이 바로 그 재료임.</span></p>
+<ul><li>내가 해 본 결산 업무 1건을 루브릭 과제로 재구성</li><li>LLM-as-judge로 Claude·GPT 답안 채점 비교</li><li>결과를 GitHub 포트폴리오에 정리</li></ul><div class="skills"><span class="skill">LLM Evaluation</span><span class="skill">Rubric design</span><span class="skill">Month-end close</span><span class="skill">LLM-as-judge</span></div>      </div>
+      <div class="links">
+        <a href="https://www.mercor.com/blog/human-baselines-for-benchmarks-ai-now-outperforms-junior-accountants/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/news/ai-beats-human-accountants-at-monthly-close-transaction-categorization" target="_blank" rel="noopener">Accounting Today: 두 연구 비교 (10/16) ↗</a><a href="https://digits.com/blog/ai-cant-close-books-from-outside/" target="_blank" rel="noopener">Digits 거래 분류 벤치마크 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🛡️ Deloitte</span>
+        <span>Deloitte · 10/15</span>
+<span class="tag">#리스크관리</span><span class="tag">#내부통제</span><span class="tag">#에이전틱AI</span>      </div>
+      <h3><a href="https://www.deloitte.com/us/en/services/consulting/services/ai-powered-risk-clarity-solution.html" target="_blank" rel="noopener">Deloitte, 에이전트 기반 리스크 관리 &#39;Risk Clarity&#39;</a></h3>
+<p class="orig">Deloitte launches Risk Clarity, an AI-native agentic enterprise risk solution</p>      <p class="summary">Deloitte가 전사 리스크 관리(ERM)의 전 과정을 AI 에이전트 팀이 처리하는 AI 네이티브 솔루션 Risk Clarity를 출시함. 규제 분석, 리스크·통제 자가평가(RCSA), 통제 테스트, 이슈 관리까지 자동화하고, 가디언 에이전트(guardian agents)와 사람이 결과를 검증하는 구조임.</p>
+      <ul class="points"><li>6개 모듈·25개 이상 에이전트, Deloitte Ascend 플랫폼으로 제공</li><li>워크스루·설계평가·테스트 스크립트·모집단 테스트까지 자동화</li><li>효율 1년차 20~30%, 3년차 40~50% (Deloitte 자체 추정치)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Big 4가 내부통제·리스크 업무를 사람 중심 컨설팅에서 &#39;에이전트+사람 검증&#39; 구조의 제품으로 바꾸고 있음. 앞으로 리스크·감사 인력에게는 에이전트 결과를 검토·감독하는 역량이 요구될 것임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>RCSA·통제 테스트는 회계 실무자가 흐름을 잘 아는 영역이라, 이를 에이전트 워크플로로 설계하는 경험 자체가 차별점이 됨.</span></p>
+<ul><li>통제 설명 초안을 LLM으로 개선·중복 탐지 실험</li><li>샘플 모집단으로 자동 통제 테스트 스크립트 작성</li><li>Deloitte·EY 호주 리스크 AI 채용 공고 확인</li></ul><div class="skills"><span class="skill">RCSA</span><span class="skill">Internal controls</span><span class="skill">Agentic workflow</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://www.deloitte.com/us/en/services/consulting/services/ai-powered-risk-clarity-solution.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techintelpro.com/AI/Agentic-AI/deloitte-launches-risk-clarity-to-modernize-risk-management-with-ai" target="_blank" rel="noopener">TechIntelPro 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">💳 Spade</span>
+        <span>FinTech Global · 10/16</span>
+<span class="tag">#거래데이터</span><span class="tag">#사기탐지</span><span class="tag">#파운데이션모델</span>      </div>
+      <h3><a href="https://fintech.global/2026/10/16/spade-brings-transaction-ai-to-banks-of-every-size/" target="_blank" rel="noopener">Spade, 은행용 거래 데이터 AI &#39;Predictions&#39; 출시</a></h3>
+<p class="orig">Spade brings transaction AI to banks of every size</p>      <p class="summary">Spade가 결제 행동과 검증된 가맹점 데이터로 학습한 은행·핀테크용 파운데이션 모델 Spade Predictions를 출시함. 규모가 작은 은행도 그대로 쓰거나 미세조정하거나, 임베딩(embedding)만 받아 대출·사기 탐지 모델에 붙일 수 있음.</p>
+      <ul class="points"><li>美 은행 대출 테스트: 기존 성향 모델 대비 35% 우수</li><li>8개월 카드 거래 테스트: 사기 지출 최대 $300만 차단 가능</li><li>Merchant Graph: 美·캐나다 사업체 99.9%, 40ms 내 매칭</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 거래 데이터 분석은 원래 대형 은행만 하던 일인데, 사전학습 모델과 임베딩 형태로 중소 금융사도 쓸 수 있게 됨. 다만 성과 수치는 벤더 자체 발표임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>거래 내역 → 가맹점 식별 → 임베딩 → 대출·사기 모델로 이어지는 구조는 바로 따라 해 볼 만한 포트폴리오 주제임.</span></p>
+<ul><li>Kaggle 카드 거래 데이터로 가맹점 임베딩 실습</li><li>임베딩 추가 전후 사기 탐지 성능(AUC) 비교</li></ul><div class="skills"><span class="skill">Embeddings</span><span class="skill">Fraud detection</span><span class="skill">Credit risk</span><span class="skill">Feature engineering</span></div>      </div>
+      <div class="links">
+        <a href="https://fintech.global/2026/10/16/spade-brings-transaction-ai-to-banks-of-every-size/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.spade.com/" target="_blank" rel="noopener">Spade 공식 사이트 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Joint Select Committee on AI / Australian AI Safety Institute</span>
+        <span>The Nightly · 10/16</span>
+<span class="tag">#호주AI정책</span><span class="tag">#AI안전</span><span class="tag">#데이터센터</span>      </div>
+      <h3><a href="https://thenightly.com.au/politics/australias-ai-safety-institute-doesnt-have-resourcing-to-be-taken-seriously-internationally-experts-warn-c-23027685" target="_blank" rel="noopener">호주 AI안전연구소, 국제 위상에 비해 자원 부족 지적</a></h3>
+<p class="orig">Australia&#39;s AI Safety Institute doesn&#39;t have resourcing &#39;to be taken seriously&#39; internationally, experts warn</p>      <p class="summary">의회 AI 합동특별위원회(Joint Select Committee on AI) 청문회에서 전문가들이 호주 AI안전연구소(AISI)가 국제무대에서 인정받기엔 자원이 부족하다고 경고함. 정부는 $2,980만을 지원하고 있고 이미 모델 안전 테스트와 영국 협력을 시작했다고 반박함.</p>
+      <ul class="points"><li>연구자 Janet Egan은 $750만을 언급하며 해외보다 크게 적다고 비판</li><li>Tim Ayres 장관 측은 $2,980만 지원, 안전 테스트 착수라고 반박</li><li>Carnegie의 Winter-Levy: 인허가·전력망 병목으로 데이터센터 美보다 느림</li></ul>
+<p class="why"><b>💡 왜 중요?</b> OpenAI 에이전트의 Medicare 통계 무단 접근 이후, 호주는 프런티어 AI 감독 역량과 컴퓨트 인프라를 둘 다 &#39;전략 자산&#39;으로 다루기 시작함. 2026년 말 국가 AI 표준과 2027년 입법을 앞두고 감독 기관에 실제로 얼마나 힘이 실릴지가 쟁점이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>호주에서 AI 거버넌스·AI 보증(assurance)을 맡을 인력 수요는 정부·금융권 모두에서 커질 수밖에 없음. 재무·감사 경력에 AI 평가 역량을 더하면 바로 맞는 자리임.</span></p>
+<ul><li>위원회 제출 의견서(submissions) 2~3건 읽고 쟁점 정리</li><li>DISR AISI 채용·자문 공고 알림 설정</li><li>Big 4 호주 AI assurance 직무 요건 비교</li></ul><div class="skills"><span class="skill">AI governance</span><span class="skill">AI assurance</span><span class="skill">Model evaluation</span><span class="skill">Australian AI policy</span></div>      </div>
+      <div class="links">
+        <a href="https://thenightly.com.au/politics/australias-ai-safety-institute-doesnt-have-resourcing-to-be-taken-seriously-internationally-experts-warn-c-23027685" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-institute" target="_blank" rel="noopener">DISR 호주 AI안전연구소 페이지 ↗</a><a href="https://www.themandarin.com.au/321947-monday-briefing-ai-safety-institute/" target="_blank" rel="noopener">The Mandarin: AISI 브리핑 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽 흐름은 &#39;모델을 어디서든 싸게 돌리는 것(Nemotron, TorchNeuron)&#39;과 &#39;AI 결과를 어떻게 믿을 것인가(Simons 검증 기금)&#39;로 나뉨. 재무 쪽에서는 Mercor 실험처럼 정형 결산을 AI가 이미 사람보다 빠르고 정확하게 하고, Deloitte는 통제 테스트를 에이전트에 맡기고 사람은 검증만 하는 구조를 상품으로 내놓음. 결국 가치가 몰리는 곳은 &#39;정답을 만드는 일&#39;보다 &#39;정답 여부를 판정하는 기준과 통제를 설계하는 일&#39;임. 회계 실무로 결산·통제를 아는 사람이 평가 루브릭과 Human-in-the-loop 설계를 할 수 있다면, 호주 AI 거버넌스 수요와도 바로 맞물리는 희소한 프로필이 됨.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Mercor 루브릭 구조 읽고 결산 과제 1개 만들기</li><li>RCSA 통제 설명 3건 LLM으로 개선해 보기</li><li>공개 카드 데이터로 임베딩 사기 탐지 실습하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">RCSA (Risk and Control Self-Assessment)</span> — 부서가 직접 자기 업무의 리스크와 통제를 평가하는 절차임. 내부통제·ERM의 기본 도구로, Deloitte Risk Clarity가 AI 에이전트로 이 과정의 검토·통제 추천을 자동화함.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">10/20</span><span>AWS TorchNeuron 오픈소스 공개 (PyTorch Conference North America)</span></li><li><span class="d">10/23</span><span>NVIDIA Nemotron 3.5 Bolt E4B 4GB 출시 예정</span></li></ul></section><div class="hashtags">#FinAI #월말결산 #AI감사 #리스크관리 #Nemotron #호주AI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-20 · 검색 1시간 5분 · 탐색 17회 · 검색어 75개 · 출처 62곳 → 후보 30건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
