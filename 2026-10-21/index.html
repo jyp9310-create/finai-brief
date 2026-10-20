@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-21</title>
+<meta name="description" content="AI를 감시·감사하는 시대: 가디언 에이전트부터 CPA 인증까지">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 21일 (수)">
+<meta property="og:description" content="AI를 감시·감사하는 시대: 가디언 에이전트부터 CPA 인증까지">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-21/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-21/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 21일 (수)</div>
+    <h1>AI를 감시·감사하는 시대: 가디언 에이전트부터 CPA 인증까지</h1>
+    <p class="overview">AI 쪽에서는 구글이 엔비디아 견제용 TorchTPU를 공개했고, 앤트로픽 상장신고서(S-1) 유출로 프런티어 랩의 막대한 인프라 비용이 드러났음. 재무 쪽에서는 AICPA·영국 FCA·마이크로소프트가 같은 메시지를 냈음: AI 에이전트는 독립적으로 계속 감시·검증해야 한다는 것임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 16회 · 검색어 77개 · 출처 66곳 → 후보 27건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. AICPA, SOC 2+AIUC-1 결합 AI 보증 인증 발표</div>
+<div class="r">감사·재무 경력과 AI 전공을 합쳐 바로 지원할 수 있는 &#39;AI 보증&#39; 직무가 CPA 표준 서비스로 생겨나는 신호이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🔌 구글, TorchTPU 오픈소스 공개…엔비디아 견제</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">📑 앤트로픽 S-1 유출…클라우드 계약 $7,500억 가능성</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🛡️ MS &#34;AI 에이전트는 내부자&#34;…가디언 에이전트 제안</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">✅ AICPA, SOC 2+AIUC-1 결합 AI 보증 인증 발표</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🇬🇧 영국 FCA, &#39;에이전트 금융&#39; 규제 틀 만든다</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 로이즈, AI 지수 영국 은행 1위…£1억+ 가치 기대</a></li>
+    <li><span class="n au">7</span><a href="#item-7">⚖️ 노인돌봄 배정 알고리즘, 독립 전문가 검토 착수</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🔌 Google Cloud</span>
+        <span>Google Cloud Blog · 10/20</span>
+<span class="tag">#Google</span><span class="tag">#AI 칩</span><span class="tag">#PyTorch</span>      </div>
+      <h3><a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus" target="_blank" rel="noopener">구글, TorchTPU 오픈소스 공개…엔비디아 견제</a></h3>
+<p class="orig">TorchTPU is now open source: Run native PyTorch on TPUs</p>      <p class="summary">구글이 PyTorch 앱을 코드 재작성 없이 설정 변경만으로 자사 TPU에서 돌릴 수 있는 TorchTPU를 PyTorch Conference 2026에서 오픈소스로 공개함. 하루 전 아마존이 Trainium용 TorchNeuron을 낸 데 이어, 엔비디아 GPU 중심 개발 생태계를 흔들려는 빅테크 경쟁이 본격화됨.</p>
+      <ul class="points"><li>Meta PyTorch팀과 공동 개발, GitHub에 오픈소스로 공개</li><li>Hugging Face·vLLM(Inferact)·SGLang(RadixArk)과 호환 작업</li><li>TorchTitan, Ironwood TPU 8,192개까지 거의 선형 확장·MFU 최대 52%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 앱 대부분(일부 집계 약 85%)이 PyTorch로 만들어지는데, TPU로 옮기는 비용이 낮아지면 엔비디아 의존도와 추론 단가 협상력에 변화가 생김. 클라우드 3사의 칩 선택지 경쟁이 개발자 도구 레벨로 내려왔다는 신호임.</p>      <div class="links">
+        <a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" target="_blank" rel="noopener">TechCrunch: Google joins Amazon in attacking Nvidia&#39;s stronghold ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">📑 Anthropic</span>
+        <span>The Wall Street Journal (via TechCrunch) · 10/20</span>
+<span class="tag">#Anthropic</span><span class="tag">#IPO</span><span class="tag">#S-1</span>      </div>
+      <h3><a href="https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1" target="_blank" rel="noopener">앤트로픽 S-1 유출…클라우드 계약 $7,500억 가능성</a></h3>
+<p class="orig">Anthropic revenue growth and IPO (leaked S-1, WSJ) / Anthropic&#39;s cloud partnerships are getting messy</p>      <p class="summary">WSJ가 입수한 앤트로픽 상장신고서(S-1)에 따르면, AWS·구글·MS가 앤트로픽을 점점 경쟁자로 보면서 컴퓨팅 확보가 어려워졌고, 클라우드 계약에 7,500억 달러 넘게 쓸 수도 있다고 함. 지난주 보도된 3분기 매출(168억 달러)에 더해 이번에 새로 나온 내용은 상반기 순손실 807억 달러, 고객 집중도, 보험 한도를 넘는 배상책임 위험 같은 위험 공시임.</p>
+      <ul class="points"><li>2026 상반기 매출 $163억, 순손실 $807억</li><li>3분기 매출 $168억, 전 분기 대비 45% 증가</li><li>고객 2곳이 매출 약 1/5 차지, 11월 IPO 목표 보도</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 AI 랩의 비용 구조와 위험요인이 공시 형태로 처음 드러나 AI 산업 수익성 논쟁의 기준점이 됨. 클라우드 업체가 공급자이면서 경쟁자라는 구조적 긴장도 확인됨.</p>      <div class="links">
+        <a href="https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/" target="_blank" rel="noopener">TechCrunch: Anthropic&#39;s cloud partnerships are getting messy ↗</a><a href="https://www.wsj.com/tech/ai/anthropic-shifts-planned-ipo-to-november-8874dffc" target="_blank" rel="noopener">WSJ: Anthropic shifts planned IPO to November ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🛡️ Microsoft</span>
+        <span>Official Microsoft Blog · 10/19</span>
+<span class="tag">#Microsoft</span><span class="tag">#AI 보안</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/" target="_blank" rel="noopener">MS &#34;AI 에이전트는 내부자&#34;…가디언 에이전트 제안</a></h3>
+<p class="orig">Securing the agentic insider</p>      <p class="summary">Microsoft Security EVP 헤이트 갈로(Hayete Gallot)는 데이터·도구에 폭넓게 접근하는 기업 AI 에이전트를 &#39;에이전트형 내부자(agentic insider)&#39;로 보고, 모든 행동을 실행 전에 24시간 감시·조정하는 독립 &#39;가디언 에이전트(Guardian Agents)&#39;가 필요하다고 주장함. 7월 발표한 Project Perception의 레드·블루·그린 에이전트 스택을 바탕으로, 행동 맥락에 따라 위험도를 실시간으로 계산하는 구조를 제시함.</p>
+      <ul class="points"><li>센서 신호로 에이전트 발견 후 신원·컨테이너·권한 부여</li><li>에이전트 행동 맥락에 따라 위험도 동적 산정</li><li>Project Perception(2026년 7월) 기반, 위험 높아지면 즉시 대응</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI를 만드는 쪽과 감시하는 쪽을 분리해야 한다는 &#39;독립 감독&#39; 원칙을 빅테크가 공식 보안 구조로 내놓은 것임. 감사인-피감사인 관계와 비슷한 통제 모델이 AI 운영 표준이 될 수 있음.</p>      <div class="links">
+        <a href="https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/" target="_blank" rel="noopener">TechCrunch: Microsoft says AI agents are like insider threats ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">✅ AICPA &amp; AIUC</span>
+        <span>AICPA &amp; CIMA · 10/19</span>
+<span class="tag">#AI 보증</span><span class="tag">#감사</span><span class="tag">#SOC 2</span>      </div>
+      <h3><a href="https://www.aicpa-cima.com/news/article/auditors-meet-urgent-demand-for-ai-assurance-with-new-offering-from-aicpa-and-aiuc" target="_blank" rel="noopener">AICPA, SOC 2+AIUC-1 결합 AI 보증 인증 발표</a></h3>
+<p class="orig">Auditors Meet Urgent Demand for AI Assurance with New Offering from AICPA and AIUC</p>      <p class="summary">미국공인회계사회(AICPA)와 AI 에이전트 인증사 AIUC가 SOC 2 보고서와 AIUC-1 인증을 CPA가 주도하는 업무(engagement) 하나로 함께 받는 공동 AI 보증(assurance) 상품을 발표함. 정책·가드레일 검토에 그치지 않고 에이전트 행동을 수백 가지 위험·공격 조합으로 실제 테스트하는 게 핵심이며, 정식 출시는 2027년 초 예정임.</p>
+      <ul class="points"><li>AIUC-1: 데이터·보안·안전·신뢰성·책임성·사회 6원칙</li><li>MITRE ATLAS·ISO 42001·EU AI Act와 통제 매핑</li><li>연 1회 재인증+분기별 기술 재테스트, PwC 등에서 파일럿</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 시스템 감사가 회계법인의 정식 서비스 라인으로 표준화되기 시작함. SOC 2처럼 AI 벤더 계약·실사 때 요구하는 필수 보고서가 될 가능성이 큼.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>재무·감사 경력에 AI 전공을 더한 조합이 가장 직접 쓰이는 &#39;AI 보증&#39; 직무가 공식 시장으로 열림.</span></p>
+<ul><li>AIUC-1 6원칙과 SOC 2 TSC 비교표 만들기</li><li>Big 4 호주 &#39;AI Assurance&#39; 채용공고 분석</li><li>LLM 에이전트 프롬프트 인젝션 테스트 실습</li></ul><div class="skills"><span class="skill">AI Assurance</span><span class="skill">SOC 2</span><span class="skill">ISO 42001</span><span class="skill">AI Red Teaming</span></div>      </div>
+      <div class="links">
+        <a href="https://www.aicpa-cima.com/news/article/auditors-meet-urgent-demand-for-ai-assurance-with-new-offering-from-aicpa-and-aiuc" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/news/new-ai-assurance-certification-combines-soc-2-aiuc-1" target="_blank" rel="noopener">Accounting Today: New AI assurance certification combines SOC 2, AIUC-1 ↗</a><a href="https://www.cfodive.com/news/aicpa-assurance-firm-team-up-certify-ai-agents/833403/" target="_blank" rel="noopener">CFO Dive: AICPA, assurance firm team up to certify AI agents ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🇬🇧 UK Financial Conduct Authority (FCA)</span>
+        <span>FCA · 10/19</span>
+<span class="tag">#규제</span><span class="tag">#에이전틱 AI</span><span class="tag">#영국</span>      </div>
+      <h3><a href="https://www.fca.org.uk/news/speeches/building-future-finance-age-ai" target="_blank" rel="noopener">영국 FCA, &#39;에이전트 금융&#39; 규제 틀 만든다</a></h3>
+<p class="orig">Building the future of finance in the age of AI</p>      <p class="summary">영국 금융행위감독청(FCA)의 최고데이터책임자 제시카 루수(Jessica Rusu)는 업계·타 규제기관·프런티어 랩과 함께 AI 에이전트의 신원·위임 권한·책임·실행을 다루는 프레임워크를 만들겠다고 밝힘. 에이전트는 배포 때 한 번 승인하는 것으로 끝나지 않고 &#39;지속적·조건부 보증&#39;이 필요하며, 큰 AI 실패뿐 아니라 아차사고(near-miss) 보고도 규제 우선순위라고 강조함.</p>
+      <ul class="points"><li>프레임워크 범위: 에이전트 신원·위임 권한·책임·실행</li><li>AI 제공사에 금융정보 면책 문구 자발적 표시 요청</li><li>FCA 자체 에이전트로 소형 거래보고사 약 9,000곳 감독 예정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 주요 금융감독기관이 &#39;고객 대신 행동하는 AI&#39;를 별도 규제 대상으로 공식화한 것임. 아직 일정·초안은 없지만, 영국과 공조하는 호주 ASIC·APRA 논의에도 기준점이 될 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트의 &#39;위임 권한·책임&#39; 설계는 재무 전결규정(DoA)을 다뤄 본 경험이 그대로 쓰이는 영역임.</span></p>
+<ul><li>전결규정을 AI 에이전트 권한표로 바꿔 보기</li><li>FCA Handbook API 문서 살펴보기</li></ul><div class="skills"><span class="skill">Delegation of Authority</span><span class="skill">RegTech</span><span class="skill">Continuous Assurance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.fca.org.uk/news/speeches/building-future-finance-age-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.pymnts.com/news/artificial-intelligence/2026/united-kingdom-financial-conduct-authority-plans-regulatory-framework-agentic-finance/" target="_blank" rel="noopener">PYMNTS: UK&#39;s FCA Plans Regulatory Framework for Agentic Finance ↗</a><a href="https://regulationtomorrow.com/2026/10/fca-good-and-poor-practice-ai-in-financial-services-good-practice-and-areas-for-improvement" target="_blank" rel="noopener">Regulation Tomorrow: FCA good and poor practice on AI ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Lloyds Banking Group</span>
+        <span>EuropaWire (Lloyds press release) · 10/19</span>
+<span class="tag">#은행</span><span class="tag">#에이전틱 AI</span><span class="tag">#Evident AI</span>      </div>
+      <h3><a href="https://news.europawire.eu/lloyds-banking-group-retains-highest-uk-bank-ranking-in-evident-ai-index-as-ai-score-rises-10-2-points/eu-press-release/2026/10/19/18/45/04/183430" target="_blank" rel="noopener">로이즈, AI 지수 영국 은행 1위…£1억+ 가치 기대</a></h3>
+<p class="orig">Lloyds Banking Group retains highest UK bank ranking in Evident AI Index as AI score rises 10.2 points</p>      <p class="summary">로이즈뱅킹그룹은 2026년 10월 Evident AI Index에서 세계 15위, 영국 은행 중 1위를 지켰고 점수가 45.0에서 55.2로 10.2점 올랐다고 밝힘. 사내 AI 에이전트 플랫폼 &#39;Envoy&#39;를 넓혀 2026년 차세대 AI로 1억 파운드 이상의 추가 가치를 기대하며, 에이전트 AI 직무도 1,000개 넘게 만들 계획임(회사 자체 발표 수치).</p>
+      <ul class="points"><li>점수 45.0→55.2(+10.2), 50개 은행 평균 46.1(+9.6)</li><li>인재 10위·리더십 6위·투명성 6위</li><li>Envoy 플랫폼으로 £1억+ 가치, 에이전트 AI 직무 1,000개+</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행들이 AI 성과를 &#39;시간 절감&#39; 대신 &#39;파운드 단위 가치&#39;로 보고하기 시작함. 거버넌스가 있는 사내 에이전트 플랫폼과 인재 투자가 경쟁력 지표로 자리 잡는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI가 만든 &#39;£1억 가치&#39;를 정의하고 측정·검증하는 일은 재무 출신이 가장 잘할 수 있는 역할임.</span></p>
+<ul><li>Evident AI Index 방법론·지표 확인하기</li><li>AI 가치 측정 KPI 템플릿 만들어 보기</li></ul><div class="skills"><span class="skill">AI ROI</span><span class="skill">Value Tracking</span><span class="skill">Banking AI</span></div>      </div>
+      <div class="links">
+        <a href="https://news.europawire.eu/lloyds-banking-group-retains-highest-uk-bank-ranking-in-evident-ai-index-as-ai-score-rises-10-2-points/eu-press-release/2026/10/19/18/45/04/183430" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">⚖️ Australian Government (Minister for Aged Care Sam Rae)</span>
+        <span>Department of Health, Disability and Ageing · 10/15</span>
+<span class="tag">#호주 정부</span><span class="tag">#알고리즘 책임성</span><span class="tag">#ADM</span>      </div>
+      <h3><a href="https://www.health.gov.au/ministers/the-hon-sam-rae-mp/media/independent-expert-review-of-aged-care-assessment-tool?language=en" target="_blank" rel="noopener">노인돌봄 배정 알고리즘, 독립 전문가 검토 착수</a></h3>
+<p class="orig">Independent expert review of aged care assessment tool</p>      <p class="summary">샘 레이(Sam Rae) 노인복지부 장관은 노인돌봄 등급과 우선순위를 정하는 알고리즘 기반 통합평가도구(IAT)를 독립 전문가에게 검토받겠다고 발표함. 알고리즘이 개인 사정을 반영하지 못하고 평가자가 결과를 뒤집을(override) 수 없다는 비판이 이어지자, 2027년 1월부터 예외 사례를 부처가 재검토하는 경로도 도입하기로 함.</p>
+      <ul class="points"><li>등급·우선순위 산정 메커니즘의 기본 구조 전반을 검토</li><li>보고서는 2027년 상반기 전문 공개·의회 제출 예정</li><li>옴부즈만도 IAT 조사 중, 상원은 7월 인간 개입 복원 법안 통과</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 정부의 자동화 의사결정(ADM)에서 &#39;사람이 알고리즘 결과를 뒤집을 수 있느냐&#39;가 정치 쟁점이 됨. ASIC이 예고한 은행 AI 검토처럼 금융권 AI 심사·결정에도 같은 기준이 적용될 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>알고리즘 결과를 사람이 뒤집을 수 있는지(human override)가 호주 AI 거버넌스의 핵심 쟁점임.</span></p>
+<ul><li>IAT 사례로 human override 설계안 1쪽 쓰기</li><li>ASIC 은행 AI 리뷰와 쟁점 비교해 보기</li></ul><div class="skills"><span class="skill">Automated Decision-Making</span><span class="skill">Human-in-the-loop</span><span class="skill">AI Governance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.health.gov.au/ministers/the-hon-sam-rae-mp/media/independent-expert-review-of-aged-care-assessment-tool?language=en" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.theweeklysource.com.au/govt-announces-independent-review-on-aged-care-assessment-tool/" target="_blank" rel="noopener">The Weekly Source: Govt orders independent review of aged care assessments ↗</a><a href="https://www.innovationaus.com/aged-care-algorithm-flaws-spark-second-independent-review/" target="_blank" rel="noopener">InnovationAus: Aged care algorithm flaws spark second independent review ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 나온 소식은 거의 다 &#39;AI를 누가, 어떻게 독립적으로 감시하나&#39;라는 질문으로 모임. 마이크로소프트는 가디언 에이전트를, AICPA는 CPA가 이끄는 AI 인증을, 영국 FCA는 지속적 보증과 아차사고 보고를 내놨고, 호주에서는 알고리즘 결과를 사람이 뒤집을 수 있는지가 쟁점이 됨. 이는 감사인의 독립성, 직무 분리, 전결규정 같은 전통적 내부통제 개념이 AI 에이전트 운영의 기본 틀로 옮겨 가고 있다는 뜻임. 재무·회계 실무를 해 본 AI 전공자에게는 &#39;통제를 설계하고 검증하는 사람&#39;으로 자리 잡을 기회가 지금 열리고 있음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>AIUC-1 6원칙과 SOC 2 기준 비교표 만들기</li><li>회사 전결규정을 AI 에이전트 권한표로 바꿔 보기</li><li>앤트로픽 S-1 보도 속 위험요인 3개 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">AI 보증 (AI Assurance)</span> — AI가 안전하고 믿을 만한지 독립 제3자가 검증하는 것. 재무제표 감사처럼 통제 설계를 검토하고, 에이전트를 실제로 공격·테스트해 결과를 보고서나 인증으로 내줌.</p></section><div class="hashtags">#AI보증 #AIUC1 #SOC2 #에이전틱AI #FCA #TorchTPU </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-21 · 검색 1시간 1분 · 탐색 16회 · 검색어 77개 · 출처 66곳 → 후보 27건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
