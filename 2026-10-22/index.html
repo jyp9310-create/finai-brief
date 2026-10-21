@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-22</title>
+<meta name="description" content="AI 에이전트에 지갑·권한 준다…통제·규제도 동시 강화">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 22일 (목)">
+<meta property="og:description" content="AI 에이전트에 지갑·권한 준다…통제·규제도 동시 강화">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-22/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-22/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 22일 (목)</div>
+    <h1>AI 에이전트에 지갑·권한 준다…통제·규제도 동시 강화</h1>
+    <p class="overview">마스터카드와 구글이 AI 에이전트에게 결제와 재무 분석을 맡기는 도구를 공개함. 동시에 앤트로픽 안전법안, 미 정부 DeepSeek 퇴출, 금감원 &#39;AI 방어&#39; 주문, NAB 감원으로 AI의 통제·책임 문제가 전면에 드러남.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 14분 · 탐색 16회 · 검색어 77개 · 출처 58곳 → 후보 26건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. NAB, 최대 2,500명 감원…AI 역할 공개 요구</div>
+<div class="r">멜버른 본사 은행 NAB의 본사·재무 기능 감원은 이 독자가 노리는 호주 재무+AI 직무 시장의 변화를 바로 보여 줌.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">⚖️ 앤트로픽, &#39;50명 사망 위험&#39; 시 AI 출시 중단 법안 제안</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧬 OpenAI, 신약개발 운영 에이전트 Orchestra Bio 인수</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🚫 미 정부, 연방 민간기관에서 DeepSeek 퇴출 명령</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">💳 마스터카드, AI 에이전트 결제 API 개발자에 개방</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">📊 구글 Gemini, 소상공인용 재무 분석·Xero 연동</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛡️ 금감원장 &#39;AI 공격엔 AI 방어&#39;…금융보안 강화</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 NAB, 최대 2,500명 감원…AI 역할 공개 요구</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">⚖️ Anthropic</span>
+        <span>TechCrunch · 10/20</span>
+<span class="tag">#AI규제</span><span class="tag">#AI안전</span><span class="tag">#미국의회</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/" target="_blank" rel="noopener">앤트로픽, &#39;50명 사망 위험&#39; 시 AI 출시 중단 법안 제안</a></h3>
+<p class="orig">Anthropic pitches AI safety bill that may block a model if 50+ people could be killed</p>      <p class="summary">앤트로픽이 프런티어 AI 모델이 재앙적 위험을 일으킬 때만 정부가 출시를 막을 수 있게 하는 법안 초안을 미 의회에 비공개로 제안함(10/16 Politico 첫 보도). 상무부에 등록한 독립 평가기관(independent evaluator)이 위험을 통보하고 법원이 중단 여부를 판단하는 구조임.</p>
+      <ul class="points"><li>사망·중상 50명 초과 또는 피해 $10억 초과 위험 시 중단 가능</li><li>평가기관은 위험 발견 72시간 내 상무부에 통보해야 함</li><li>D.C. 연방판사 승인 필요, 다른 기관의 단독 중단은 금지</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 규제를 &#39;외부 평가기관 + 법원&#39;이라는 감사(audit)형 구조로 설계하려는 업계의 첫 구체안임. 다만 연구소가 평가기관에 직접 비용을 내는 구조라 독립성 논란이 남음.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.thestar.com.my/tech/tech-news/2026/10/17/anthropic-quietly-pitches-its-own-ai-safety-bill-to-lawmakers-politico-reports" target="_blank" rel="noopener">The Star (Politico 보도 인용) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧬 OpenAI</span>
+        <span>OpenAI · 10/20</span>
+<span class="tag">#OpenAI</span><span class="tag">#인수합병</span><span class="tag">#생명과학</span>      </div>
+      <h3><a href="https://openai.com/index/openai-to-acquire-orchestra-bio/" target="_blank" rel="noopener">OpenAI, 신약개발 운영 에이전트 Orchestra Bio 인수</a></h3>
+<p class="orig">OpenAI to acquire Orchestra Bio</p>      <p class="summary">OpenAI가 신약개발의 운영 업무(재무 추적, 임상시험 일정 조율 등)를 처리하는 AI 에이전트 스타트업 Orchestra Bio를 인수함. 팀과 기술은 생명과학 모델 Rosalind와 연구 도구 Rosalind Workbench에 합쳐짐.</p>
+      <ul class="points"><li>Orchestra는 설립 4년 차로 a16z·Atria·8VC에서 약 $2천만 유치</li><li>Rosalind Workbench는 실험 설계·결과 분석 지원 도구임</li><li>Rosalind 고객: Moderna·Novo Nordisk, 인수가는 비공개</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 모델 회사가 특정 산업의 &#39;업무 운영 에이전트&#39;까지 직접 사들여 버티컬(vertical) 시장을 공략하는 흐름임.</p>      <div class="links">
+        <a href="https://openai.com/index/openai-to-acquire-orchestra-bio/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🚫 US DHS</span>
+        <span>Federal Register · 10/20</span>
+<span class="tag">#AI규제</span><span class="tag">#DeepSeek</span><span class="tag">#공급망보안</span>      </div>
+      <h3><a href="https://public-inspection.federalregister.gov/2026-21447.pdf" target="_blank" rel="noopener">미 정부, 연방 민간기관에서 DeepSeek 퇴출 명령</a></h3>
+<p class="orig">Notice of Order Regarding Exclusion and Removal of DeepSeek Products from Federal Civilian Executive Branch IT Systems and Procurements</p>      <p class="summary">미 국토안보부(DHS)가 연방 민간기관에 중국 DeepSeek 제품의 구매를 금지하고 기존 IT 시스템에서도 제거하라고 명령함. DeepSeek 기술로 만든 제3자 제품·서비스까지 포함해 적용 범위가 넓어짐.</p>
+      <ul class="points"><li>연방조달 공급망보안법(FASCSA, 2018)을 근거로 함</li><li>신규 구매 금지와 기존 시스템 제거 모두 해당, 예외는 별도 신청</li><li>중국 외교부는 &#39;국가안보 개념 남용&#39;이라며 반발함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 어떤 AI 모델을 쓰는지, 그 모델 위에 만든 제품인지까지가 공급망·컴플라이언스 이슈가 됨. 정부와 거래하는 금융사·벤더의 제3자 위험관리(TPRM) 범위도 넓어짐.</p>      <div class="links">
+        <a href="https://public-inspection.federalregister.gov/2026-21447.pdf" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">💳 Mastercard</span>
+        <span>The Block · 10/20</span>
+<span class="tag">#에이전트결제</span><span class="tag">#핀테크</span><span class="tag">#x402</span>      </div>
+      <h3><a href="https://theblock.co/news/business/2026-10-20-mastercard-opens-early-access-to-ai-agent-payments-following-pilots-with-coinbase-base-and-cloudflare-421406" target="_blank" rel="noopener">마스터카드, AI 에이전트 결제 API 개발자에 개방</a></h3>
+<p class="orig">Mastercard opens early access to AI agent payments following pilots with Coinbase, Base and Cloudflare</p>      <p class="summary">마스터카드가 AI 에이전트끼리 결제하는 기계 간(M2M) 결제 시스템 &#39;Agent Pay for Machines&#39;의 개발자 얼리 액세스를 열고 구매자·판매자 API, 툴킷, 샌드박스를 공개함. 6월 발표 이후 처음으로 개발자가 직접 써 볼 수 있게 됐으나 아직 상용화 전 파일럿 단계임.</p>
+      <ul class="points"><li>구매자·판매자 API, 개발자 툴킷, 샌드박스를 얼리 액세스로 공개</li><li>Cloudflare·Coinbase·Base·Ant International·BVNK·AIsa와 파일럿</li><li>카드·계좌·스테이블코인 결제와 지출 통제(spending controls) 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트가 승인된 예산 안에서 스스로 결제하는 구조가 카드 네트워크 수준에서 만들어지는 중임. 지출 한도, 승인, 정산 같은 재무 통제가 에이전트 설계 안으로 들어감.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트가 쓰는 돈의 승인·한도·정산 대사는 결국 재무 내부통제 문제임.</span></p>
+<ul><li>x402 결제 흐름을 다이어그램으로 정리하기</li><li>에이전트 지출 정산 대사 시나리오 설계하기</li></ul><div class="skills"><span class="skill">Agentic Payments</span><span class="skill">x402</span><span class="skill">Internal Controls</span><span class="skill">Stablecoin</span></div>      </div>
+      <div class="links">
+        <a href="https://theblock.co/news/business/2026-10-20-mastercard-opens-early-access-to-ai-agent-payments-following-pilots-with-coinbase-base-and-cloudflare-421406" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://thepaypers.com/payments/news/mastercard-launches-agent-pay-for-machines-for-ai-commerce" target="_blank" rel="noopener">The Paypers: 6월 AP4M 첫 발표 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">📊 Google</span>
+        <span>Google Blog · 10/20</span>
+<span class="tag">#Gemini</span><span class="tag">#소상공인</span><span class="tag">#재무분석</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/" target="_blank" rel="noopener">구글 Gemini, 소상공인용 재무 분석·Xero 연동</a></h3>
+<p class="orig">New Gemini tools for small business owners</p>      <p class="summary">구글이 Gemini 앱에 소상공인용 비즈니스 허브를 추가해 영수증, 구매 기록, 스프레드시트를 차트와 인터랙티브 재무 모델로 바꿔 주는 기능을 공개함. Xero·Shopify 등 외부 앱 연결로 회계·매출 데이터를 Gemini 안에서 바로 분석할 수 있게 됨.</p>
+      <ul class="points"><li>영수증·스프레드시트를 차트·인터랙티브 재무 모델로 변환</li><li>Xero·Shopify·Zoho·Wix·Canva 등 외부 앱과 Google Ads 연결</li><li>전 세계 모든 Gemini 앱 사용자에게 며칠 내 순차 배포</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 소규모 기업의 장부 분석과 간단한 재무 계획(FP&amp;A)이 회계 SW 밖의 범용 AI 앱 안으로 들어옴. 회계사·북키퍼의 역할이 숫자를 만드는 일에서 AI 결과물을 검증하는 일로 옮겨 가는 흐름임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>무료로 바로 써 보고 AI 재무 분석의 정확도를 검증하는 포트폴리오 소재로 쓸 수 있음.</span></p>
+<ul><li>가상 영수증·매출 데이터로 재무 모델 생성해 보기</li><li>결과 수치를 직접 계산값과 대조해 오류율 기록하기</li></ul><div class="skills"><span class="skill">FP&amp;A</span><span class="skill">Xero</span><span class="skill">Data Validation</span><span class="skill">Prompting</span></div>      </div>
+      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛡️ 금융감독원</span>
+        <span>뉴스핌 · 10/19</span>
+<span class="tag">#금융보안</span><span class="tag">#금감원</span><span class="tag">#AI레드티밍</span>      </div>
+      <h3><a href="https://www.newspim.com/news/view/20261019000038" target="_blank" rel="noopener">금감원장 &#39;AI 공격엔 AI 방어&#39;…금융보안 강화</a></h3>
+<p class="orig">[2026 국감] 이찬진 금감원장 &#34;AI 공격엔 AI 방어&#34;…금융사 보안역량 강화 주문</p>      <p class="summary">이찬진 금감원장이 10월 19일 국정감사에서 금융권 AI 해킹 사태와 관련해 &#39;AI 공격엔 AI 방어&#39; 원칙으로 금융사의 자체 보안역량 강화를 유도하겠다고 밝힘. 감독 방식을 사고 후 제재에서 사전 예방 중심으로 바꾸고, 생성형 AI 레드티밍과 모의해킹을 확대함.</p>
+      <ul class="points"><li>위협정보 관제 FIRST, 2~9월 금융권에 경보 213건 발송</li><li>블라인드 모의해킹 20→40곳, 버그바운티 34→70곳으로 확대</li><li>생성형 AI 레드티밍 도입, 전자금융거래법 개정 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 기반 공격이 실제 금융사 침해로 이어지면서 감독당국이 AI 보안과 IT 내부통제를 규제 요구사항으로 끌어올리는 중임. 프런티어 AI에 대비한 취약점 평가기준 개편과 불시 현장점검도 예고됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>IT 일반통제(ITGC) 감사 경험에 AI 보안을 더하면 한국 금융권 수요와 직접 연결됨.</span></p>
+<ul><li>생성형 AI 레드티밍 점검 항목 10개 정리하기</li><li>전자금융거래법 개정안 주요 쟁점 요약하기</li></ul><div class="skills"><span class="skill">ITGC</span><span class="skill">AI Red Teaming</span><span class="skill">전자금융거래법</span><span class="skill">Cyber Risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.newspim.com/news/view/20261019000038" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.dailian.co.kr/news/view/1702972/2026-%EA%B5%AD%EA%B0%90-%EC%9D%B4%EC%B0%AC%EC%A7%84-%EA%B8%88%EC%9C%B5%EA%B6%8C-AI-%ED%95%B4-2026" target="_blank" rel="noopener">데일리안 관련 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 NAB</span>
+        <span>NAB · 10/20</span>
+<span class="tag">#호주은행</span><span class="tag">#구조조정</span><span class="tag">#AI일자리</span>      </div>
+      <h3><a href="https://www.nab.com.au/news/nab-updates/nab-simplifying-operating-model-and-alignment-to-customer-priorities" target="_blank" rel="noopener">NAB, 최대 2,500명 감원…AI 역할 공개 요구</a></h3>
+<p class="orig">NAB simplifying operating model and improving alignment to customer priorities</p>      <p class="summary">NAB가 FY27 중 내부 인력을 최대 2,500명(약 6%) 줄이고 2026년 말까지 최대 1,500명을 먼저 감축한다고 발표함. 발표문은 &#39;급격한 기술 변화&#39;만 언급하고 AI는 직접 거론하지 않아, 전문가와 금융노조(FSU)가 AI의 역할을 투명하게 밝히라고 요구함.</p>
+      <ul class="points"><li>FY27 최대 2,500명(약 6%) 감축, 연내 최대 1,500명</li><li>세전 구조조정 비용 약 A$3억, FY25·26엔 각 약 A$8천만</li><li>본사 기능 축소에 집중, 고객 대면 직무 영향은 적다고 밝힘</li></ul>
+<p class="why"><b>💡 왜 중요?</b> ANZ에 이어 NAB까지 본사·지원 조직을 줄이면서, 호주 대형 은행의 백오피스 재무·운영 직무가 기술 중심으로 재편되고 있음. AI가 감원에 얼마나 작용했는지 공개하라는 거버넌스 압력도 커지는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>사라지는 쪽은 본사 기능이고 늘어나는 쪽은 기술 투자이므로, 재무+AI 하이브리드 역할로 포지셔닝해야 함.</span></p>
+<ul><li>NAB 11/5 실적에서 기술 투자 규모 확인하기</li><li>호주 은행 &#39;AI+Finance&#39; 채용 공고 5개 분석하기</li></ul><div class="skills"><span class="skill">Banking Operations</span><span class="skill">Process Automation</span><span class="skill">AI Governance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.nab.com.au/news/nab-updates/nab-simplifying-operating-model-and-alignment-to-customer-priorities" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://abc.net.au/news/2026-10-20/nab-slashes-jobs-in-massive-restructure/107286316" target="_blank" rel="noopener">ABC News: AI 역할 공개 요구 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 소식은 AI 에이전트가 결제(마스터카드)와 재무 분석(Gemini)까지 실제로 맡기 시작했다는 것과, 그만큼 통제·책임 요구도 커지고 있다는 것으로 요약됨. 앤트로픽 법안은 외부 평가기관, 금감원은 레드티밍, 미 정부는 공급망 배제를 내세웠는데, 모두 감사·내부통제의 언어로 AI를 다루는 방식임. NAB 감원이 보여 주듯 단순 본사 업무는 줄고 있어, &#39;AI를 만들 줄 알고 통제하는 법도 아는 재무 인력&#39;이 희소한 자리가 됨. 재무회계 실무와 AI 전공을 함께 갖춘 독자에게는 에이전트 지출 통제, AI 결과 검증, AI 보증(assurance)을 포트폴리오 주제로 삼을 좋은 시점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Gemini에 영수증 넣어 재무 차트 만들어 보기</li><li>x402 문서 읽고 에이전트 결제 흐름 정리하기</li><li>NAB 11/5 실적에서 AI·인력 언급 확인하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">x402 프로토콜</span> — AI 에이전트가 웹에서 바로 돈을 내게 해 주는 결제 규약임. 웹 표준의 &#39;HTTP 402 Payment Required&#39; 상태 코드를 활용해, 유료 API나 데이터를 요청하면 에이전트가 자동으로 결제한 뒤 접근하는 방식임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/5</span><span>NAB FY26 실적 발표 (구조조정 세부 내용 공개 예정)</span></li></ul></section><div class="hashtags">#AI에이전트 #에이전트결제 #금융보안 #NAB #AI규제 #FinAI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-22 · 검색 1시간 14분 · 탐색 16회 · 검색어 77개 · 출처 58곳 → 후보 26건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
