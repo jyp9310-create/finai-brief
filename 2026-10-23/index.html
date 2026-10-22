@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-23</title>
+<meta name="description" content="AI가 먼저 움직이고 계산까지… 에이전트, 세무·회계 현장으로">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 23일 (금)">
+<meta property="og:description" content="AI가 먼저 움직이고 계산까지… 에이전트, 세무·회계 현장으로">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-23/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-23/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 23일 (금)</div>
+    <h1>AI가 먼저 움직이고 계산까지… 에이전트, 세무·회계 현장으로</h1>
+    <p class="overview">Anthropic은 사용자가 시키기 전에 먼저 움직이는 에이전트 Claude Duet을 공개함. OpenAI는 구글 클라우드에서도 모델을 팔기 시작했고, AI가 PHP 치명 결함을 찾아내며 보안 지형도 흔들림. 재무 쪽에서는 Thomson Reuters·Financial Cents가 계산 실행·MCP·감사 로그를 갖춘 세무·회계 AI를 내놓았음. BCG는 은행 백오피스 역량의 최대 40%를 AI가 확보할 수 있다고 추산함.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 2분 · 탐색 17회 · 검색어 91개 · 출처 75곳 → 후보 31건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 톰슨로이터, 세무·감사 에이전트 CoCounsel 출시</div>
+<div class="r">계산은 코드로 실행하고, 근거는 문서로 남기고, 결과는 Excel 조서로 내는 구조가 재무회계 경력과 AI 전공을 잇는 포트폴리오 설계도로 바로 쓰이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🤝 Anthropic, 먼저 움직이는 비서 &#39;Claude Duet&#39; 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">☁️ OpenAI 모델, 구글 클라우드 입점…3대 클라우드 완성</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🛡️ AI가 찾은 PHP 치명 결함…각국 사이트 비상</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧮 톰슨로이터, 세무·감사 에이전트 CoCounsel 출시</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔌 회계사무소 SW Financial Cents, MCP 서버 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 BCG &#34;AI로 은행 미들·백오피스 역량 40% 확보&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏛️ 포콕 상원의원, 데이터센터 매출 5% 부과금 제안</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🤝 Anthropic</span>
+        <span>Claude (Anthropic) · 10/21</span>
+<span class="tag">#AI 에이전트</span><span class="tag">#Anthropic</span><span class="tag">#연구 프리뷰</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener">Anthropic, 먼저 움직이는 비서 &#39;Claude Duet&#39; 공개</a></h3>
+<p class="orig">Introducing Claude Duet</p>      <p class="summary">Anthropic이 Claude Opus 5.5 기반의 능동형(proactive) 에이전트 Claude Duet을 미국 Pro·Max 구독자 대상 연구 프리뷰(waitlist)로 공개함. 시키기 전에 연결된 앱을 몇 시간마다 확인해 일일 브리핑을 만들고, 인보이스 후속 연락·메시지 초안 같은 일을 백그라운드에서 처리함.</p>
+      <ul class="points"><li>Opus 5.5 기반, 미국 Pro·Max 대기자 명단부터 시작</li><li>QuickBooks·Stripe·Gusto 등 커넥터 6,000개+ 연결</li><li>송금·서명·삭제 전 승인 필수, 증권 거래·계좌 간 이체는 금지</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 챗봇이 &#39;물어보면 답하는 도구&#39;에서 &#39;먼저 일하고 승인받는 동료&#39;로 넘어가는 흐름임. 승인을 받아도 금융 거래만은 막아 둔 하드 리밋(hard limit) 설계는 앞으로 나올 금융 에이전트 가드레일(안전장치)의 기준점이 될 수 있음.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://venturebeat.com/technology/anthropics-answer-to-muse-is-here-claude-duet-a-mobile-and-desktop-ai-agent-that-takes-actions-proactively" target="_blank" rel="noopener">VentureBeat 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">☁️ OpenAI / Google Cloud</span>
+        <span>OpenAI · 10/21</span>
+<span class="tag">#OpenAI</span><span class="tag">#Google Cloud</span><span class="tag">#엔터프라이즈</span>      </div>
+      <h3><a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener">OpenAI 모델, 구글 클라우드 입점…3대 클라우드 완성</a></h3>
+<p class="orig">OpenAI models are coming to Google Cloud</p>      <p class="summary">OpenAI가 최신 모델과 Codex 에이전트 워크플로를 Google Cloud Model Garden에서 제공한다고 10월 21일 발표함. 선택된 기업 고객 대상 비공개 프리뷰(private preview)로 시작하며, 이로써 Azure·AWS에 이어 3대 클라우드 모두에서 OpenAI 모델을 살 수 있게 됨.</p>
+      <ul class="points"><li>GPT-6 Astra·GPT-6.1 Sol·GPT-6 Luna로 시작(AI타임스 보도)</li><li>Google Cloud 마켓플레이스 결제, 기존 약정(commitment) 차감</li><li>정식 출시(GA)는 수주 내 예정, Antigravity 연동도 예고</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 기업이 클라우드를 바꾸지 않고 모델만 골라 쓰는 멀티모델 시대가 굳어짐. 별도 공급사 계약·조달 절차 없이 쓸 수 있어 보안·조달 심사가 까다로운 금융·헬스케어의 도입 장벽이 낮아짐.</p>      <div class="links">
+        <a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216500" target="_blank" rel="noopener">AI타임스 보도 ↗</a><a href="https://x.com/OpenAI/status/2112988118471295323" target="_blank" rel="noopener">OpenAI X 발표 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🛡️ Wiz (Google) / Calif / OpenAI</span>
+        <span>Wiz Blog · 10/21</span>
+<span class="tag">#AI 보안</span><span class="tag">#취약점</span><span class="tag">#PHP</span>      </div>
+      <h3><a href="https://www.wiz.io/blog/php2shell-php-rce" target="_blank" rel="noopener">AI가 찾은 PHP 치명 결함…각국 사이트 비상</a></h3>
+<p class="orig">PHP2Shell: Critical PHP RCE vulnerabilities (CVE-2026-109618, CVE-2026-109619)</p>      <p class="summary">Google 산하 Wiz와 OpenAI &#39;Patch the Planet&#39; 협력사 Calif가 AI로 PHP의 원격코드실행(RCE) 취약점을 찾아냈고, 10월 21일 패치가 공개됨. PHP 5 시절부터 숨어 있던 버그를 AI가 찾아 익스플로잇(공격 코드)까지 빠르게 만들어 냄. 미국 NSA는 바로 패치할 수 없는 사이트를 오프라인으로 내리라고 권고함.</p>
+      <ul class="points"><li>CVE-2026-109618·109619, 심각도 CVSS 최고 9.2</li><li>Wiz Atlas·Gemini 4 Argon·GPT-5.6 Sol 활용</li><li>연구자 1명이 1주 만에 끝냄, 예전엔 팀으로 수개월 걸릴 작업</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 방어(취약점 발견)와 공격(익스플로잇 개발)의 속도를 동시에 바꾸고 있음을 보여 준 대형 사례임. 웹사이트 약 70%가 쓰는 PHP라 금융사·공공기관의 레거시 시스템에도 직결됨.</p>      <div class="links">
+        <a href="https://www.wiz.io/blog/php2shell-php-rce" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://www.aitimes.com/news/articleView.html?idxno=216499" target="_blank" rel="noopener">AI타임스 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧮 Thomson Reuters</span>
+        <span>PR Newswire · 10/22</span>
+<span class="tag">#세무·감사 AI</span><span class="tag">#에이전트</span><span class="tag">#Thomson Reuters</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/thomson-reuters-launches-ai-for-tax-and-audit-that-knows-the-answer-and-why-its-right-302915932.html" target="_blank" rel="noopener">톰슨로이터, 세무·감사 에이전트 CoCounsel 출시</a></h3>
+<p class="orig">Thomson Reuters Launches AI for Tax and Audit That Knows the Answer, and Why It&#39;s Right</p>      <p class="summary">Thomson Reuters가 세무·감사·회계용 에이전트형 AI 플랫폼 &#39;CoCounsel Tax, Audit &amp; Accounting&#39; 차세대 버전을 10월 22일 미국 전 고객에게 출시함. 질문에 답하는 수준을 넘어 작업 계획→계산 실행→근거 규정 적용→검토용 결과물(Excel·메모)까지 한 흐름으로 만들어 줌.</p>
+      <ul class="points"><li>감가상각·상각·QBI 등 계산은 코드 실행으로 처리</li><li>Checkpoint 문서 1,200만 건+에 근거(grounding)</li><li>라이브 수식 Excel·조서 템플릿 메모 출력, MCP 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 세무·감사 AI의 경쟁 포인트가 &#39;답변이 그럴듯한가&#39;에서 &#39;계산을 재현할 수 있고 근거를 추적할 수 있는가&#39;로 옮겨 가고 있음. 출시 당일 주가가 약 7% 올랐다는 보도도 시장의 기대를 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>LLM이 숫자를 &#39;추측&#39;하지 않고 코드로 계산하고 근거를 남기는 구조가 회계 AI의 표준이 되고 있음</span></p>
+<ul><li>감가상각 계산을 LLM+Python 툴 호출로 구현</li><li>결과를 수식 살린 Excel 조서로 출력</li><li>ATO 세법 문서 RAG로 근거 인용 붙이기</li></ul><div class="skills"><span class="skill">Tool calling / Code execution</span><span class="skill">RAG grounding</span><span class="skill">openpyxl</span><span class="skill">Audit workpapers</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/thomson-reuters-launches-ai-for-tax-and-audit-that-knows-the-answer-and-why-its-right-302915932.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://siliconangle.com/2026/10/22/thomson-reuters-folds-ai-into-its-professional-tax-and-audit-software/" target="_blank" rel="noopener">SiliconANGLE 보도 ↗</a><a href="https://rttnews.com/3701936/thomson-reuters-stock-rises-7-on-launch-of-ai-platform-for-tax-and-audit.aspx" target="_blank" rel="noopener">RTTNews 주가 반응 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔌 Financial Cents</span>
+        <span>PR Newswire · 10/20</span>
+<span class="tag">#MCP</span><span class="tag">#회계사무소</span><span class="tag">#업무관리</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/financial-cents-launches-mcp-server-to-put-firm-data-to-work-inside-everyday-ai-assistants-302910604.html" target="_blank" rel="noopener">회계사무소 SW Financial Cents, MCP 서버 출시</a></h3>
+<p class="orig">Financial Cents Launches MCP Server to Put Firm Data to Work Inside Everyday AI Assistants</p>      <p class="summary">회계사무소용 업무관리(practice management) SW Financial Cents가 Claude·ChatGPT·Gemini에서 사무소 데이터를 바로 조회·수정할 수 있게 해 주는 MCP 서버를 출시함. &#39;미수 인보이스 보여줘&#39;, &#39;시간 기록해줘&#39; 같은 자연어로 업무를 처리함. 대신 OAuth 2.1 인증, 변경 전 확인, 감사 로그, 삭제 불가로 통제를 걸어 둠.</p>
+      <ul class="points"><li>Claude·ChatGPT·Gemini 연결, Scale 요금제에서 제공</li><li>OAuth 2.1, 변경 전 확인, 모든 작업 감사 로그·속도 제한</li><li>자체 조사: 95%가 AI 사용, 측정 가능한 ROI는 5명 중 1명</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계 SW가 자체 챗봇을 만드는 대신 MCP로 범용 AI 비서에 &#39;데이터 출입문&#39;을 여는 추세임. 삭제 금지·권한 범위 제한 같은 통제 설계가 감사 가능성(auditability)의 핵심이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>MCP 서버에 &#39;삭제 불가·변경 전 확인·감사 로그&#39;를 넣는 설계는 그대로 포트폴리오 템플릿으로 쓸 수 있음</span></p>
+<ul><li>Python MCP SDK로 미수금 조회 서버 만들기</li><li>쓰기 작업에 확인 단계·감사 로그 추가</li><li>Claude Desktop에 연결해 데모 영상 찍기</li></ul><div class="skills"><span class="skill">MCP</span><span class="skill">OAuth 2.1</span><span class="skill">Audit trail</span><span class="skill">AR aging</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/financial-cents-launches-mcp-server-to-put-firm-data-to-work-inside-everyday-ai-assistants-302910604.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 BCG</span>
+        <span>BCG · 10/14</span>
+<span class="tag">#은행</span><span class="tag">#백오피스</span><span class="tag">#BCG 보고서</span>      </div>
+      <h3><a href="https://www.bcg.com/press/14october2026-banking-revenue-pool-record-window-reshape-growth" target="_blank" rel="noopener">BCG &#34;AI로 은행 미들·백오피스 역량 40% 확보&#34;</a></h3>
+<p class="orig">Banking Revenue Pool on Track for Record $1.1 Trillion, Opening Window to Reshape for Growth</p>      <p class="summary">BCG가 2026 기업·투자은행(CIB) 보고서 &#39;A Golden Window for Growth&#39;에서 AI가 2030년까지 미들·백오피스 FTE 역량의 최대 40%를 확보해 줄 수 있다고 분석함. 다만 이것이 곧 순감원은 아니라고 선을 그었고, CIB 매출 풀(revenue pool)은 2026년 약 $1.1조로 사상 최대가 될 전망임.</p>
+      <ul class="points"><li>2030년까지 미들·백오피스 FTE 역량 최대 40% 확보</li><li>CIB 매출 풀 2026년 약 $1.1조 → 2030년 약 $1.4조</li><li>2030 선두 은행 CIR 53%·RoTE 21%, 후발은 68%·10%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 AI 효과를 &#39;절약한 시간&#39;이 아니라 비용구조(CIR)와 수익성(RoTE) 격차로 재기 시작함. 결제·정산·대사 같은 백오피스가 1차 전환 대상임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>결산·대사·정산 실무 경험은 AI로 확보된 40%의 역량을 어디에 재배치할지 설계하는 역할로 바로 이어짐</span></p>
+<ul><li>CIR·RoTE 개념 정리해 면접 답변 준비</li><li>은행 거래 대사(reconciliation) 자동화 데모</li><li>호주 4대 은행 운영 AI 직무 공고 검색</li></ul><div class="skills"><span class="skill">Cost-to-income ratio</span><span class="skill">RoTE</span><span class="skill">Reconciliation automation</span><span class="skill">Operating model</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bcg.com/press/14october2026-banking-revenue-pool-record-window-reshape-growth" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.devdiscourse.com/article/business/3992264-ai-could-free-up-40-of-banks-middle-and-back-office-capacity-by-2030-bcg-report" target="_blank" rel="noopener">Devdiscourse 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏛️ David Pocock (호주 무소속 상원의원)</span>
+        <span>SBS News · 10/21</span>
+<span class="tag">#호주 세제</span><span class="tag">#데이터센터</span><span class="tag">#AI 정책</span>      </div>
+      <h3><a href="https://www.sbs.com.au/news/article/were-siding-with-the-tech-bros-pococks-proposes-new-levy-on-big-players/qr2mfu41a" target="_blank" rel="noopener">포콕 상원의원, 데이터센터 매출 5% 부과금 제안</a></h3>
+<p class="orig">&#39;Imagine siding with the tech bros&#39;: Pocock proposes new levy on big players</p>      <p class="summary">무소속 David Pocock 상원의원이 10월 21일 National Press Club에서 호주 내 데이터센터 매출에 5% 부과금(levy)을 매기자고 제안함. 의회예산처(PBO) 추계로 2030년까지 약 5억 호주달러를 걷어 공공도 AI &#39;gold rush&#39;의 몫을 나누자는 취지임. 현지 매출에 비해 세금을 거의 내지 않는 기업도 겨냥함.</p>
+      <ul class="points"><li>데이터센터 매출의 5% 부과, 내년 초 시행 제안</li><li>PBO 비용추계 약 A$5억(2030년까지 4년간)</li><li>세수는 Housing Australia Future Fund 1년치 재원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 AI 데이터센터 투자 붐에 매출 기반 과세 논쟁이 본격적으로 붙음. 정부 공식 입장은 아직 보도되지 않았고, 투자 위축을 우려하는 업계 반발도 예상돼 정책 줄다리기가 이어질 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>AI 인프라 과세는 세무 실무 경력과 AI 산업 이해를 함께 쓸 수 있는 틈새 영역이며, 호주 Big 4 세무·딜 자문 수요와 맞닿아 있음</span></p>
+<ul><li>5% 부과금 넣어 데이터센터 손익 모델 만들기</li><li>Alberta 2% 하드웨어 부과금과 구조 비교</li><li>Big 4 호주 세무팀 논평 찾아 요약하기</li></ul><div class="skills"><span class="skill">Tax policy</span><span class="skill">Financial modelling</span><span class="skill">Data centre economics</span></div>      </div>
+      <div class="links">
+        <a href="https://www.sbs.com.au/news/article/were-siding-with-the-tech-bros-pococks-proposes-new-levy-on-big-players/qr2mfu41a" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.innovationaus.com/pocock-floats-5pc-data-centre-levy-patriotic-procurement/" target="_blank" rel="noopener">InnovationAus 보도 ↗</a><a href="https://www.canberratimes.com.au/story/9372631/david-pocock-urges-5-tax-on-tech-giants-ai-data-centres/" target="_blank" rel="noopener">Canberra Times 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘의 공통점은 &#39;행동하는 AI&#39;와 &#39;통제 설계&#39;가 한 묶음이 됐다는 점임. Claude Duet은 송금·서명 전에 승인을 받고 증권 거래는 막음. Financial Cents는 삭제를 막고 감사 로그를 남김. Thomson Reuters는 계산을 코드로 실행하고 근거 문서를 붙임. 모두 감사·내부통제의 언어로 AI를 설계한 것임. PHP 사례처럼 AI가 공격 속도까지 높이는 상황이라, 재무 도메인에서는 &#39;무엇을 할 수 있나&#39;보다 &#39;무엇을 못 하게 막았나&#39;가 더 큰 차별점이 됨. 회계 실무 경력에 MCP·툴 호출 구현 능력을 더하면, 이 통제 설계를 직접 할 수 있는 드문 인재로 포지셔닝할 수 있음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Python MCP SDK로 미수금 조회 서버 만들기</li><li>CoCounsel 기능을 내 포트폴리오 설계와 비교하기</li><li>BCG 보고서로 CIR·RoTE 개념 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">MCP (Model Context Protocol)</span> — AI 비서가 외부 앱 데이터를 읽고 쓰게 해 주는 표준 연결 규격임. USB-C처럼 한 번 맞춰 두면 Claude·ChatGPT·Gemini 어디서든 같은 회계 SW에 연결할 수 있고, 권한·확인·로그 같은 통제도 서버 쪽에서 설계함.</p></section><div class="hashtags">#AI에이전트 #회계AI #MCP #세무자동화 #AI보안 #호주AI정책 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-23 · 검색 1시간 2분 · 탐색 17회 · 검색어 91개 · 출처 75곳 → 후보 31건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
