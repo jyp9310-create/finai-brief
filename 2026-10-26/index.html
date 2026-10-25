@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-26</title>
+<meta name="description" content="에이전트는 커지고, 재무는 AI 비용·통제를 쥐기 시작함">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 26일 (월)">
+<meta property="og:description" content="에이전트는 커지고, 재무는 AI 비용·통제를 쥐기 시작함">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-26/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-26/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 26일 (월)</div>
+    <h1>에이전트는 커지고, 재무는 AI 비용·통제를 쥐기 시작함</h1>
+    <p class="overview">Anthropic은 Claude 엔터프라이즈에 클라우드 에이전트와 지출 통제 기능을 함께 넣었고, OpenAI·Meta는 AI 인프라에 쓸 자금을 사상 최대 규모로 모으고 있음. 금융 쪽에서는 KB증권이 에이전트 25개를 하나로 합쳐 업무 시간을 크게 줄였고, Deloitte 조사에서는 CFO들이 아직 AI 비용을 실시간으로 관리하지 못하는 것으로 나타남.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 2분 · 탐색 20회 · 검색어 87개 · 출처 91곳 → 후보 29건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. KB증권 &#39;깨비AI&#39;, AI 에이전트 25개를 하나로 통합</div>
+<div class="r">국내 금융사가 에이전트 통합 구조와 사람 승인 설계로 업무 시간 단축을 숫자로 보여 준 사례라, 재무 경력과 AI 전공을 살린 포트폴리오로 그대로 옮기기 좋음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧩 Claude 채팅·Cowork 통합, 엔터프라이즈 정식 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">💰 OpenAI, 기업가치 1.25조 달러로 300억 달러 조달 추진</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📊 메타, AI 투자 자금 위해 무의결권 주식 신설</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🤖 KB증권 &#39;깨비AI&#39;, AI 에이전트 25개를 하나로 통합</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 CFO 80%가 AI 결정 참여, 실시간 비용 추적은 47%</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📑 Kognitos, SOP 기반 재무 &#39;AI 직원&#39; 61종 공개</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🛡️ AI가 찾은 PHP 치명 결함, 호주 ASD 긴급 경보</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧩 Anthropic</span>
+        <span>Claude (Anthropic) · 10/23</span>
+<span class="tag">#Anthropic</span><span class="tag">#에이전트</span><span class="tag">#엔터프라이즈</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/unified-claude-enterprise" target="_blank" rel="noopener">Claude 채팅·Cowork 통합, 엔터프라이즈 정식 출시</a></h3>
+<p class="orig">Claude Cowork and chat come together for Enterprise</p>      <p class="summary">Anthropic이 채팅과 Cowork를 합친 통합 Claude를 Enterprise 요금제에 정식 출시(GA)함. 에이전트 작업은 Anthropic이 관리하는 클라우드 VM에서 돌아가 노트북을 닫아도 계속되고, 관리자는 모델 권한과 지출 한도를 세밀하게 설정할 수 있게 됨.</p>
+      <ul class="points"><li>9월 Pro·Max 출시에 이어 10/23 Enterprise에 GA</li><li>세션마다 격리 VM 사용, 외부 네트워크(egress)는 기본 차단</li><li>Efficient mode(Sonnet·Haiku만 사용), 조직·그룹·개인별 지출 한도</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 기업용 AI 경쟁의 초점이 모델 성능에서 &#39;오래 도는 에이전트를 안전하고 예산 안에서 돌리는 운영 기능&#39;으로 옮겨가고 있음. Opus 5.5는 Opus 5보다 일반 작업 기준 40% 저렴하다고 밝힘.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/unified-claude-enterprise" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://claude.com/blog" target="_blank" rel="noopener">Claude 블로그 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">💰 OpenAI</span>
+        <span>CNBC (TechCrunch 재인용) · 10/22</span>
+<span class="tag">#OpenAI</span><span class="tag">#투자유치</span><span class="tag">#IPO</span>      </div>
+      <h3><a href="https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html" target="_blank" rel="noopener">OpenAI, 기업가치 1.25조 달러로 300억 달러 조달 추진</a></h3>
+<p class="orig">OpenAI working on new $30B raise at $1.25T valuation ahead of IPO</p>      <p class="summary">CNBC 소식통에 따르면 OpenAI가 투자 전 기업가치(pre-money) 1.25조 달러에 최대 300억 달러를 조달하는 막바지 협상 중이며, Coatue와 UAE 투자자가 주도하는 것으로 알려짐. 성사되면 역대 가장 비싼 비상장 기업이 되지만, 조건은 아직 바뀔 수 있음.</p>
+      <ul class="points"><li>최대 $300억, pre-money $1.25조, Coatue·UAE 투자자 주도</li><li>3월 라운드 $8520억(post-money)에서 크게 상승</li><li>6월 비공개 IPO 신청, UAE 컴퓨팅 계약과 연계 가능성</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Anthropic($9650억, 5월)과 함께 프런티어 AI 랩들의 상장 전 몸값 경쟁이 1조 달러를 넘어섬. 결국 컴퓨팅 확보 자금 싸움이라는 점이 드러남.</p>      <div class="links">
+        <a href="https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📊 Meta</span>
+        <span>Meta Investor Relations · 10/21</span>
+<span class="tag">#Meta</span><span class="tag">#실적</span><span class="tag">#자본조달</span>      </div>
+      <h3><a href="https://s21.q4cdn.com/399680738/files/doc_news/Meta-Reports-Third-Quarter-2026-Results-2026.pdf" target="_blank" rel="noopener">메타, AI 투자 자금 위해 무의결권 주식 신설</a></h3>
+<p class="orig">Meta Reports Third Quarter 2026 Results / Meta wants to pay for its broad AI buildout with a newly created class of stock</p>      <p class="summary">Meta가 3분기 실적 발표에서 주식배당 방식으로 나눠 줄 무의결권 주식(Class C)을 새로 만들겠다고 밝힘. 이 주식은 자금 조달, 보상, 인수에 쓰이며, 창업자의 지배력은 그대로 유지됨. 매출은 26% 늘었지만 비용은 68% 급증함.</p>
+      <ul class="points"><li>매출 약 $646억(+26%), 비용 +68%(법률 합의 $98.9억 포함)</li><li>CFO Susan Li, 무의결권 주식 신설·주식배당 방식 확인</li><li>Muse 개인 에이전트 설정자, 6주 만에 미·캐나다 1,000만 명+</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 인프라 비용을 현금흐름만으로 감당하기 어려워지자, 빅테크가 지배구조를 지키면서 주식으로 돈을 마련하는 방법까지 동원하기 시작함.</p>      <div class="links">
+        <a href="https://s21.q4cdn.com/399680738/files/doc_news/Meta-Reports-Third-Quarter-2026-Results-2026.pdf" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/" target="_blank" rel="noopener">TechCrunch: 무의결권 주식 ↗</a><a href="https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066773/meta-20260930.htm" target="_blank" rel="noopener">Meta 10-Q (SEC) ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🤖 KB증권</span>
+        <span>바이라인네트워크 · 10/22</span>
+<span class="tag">#증권</span><span class="tag">#멀티 에이전트</span><span class="tag">#국내 사례</span>      </div>
+      <h3><a href="https://byline.network/2026/10/1021-10/" target="_blank" rel="noopener">KB증권 &#39;깨비AI&#39;, AI 에이전트 25개를 하나로 통합</a></h3>
+<p class="orig">KB증권, 25개 AI 에이전트를 하나로 묶었다</p>      <p class="summary">KB증권이 임직원용 통합 AI 에이전트 &#39;깨비AI&#39;에 에이전트 25개와 데이터 저장소 140개를 합쳐, 하나의 에이전트가 업무에 맞는 기능·데이터를 골라 쓰는 &#39;수퍼 에이전트(super agent)&#39; 구조로 바꿈. IPO 수요예측 분석 시간이 85% 이상 줄었고, 다음 달부터 KB금융 계열사로 확대함.</p>
+      <ul class="points"><li>IPO 수요예측 7~8시간 → 30분~1시간 (85%↑ 단축)</li><li>WM 불완전판매 점검 약 1시간 → 약 5분, S&amp;T 수작업 약 90%↓</li><li>고객 자산·자금 이동 업무는 사람 승인(human-in-the-loop) 필수</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 업무마다 따로 만들던 에이전트를 하나의 라우팅 구조로 합쳐 성과를 숫자로 보여 준 국내 금융권의 드문 사례임. 계열사 확대와 B2B 사업화까지 예고해 금융 AI 플랫폼 경쟁의 신호로 볼 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>업무별 도구를 하나의 라우터 에이전트로 묶고, 자금 관련 단계에만 사람 승인을 거는 구조는 포트폴리오로 그대로 재현할 수 있음.</span></p>
+<ul><li>결산·대사·보고 툴 3개를 라우터 에이전트로 묶기</li><li>지급·이체 단계에 사람 승인 게이트 구현하기</li><li>단축 시간을 전후 비교표로 정리해 보기</li></ul><div class="skills"><span class="skill">multi-agent orchestration</span><span class="skill">tool routing</span><span class="skill">human-in-the-loop</span><span class="skill">AI governance</span></div>      </div>
+      <div class="links">
+        <a href="https://byline.network/2026/10/1021-10/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 Deloitte</span>
+        <span>Deloitte Insights · 10/21</span>
+<span class="tag">#CFO 설문</span><span class="tag">#AI 비용</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/3q-2026-cfo-signals-survey.html" target="_blank" rel="noopener">CFO 80%가 AI 결정 참여, 실시간 비용 추적은 47%</a></h3>
+<p class="orig">3Q 2026 CFO Signals Survey: AI cost governance</p>      <p class="summary">Deloitte가 매출 10억 달러 이상 북미 기업 CFO 200명을 조사한 결과, 약 80%가 재무 부서가 AI 의사결정에 공식적으로 참여한다고 답함. 하지만 AI 사용 비용을 실시간에 가깝게 추적하는 곳은 47%, 토큰 단위 비용 귀속 같은 고급 통제를 쓰는 곳은 20%에 그침.</p>
+      <ul class="points"><li>41%는 재무가 AI 투자 필수 승인자, 38%는 평가 프레임 운영</li><li>53%는 청구서·정기 보고 등 사후 검토, 고급 AI 통제 20%</li><li>비용 초과 시 당일 대응 19%, 74%는 며칠~몇 주 걸림</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 비용은 쓴 만큼 나가는 종량제(토큰) 구조라 기존 IT 예산 통제로는 잘 잡히지 않음. &#39;AI FinOps&#39;가 재무 조직의 새 역할로 떠오르고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>토큰 비용을 부서·업무별로 나누는 일은 원가배분(cost allocation)과 같아서, 회계 경력과 AI 지식이 가장 직접 만나는 영역임.</span></p>
+<ul><li>LLM 호출 로그로 부서별 토큰 원가 대시보드 만들기</li><li>LiteLLM 같은 AI 게이트웨이로 예산 한도 실습하기</li></ul><div class="skills"><span class="skill">AI FinOps</span><span class="skill">cost allocation</span><span class="skill">LLM gateway</span><span class="skill">unit economics</span></div>      </div>
+      <div class="links">
+        <a href="https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/3q-2026-cfo-signals-survey.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📑 Kognitos</span>
+        <span>Kognitos · 10/21</span>
+<span class="tag">#AP·대사</span><span class="tag">#결산 자동화</span><span class="tag">#신제품</span>      </div>
+      <h3><a href="https://www.kognitos.com/news/kognitos-launches-ai-employees-context-graphs-finance-banking/" target="_blank" rel="noopener">Kognitos, SOP 기반 재무 &#39;AI 직원&#39; 61종 공개</a></h3>
+<p class="orig">Kognitos Launches AI Employees and expands Context Graphs for Finance and Banking</p>      <p class="summary">Kognitos가 매입채무(AP), 대사, 입금 처리(cash application), 월 결산, KYC 업무를 맡는 &#39;AI 직원&#39; 61개 역할을 공개함. 각 역할은 사람이 승인한 표준업무절차(SOP) 515개를 따르고, 사람 승인 없이 할 수 있는 범위가 정해져 있음.</p>
+      <ul class="points"><li>역할 예: AP Specialist, Reconciliation Accountant, Close Manager</li><li>SOP 초안 작성 에이전트 Quill, 사람이 승인해야 게시</li><li>Context Graph에 재무 모니터 133개 추가, REST·MCP 연결 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 재무 에이전트가 &#39;자유롭게 생각하는 AI&#39;에서 &#39;승인된 절차를 따르는 AI&#39;로 바뀌고 있음. 감사 추적성을 중시하는 재무 업무에 맞춘 설계임. 다만 아직 고객사 대상 프리뷰이고 성과 수치는 공개되지 않았음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>실무에서 쓰던 결산 체크리스트와 내부통제 문서가 곧 에이전트를 움직이는 SOP가 된다는 점이 핵심임.</span></p>
+<ul><li>내 월결산 SOP를 단계별 에이전트 지시문으로 바꾸기</li><li>은행 대사 예외를 잡는 지속 모니터링 규칙 짜기</li></ul><div class="skills"><span class="skill">SOP design</span><span class="skill">continuous controls monitoring</span><span class="skill">MCP</span><span class="skill">knowledge graph</span></div>      </div>
+      <div class="links">
+        <a href="https://www.kognitos.com/news/kognitos-launches-ai-employees-context-graphs-finance-banking/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.kognitos.com/ai-employees/" target="_blank" rel="noopener">Kognitos AI Employees 소개 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🛡️ Australian Signals Directorate / ABC</span>
+        <span>ABC News · 10/22</span>
+<span class="tag">#사이버보안</span><span class="tag">#ASD</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://www.abc.net.au/news/2026-10-22/data-breach-warning-after-ai-uncovers-critical-php-flaw/107295516" target="_blank" rel="noopener">AI가 찾은 PHP 치명 결함, 호주 ASD 긴급 경보</a></h3>
+<p class="orig">Australians face spike in data breaches after AI helps uncover &#39;critical&#39; website flaw</p>      <p class="summary">미국 보안업체 Calif가 OpenAI 모델을 활용해 찾아낸 PHP 치명 취약점 2건(PHP2Shell)에 대해 호주 신호정보국(ASD)이 이례적으로 &#39;치명(Critical)&#39; 경보를 냈음. PHP2Shell은 10/23 브리핑에서 다뤘고, 이번에 새로운 점은 GovCMS·Moodle 등 호주 기관의 실제 대응과 데이터 유출 증가 경고임.</p>
+      <ul class="points"><li>PHP는 웹사이트·앱 약 70%의 백엔드, 인증 없이 원격 코드 실행 가능</li><li>GovCMS 서버 접근 차단, Moodle 사이트 임시 중단, VentraIP 업로드 제한</li><li>AWS는 공개 전인 10/17부터 공격 시도 관측, Troy Hunt는 유출 증가 경고</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 취약점을 찾는 속도가 빨라지면서 공격자의 무기화 속도도 함께 빨라지고 있음. 패치 관리가 호주 금융권의 운영 리스크 의제(APRA CPS 234·CPS 230)로 더 중요해짐.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>AI 시대 취약점 대응은 IT 감사와 운영 리스크의 핵심 통제 항목이어서, 호주 금융권 IT 리스크·감사 직무와 바로 연결됨.</span></p>
+<ul><li>APRA CPS 234 핵심 요건 1장으로 정리하기</li><li>cyber.gov.au 경보 구독하고 패치 SLA 사례 수집하기</li></ul><div class="skills"><span class="skill">CPS 234</span><span class="skill">vulnerability management</span><span class="skill">IT audit</span><span class="skill">operational risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.abc.net.au/news/2026-10-22/data-breach-warning-after-ai-uncovers-critical-php-flaw/107295516" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cyber.gov.au/alert/critical-vulnerabilities-in-php" target="_blank" rel="noopener">ASD 경보: Critical vulnerabilities in PHP ↗</a><a href="https://itnews.com.au/news/critical-flaws-strike-php-as-disclosure-embargo-is-broken-629794" target="_blank" rel="noopener">iTnews: 공개 전 정보 유출 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들은 같은 방향을 가리킴. Claude 엔터프라이즈는 지출 한도와 모델 권한을, KB증권은 자금 이동 단계의 사람 승인을, Kognitos는 승인된 SOP를 앞세웠음. 즉 AI 에이전트를 &#39;통제 가능한 업무 단위&#39;로 만드는 경쟁이고, Deloitte 조사는 재무 조직이 그 비용 통제를 아직 따라가지 못하고 있음을 보여 줌. 원가배분·내부통제·결산 절차를 아는 사람이 에이전트 설계와 AI FinOps를 함께 다룰 수 있다면, 지금 가장 수요가 비어 있는 자리에 서게 됨.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>LLM 호출 로그로 토큰 원가표 만들어 보기</li><li>결산 SOP를 에이전트 지시문으로 바꿔 보기</li><li>APRA CPS 234 요건 1장으로 요약하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">토큰 단위 비용 귀속(Token-level attribution)</span> — AI 사용 비용을 토큰 단위로 쪼개 부서·업무에 배분하는 것임. 회계의 원가배분처럼, 누가 어떤 작업에 AI 비용을 얼마나 썼는지 실시간으로 보여 줘 예산 초과를 막는 데 쓰임.</p></section><div class="hashtags">#AI에이전트 #AIFinOps #재무자동화 #KB증권 #Claude #호주사이버보안 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-26 · 검색 1시간 2분 · 탐색 20회 · 검색어 87개 · 출처 91곳 → 후보 29건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
