@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-27</title>
+<meta name="description" content="앤트로픽 IPO 공식화, 재무 현장엔 &#39;돈 다루는 에이전트&#39; 확산">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 27일 (화)">
+<meta property="og:description" content="앤트로픽 IPO 공식화, 재무 현장엔 &#39;돈 다루는 에이전트&#39; 확산">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-27/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-27/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 27일 (화)</div>
+    <h1>앤트로픽 IPO 공식화, 재무 현장엔 &#39;돈 다루는 에이전트&#39; 확산</h1>
+    <p class="overview">앤트로픽이 S-1을 공개하며 IPO를 공식화했고, OpenAI는 절반 가격의 중간급 모델 GPT-6.1 Terra를, Google은 온디바이스 GPU 엔진 ML Drift를 오픈소스로 내놓음. 재무 쪽에서는 Tipalti·Stripe가 AP·자금 업무를 직접 실행하는 에이전트를 출시했고, 이타우는 금융 특화 AI 스타트업을 통째로 인수했으며, 호주에선 NEXTDC가 멜버른 데이터센터 전력 지연으로 가이던스를 크게 낮춤.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 5분 · 탐색 7회 · 검색어 31개 · 출처 27곳 → 후보 7건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. 티팔티, 매입채무 전 과정 맡는 AP 에이전트 출시</div>
+<div class="r">AP 실무 경험을 MCP·에이전트·통제 설계와 바로 연결할 수 있어, 포트폴리오와 호주 재무 자동화 직무 지원에 가장 직접 쓸모 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">📈 앤트로픽, IPO 신청서 공개…상반기 매출 163억 달러</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🤖 OpenAI, 절반 가격 중간급 모델 GPT-6.1 Terra 출시</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📱 구글, 온디바이스 AI GPU 엔진 ML Drift 오픈소스화</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 브라질 이타우, 금융 AI 스타트업 네오스페이스 인수</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 티팔티, 매입채무 전 과정 맡는 AP 에이전트 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">💳 스트라이프, AI 에이전트가 자금 운용하는 Treasury 출시</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🔌 넥스트DC, 멜버른 M3 전력 지연에 실적 전망 대폭 하향</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">📈 Anthropic</span>
+        <span>SEC EDGAR · 10/26</span>
+<span class="tag">#IPO</span><span class="tag">#Anthropic</span><span class="tag">#재무제표</span>      </div>
+      <h3><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener">앤트로픽, IPO 신청서 공개…상반기 매출 163억 달러</a></h3>
+<p class="orig">Anthropic PBC Form S-1 Registration Statement</p>      <p class="summary">Anthropic이 10월 26일 S-1(증권신고서)을 공개 제출하고 Nasdaq에 티커 &#39;ANT&#39;로 상장하겠다고 밝힘. 소문과 유출로만 돌던 실적이 처음 공식 공개됐고, 공모 규모와 가격은 아직 공개되지 않음.</p>
+      <ul class="points"><li>2026 상반기 매출 $16.3B, 전년 동기 $1.16B의 약 14배</li><li>영업손실 $693M(전년 $2.1B), 순손실 $80.7B는 전환사채 비현금 조정 탓</li><li>공동창업자 7인의 Founder LLC가 의결권 50.1% 보유</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 AI 연구소가 처음으로 감사받은 재무제표를 공개한 사례로, AI 기업 가치평가의 기준점이 됨. 연간 $1M 이상 쓰는 고객이 1,900곳으로, 기업 AI 지출이 실제로 커지고 있음이 숫자로 확인됨.</p>      <div class="links">
+        <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/" target="_blank" rel="noopener">TechCrunch: Anthropic officially files for its public debut ↗</a><a href="https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/" target="_blank" rel="noopener">TechCrunch: S-1에 드러난 기업 고객 전략 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🤖 OpenAI</span>
+        <span>OpenAI · 10/26</span>
+<span class="tag">#OpenAI</span><span class="tag">#모델 출시</span><span class="tag">#컴퓨터 사용</span>      </div>
+      <h3><a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener">OpenAI, 절반 가격 중간급 모델 GPT-6.1 Terra 출시</a></h3>
+<p class="orig">Introducing GPT-6.1 Terra</p>      <p class="summary">OpenAI가 GPT-5.6 Terra를 대체하는 중간급 모델 GPT-6.1 Terra를 ChatGPT Work, Codex, API에 출시함. 가격은 이전 Terra의 절반이고, 화면 읽기와 앱 조작 같은 컴퓨터 사용(computer use) 성능을 내세움.</p>
+      <ul class="points"><li>Luna&lt;Terra&lt;Sol&lt;Astra 4단계 라인업 중 중간급 모델임</li><li>API 가격 100만 토큰당 입력 $1·출력 $5, 이전 대비 50%↓</li><li>오류 유도 테스트 오류율 53.6%→16.7%(low effort 기준)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트가 반복 업무를 처리하는 데 드는 비용이 크게 떨어져, 대량 업무 자동화의 손익 계산이 달라짐. 성능 수치 대부분은 OpenAI 자체 측정이라 외부 검증이 필요함.</p>      <div class="links">
+        <a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model/" target="_blank" rel="noopener">9to5Mac: GPT-6.1 Terra 상세 ↗</a><a href="https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier" target="_blank" rel="noopener">Artificial Analysis 평가 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📱 Google</span>
+        <span>Google Developers Blog · 10/25</span>
+<span class="tag">#Google</span><span class="tag">#온디바이스 AI</span><span class="tag">#오픈소스</span>      </div>
+      <h3><a href="https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/" target="_blank" rel="noopener">구글, 온디바이스 AI GPU 엔진 ML Drift 오픈소스화</a></h3>
+<p class="orig">ML Drift: Next-gen GPU AI/ML inference at the edge</p>      <p class="summary">Google이 LiteRT의 핵심 GPU 가속 엔진인 ML Drift를 Apache 2.0 라이선스로 공개함. 휴대폰·PC·웹에서 생성형 AI를 클라우드 없이 GPU로 돌리는 기반 기술을 외부 개발자도 쓸 수 있게 됨.</p>
+      <ul class="points"><li>OpenGL ES·OpenCL·Metal·WebGPU 지원, Arm·Intel·Qualcomm 최적화</li><li>Gemma 구동 시 llama.cpp·MLX LM 대비 메모리 12%↓</li><li>Snapchat 모델 지연 30%↓, Lightroom 일부 AI 기능 최대 30% 빨라짐</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 온디바이스 추론은 데이터를 기기 밖으로 보내지 않아 금융·의료처럼 보안 민감 업무에 유리함. iPhone Core ML과의 비교는 공개되지 않음.</p>      <div class="links">
+        <a href="https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.infoq.com/news/2026/10/google-ml-drift/" target="_blank" rel="noopener">InfoQ: Google ML Drift ↗</a><a href="https://github.com/google-ai-edge/ml-drift" target="_blank" rel="noopener">GitHub: google-ai-edge/ml-drift ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 Itaú Unibanco</span>
+        <span>SEC EDGAR (Form 6-K) · 10/26</span>
+<span class="tag">#은행 AI</span><span class="tag">#M&amp;A</span><span class="tag">#파운데이션 모델</span>      </div>
+      <h3><a href="https://www.sec.gov/Archives/edgar/data/0001132597/000113259726000245/materialfact_neospace.htm" target="_blank" rel="noopener">브라질 이타우, 금융 AI 스타트업 네오스페이스 인수</a></h3>
+<p class="orig">Material Fact – Acquisition of NeoSpace A.I. Technologies Ltda.</p>      <p class="summary">남미 최대 은행 Itaú Unibanco가 자사 데이터로 금융 특화 파운데이션 모델을 만들어 온 NeoSpace의 지분 전부를 BRL 29.25억에 사기로 함. 약 2년간 외부 협력사였던 AI 개발사를 은행 안으로 들여 신용·CRM·사기 탐지용 모델을 직접 소유하게 됨.</p>
+      <ul class="points"><li>인수가 BRL 2,925,000,000, 일부 선지급·나머지 5년 분할</li><li>CADE(반독점 당국)·브라질 중앙은행 승인 후 거래 종결</li><li>Itaú 고유 데이터 학습 모델로 신용·CRM·사기방지 성과 냄</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행이 범용 LLM을 빌려 쓰는 데서 벗어나, 자기 데이터로 학습한 모델과 팀을 직접 소유하는 쪽으로 가고 있음을 보여 줌. 금융 데이터 특화 모델이 실제 가치 있는 자산으로 평가받은 사례임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>&#39;우리 회사 데이터로 학습한 모델&#39;이 범용 모델보다 나은지 입증하는 능력이 은행 AI 직무의 핵심임</span></p>
+<ul><li>공개 신용부도 데이터로 범용 vs 특화 모델 비교</li><li>APRA CPS 230 등 모델·운영 리스크 요건 읽기</li><li>포트폴리오에 사기탐지 성능지표(AUC) 정리하기</li></ul><div class="skills"><span class="skill">Credit Risk Modelling</span><span class="skill">Fraud Detection</span><span class="skill">Domain-specific Foundation Model</span><span class="skill">Model Risk Management</span></div>      </div>
+      <div class="links">
+        <a href="https://www.sec.gov/Archives/edgar/data/0001132597/000113259726000245/materialfact_neospace.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://whbl.com/2026/10/26/brazils-itau-agrees-to-buy-ai-startup-neospace-for-589-million/" target="_blank" rel="noopener">Reuters 경유 보도: Itaú buys NeoSpace for $589M ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 Tipalti</span>
+        <span>Accounting Today · 10/23</span>
+<span class="tag">#매입채무(AP)</span><span class="tag">#AI 에이전트</span><span class="tag">#MCP</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/list/tech-news-tipalti-touts-ai-agent-to-manage-entire-ap-process" target="_blank" rel="noopener">티팔티, 매입채무 전 과정 맡는 AP 에이전트 출시</a></h3>
+<p class="orig">Tipalti touts AI agent to manage entire AP process</p>      <p class="summary">지급 자동화 업체 Tipalti가 송장 수집부터 계정 코딩, 승인, 지급, 대사(reconciliation)까지 하나로 잇는 AP Agent를 내놓음. 기능별로 나뉘어 있던 2025년 에이전트들을 하나의 흐름으로 묶고, MCP로 Claude Enterprise 같은 사내 AI 도구와도 연결함.</p>
+      <ul class="points"><li>송장 수집·코딩·승인·지급·대사를 한 워크플로로 연결</li><li>거래처 이력·총계정원장(GL)·회사 정책 보고 판단, 예외는 사람에게</li><li>MCP로 Claude Enterprise에서 송장·거래처 상태를 자연어로 조회</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AP 자동화가 &#39;건별 도구&#39;에서 &#39;전 과정 실행 에이전트&#39;로 넘어가고 있음. 사용자가 자율 범위를 단계적으로 넓히는 방식이라, 내부통제를 설계하는 일이 회계팀의 새 업무가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AP 실무 경험에 MCP·에이전트 설계를 더하면 &#39;통제 설계까지 아는 재무 AI 인재&#39;로 차별화됨</span></p>
+<ul><li>가상 AP 원장 만들어 Claude MCP 질의 데모 제작</li><li>3-way matching 예외 규칙으로 평가셋 만들기</li><li>자율 범위별 승인 매트릭스 문서화하기</li></ul><div class="skills"><span class="skill">Accounts Payable</span><span class="skill">MCP</span><span class="skill">Human-in-the-loop</span><span class="skill">Internal Controls</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/list/tech-news-tipalti-touts-ai-agent-to-manage-entire-ap-process" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">💳 Stripe</span>
+        <span>The Paypers · 10/23</span>
+<span class="tag">#자금관리(Treasury)</span><span class="tag">#에이전트 결제</span><span class="tag">#MCP</span>      </div>
+      <h3><a href="https://thepaypers.com/fintech/news/stripe-launches-treasury-for-agents-to-automate-startup-finances" target="_blank" rel="noopener">스트라이프, AI 에이전트가 자금 운용하는 Treasury 출시</a></h3>
+<p class="orig">Stripe launches Treasury for agents to automate startup finances</p>      <p class="summary">Stripe가 ChatGPT·Claude 같은 AI 에이전트가 MCP 서버로 접속해 스타트업 자금 업무를 처리하는 &#39;Stripe Treasury for agents&#39;를 출시함. 에이전트가 데이터를 읽는 데 그치지 않고 송장 결제, 계좌 이체, 환전까지 직접 실행할 수 있게 됨.</p>
+      <ul class="points"><li>출시 기능: 잔액 조회·송장 결제·계좌 간 이체·환전</li><li>카드 발급 추가 예정, 에이전트 지출 한도는 &#39;수 주 내&#39; 도입</li><li>계좌·데이터 접근, 읽기/실행 권한, 사람 승인 시점 직접 설정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 결제 인프라 회사가 &#39;에이전트가 돈을 움직이는&#39; 기능을 공식 제품으로 내놓은 것으로, 은행들이 무단 에이전트를 막는 흐름과 대비됨. 권한·승인 통제가 제품 기본 기능이 된 점이 핵심임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>재무 프로세스의 &#39;조회 권한 vs 실행 권한&#39; 분리를 에이전트에 적용하는 감각을 기를 좋은 사례임</span></p>
+<ul><li>Stripe 테스트 모드+MCP로 잔액 조회 봇 만들기</li><li>이체 승인 단계를 직무분리(SoD) 표로 설계하기</li></ul><div class="skills"><span class="skill">Treasury Management</span><span class="skill">MCP</span><span class="skill">Segregation of Duties</span><span class="skill">Agentic Payments</span></div>      </div>
+      <div class="links">
+        <a href="https://thepaypers.com/fintech/news/stripe-launches-treasury-for-agents-to-automate-startup-finances" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🔌 NEXTDC</span>
+        <span>ASX Announcements · 10/21</span>
+<span class="tag">#데이터센터</span><span class="tag">#가이던스</span><span class="tag">#멜버른</span>      </div>
+      <h3><a href="https://announcements.asx.com.au/asxpdf/20261021/pdf/075kx2sf3k54h5.pdf" target="_blank" rel="noopener">넥스트DC, 멜버른 M3 전력 지연에 실적 전망 대폭 하향</a></h3>
+<p class="orig">M3 Melbourne Power Delay and Revised FY27 Guidance</p>      <p class="summary">호주 데이터센터 기업 NEXTDC가 웨스트 풋스크레이 M3 센터의 전력망 공사(Jemena) 중단으로 FY27 매출·EBITDA 가이던스를 크게 낮추고 신규 개발을 전면 보류함. 발표 직후 주가가 약 40% 급락했으며, AI 인프라 확장이 전력·지역사회 반발에 막힐 수 있다는 점이 드러남.</p>
+      <ul class="points"><li>FY27 순매출 A$615~640m→A$475~500m로 하향</li><li>EBITDA A$385~410m→A$245~265m, M3 계약분 약 A$140m 제외</li><li>Jemena 66kV 공사 2027년 2월 전 재개 어려움, 증설은 FY28</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 수요가 커도 전력망과 인허가가 받쳐 주지 않으면 매출로 이어지지 않음을 보여 줌. 수퍼펀드를 통해 AI 인프라에 노출된 호주 투자자에게도 직접적인 리스크 사례임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>가이던스 변경·이자 자본화·약정(covenant) 리스크가 한 공시에 다 담긴 호주 기업 재무분석 교재임</span></p>
+<ul><li>구 가이던스→신 가이던스 브리지 차트 만들기</li><li>AASB 123 차입원가 자본화 요건 확인하기</li><li>불가항력(force majeure)·SLA 크레딧 회계처리 정리</li></ul><div class="skills"><span class="skill">Guidance Analysis</span><span class="skill">AASB 123</span><span class="skill">Debt Covenants</span><span class="skill">AI Infrastructure</span></div>      </div>
+      <div class="links">
+        <a href="https://announcements.asx.com.au/asxpdf/20261021/pdf/075kx2sf3k54h5.pdf" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.abc.net.au/news/2026-10-21/west-footscray-data-centre-delays-nextdc-value-asx-vic/107291744" target="_blank" rel="noopener">ABC News: NextDC 주가 40% 급락 ↗</a><a href="https://www.placera.se/pressmeddelanden/nextdc-limited-m3-melbourne-power-delay-and-revised-fy27-guidance-20261020" target="_blank" rel="noopener">공시 전문(Placera 게재본) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽은 앤트로픽 S-1로 기업 AI 지출 규모가 숫자로 확인됐고, OpenAI는 컴퓨터 사용 모델 가격을 절반으로 내려 에이전트를 돌리는 비용을 낮춤. 그 결과가 재무 현장에서 바로 보이는데, Tipalti와 Stripe가 에이전트에게 &#39;조회&#39;를 넘어 지급·이체·환전 같은 &#39;실행&#39; 권한을 주면서 사람 승인과 권한 범위 설정을 핵심 기능으로 내세움. 결국 경쟁력은 모델을 잘 아는 것보다 재무 프로세스의 직무분리(SoD)와 승인 통제를 에이전트 설계로 옮기는 능력에서 나옴. NEXTDC 사례처럼 AI 투자의 재무 리스크를 공시로 읽는 힘까지 갖추면, 회계 경력과 AI 전공이 함께 쓰이는 지점이 분명해짐.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Stripe 테스트 모드+MCP로 잔액 조회 봇 만들기</li><li>앤트로픽 S-1에서 비현금 손실 항목 정리하기</li><li>NEXTDC 가이던스 변경을 엑셀 브리지로 그리기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">MCP (Model Context Protocol)</span> — AI가 외부 앱의 데이터·기능에 접속하는 표준 규격임. 오늘 Stripe·Tipalti가 이 규격으로 Claude·ChatGPT에서 결제·AP 데이터를 직접 다루게 함.</p></section><div class="hashtags">#AnthropicIPO #GPT61Terra #AP자동화 #AI에이전트 #MCP #NEXTDC </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-27 · 검색 1시간 5분 · 탐색 7회 · 검색어 31개 · 출처 27곳 → 후보 7건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
