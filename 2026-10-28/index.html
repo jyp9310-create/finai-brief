@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-28</title>
+<meta name="description" content="AI가 결산·결제·보고서까지 — 이제 경쟁력은 &#39;검증&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 28일 (수)">
+<meta property="og:description" content="AI가 결산·결제·보고서까지 — 이제 경쟁력은 &#39;검증&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-28/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-28/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 28일 (수)</div>
+    <h1>AI가 결산·결제·보고서까지 — 이제 경쟁력은 &#39;검증&#39;</h1>
+    <p class="overview">OpenAI는 미해결 난제 증명을 주장했고, Anthropic은 신약 문서 검토 성과를 수치로 공개했으며, Google은 Genie 4를 선보임. AI가 &#39;실제 결과물&#39;을 내는 단계로 들어선 셈임. 재무 쪽에서는 NetSuite 상시 결산과 카드사 에이전트 페이가 현실화되는 반면, 딜로이트 호주 사례는 검증 없는 AI 산출물이 얼마나 비싼 대가를 치르는지 보여줌.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 2분 · 탐색 17회 · 검색어 80개 · 출처 78곳 → 후보 31건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. NetSuite, &#39;제로데이 결산&#39; AI 워크스페이스 공개</div>
+<div class="r">결산 실무 경험을 AI 에이전트 설계로 바로 옮길 수 있고, SuiteSkills가 GitHub에 공개돼 있으며 호주에서도 이미 쓸 수 있어 포트폴리오와 취업에 바로 연결됨.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧮 OpenAI, 수학·CS·물리 난제 3건 &#39;AI 증명&#39; 주장</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🌍 구글 딥마인드, 소리까지 만드는 월드모델 Genie 4</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">💊 Anthropic, Claude로 신약개발 가속 중간 성과 공개</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📒 NetSuite, &#39;제로데이 결산&#39; AI 워크스페이스 공개</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💳 국내 카드사, 내년 상반기 &#39;AI 에이전트 페이&#39; 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 Backbase, 은행 개발용 AI 에이전트 출시</a></li>
+    <li><span class="n au">7</span><a href="#item-7">⚠️ 딜로이트 호주, WA 대학 합병 보고서 AI 오류 논란</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧮 OpenAI</span>
+        <span>OpenAI · 10/27</span>
+<span class="tag">#AI for Science</span><span class="tag">#검증</span><span class="tag">#OpenAI</span>      </div>
+      <h3><a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/" target="_blank" rel="noopener">OpenAI, 수학·CS·물리 난제 3건 &#39;AI 증명&#39; 주장</a></h3>
+<p class="orig">Working with academic communities to build scientific understanding</p>      <p class="summary">OpenAI가 자사 모델로 수학(파동방정식 local smoothing), 컴퓨터과학(지수 시간 가설 ETH 반증), 물리(QCD 포함 4차원 게이지-페르미온 양자장론 존재 증명)에서 결과 3건을 얻었다고 발표함. 결과 검증을 위해 외부 전문가 &#39;셰퍼드(shepherd)&#39; 그룹과 협업하는 절차도 공개했지만, 독립적인 학계 검증은 아직 없음.</p>
+      <ul class="points"><li>ETH 반증 결과는 Lean(정형 증명 검사기)으로 검증했다고 밝힘</li><li>물리 검증 그룹은 David Gross 주도, Klebanov·Nekrasov 등 참여</li><li>물리 자료 전체 미공개, 셰퍼드를 OpenAI가 선정해 독립성 쟁점</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 연구소의 주장이 &#39;연구 보조&#39;를 넘어 &#39;미해결 난제 해결&#39;로 올라감. ETH가 실제로 틀렸다면 알고리즘 이론의 기본 가정이 흔들리는 만큼, 검증 결과가 나와야 판단할 수 있음.</p>      <div class="links">
+        <a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://tech-insider.org/openai-three-science-discoveries-eth-kakeya-qcd-2026" target="_blank" rel="noopener">Tech Insider 분석 (검증 쟁점) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🌍 Google DeepMind</span>
+        <span>Google DeepMind · 10/27</span>
+<span class="tag">#World Model</span><span class="tag">#Google</span><span class="tag">#Robotics</span>      </div>
+      <h3><a href="https://deepmind.google/models/genie/" target="_blank" rel="noopener">구글 딥마인드, 소리까지 만드는 월드모델 Genie 4</a></h3>
+<p class="orig">Genie 4 — Google DeepMind</p>      <p class="summary">Google DeepMind가 텍스트 프롬프트로 탐험 가능한 3D 세계를 실시간 생성하는 월드 모델(world model) Genie 4를 공개함. 발소리·대화 같은 오디오를 함께 생성(native audio)하고 실행 중에도 자연어로 날씨·캐릭터를 바꿀 수 있으며, 지금은 신뢰 테스터 대상 연구 프리뷰임.</p>
+      <ul class="points"><li>Gemini Omni가 현실 외형·동작을 근거로 잡고, 다른 Gemini가 추론 담당</li><li>AI Ultra(Project Genie)·Gemini API 조기 파트너에 먼저 개방 예정</li><li>연속 상호작용은 수 분, 길어지면 객체 일관성이 흔들림</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 로봇 계획 모델이 단계별 캡션을 Genie 4에 넘기는 예시까지 제시함. 월드 모델이 게임을 넘어 에이전트·로봇 훈련용 시뮬레이터로 쓰이는 흐름임. 모든 출력에는 SynthID 워터마크가 들어감.</p>      <div class="links">
+        <a href="https://deepmind.google/models/genie/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://pasqualepillitteri.it/en/news/27630/genie-4-google-deepmind-world-model-native-audio" target="_blank" rel="noopener">Genie 4 상세 정리 (2차 보도) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">💊 Anthropic</span>
+        <span>Anthropic · 10/27</span>
+<span class="tag">#Anthropic</span><span class="tag">#Life Sciences</span><span class="tag">#문서 검토</span>      </div>
+      <h3><a href="https://www.anthropic.com/research/early-progress-drug-development" target="_blank" rel="noopener">Anthropic, Claude로 신약개발 가속 중간 성과 공개</a></h3>
+<p class="orig">Early progress on accelerating drug development with Claude</p>      <p class="summary">Anthropic이 BMS·Enveda 등 제약·바이오사 6곳에서 Claude를 신약개발에 적용한 초기 성과를 공개함. 항체 설계부터 제조 문서 검토·규제 문서 작성까지 쓰였고, 1인 기업 Mithril Medicine을 인수해 근이영양증 치료제 자체 개발도 시작함.</p>
+      <ul class="points"><li>Enveda: 1,061쪽 제조문서 검토시간 89%↓(25시간→3시간 미만)</li><li>사람이 찾은 오류 11건 전부 + 7건 추가 발견, 규제문서 초안 4시간</li><li>Divergence Labs: 약 1개월 만에 항체 설계 약 3.5만 개 생성</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 실험 설계뿐 아니라 규제 문서 검토 같은 &#39;문서 집약 업무&#39;에서 큰 시간 절감이 수치로 확인됨. 다만 대부분 전임상 단계이고, 사람 검토에서 여전히 경미한 오류가 나옴.</p>      <div class="links">
+        <a href="https://www.anthropic.com/research/early-progress-drug-development" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📒 Oracle NetSuite</span>
+        <span>PR Newswire (Oracle NetSuite) · 10/26</span>
+<span class="tag">#ERP</span><span class="tag">#결산 자동화</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/netsuite-advances-vision-for-an-autonomous-suite-302919139.html" target="_blank" rel="noopener">NetSuite, &#39;제로데이 결산&#39; AI 워크스페이스 공개</a></h3>
+<p class="orig">NetSuite Advances Vision for an Autonomous Suite</p>      <p class="summary">Oracle NetSuite가 SuiteWorld 2026에서 사람·AI 에이전트·승인을 한곳에 모으는 AI Workspaces, 45개 이상의 SuiteSkills, 에이전트 제작 도구 SuiteAgent Studio를 발표함. 그중 Autonomous Close 워크스페이스는 월말에 몰아서 처리하던 결산 이슈를 기중에 계속 해결하게 해 &#39;제로데이 결산(zero-day close)&#39;을 목표로 함.</p>
+      <ul class="points"><li>SuiteSkills 45개+, Ask Oracle·외부 LLM(AI Connector)에서 사용</li><li>SuiteAgent Studio: 일정·이벤트 트리거, 권한·승인 범위 안에서 실행</li><li>Management Workspace·System Notes로 에이전트 활동 추적</li></ul>
+<p class="why"><b>💡 왜 중요?</b> ERP 벤더가 결산 자체를 &#39;에이전트 작업 + 사람 승인&#39; 구조로 다시 짜기 시작함. 4.4만 고객사(주로 중소·중견기업)의 결산과 감사 증적(audit trail) 관리 방식이 달라질 수 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>월결산을 해 본 사람은 &#39;AI가 기중에 잡아야 할 결산 이슈&#39;를 정의할 수 있음. 이게 바로 이런 제품의 핵심 도메인 지식임</span></p>
+<ul><li>GitHub에 공개된 SuiteSkills 받아 구조 분석하기</li><li>내 결산 체크리스트를 에이전트 트리거로 재설계하기</li><li>호주 NetSuite 파트너사 채용 키워드 수집하기</li></ul><div class="skills"><span class="skill">ERP</span><span class="skill">Continuous close</span><span class="skill">AI agents</span><span class="skill">MCP</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/netsuite-advances-vision-for-an-autonomous-suite-302919139.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.investing.com/news/company-news/oracle-netsuite-unveils-ai-tools-for-business-automation-93CH-4972426" target="_blank" rel="noopener">Investing.com 기능 요약 ↗</a><a href="https://itbrief.com.au/story/netsuite-next-lands-in-anz-ask-oracle-first-autonomous-suite-to-follow" target="_blank" rel="noopener">IT Brief: NetSuite Next 호주·뉴질랜드(ANZ) 출시 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💳 신한카드·하나카드·BC카드 등</span>
+        <span>전자신문 · 10/25</span>
+<span class="tag">#에이전트 커머스</span><span class="tag">#카드사</span><span class="tag">#한국</span>      </div>
+      <h3><a href="https://www.etnews.com/20261023000282" target="_blank" rel="noopener">국내 카드사, 내년 상반기 &#39;AI 에이전트 페이&#39; 출시</a></h3>
+<p class="orig">카드사 &#39;에이전트 커머스&#39; 시대 연다…내년 에이전트 페이 출시</p>      <p class="summary">국내 카드사들이 정부 &#39;모두의 AI&#39; 프로젝트를 통해 2027년 상반기에 AI 에이전트가 대신 결제하는 &#39;에이전트 페이&#39;를 내놓을 준비를 하고 있음. 신한카드는 마스터카드와 함께 Hopper에서 국내 카드사 첫 실거래에 성공했고, 다른 카드사들도 PoC와 Visa Agentic Ready 참여로 뒤따르고 있음.</p>
+      <ul class="points"><li>신한카드: AI 에이전트가 Hopper에서 교통편 예약·결제 실거래 성공</li><li>모두의 AI: SKT(신한·하나)·KT(BC) 컨소시엄, 12월 정식 출시</li><li>Visa Agentic Ready에 KB국민·삼성·신한·카카오뱅크·하나·현대 참여</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 카드 결제 수익이 정체되면서 &#39;에이전트가 결제하는 거래&#39;가 새 수익원으로 떠오름. 에이전트 인증, 승인 한도, 분쟁 처리 같은 통제 설계가 핵심 과제가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트 결제의 핵심은 승인 권한·이상거래탐지(FDS)·차지백 같은 내부통제 설계라서, 재무·통제 경험이 바로 강점이 됨</span></p>
+<ul><li>Visa·Mastercard 에이전트 결제 문서 비교하기</li><li>에이전트 거래용 통제 매트릭스(RCM) 초안 작성하기</li><li>국내 카드사 AI·디지털 직무 공고 확인하기</li></ul><div class="skills"><span class="skill">Agentic commerce</span><span class="skill">FDS</span><span class="skill">Tokenization</span><span class="skill">Internal control</span></div>      </div>
+      <div class="links">
+        <a href="https://www.etnews.com/20261023000282" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Backbase</span>
+        <span>FinTech Global · 10/27</span>
+<span class="tag">#뱅킹 IT</span><span class="tag">#AI 에이전트</span><span class="tag">#SDLC</span>      </div>
+      <h3><a href="https://fintech.global/2026/10/26/backbase-launches-ai-agents-to-speed-up-banking-software-delivery" target="_blank" rel="noopener">Backbase, 은행 개발용 AI 에이전트 출시</a></h3>
+<p class="orig">Backbase launches AI agents to speed up banking software delivery</p>      <p class="summary">디지털 뱅킹 플랫폼 기업 Backbase가 요구사항·설계·개발·마이그레이션을 역할별 AI 에이전트가 나눠 맡는 Delivery Factory를 출시함. 기존 코드보다 승인된 요구사항·아키텍처 문서·회의록을 근거로 작업하고, 은행 자체 저장소·파이프라인 안에서 돌아감.</p>
+      <ul class="points"><li>10건+ 구축에서 일반 팀 대비 2배, 범용 코딩 AI 대비 30% 빠름</li><li>요구사항 작업 80%↓, 코딩·리뷰 40%↓, 테스트 커버리지 60%↑</li><li>BA·아키텍트·마이그레이션 등 역할별 에이전트, 은행 고객 120곳+</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 금융권 AI가 고객 서비스를 넘어 은행 IT 개발 공정 자체로 들어감. 규제 요건을 반영한 도메인 특화 에이전트로 범용 코딩 도구와 차별화하려는 구도이며, 성과 수치는 회사 자체 발표임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>BA 에이전트가 회의록을 유저스토리·인수조건으로 바꾸는 구조를 보면, 재무 도메인 BA 역할이 AI와 어떻게 나뉠지 알 수 있음</span></p>
+<ul><li>회의록→유저스토리 변환 프롬프트 만들어 보기</li><li>Jira 인수조건(acceptance criteria) 작성법 익히기</li></ul><div class="skills"><span class="skill">Business Analysis</span><span class="skill">Agentic SDLC</span><span class="skill">Core banking</span></div>      </div>
+      <div class="links">
+        <a href="https://fintech.global/2026/10/26/backbase-launches-ai-agents-to-speed-up-banking-software-delivery" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">⚠️ Deloitte Australia / WA Government</span>
+        <span>The Guardian · 10/26</span>
+<span class="tag">#AI 거버넌스</span><span class="tag">#Big 4</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://www.theguardian.com/australia-news/2026/oct/26/deloitte-report-wa-university-mergers-260m-discrepancy-ai" target="_blank" rel="noopener">딜로이트 호주, WA 대학 합병 보고서 AI 오류 논란</a></h3>
+<p class="orig">Deloitte report for WA government on university mergers contained AI-hallucinated references and $260m discrepancy</p>      <p class="summary">딜로이트가 서호주(WA) 주정부에 낸 대학 합병 검토 보고서에서 AI가 지어낸 가짜 참고문헌(hallucination)과 $2.6억짜리 계산 오류를 비롯한 비용 불일치가 드러남. 딜로이트는 자료 취합·정보 종합·교정에 생성형 AI를 썼다고 인정했고, 주정부는 &#39;신속한&#39; 비용 회수를 추진 중임.</p>
+      <ul class="points"><li>수학 오류 하나만 $2.6억, 비용 불일치는 수억 달러 규모</li><li>딜로이트, 처음엔 &#39;경미한 오류&#39;라 했다가 GenAI 사용을 인정</li><li>WA 야당은 &#39;AI slop&#39;이라 비판, 주정부는 신속 비용 회수 추진</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 2025년 연방 고용부(DEWR) 보고서 부분 환불 사태에 이어 같은 회사에서 다시 일어남. 컨설팅·회계법인의 AI 산출물을 누가 어떻게 검증하는지가 이제 계약·평판 리스크가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 산출물의 인용·숫자를 검증하는 &#39;AI 품질보증(AI assurance)&#39;은 호주 Big 4가 지금 가장 급하게 필요로 하는 역할이고, 회계 실무 경험과 AI 전공이 딱 맞는 자리임</span></p>
+<ul><li>보고서 인용·수치 자동 대조 툴 만들어 보기</li><li>Big 4 호주 AI assurance 공고 저장하기</li><li>AICPA·AIUC AI 보증 프레임워크 읽어 보기</li></ul><div class="skills"><span class="skill">AI assurance</span><span class="skill">Hallucination detection</span><span class="skill">Citation verification</span><span class="skill">Model risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.theguardian.com/australia-news/2026/oct/26/deloitte-report-wa-university-mergers-260m-discrepancy-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.goingconcern.com/monday-morning-accounting-news-brief-deloitte-in-trouble-again-for-ai-slop-report-dont-embezzle-to-tip-livestream-girls-10-26-26/" target="_blank" rel="noopener">Going Concern 월요 브리프 ↗</a><a href="https://www.accountingtimes.com.au/profession/big-4-misconduct-reports-to-asic-pile-up-to-153" target="_blank" rel="noopener">Accounting Times: ASIC에 접수된 Big 4 부정행위 신고 153건 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들의 공통점은 AI가 증명·문서 검토·결산·결제처럼 &#39;결과물&#39;을 직접 내놓기 시작했다는 것임. 동시에 OpenAI의 셰퍼드 검증, Enveda의 사람 검토, NetSuite의 승인·System Notes, 딜로이트의 실패 사례가 모두 같은 질문을 던짐: &#39;AI 결과물을 누가, 어떻게 검증하나?&#39;. 이 질문은 감사·내부통제 개념(증적, 승인 권한, 재수행)과 정확히 겹치고, 재무 실무를 해 본 사람이 AI 엔지니어보다 먼저 답할 수 있는 영역임. 그러니 &#39;AI를 만들 줄 아는 회계 전문가&#39;보다 &#39;AI 산출물을 감사할 줄 아는 엔지니어&#39;로 포지셔닝하는 쪽이 호주 Big 4와 핀테크 시장에서 더 희소함.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>NetSuite SuiteSkills GitHub 자료 훑어보기</li><li>AI 보고서 인용·숫자 검증 미니 툴 설계하기</li><li>에이전트 결제 내부통제 포인트 5개 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">제로데이 결산 (Zero-day Close)</span> — 결산을 월말이 아닌 기중에 계속 처리해 마감 지연을 없애는 방식임. 거래가 생길 때 오류·미결 항목을 바로 찾아 고치기 때문에 월말에 일이 몰리는 현상(close crunch)이 줄어듦.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/5</span><span>NAB 연간 실적 발표 — 최대 2,500명 감원과 약 $3억 구조조정 비용 세부 공개 예정</span></li></ul></section><div class="hashtags">#FinAI #AutonomousClose #AgenticCommerce #AIassurance #NetSuite #Deloitte </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-28 · 검색 1시간 2분 · 탐색 17회 · 검색어 80개 · 출처 78곳 → 후보 31건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
