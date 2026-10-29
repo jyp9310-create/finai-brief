@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-30</title>
+<meta name="description" content="Gemini 4 Carbon 1위 탈환, 금융권은 &#39;AI 가드레일&#39; 설계 경쟁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 30일 (금)">
+<meta property="og:description" content="Gemini 4 Carbon 1위 탈환, 금융권은 &#39;AI 가드레일&#39; 설계 경쟁">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-30/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-30/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 30일 (금)</div>
+    <h1>Gemini 4 Carbon 1위 탈환, 금융권은 &#39;AI 가드레일&#39; 설계 경쟁</h1>
+    <p class="overview">Google은 보안 특화 Gemini 4 Carbon으로 성능 1위를 되찾았고, Mistral은 1조 파라미터 모델 가중치를 풀며 자체 구축(on-prem) 수요를 겨냥함. 금융권에서는 Morgan Stanley·PNC가 에이전트 권한 설계와 자체 컴퓨트 전략을 밝혔고, 한국 금감원·호주 RBA는 AI 시대의 보안·운영 리스크를 짚음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 91개 · 출처 78곳 → 후보 34건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. 모건스탠리 자산관리, AI 에이전트 3종 설계 공개</div>
+<div class="r">에이전트의 권한·사람 개입 설계는 재무 내부통제 경험을 AI 포트폴리오로 바로 옮길 수 있는 주제임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">💎 구글 Gemini 4 Carbon 공개, AI 성능 1위 탈환</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧱 Mistral, 1조 파라미터 Large 4 가중치 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🏛️ Anthropic, 미 정부에 Claude 40% 할인</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🔓 금감원, AI 보안 우수 금융사부터 망분리 전면 해제 검토</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧭 모건스탠리 자산관리, AI 에이전트 3종 설계 공개</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 PNC CEO &#34;AI로 수십억 달러 절감, 은행 M&amp;A 늘 것&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 RBA &#34;AI는 운영 리스크 가속기&#34;, 슈퍼 업계에 경고</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">💎 Google DeepMind</span>
+        <span>Google Blog · 10/28</span>
+<span class="tag">#Gemini</span><span class="tag">#사이버보안</span><span class="tag">#LLM</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" target="_blank" rel="noopener">구글 Gemini 4 Carbon 공개, AI 성능 1위 탈환</a></h3>
+<p class="orig">Introducing Gemini 4 Carbon</p>      <p class="summary">Google이 새 모델 Gemini 4 Carbon을 공개했고, Artificial Analysis Intelligence Index v5.0에서 59점으로 1위에 오름. 취약점 탐지·패치 등 사이버보안 성능을 앞세웠으며, 우선 일부 사이버 방어 담당자에게만 제한적으로 제공됨.</p>
+      <ul class="points"><li>AA Intelligence Index 59점 1위 (Opus 5.5 58, GPT-6 Astra 57)</li><li>SEC-bench Pro 88.2%, ExploitGym 54.8%, CWE-bench 71.0%</li><li>도입가 입력 $2/출력 $10, 이후 $4/$20 (100만 토큰당)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 경쟁이 범용 성능에서 보안 능력으로 옮겨가고, 위험한 모델은 &#39;제한 공개&#39;하는 방식이 표준이 되고 있음. AI타임스에 따르면 Vals Finance Index에서도 1위라 금융 업무용 모델 선택에도 영향이 있음.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216768" target="_blank" rel="noopener">AI타임스: 구글, 1년 만에 AI 성능 1위 탈환 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧱 Mistral AI</span>
+        <span>Mistral AI · 10/29</span>
+<span class="tag">#오픈웨이트</span><span class="tag">#Mistral</span><span class="tag">#온프레미스</span>      </div>
+      <h3><a href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener">Mistral, 1조 파라미터 Large 4 가중치 공개</a></h3>
+<p class="orig">Le Chonk: Built for Coders, Trusted by Defenders</p>      <p class="summary">Mistral이 1조 파라미터 MoE 모델 Mistral Large 4(&#39;Le Chonk&#39;)의 가중치를 Hugging Face에 공개함. 이제 기업·정부가 vLLM·SGLang으로 자체 서버에 직접 올려 쓸 수 있고, 코딩·사이버보안 용도를 내세움.</p>
+      <ul class="points"><li>HF 저장소 mistralai/Mistral-Large-4-1T-A52B, 수정 MIT 라이선스</li><li>Coding Agent Index 48%로 GLM-5.3과 동률, 토큰 47% 절감</li><li>API 가격 입력 $0.70/출력 $2.10, 금융 벤치마크 Finch 73.3%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 데이터를 외부로 보낼 수 없는 금융·공공기관도 프런티어급 모델을 자체 인프라에서 돌릴 수 있게 됨. 단, 모델을 서비스로 파는(MaaS) 기업은 별도 상업 라이선스가 필요함.</p>      <div class="links">
+        <a href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🏛️ Anthropic</span>
+        <span>Anthropic · 10/27</span>
+<span class="tag">#Anthropic</span><span class="tag">#공공부문</span><span class="tag">#가격</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/expanding-partnership-gsa" target="_blank" rel="noopener">Anthropic, 미 정부에 Claude 40% 할인</a></h3>
+<p class="orig">Expanding our partnership with GSA to bring Claude to all levels of government</p>      <p class="summary">Anthropic이 미국 조달청(GSA) 계약을 확대해 Claude Enterprise·Claude for Government·API를 40% 할인 제공함. 연방뿐 아니라 주·지방·원주민·속령 정부까지 최소 지출 약정 없이 적용됨.</p>
+      <ul class="points"><li>40% 할인, 정부 예상 절감액 약 $10억</li><li>약 500개 미 연방·주·지방 기관이 Claude 사용 중</li><li>유타 Claude Code 파일럿: 개발자 71%가 20시간 이상 절약</li></ul>
+<p class="why"><b>💡 왜 중요?</b> IPO를 앞둔 Anthropic이 공공부문을 가격으로 공략하며 OpenAI·Google과 정부 시장을 두고 경쟁함. FedRAMP 같은 보안 인증이 규제 산업 진입의 관문임을 보여줌.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/expanding-partnership-gsa" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🔓 금융감독원</span>
+        <span>뉴스웨이 · 10/26</span>
+<span class="tag">#망분리</span><span class="tag">#금융규제</span><span class="tag">#한국</span>      </div>
+      <h3><a href="https://www.newsway.co.kr/news/view?ud=2026102614034161631" target="_blank" rel="noopener">금감원, AI 보안 우수 금융사부터 망분리 전면 해제 검토</a></h3>
+<p class="orig">금감원 &#34;AI 보안 역량 갖춘 금융사부터 망분리 전면 해제 검토&#34;</p>      <p class="summary">이석 금감원 디지털금융총괄국장이 서울핀테크위크 2026에서 AI 보안 역량이 높은 금융사부터 망분리(network separation) 규제를 전면 해제하는 방안을 검토 중이라고 밝힘. 보안 목적에 한정했던 생성형 AI 허용을 넘어 상시·다각적 AI 활용을 열어주되, 위험관리 책임은 금융사가 지게 하는 방향임.</p>
+      <ul class="points"><li>1차 테스트: 신청 49개사 중 10곳 선정, 생성형 AI·SaaS 대상</li><li>SaaS는 올해 4월 규정 개정으로 정규 제도화됨</li><li>신용정보 건별 사전 동의 개선, 데이터 결합 패스트트랙 검토</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 한국 금융권 AI 도입의 최대 장벽이던 망분리가 &#39;역량 있는 곳부터&#39; 풀리면 내부 데이터를 쓰는 AI 에이전트 도입이 빨라짐. 동시에 최근 잇따른 금융권 해킹으로 AI 보안 역량 자체가 규제 완화의 조건이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>한국 금융권에선 &#39;AI 보안·거버넌스&#39; 역량이 AI 도입 허가증이 됨</span></p>
+<ul><li>금감원 2024년 망분리 개선 로드맵 요약하기</li><li>AI 위험관리 체크리스트를 포트폴리오에 넣기</li><li>가명처리·데이터 결합 기준 공부하기</li></ul><div class="skills"><span class="skill">망분리</span><span class="skill">AI 거버넌스</span><span class="skill">가명정보</span><span class="skill">SaaS 보안</span></div>      </div>
+      <div class="links">
+        <a href="https://www.newsway.co.kr/news/view?ud=2026102614034161631" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.etoday.co.kr/news/view/2640150" target="_blank" rel="noopener">이투데이 보도 ↗</a><a href="https://byline.network/2026/10/1026-6/" target="_blank" rel="noopener">바이라인네트워크 보도 ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧭 Morgan Stanley</span>
+        <span>Banking Dive (CIO Dive) · 10/26</span>
+<span class="tag">#에이전트</span><span class="tag">#자산관리</span><span class="tag">#데이터 아키텍처</span>      </div>
+      <h3><a href="https://www.bankingdive.com/news/morgan-stanley-wealth-division-ai-playbook/872746/" target="_blank" rel="noopener">모건스탠리 자산관리, AI 에이전트 3종 설계 공개</a></h3>
+<p class="orig">A look inside the AI playbook at Morgan Stanley&#39;s wealth division</p>      <p class="summary">모건스탠리 자산관리 부문 기술 CIO Hina Shamsi가 고객·서비스·어드바이저용 AI 에이전트 3종의 구조와 가드레일을 소개함. 약 8년 전 계좌 단위에서 고객 관계 단위로 데이터를 재설계한 것이 AI 도입의 토대가 됐다고 설명함.</p>
+      <ul class="points"><li>서비스 에이전트가 송금·계좌 개설·수익자 변경까지 실행</li><li>에이전트별 데이터 접근·실행 범위·사람 개입 시점 명시</li><li>약 8년 전 계좌→고객관계 단위 데이터 전환, 시맨틱 레이어 투자</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 대형 금융사의 에이전트 도입은 모델보다 데이터 구조와 권한 설계가 핵심임을 보여줌. 다만 생산성 수치는 공개되지 않음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>에이전트의 &#39;권한·모니터링·사람 개입&#39; 설계가 곧 내부통제임</span></p>
+<ul><li>AP 지급 에이전트 권한표(RACI) 만들어 보기</li><li>사람 승인 단계 둔 송금 에이전트 데모 만들기</li><li>시맨틱 레이어(semantic layer) 개념 공부하기</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">Human-in-the-loop</span><span class="skill">Semantic layer</span><span class="skill">내부통제</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bankingdive.com/news/morgan-stanley-wealth-division-ai-playbook/872746/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 PNC</span>
+        <span>Banking Dive · 10/27</span>
+<span class="tag">#은행</span><span class="tag">#M&amp;A</span><span class="tag">#Build vs Buy</span>      </div>
+      <h3><a href="https://www.bankingdive.com/news/pnc-ceo-ai-will-change-ma-landscape/872898/" target="_blank" rel="noopener">PNC CEO &#34;AI로 수십억 달러 절감, 은행 M&amp;A 늘 것&#34;</a></h3>
+<p class="orig">PNC CEO: AI will change the M&amp;A landscape</p>      <p class="summary">PNC CEO Bill Demchak가 Money20/20에서 AI 계획에 &#39;수억 달러를 써서 매년 수십억 달러를 아낄 것&#39;이라고 밝힘. 자체 컴퓨트와 데이터가 없는 은행은 뒤처져 소형 은행 M&amp;A가 늘 것이라고 전망함.</p>
+      <ul class="points"><li>AI 비용 &#39;수억 달러&#39;, 절감 &#39;연간 수십억 달러&#39; 기대</li><li>AI 앱은 직접 구축·소유, 락인 없는 부품만 구매</li><li>해외 외주 인력부터 축소, 3년 내 &#39;의미 있는 진전&#39; 목표</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 투자 여력이 은행 간 격차를 벌리고 업계 재편(M&amp;A)까지 이끌 수 있다는 대형 은행 CEO의 판단임. &#39;Build vs Buy&#39; 기준을 공개적으로 밝힌 점도 참고할 만함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 투자 ROI와 Build vs Buy 판단은 재무 출신이 강한 영역임</span></p>
+<ul><li>PNC 발언 기반 AI 투자 NPV 모델 만들어 보기</li><li>은행 AI 비용·절감 공시 사례 비교하기</li></ul><div class="skills"><span class="skill">ROI 분석</span><span class="skill">Build vs Buy</span><span class="skill">IT 투자 평가</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bankingdive.com/news/pnc-ceo-ai-will-change-ma-landscape/872898/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Reserve Bank of Australia</span>
+        <span>Reserve Bank of Australia · 10/26</span>
+<span class="tag">#RBA</span><span class="tag">#슈퍼애뉴에이션</span><span class="tag">#운영리스크</span>      </div>
+      <h3><a href="https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-26.html" target="_blank" rel="noopener">RBA &#34;AI는 운영 리스크 가속기&#34;, 슈퍼 업계에 경고</a></h3>
+<p class="orig">Panel Participation at the AFR Super and Wealth Summit (Brad Jones)</p>      <p class="summary">RBA 금융시스템 담당 부총재보 Brad Jones가 멜버른 AFR Super &amp; Wealth Summit 패널에서 AI를 운영 리스크(operational risk)의 가속기라 부르며 공격·방어 능력이 &#39;군비 경쟁&#39; 같다고 말함. AI 관련 주식 가치가 부풀었고 벤더·순환 금융 등 부채 조달이 늘고 있으며, 슈퍼 펀드의 행정·수탁 업체 쏠림도 리스크라고 지적함.</p>
+      <ul class="points"><li>미 IT 섹터 3년 이후 이익 기대 연 약 45% → 고평가 우려</li><li>90년대 말과 달리 AI는 벤더·순환 금융 등 부채 조달 증가</li><li>RBA·APRA 스트레스 테스트상 슈퍼 업계는 &#39;꽤 양호한 상태&#39;</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 중앙은행이 AI를 시장 밸류에이션과 운영 리스크 양쪽에서 금융안정 위험으로 본다는 신호임. 대형 시장 충격과 운영 사고가 겹치는 시나리오를 감독 당국이 의식하고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>호주 슈퍼·자산운용사는 AI 운영 리스크 관리 인력을 찾게 됨</span></p>
+<ul><li>APRA CPS 230(운영 리스크) 요점 정리하기</li><li>슈퍼펀드 리스크·컴플라이언스 채용공고 분석하기</li><li>제3자 벤더 집중 리스크 분석 미니 프로젝트 하기</li></ul><div class="skills"><span class="skill">Operational risk</span><span class="skill">CPS 230</span><span class="skill">Third-party risk</span><span class="skill">Stress testing</span></div>      </div>
+      <div class="links">
+        <a href="https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-26.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 모델 쪽 키워드는 &#39;보안&#39;임. Gemini 4 Carbon은 사이버보안 성능을 앞세우며 제한 공개했고, Mistral은 자체 구축용 가중치를 풀었음. 금융 쪽에서는 모건스탠리의 에이전트 권한 설계, 금감원의 &#39;보안 역량에 따른 망분리 해제&#39;, RBA의 운영 리스크 경고가 모두 같은 질문을 던짐. AI에게 무엇을 어디까지 맡기고 누가 통제할 것인가임. 재무·감사 실무에서 익힌 내부통제(SoD, 승인 단계) 감각을 에이전트 설계 언어로 옮길 수 있다면 호주·한국 어느 시장에서든 강한 차별점이 됨.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>AP 지급 에이전트 권한·승인 매트릭스 작성하기</li><li>APRA CPS 230 핵심 요건 1쪽으로 요약하기</li><li>OpenRouter로 Mistral Large 4 재무 질의 테스트하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">망분리 (Network Separation)</span> — 금융사 내부 업무망을 외부 인터넷과 물리·논리적으로 끊는 보안 규제임. 해킹은 막아주지만 외부 클라우드 AI·SaaS를 쓰기 어려워 한국 금융권 AI 도입의 큰 걸림돌로 꼽혀 옴.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/3</span><span>RBA 통화정책 이사회 결정 발표</span></li></ul></section><div class="hashtags">#Gemini4Carbon #MistralLarge4 #AI에이전트 #망분리 #RBA #금융AI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-30 · 검색 1시간 1분 · 탐색 17회 · 검색어 91개 · 출처 78곳 → 후보 34건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
