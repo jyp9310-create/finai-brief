@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-10-31</title>
+<meta name="description" content="AI 투자 거품 경고음 속, 재무 업무엔 AI가 한 발 더 들어옴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 10월 31일 (토)">
+<meta property="og:description" content="AI 투자 거품 경고음 속, 재무 업무엔 AI가 한 발 더 들어옴">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-10-31/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-10-31/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 10월 31일 (토)</div>
+    <h1>AI 투자 거품 경고음 속, 재무 업무엔 AI가 한 발 더 들어옴</h1>
+    <p class="overview">빅테크 AI 설비투자(capex)가 7,400억 달러를 넘자 시장이 처음으로 크게 흔들렸고, 호주에서도 AI 데이터센터 Firmus IPO가 무산되며 ASIC 조사로 번짐. 반면 현장에선 Microsoft가 결산·분개용 Copilot 기능을 내놓고, 한국 5대 은행은 AI 실적 경쟁을 벌이는 등 재무 업무 쪽 AI 도입은 계속 빨라지고 있음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 80개 · 출처 64곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. MS Copilot, 대사·분개까지 하는 재무 기능 출시</div>
+<div class="r">대사·분개·차이분석 등 독자가 직접 해 본 결산 업무가 그대로 AI 기능으로 나와, 실습과 포트폴리오로 바로 연결할 수 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">📉 빅테크 AI 투자 7,400억달러… 시장에 균열 신호</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">⚖️ Claude, 법무용 &#39;아티팩트&#39; 갤러리 출시</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📝 Gemini 앱, 문서·PDF·시트 대화 중 바로 편집</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📊 MS Copilot, 대사·분개까지 하는 재무 기능 출시</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🏦 5대 은행 AI 경쟁… 심사의견 30분→10초</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🔍 내부감사 77%, 감사계획에 AI 점검 포함</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 ASIC, 무산된 AI 데이터센터 Firmus IPO 은행 조사</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">📉 Alphabet · Amazon · Meta · Microsoft</span>
+        <span>TechCrunch · 10/30</span>
+<span class="tag">#AI 설비투자</span><span class="tag">#빅테크 실적</span><span class="tag">#잉여현금흐름</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/" target="_blank" rel="noopener">빅테크 AI 투자 7,400억달러… 시장에 균열 신호</a></h3>
+<p class="orig">Cracks are emerging in the AI spending boom</p>      <p class="summary">Alphabet·Amazon·Meta·Microsoft 4사의 올해 설비투자(capex) 계획이 합계 7,400억 달러를 넘었지만, 3분기 실적 발표 뒤 시장 반응은 싸늘했음. Alphabet은 하루 12% 떨어져 사상 최악의 하루를 기록했고, 잉여현금흐름(FCF)이 마이너스로 돌아선 회사가 늘면서 부채로 투자하는 구조에 대한 우려가 커짐.</p>
+      <ul class="points"><li>Alphabet 하루 -12%, 시총 약 5,000억 달러 증발(사상 최악)</li><li>Alphabet 3분기 FCF -91억 달러, Amazon 최근 12개월 -424억 달러</li><li>5개사(+Oracle) 올해 부채 조달 3,260억 달러, 작년의 3배</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 인프라 투자가 이제 현금흐름이 아니라 빚에 기대는 단계로 넘어가고 있어, 투자 속도 조절이나 AI 기업 밸류에이션 재평가로 이어질 수 있음. Blackstone이 Anthropic의 IPO 뒤 투자등급(investment-grade) 획득이 어려울 수 있다고 경고했다는 FT 보도도 같은 맥락임.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener">Alphabet Q3 2026 CEO 발언 (Google Blog) ↗</a><a href="https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" target="_blank" rel="noopener">AWS will be a $1T business, Jassy says (TechCrunch) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">⚖️ Anthropic</span>
+        <span>Claude (Anthropic) · 10/28</span>
+<span class="tag">#Anthropic</span><span class="tag">#Claude for Legal</span><span class="tag">#리걸테크</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/introducing-artifacts-for-legal-work" target="_blank" rel="noopener">Claude, 법무용 &#39;아티팩트&#39; 갤러리 출시</a></h3>
+<p class="orig">Introducing artifacts for legal work</p>      <p class="summary">Anthropic이 Claude for Legal에 바로 쓸 수 있는 법무용 아티팩트(artifacts, 대화 안에서 만드는 트래커·대시보드 같은 인터랙티브 도구) 갤러리를 공개함. 팀 데이터와 커넥터로 고쳐 쓰고 조직 안에서 공유할 수 있으며, 모든 결과물이 출처에 연결됨.</p>
+      <ul class="points"><li>기본 6종: 인용 검증, 계약 표 검토, 규제 동향 스캔 등</li><li>Harvey·Goodwin·Foley &amp; Lardner·PwC가 파트너 아티팩트 제작</li><li>5월 출시 이후 법무 커넥터 60개+ 추가(Bloomberg Law 등)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 범용 챗봇을 넘어 업무별 &#39;완성형 도구&#39;를 갤러리로 묶어 파는 방식이 법무까지 확장됨. 구현 파트너에 Deloitte·KPMG·PwC·Accenture가 들어가 있어 재무·감사 쪽으로 넓어질 가능성도 큼.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/introducing-artifacts-for-legal-work" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://claude.com/blog" target="_blank" rel="noopener">Claude blog ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📝 Google</span>
+        <span>Google Blog · 10/29</span>
+<span class="tag">#Google</span><span class="tag">#Gemini</span><span class="tag">#생산성</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/" target="_blank" rel="noopener">Gemini 앱, 문서·PDF·시트 대화 중 바로 편집</a></h3>
+<p class="orig">You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini</p>      <p class="summary">Gemini 앱에서 PDF, Google Docs·Sheets, 슬라이드, Markdown, TXT, 코드 파일을 채팅 안에서 만들고 미리 보고 편집할 수 있게 됨. 전체 화면으로 직접 고치거나, 텍스트를 드래그해 Gemini에게 수정을 시킬 수 있음.</p>
+      <ul class="points"><li>PDF는 웹·모바일 모두, 나머지 형식은 웹에서만 지원</li><li>전체 화면 직접 편집 + 선택 영역 지정해 AI 수정 요청</li><li>Gemini 앱 지원 모든 언어·모든 사용자 대상 제공</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 채팅 결과를 다른 앱에 복사해 다듬던 단계가 사라지며, ChatGPT·Claude와의 &#39;문서 작업 공간&#39; 경쟁이 본격화됨. Alphabet은 Gemini 앱 월 사용자가 약 10억 명이라고 밝힌 바 있어 파급력이 큼.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener">Alphabet Q3 2026 CEO 발언 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📊 Microsoft</span>
+        <span>Microsoft Copilot Blog · 10/29</span>
+<span class="tag">#Copilot</span><span class="tag">#결산 자동화</span><span class="tag">#Excel</span>      </div>
+      <h3><a href="https://www.microsoft.com/en-us/copilot/blog/2026/10/29/microsoft-copilot-for-finance-purpose-built-for-the-way-finance-teams-work/" target="_blank" rel="noopener">MS Copilot, 대사·분개까지 하는 재무 기능 출시</a></h3>
+<p class="orig">Microsoft Copilot for finance: Purpose-built for the way finance teams work</p>      <p class="summary">Microsoft가 Copilot 전반에 25개가 넘는 재무 스킬과 파트너 플러그인을 추가함. Excel·Cowork에서 계정 대사(reconciliation), 분개 초안(journal entries), 예산 대비 차이 분석(variance)까지 처리하고, 결산 검토 패키지·감사 증빙 패키지도 만들어 줌.</p>
+      <ul class="points"><li>분개 초안: 미지급비용·재분류·배부·역분개, 차대 균형 검사</li><li>Cowork Finance 플러그인: 결산·예측 검토, 감사 증빙 패키지</li><li>QuickBooks·Xero·Zoho Books, FactSet·LSEG·S&amp;P 연동</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 엑셀이라는 재무팀의 기본 도구 안에 결산(R2R) 업무 자체가 AI 기능으로 들어온 것이라 파급력이 큼. 회계 기능은 아직 Frontier(조기 체험) 단계지만 Insiders 7일 동안 8,000명+가 44,000회 넘게 호출함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>직접 해 본 결산·대사·분개 업무가 그대로 AI 기능이 됐으니, 그 검증 기준을 만드는 역할이 기회임.</span></p>
+<ul><li>Xero 데모 데이터로 은행 대사 자동화 실습</li><li>분개 오류 유형 20개로 AI 평가셋 만들기</li><li>Excel Copilot 재무 스킬(GA) 바로 써 보기</li></ul><div class="skills"><span class="skill">Account Reconciliation</span><span class="skill">Journal Entry</span><span class="skill">Excel Copilot</span><span class="skill">Record-to-Report</span></div>      </div>
+      <div class="links">
+        <a href="https://www.microsoft.com/en-us/copilot/blog/2026/10/29/microsoft-copilot-for-finance-purpose-built-for-the-way-finance-teams-work/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cfodive.com/news/microsoft-expands-copilot-reach-in-finance-workflows/873239/" target="_blank" rel="noopener">Microsoft expands Copilot&#39;s reach in finance workflows (CFO Dive) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🏦 KB국민·신한·하나·우리·NH농협은행</span>
+        <span>서울신문 · 10/29</span>
+<span class="tag">#한국 은행</span><span class="tag">#AI 에이전트</span><span class="tag">#여신심사</span>      </div>
+      <h3><a href="https://www.seoul.co.kr/news/economy/finance/2026/10/29/20261029032002" target="_blank" rel="noopener">5대 은행 AI 경쟁… 심사의견 30분→10초</a></h3>
+<p class="orig">맞춤형 상담·업무 효율화 … 5대 은행, AI 서비스 활용 경쟁</p>      <p class="summary">서울신문이 5대 은행의 AI 전략을 비교한 결과, 고객용 대화형 AI와 직원용 업무 에이전트가 동시에 확산되고 있음. 하나은행은 기업 신용평가 심사의견 초안 작성을 30분 이상에서 10초로 줄였고, KB국민은행은 상담 에이전트로 업무처리 시간을 최대 70% 줄였다고 밝힘.</p>
+      <ul class="points"><li>하나은행: 기업 신용평가 심사의견 초안 30분+ → 10초</li><li>신한 &#39;자산관리 에이전트&#39; 월 직원 이용 1,100명(2월 도입)</li><li>KB: 9월 &#39;KB AI&#39; 도입, 상담 에이전트로 업무시간 최대 70%↓</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 한국 은행 AI가 챗봇 수준을 넘어 여신심사·PB 지원 같은 핵심 업무로 들어가고 있음. 다만 기사도 효율이 고객 편의로 이어질지, 보안 취약점 관리가 과제라고 지적함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>심사의견 초안 자동화는 재무제표 분석 경험과 LLM을 합친 대표 사례로 포트폴리오 주제로 좋음.</span></p>
+<ul><li>DART 재무제표로 신용평가 의견 초안 생성기 만들기</li><li>한국 은행 AI·디지털 직무 공고 요건 정리</li></ul><div class="skills"><span class="skill">Credit Analysis</span><span class="skill">LLM</span><span class="skill">RAG</span><span class="skill">DART API</span></div>      </div>
+      <div class="links">
+        <a href="https://www.seoul.co.kr/news/economy/finance/2026/10/29/20261029032002" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🔍 Sikich</span>
+        <span>Sikich · 10/20</span>
+<span class="tag">#내부감사</span><span class="tag">#AI 보증</span><span class="tag">#감사 트렌드</span>      </div>
+      <h3><a href="https://www.sikich.com/?p=39450" target="_blank" rel="noopener">내부감사 77%, 감사계획에 AI 점검 포함</a></h3>
+<p class="orig">Sikich survey finds organizations increasing investment in internal audit as the function&#39;s role expands</p>      <p class="summary">Sikich의 &#39;2026 U.S. Internal Audit Priorities Survey&#39;에서 내부감사 리더의 77%가 감사계획에 AI 평가를 넣는다고 답함. 다만 많은 조직이 거버넌스·보안 통제 점검에 그치고, AI가 믿을 만한 결과를 내는지까지는 검증하지 못하는 &#39;AI 보증 공백&#39;이 있다고 지적함.</p>
+      <ul class="points"><li>77%가 감사계획에 AI 평가 포함, 리스크 의제 1위는 사이버·AI</li><li>64% 내부감사 예산 증가, 43% 인원 증가 예상</li><li>82%가 외부 파트너 활용, 사이버·AI·데이터 인력 부족</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 내부감사의 역할이 &#39;AI 통제가 있나&#39;에서 &#39;AI 결과가 맞나&#39;로 넓어지는 중이라, 회계와 AI를 함께 아는 인력 수요가 커짐. 채용이 수요를 못 따라간다는 Sikich 측 발언도 같은 신호임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 모델 결과를 감사하는 &#39;AI 보증&#39; 역량은 회계 경력+AI 전공 조합이 가장 빛나는 영역임.</span></p>
+<ul><li>IIA AI 감사 프레임워크 요약 노트 만들기</li><li>분류 모델 하나 골라 감사 체크리스트 써 보기</li></ul><div class="skills"><span class="skill">AI Assurance</span><span class="skill">Internal Audit</span><span class="skill">Model Validation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.sikich.com/?p=39450" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.goingconcern.com/friday-footnotes-internal-auditors-are-all-in-on-ai-kpmg-australia-takes-a-few-more-ls-10-23-26/" target="_blank" rel="noopener">Going Concern Friday Footnotes 10.23.26 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 ASIC (호주증권투자위원회)</span>
+        <span>iTnews · 10/30</span>
+<span class="tag">#ASIC</span><span class="tag">#AI IPO</span><span class="tag">#자본시장</span>      </div>
+      <h3><a href="https://www.itnews.com.au/news/asic-talking-to-bankers-over-failed-firmus-ipo-630014" target="_blank" rel="noopener">ASIC, 무산된 AI 데이터센터 Firmus IPO 은행 조사</a></h3>
+<p class="orig">ASIC talking to bankers over failed Firmus IPO</p>      <p class="summary">호주 역대 두 번째 규모가 될 예정이던 AI 데이터센터 운영사 Firmus의 IPO가 10월 9일 무산된 뒤, ASIC이 주관사 은행들의 수요예측(bookbuild) 마케팅을 들여다보고 있음. 정식 조사는 아니지만 Sarah Court 의장이 &#39;매우 중대한 사건&#39;이라며 주관사가 지켜야 할 기준을 서한으로 제시함.</p>
+      <ul class="points"><li>주관사: BofA·JPMorgan·Morgan Stanley·Morgans</li><li>&#39;이 가격에 수요가 공모 규모 초과&#39; 텀시트 문구 논란</li><li>ASIC 기준: 수요 주장 근거, 북빌딩 기록, 이해상충 관리</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 밸류에이션·과잉투자 우려가 호주 자본시장에서 실제 딜 실패로 나타난 사례이자, 규제기관이 AI 붐 속 IPO 관행을 점검하기 시작했다는 신호임. 빅테크 capex 논란과 같은 흐름임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 기업 투자 판단에 쓰이는 수요·밸류에이션 검증은 재무 경력자가 AI 업계에서 차별화할 수 있는 지점임.</span></p>
+<ul><li>Firmus 사례로 AI 인프라 기업 밸류 메모 쓰기</li><li>ASIC 서한의 4개 기준을 IPO 체크리스트로 정리</li></ul><div class="skills"><span class="skill">IPO Bookbuild</span><span class="skill">Valuation</span><span class="skill">Australian Regulation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.itnews.com.au/news/asic-talking-to-bankers-over-failed-firmus-ipo-630014" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.bloomberg.com/news/articles/2026-10-28/bankers-in-failed-firmus-ipo-probed-by-australian-regulator-asic" target="_blank" rel="noopener">Bankers in Failed Firmus IPO Probed by Australian Regulator (Bloomberg) ↗</a><a href="https://www.capitalbrief.com/briefing/asic-making-targeted-inquiries-into-firmus-ipo-bankers-5566e825-d331-4a6e-816e-f9dfd436833f/" target="_blank" rel="noopener">ASIC making &#39;targeted inquiries&#39; into Firmus&#39; IPO bankers (Capital Brief) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘은 AI 투자 쪽에선 경고음이, 재무 현장에선 도입 가속 신호가 동시에 나온 날임. 빅테크 FCF 적자와 Firmus IPO 무산은 &#39;AI가 돈을 버는가&#39;를 따지는 재무적 시각이 다시 중요해졌다는 뜻이고, Microsoft Copilot 재무 기능과 하나은행 심사의견 10초 사례는 그 수익이 실제로 결산·여신 같은 핵심 업무 자동화에서 나온다는 걸 보여줌. Sikich 설문처럼 AI 결과를 검증할 사람이 부족하다는 점까지 보면, 회계 실무와 AI를 함께 아는 사람의 자리는 &#39;만드는 쪽&#39;과 &#39;검증하는 쪽&#39; 모두에 열려 있음. 엔지니어링 역량만큼 재무 판단 기준을 평가셋·체크리스트로 만드는 능력을 키우는 게 차별점이 될 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Excel Copilot 재무 스킬로 대사 실습하기</li><li>분개 오류 20개로 AI 평가셋 만들기</li><li>빅테크 4사 capex·FCF 비교표 작성하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">AI 보증 (AI Assurance)</span> — AI가 믿을 만한 결과를 내는지 독립적으로 검증하는 일. 통제나 보안 점검을 넘어 모델의 정확도, 판단의 질, 의도한 결과가 나오는지까지 감사하는 영역으로, 감사인과 AI 전문가의 역량이 모두 필요함.</p></section><div class="hashtags">#AI재무자동화 #CopilotForFinance #AI감사 #ASIC #AI투자 #핀테크 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-10-31 · 검색 1시간 1분 · 탐색 17회 · 검색어 80개 · 출처 64곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
