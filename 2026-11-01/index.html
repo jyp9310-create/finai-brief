@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-01</title>
+<meta name="description" content="AI 자금줄 조이는 사이, 결산·서류 업무로 퍼지는 에이전트">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 1일 (일)">
+<meta property="og:description" content="AI 자금줄 조이는 사이, 결산·서류 업무로 퍼지는 에이전트">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-01/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-01/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 1일 (일)</div>
+    <h1>AI 자금줄 조이는 사이, 결산·서류 업무로 퍼지는 에이전트</h1>
+    <p class="overview">OpenAI가 투자 유치 목표를 낮추고 앤트로픽은 요금제를 손보는 등 AI 업계가 &#39;돈과 사용량&#39; 조정에 들어감. 반면 현장에서는 Intuit의 결산 에이전트, IBK기업은행의 서류 자동화처럼 재무 실무를 직접 맡는 에이전트가 늘고 있음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 36분 · 탐색 17회 · 검색어 70개 · 출처 64곳 → 후보 29건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. Intuit, SOP로 만드는 &#39;AI 결산 에이전트&#39; 공개</div>
+<div class="r">독자의 결산 실무 경험을 에이전트 설계(SOP→워크플로, 사람 승인, 감사 로그)로 바로 옮겨 포트폴리오로 만들 수 있는 가장 직접적인 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🖱️ Gemini API &#39;Computer Use&#39; 정식 출시(GA)</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">💳 앤트로픽, Max 20x→&#39;Ultra&#39; 개명·5시간 제한 폐지</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📉 OpenAI, 투자 유치 목표 $300억→$200억 하향</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📒 Intuit, SOP로 만드는 &#39;AI 결산 에이전트&#39; 공개</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🏦 IBK기업은행, 보이스피싱 구제 서류 처리 88% 단축</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📊 LLM 퀀트 에이전트 9종, 시장 평균도 못 이겨</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🛡️ ASD 연례 보고서 &#34;AI가 사이버 위협 재정의&#34;</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🖱️ Google</span>
+        <span>Google AI for Developers (Gemini API Release notes) · 10/30</span>
+<span class="tag">#Google</span><span class="tag">#AI 에이전트</span><span class="tag">#API</span>      </div>
+      <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API &#39;Computer Use&#39; 정식 출시(GA)</a></h3>
+<p class="orig">Gemini API changelog: Computer Use generally available (GA)</p>      <p class="summary">Google이 화면을 보고 클릭·입력하는 Computer Use 도구를 Interactions API와 GenerateContent API 모두에서 정식 출시(GA)함. 미리보기(preview) 단계를 벗어나 브라우저·UI 자동화 에이전트를 실서비스에 쓸 수 있게 됨.</p>
+      <ul class="points"><li>10/30 Computer Use GA, Interactions·GenerateContent API 모두 지원</li><li>10/27 코딩 에이전트·CI용 `gemini-api` CLI 베타 공개</li><li>10/26 신규 유료 프로젝트는 요청 저장(store=true)이 기본값</li></ul>
+<p class="why"><b>💡 왜 중요?</b> API가 없는 레거시 화면까지 AI가 직접 조작하는 &#39;UI 에이전트&#39;가 상용 단계로 들어섬. 앤트로픽·OpenAI와 컴퓨터 사용 에이전트 경쟁이 본격화됨.</p>      <div class="links">
+        <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://releasebot.io/updates/google/gemini-api" target="_blank" rel="noopener">Releasebot: Gemini API 업데이트 모음 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">💳 Anthropic</span>
+        <span>Claude Help Center · 10/30</span>
+<span class="tag">#Anthropic</span><span class="tag">#Claude</span><span class="tag">#요금제</span>      </div>
+      <h3><a href="https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan" target="_blank" rel="noopener">앤트로픽, Max 20x→&#39;Ultra&#39; 개명·5시간 제한 폐지</a></h3>
+<p class="orig">What is the Ultra plan? (Max 20x renamed to Ultra)</p>      <p class="summary">앤트로픽이 Max 5x를 &#39;Max&#39;($100), Max 20x를 &#39;Ultra&#39;($200)로 이름을 바꾸고, 인증된 Ultra 계정의 5시간 사용 제한을 없앰. 가격과 주간 한도(Pro의 10배)는 그대로지만, 주간 한도를 원하는 시간에 몰아 쓸 수 있게 됨.</p>
+      <ul class="points"><li>Max 5x→Max($100), Max 20x→Ultra($200), 가격 동일</li><li>인증된 Ultra는 5시간 제한 없음, 주간 한도는 Pro의 10배</li><li>인증은 계정·결제 이력으로 자동 진행, 수동 신청 불가</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;20배&#39;라는 이름이 주간 한도까지 20배라는 오해를 낳자 이름을 바로잡은 조치임. 하루 전 OpenAI도 Pro 한도를 2배로 늘려 사용량 경쟁이 붙음.</p>      <div class="links">
+        <a href="https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216846" target="_blank" rel="noopener">AI타임스: 앤트로픽 요금제 개편 보도 ↗</a><a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude 요금제 페이지 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📉 OpenAI</span>
+        <span>TechCrunch (FT·WSJ 인용) · 10/31</span>
+<span class="tag">#OpenAI</span><span class="tag">#투자</span><span class="tag">#AI 거품론</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/" target="_blank" rel="noopener">OpenAI, 투자 유치 목표 $300억→$200억 하향</a></h3>
+<p class="orig">OpenAI reportedly lowers funding target for new round</p>      <p class="summary">FT 보도에 따르면 OpenAI가 이번 투자 라운드 목표를 $300억에서 $200억으로 낮췄고, 1차 마감액은 그보다도 적을 전망임. WSJ는 지금까지 $110억을 확보했으며 일부 대형 투자자 반응이 &#39;미지근(tepid)&#39;하다고 전함.</p>
+      <ul class="points"><li>목표 $300억→$200억 하향(FT, 10/30 보도)</li><li>확보액 $110억, 원래 목표의 절반 미만(WSJ)</li><li>UAE 투자자 주도, 기업가치 $1.25조 수준 거론</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 인프라 과잉 투자 우려와 기술주 급락이 최고 AI 기업의 자금 조달에도 영향을 주기 시작함. 상장을 앞둔 앤트로픽 IPO에도 부담이 될 수 있음.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html" target="_blank" rel="noopener">CNBC: OpenAI $1.25조 가치 조달 추진(이전 보도) ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📒 Intuit</span>
+        <span>Accounting Today · 10/27</span>
+<span class="tag">#월말결산</span><span class="tag">#AI 에이전트</span><span class="tag">#회계법인</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/news/intuit-plans-bigger-ai-rollout-with-accountants" target="_blank" rel="noopener">Intuit, SOP로 만드는 &#39;AI 결산 에이전트&#39; 공개</a></h3>
+<p class="orig">Intuit plans bigger AI rollout with accountants</p>      <p class="summary">Intuit이 Intuit Connect에서 회계법인이 자기 업무 절차서(SOP)를 올리면 결산 흐름을 에이전트가 수행하는 Agentic Book Close를 공개함. 에이전트가 진행 상황을 보여 주고 확인할 항목을 표시하며, 고객용 재무 요약까지 준비하고, 법인이 직접 에이전트를 만드는 Agent Studio도 함께 선보임.</p>
+      <ul class="points"><li>SOP 업로드→단계별 결산 작업 수행·예외 표시·재무요약 작성</li><li>Agent Studio: 잔액-원장 대사, 건설 유보금 처리 등 예시</li><li>약 20개 법인에 구축, 베타 법인들 시간 절감 보고(수치 미공개)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 결산 자동화가 &#39;규칙 몇 개&#39;에서 회사별 SOP를 그대로 실행하는 에이전트로 넘어가고 있음. 사람이 검토·승인하는 구조라 회계사의 역할이 작업자에서 검토자로 바뀜.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>내가 써 본 결산 체크리스트가 곧 에이전트 설계도라는 점이 핵심임.</span></p>
+<ul><li>예전 월말결산 SOP를 단계·검증규칙으로 재작성</li><li>대사(reconciliation) 에이전트를 LLM으로 시제작</li><li>사람 승인 지점·감사 로그 설계를 포트폴리오에 명시</li></ul><div class="skills"><span class="skill">Agentic Workflow</span><span class="skill">Month-end Close</span><span class="skill">Reconciliation</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/news/intuit-plans-bigger-ai-rollout-with-accountants" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.firmofthefuture.com/product-update/intuit-accountant-suite-fall-2026-updates/" target="_blank" rel="noopener">Intuit Firm of the Future: Accountant Suite Fall 2026 업데이트 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🏦 IBK기업은행 / 한국딥러닝</span>
+        <span>AI타임스 · 10/30</span>
+<span class="tag">#은행</span><span class="tag">#VLM</span><span class="tag">#문서자동화</span>      </div>
+      <h3><a href="https://www.aitimes.com/news/articleView.html?idxno=216827" target="_blank" rel="noopener">IBK기업은행, 보이스피싱 구제 서류 처리 88% 단축</a></h3>
+<p class="orig">한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화</p>      <p class="summary">한국딥러닝이 VLM(이미지와 글을 함께 이해하는 모델) 기반 &#39;Deep Agent for Finance&#39;로 IBK기업은행 보이스피싱 피해구제 서류 처리를 자동화함. 4~8월 PoC에서 처리 시간이 88% 줄었고 2027년 상반기 실업무에 적용될 예정임.</p>
+      <ul class="points"><li>PoC(4~8월) 문서 처리 시간 88% 감소</li><li>인식률 인쇄체 100%, 필기체 97%+, 분류·범죄유형 추론 100%</li><li>AI-OCR·VLM 교차검증, 신뢰도 따라 자동처리/직원검토 분기</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 규제가 엄격한 은행이 폐쇄망(온프레미스)에서 생성형 AI 문서 처리를 검증한 사례임. 신뢰도에 따라 사람 검토로 넘기는 설계가 금융권 AI 도입의 표준 패턴이 되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>OCR+VLM 교차검증과 신뢰도 분기는 증빙·송장 처리에 그대로 옮길 수 있는 설계임.</span></p>
+<ul><li>영수증·송장으로 OCR vs VLM 정확도 비교</li><li>신뢰도 임계값별 자동처리율·오류율 표 만들기</li></ul><div class="skills"><span class="skill">VLM</span><span class="skill">Document AI</span><span class="skill">Confidence Routing</span><span class="skill">On-premise LLM</span></div>      </div>
+      <div class="links">
+        <a href="https://www.aitimes.com/news/articleView.html?idxno=216827" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📊 Quant-Arena 연구진 (arXiv)</span>
+        <span>arXiv · 10/21</span>
+<span class="tag">#퀀트</span><span class="tag">#벤치마크</span><span class="tag">#LLM 에이전트</span>      </div>
+      <h3><a href="https://arxiv.org/abs/2610.30113" target="_blank" rel="noopener">LLM 퀀트 에이전트 9종, 시장 평균도 못 이겨</a></h3>
+<p class="orig">Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research</p>      <p class="summary">Quant-Arena는 LLM 에이전트가 실제 중국 A주 데이터로 퀀트 리서치 전 과정을 해낼 수 있는지 평가하는 벤치마크·리더보드임. 2022~2023년 데이터로 전략을 만든 뒤 하나로 고정해 2024년에 검증했는데, 1위 GPT-6 Astra를 포함해 9개 모델 모두 동일가중 시장 지수를 못 이김.</p>
+      <ul class="points"><li>9개 최신 모델 평가, 1위는 GPT-6 Astra</li><li>학습 2022~2023, 2024년은 봉인된 검증(out-of-sample) 구간</li><li>거래비용·호가창 기반 시장충격까지 반영한 현금계좌 시뮬레이터</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 코드는 잘 짜도 실제로 돈 버는 전략을 만드는 건 아직 어렵다는 증거임. 과적합 없이 시장 대비 성과를 내는 게 진짜 기준임을 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;학습/검증 기간 분리 + 비용 반영&#39; 평가 틀은 재무 AI 포트폴리오의 신뢰도를 높여 줌.</span></p>
+<ul><li>ASX 데이터로 학습·검증 기간 나눠 백테스트</li><li>거래비용 넣은 결과와 안 넣은 결과 비교</li></ul><div class="skills"><span class="skill">Backtesting</span><span class="skill">Out-of-sample Test</span><span class="skill">Quant Research</span></div>      </div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2610.30113" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://papers.cool/arxiv/2610.30113" target="_blank" rel="noopener">papers.cool 요약 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🛡️ Australian Signals Directorate (ASD)</span>
+        <span>cyber.gov.au (ASD&#39;s ACSC) · 10/27</span>
+<span class="tag">#호주</span><span class="tag">#사이버보안</span><span class="tag">#AI 위협</span>      </div>
+      <h3><a href="https://www.cyber.gov.au/news/asd-releases-seventh-annual-cyber-threat-report-2025-26" target="_blank" rel="noopener">ASD 연례 보고서 &#34;AI가 사이버 위협 재정의&#34;</a></h3>
+<p class="orig">Annual Cyber Threat Report 2025-26</p>      <p class="summary">호주 신호정보국(ASD)이 일곱 번째 연례 사이버 위협 보고서를 내고 AI를 위협 지형의 핵심 변수로 지목함. ASD가 대응한 사고가 약 20% 늘었고, AI 에이전트 무리(swarm)가 정부 웹사이트를 자율적으로 해킹한 첫 사례도 소개됨.</p>
+      <ul class="points"><li>ASD 대응 사고 전년 대비 약 20% 증가</li><li>AI 에이전트 swarm이 보건 데이터 보안 뚫어, 첫 자율 해킹 사례</li><li>Amadey 악성코드망(PC 18만 대) 차단, 탈취 데이터 5TB 파기</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Abigail Bradshaw ASD 청장은 최신 AI 모델이 위협을 &#39;재정의&#39;했고 서비스 중단은 피할 수 없다고 밝힘. 은행·보험·연금 등 금융권에 AI 기반 보안·위험관리 수요가 커질 것임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>호주 금융권 AI 리스크 직무는 APRA CPS 234 + AI 위협 이해가 기본기임.</span></p>
+<ul><li>보고서 요약본에서 금융권 위협 3개 메모</li><li>APRA CPS 234 요건을 AI 위협에 대응해 정리</li><li>이상거래·로그 이상탐지 미니 프로젝트 하기</li></ul><div class="skills"><span class="skill">Cyber Risk</span><span class="skill">APRA CPS 234</span><span class="skill">Anomaly Detection</span><span class="skill">AI Governance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cyber.gov.au/news/asd-releases-seventh-annual-cyber-threat-report-2025-26" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.abc.net.au/news/2026-10-27/australian-signals-directorate-ai-cybersecurity-hacking-threats/107309858" target="_blank" rel="noopener">ABC News: ASD &#34;AI 기반 사이버 위협 속 서비스 중단 불가피&#34; ↗</a><a href="https://www.cyber.gov.au/publication/annual-cyber-threat-report-2025-26/executive-summary" target="_blank" rel="noopener">ASD 보고서 요약(Executive summary) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 업계는 OpenAI의 투자 목표 하향, 앤트로픽의 요금제 정리처럼 &#39;돈과 사용량&#39;을 조정하는 국면임. 반대로 재무 현장에서는 Intuit 결산 에이전트, IBK 서류 자동화처럼 측정 가능한 성과를 내는 좁고 구체적인 적용이 늘고 있음. 두 사례 모두 사람 승인·신뢰도 분기·감사 로그를 갖춘 &#39;통제 가능한 에이전트&#39;라는 공통점이 있고, Quant-Arena는 그런 검증 없이 나온 AI 성과는 믿기 어렵다는 점을 보여 줌. 재무 실무를 아는 AI 인재의 강점은 바로 이 통제·검증 설계에 있음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>예전 월말결산 SOP를 에이전트 단계로 재작성하기</li><li>송장 5장으로 OCR·VLM 추출 정확도 비교하기</li><li>ASD 보고서 요약 읽고 금융 위협 3개 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">표본 외 검증 (Out-of-sample Test)</span> — 만들 때 안 쓴 데이터로 성과를 다시 확인하는 검증임. Quant-Arena는 2022~23년 데이터로 전략을 만들고 2024년을 봉인해 이 방식으로 평가했으며, 과거 데이터에만 맞춘 과적합(overfitting)을 걸러내는 핵심 장치임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/5</span><span>ASIC RG 265/266(AI 포함 알고리즘 거래 규정) 의견 제출 마감</span></li><li><span class="d">11/6</span><span>엔비디아의 네이버 10억달러 제3자배정 유상증자 납입일</span></li></ul></section><div class="hashtags">#FinAI #AgenticAI #월말결산 #AI회계 #호주AI #사이버보안 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-01 · 검색 1시간 36분 · 탐색 17회 · 검색어 70개 · 출처 64곳 → 후보 29건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
