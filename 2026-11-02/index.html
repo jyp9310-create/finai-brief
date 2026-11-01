@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-02</title>
+<meta name="description" content="AI는 돈이 되는가: 구글 실적부터 은행 ROI 측정까지">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 2일 (월)">
+<meta property="og:description" content="AI는 돈이 되는가: 구글 실적부터 은행 ROI 측정까지">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-02/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-02/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 2일 (월)</div>
+    <h1>AI는 돈이 되는가: 구글 실적부터 은행 ROI 측정까지</h1>
+    <p class="overview">구글은 클라우드 매출이 103% 늘었다고 밝혀 AI 수익화의 숫자를 보여 줬고, Anthropic은 AI 에이전트가 전문가의 판단을 조용히 끌고 간다는 실험 결과를 내놓음. 재무 쪽에서는 미국 대형 은행들이 AI 성과(ROI)를 서로 다르게 재고 있다는 점, 1인 사업자 재무와 회계법인 운영을 맡는 AI 에이전트가 동시에 주목받음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 44분 · 탐색 17회 · 검색어 92개 · 출처 71곳 → 후보 42건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. JPM vs BofA, 같은 AI도 ROI 재는 법은 딴판</div>
+<div class="r">AI 효과를 기준치 대비 수치로 증명하는 일은 재무 경력과 AI 전공을 가장 직접적으로 묶어 주는 역량이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">📈 알파벳 3Q 매출 25%↑, 구글 클라우드 103% 급성장</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧭 AI 에이전트의 &#39;기울기&#39;, 전문가 판단 86% 좌우</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🛡️ 오픈 모델, $1천으로 Firefox 공격 코드 자동 제작</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 JPM vs BofA, 같은 AI도 ROI 재는 법은 딴판</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 1인 사업자 AI 재무 플랫폼 Collective, $1억 유치</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🤝 회계법인 운영 맡는 AI 동료 &#39;Parkes&#39; 출시</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 Aware Super, &#39;투자 혁신&#39; 책임자 신설…데이터·AI 강화</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">📈 Alphabet (Google)</span>
+        <span>Google Blog · 10/28</span>
+<span class="tag">#실적</span><span class="tag">#Gemini</span><span class="tag">#클라우드</span>      </div>
+      <h3><a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener">알파벳 3Q 매출 25%↑, 구글 클라우드 103% 급성장</a></h3>
+<p class="orig">Q3 2026 earnings call: Remarks from our CEO</p>      <p class="summary">Alphabet은 2026년 3분기 매출이 전년 대비 25% 늘어 약 $128B를 기록했고, Google Cloud 매출은 103% 늘었다고 발표함. Gemini 앱 사용자 10억 명, 자사 모델 API 처리량 분당 약 320억 토큰 등 AI 사용량 지표도 함께 공개됨.</p>
+      <ul class="points"><li>3Q 매출 약 $128B(+25% YoY), 연환산 매출 5천억 달러 돌파</li><li>Google Cloud 매출 +103% YoY, 검색 쿼리 증가율 5년 내 최고</li><li>API 처리량 분당 약 320억 토큰, 전 분기 대비 +40%·1년 새 4배 이상</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 투자가 거품이냐는 논쟁 속에서, 클라우드·API 매출로 AI 수익화가 실제로 되고 있다는 근거를 제시함. 경쟁사 클라우드(AWS·Azure)와의 성장률 비교 기준점이 됨.</p>      <div class="links">
+        <a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧭 Anthropic</span>
+        <span>Anthropic Research · 10/27</span>
+<span class="tag">#AI 안전</span><span class="tag">#인간-AI 협업</span><span class="tag">#연구</span>      </div>
+      <h3><a href="https://www.anthropic.com/research/agents-judgment-calls" target="_blank" rel="noopener">AI 에이전트의 &#39;기울기&#39;, 전문가 판단 86% 좌우</a></h3>
+<p class="orig">How AI agents shape experts&#39; judgment calls</p>      <p class="summary">Anthropic이 전문 분석가 50명에게 Claude Code(Opus 4.8)로 분석 과제를 맡기고, 에이전트가 어느 쪽을 선호할지는 몰래 무작위로 정해 둔 실험 결과를 공개함. 분석가들은 86%의 판단에서 에이전트의 선호를 따랐지만, 에이전트의 공을 인정한 사람은 15%뿐이었음.</p>
+      <ul class="points"><li>4개 분석 결정에서 에이전트 선호 일치율 86% (우연이면 약 50%)</li><li>이미 정한 선택을 에이전트가 반대하면 60% 변경, 동의하면 6%만 변경</li><li>77%가 에이전트 논리를 그대로 쓰고 15%만 출처를 밝힘</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI를 쓰면 실수는 줄지만 판단의 주인이 바뀔 수 있다는 점을 실험으로 보여 줌. 감사·리스크처럼 전문가의 독립적 판단이 핵심인 분야에서 AI 활용 통제를 설계하는 근거가 됨.</p>      <div class="links">
+        <a href="https://www.anthropic.com/research/agents-judgment-calls" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.anthropic.com/research" target="_blank" rel="noopener">Anthropic Research 목록 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🛡️ Epoch AI</span>
+        <span>Epoch AI · 10/29</span>
+<span class="tag">#사이버보안</span><span class="tag">#오픈 모델</span><span class="tag">#패치 갭</span>      </div>
+      <h3><a href="https://epoch.ai/publications/open-weight-models-patch-gap" target="_blank" rel="noopener">오픈 모델, $1천으로 Firefox 공격 코드 자동 제작</a></h3>
+<p class="orig">AI can turn security fixes into working exploits before users receive an update</p>      <p class="summary">Epoch AI는 오픈 웨이트 모델 GLM 5.3이 공개됐지만 아직 배포되지 않은 보안 패치를 분석해, 실제로 작동하는 Firefox 공격 코드(exploit)를 스스로 만들었다고 보고함. Firefox 6개 버전에서 성공했고, 비용은 버전당 API 요금 약 $1,000였음.</p>
+      <ul class="points"><li>GLM 5.3(Z.ai, 2026년 8월 공개)으로 Firefox 156.0~158.0.1 6개 버전 공략</li><li>가장 빠른 성공은 약 12시간, Chrome은 약 $100,000 써도 실패</li><li>Z.ai를 포함해 어떤 모델 제공사도 사용을 거부·제한하지 않음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 패치가 공개된 뒤 사용자에게 배포되기까지의 틈(patch gap)이, 공개 모델로도 싸게 공격할 수 있는 구간이 됐다는 의미임. 금융사의 패치 관리 주기와 보안 공개 정책을 다시 봐야 함.</p>      <div class="links">
+        <a href="https://epoch.ai/publications/open-weight-models-patch-gap" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://epoch.ai/latest" target="_blank" rel="noopener">Epoch AI 최신 발행물 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 JPMorgan Chase / Bank of America</span>
+        <span>American Banker · 10/29</span>
+<span class="tag">#은행</span><span class="tag">#AI ROI</span><span class="tag">#성과 측정</span>      </div>
+      <h3><a href="https://www.americanbanker.com/news/even-jpmorganchase-and-bofa-measure-ai-returns-differently" target="_blank" rel="noopener">JPM vs BofA, 같은 AI도 ROI 재는 법은 딴판</a></h3>
+<p class="orig">Even the largest US banks measure AI returns differently</p>      <p class="summary">JPMorgan CFO Jeremy Barnum은 AI 전체 기여도를 추정하는 데 자원을 더 쓰는 것에 회의적인 반면, BofA CEO Brian Moynihan은 약 130개 AI 프로젝트별로 회수 효과를 확인하고 있다고 밝힘. American Banker 설문(금융기관 실무자 200명)에서는 대부분의 AI 사업에 대해 순재무효과를 수치로 낸 곳이 34%에 그침.</p>
+      <ul class="points"><li>BofA: 회수 효과 확인된 AI 프로젝트 약 130개, 효익은 비용의 2-3배 예상</li><li>BofA AI 효익 올해 $250-300M, 내년 $700M 전망</li><li>AI 전 성과(baseline)와 비교하는 곳은 57%가 효과 수치화 (기타 14%)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 예산이 커지면서 이제는 효과를 어떻게 증명하느냐가 경영진의 핵심 질문이 됨. 기존 머신러닝(ML)과 생성형·에이전트 AI의 효과를 나눠 보기 어렵다는 점이 공통 숙제로 드러남.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 도입 전 기준치(baseline)를 정하고 절감 시간·비용·매출로 효과를 나누는 일은 바로 FP&amp;A 역량임.</span></p>
+<ul><li>AI 프로젝트 ROI 측정 템플릿을 Excel로 만들기</li><li>시간·비용·매출 3축으로 KPI 정의하기</li><li>포트폴리오에 &#39;AI 효과 측정&#39; 사례 추가</li></ul><div class="skills"><span class="skill">FP&amp;A</span><span class="skill">ROI 분석</span><span class="skill">Baseline 측정</span><span class="skill">AI 가치 평가</span></div>      </div>
+      <div class="links">
+        <a href="https://www.americanbanker.com/news/even-jpmorganchase-and-bofa-measure-ai-returns-differently" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 Collective</span>
+        <span>Accounting Today · 10/29</span>
+<span class="tag">#핀테크</span><span class="tag">#투자유치</span><span class="tag">#세무 자동화</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/news/collective-raises-100-million-in-new-funding-for-ai-finops-system" target="_blank" rel="noopener">1인 사업자 AI 재무 플랫폼 Collective, $1억 유치</a></h3>
+<p class="orig">Collective raises $100M in new funding for AI finops system</p>      <p class="summary">1인 사업자용 AI 재무 운영 플랫폼 Collective가 Series B $40M과 General Catalyst Customer Value Fund $60M을 합쳐 총 $100M을 유치함. 법인 설립, 비용 분류·계정 대사(reconciliation), 인보이스, 급여, 세금 신고 자동화를 한곳에서 제공하며 앞으로 은행·보험으로 확장할 계획임.</p>
+      <ul class="points"><li>Series B는 General Catalyst·QED·Gradient Ventures가 주도함</li><li>Intuit Ventures·FT Partners·SemperVirens도 참여함</li><li>전년 대비 127% 성장, 미국 1인 사업자 약 3천만 곳이 대상</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 장부 정리, 급여, 세무를 따로 쓰던 소규모 사업자 시장을 AI 하나로 묶는 흐름이 투자를 받고 있음. Intuit도 투자에 참여해 기존 회계 소프트웨어 업체도 이 방향에 걸고 있음을 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>계정 분류부터 세금 신고까지 이어지는 흐름을 직접 아는 경험은 AI 재무 자동화 제품 기획에서 강점임.</span></p>
+<ul><li>호주 sole trader 세무 흐름(ABN·BAS) 정리해 보기</li><li>거래내역 자동 분류 모델 미니 프로젝트 만들기</li></ul><div class="skills"><span class="skill">Bookkeeping 자동화</span><span class="skill">거래 분류</span><span class="skill">세무 자동화</span><span class="skill">Product sense</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/news/collective-raises-100-million-in-new-funding-for-ai-finops-system" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://thenextweb.com/news/collective-100m-solo-business-ai-finance" target="_blank" rel="noopener">TNW 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🤝 Ignition</span>
+        <span>CPA Practice Advisor · 10/27</span>
+<span class="tag">#회계법인</span><span class="tag">#AI 에이전트</span><span class="tag">#가드레일</span>      </div>
+      <h3><a href="https://www.cpapracticeadvisor.com/2026/10/27/meet-parkes-an-ai-coworker-that-helps-accounting-firms-run-the-firm/192646/" target="_blank" rel="noopener">회계법인 운영 맡는 AI 동료 &#39;Parkes&#39; 출시</a></h3>
+<p class="orig">Meet Parkes: An AI Coworker That Helps Accounting Firms Run the Firm</p>      <p class="summary">Ignition이 회계·기장 법인의 운영 업무를 돕는 AI 에이전트 Parkes를 출시함. 가격이 낮게 잡힌 고객과 계약 범위를 넘는 추가 업무(scope creep)를 찾아내고, 제안서·갱신·연체 독촉 초안을 만들며, 자동 실행/승인 필요/사용 금지 규칙과 모든 작업 기록(log)을 제공함.</p>
+      <ul class="points"><li>Xero·QuickBooks·Slack·Teams 등 30개 이상 연동, Ignition 비고객도 사용 가능</li><li>실행 단계를 자동/승인 필요/비활성 3단계로 법인이 직접 설정</li><li>사례: 계획 $5,000이던 제안서를 $8,500으로 올림 (70%↑)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계법인 AI가 기장·세무 같은 실무를 넘어 가격 책정과 미수금 회수 같은 운영 업무로 넓어지고 있음. 승인 단계와 작업 기록을 기본으로 넣어 통제 가능한 에이전트 설계의 실무 사례가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>자동/승인/금지 3단계 권한 설계와 작업 기록은 재무 AI 에이전트를 만들 때 그대로 따라 할 수 있는 구조임.</span></p>
+<ul><li>Xero 데모 데이터로 연체 독촉 초안 에이전트 만들기</li><li>에이전트 권한 3단계 매트릭스 문서화하기</li></ul><div class="skills"><span class="skill">Agent guardrails</span><span class="skill">Audit trail</span><span class="skill">Xero API</span><span class="skill">매출채권(AR)</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cpapracticeadvisor.com/2026/10/27/meet-parkes-an-ai-coworker-that-helps-accounting-firms-run-the-firm/192646/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/news/ignition-launches-parkes-practice-management-ai" target="_blank" rel="noopener">Accounting Today 보도 ↗</a><a href="https://www.parkes.ai/" target="_blank" rel="noopener">Parkes 공식 사이트 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Aware Super</span>
+        <span>Financial Newswire · 10/30</span>
+<span class="tag">#슈퍼애뉴에이션</span><span class="tag">#AI 인재</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://financialnewswire.com.au/superannuation/aware-super-invests-in-data-ai-capabilities-via-appointments/" target="_blank" rel="noopener">Aware Super, &#39;투자 혁신&#39; 책임자 신설…데이터·AI 강화</a></h3>
+<p class="orig">Aware Super invests in data, AI capabilities via appointments</p>      <p class="summary">운용자산 A$248bn 규모의 호주 연기금(super fund) Aware Super가 Head of Investment Innovation 직책을 새로 만들고, Head of Systematic Equities였던 Murray Keir를 임명함. Ganesh Suntharam은 데이터 기반·규칙 기반 모델로 투자하는 퀀트 주식 플랫폼을 맡는 Head of Systematic으로 승진함.</p>
+      <ul class="points"><li>운용자산 A$248bn 규모의 대형 슈퍼 펀드임</li><li>Murray Keir: 데이터·기술·AI로 투자 프로세스를 개발하는 역할</li><li>CIO Simon Warner: &#34;데이터와 AI는 투자 판단을 대체하지 않고 날카롭게 함&#34;</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 대형 연기금이 AI를 투자 의사결정 전반에 넣기 위한 전담 조직을 만든 것임. 호주 운용업계에서 데이터·AI와 투자를 함께 아는 인재 수요가 늘고 있다는 신호임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>재무 경력과 AI 전공을 함께 가진 사람에게 맞는 호주 내 직무가 슈퍼 펀드 투자 조직 안에 생기고 있음.</span></p>
+<ul><li>Aware·AustralianSuper 퀀트·데이터 채용공고 분석하기</li><li>LinkedIn에서 Systematic 팀 실무자 커피챗 요청하기</li><li>ASX 데이터로 팩터 백테스트 포트폴리오 만들기</li></ul><div class="skills"><span class="skill">Systematic investing</span><span class="skill">Python 백테스트</span><span class="skill">Factor 모델</span><span class="skill">Superannuation</span></div>      </div>
+      <div class="links">
+        <a href="https://financialnewswire.com.au/superannuation/aware-super-invests-in-data-ai-capabilities-via-appointments/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>구글은 AI를 클라우드 매출로 증명하고 있지만, 은행 현장에서는 AI 효과를 어떻게 재야 하는지조차 합의가 없음. 이 빈틈을 메우는 일이 바로 재무 출신 AI 인재의 몫임: 기준치를 정하고, 시간·비용·매출로 효과를 나누고, 통제를 설계하는 일임. 동시에 Anthropic 연구는 AI가 전문가 판단을 조용히 끌고 갈 수 있다는 점을, Parkes는 승인 단계와 작업 기록으로 이를 통제하는 실무 방법을 보여 줌. &#39;AI를 만들 줄 아는 사람&#39;보다 &#39;AI의 가치와 리스크를 숫자와 통제로 설명할 줄 아는 사람&#39;이 되는 쪽이 이 독자의 차별점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>AI ROI 측정 템플릿을 Excel로 만들어 보기</li><li>AI 쓰기 전 내 판단 먼저 적는 습관 들이기</li><li>슈퍼 펀드 데이터·AI 채용공고 3개 분석하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">기준치 (Baseline)</span> — AI 도입 전 성과를 측정해 둔 비교 기준점임. 기준치가 있어야 AI 도입 후 줄어든 시간이나 비용을 순수한 AI 효과로 계산할 수 있고, 설문에서도 이 비교를 한 곳이 재무효과를 4배 더 많이 수치화했음.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/3</span><span>RBA 통화정책 결정 및 Statement on Monetary Policy 발표 (AEST 14:30)</span></li></ul></section><div class="hashtags">#AI재무 #FinanceAI #AIROI #AI에이전트 #호주핀테크 #Superannuation </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-02 · 검색 1시간 44분 · 탐색 17회 · 검색어 92개 · 출처 71곳 → 후보 42건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
