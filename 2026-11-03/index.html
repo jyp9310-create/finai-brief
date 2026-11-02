@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-03</title>
+<meta name="description" content="AI 비용의 시대: 감사 AI 등장, 웨스트팩은 비용 절반 절감">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 3일 (화)">
+<meta property="og:description" content="AI 비용의 시대: 감사 AI 등장, 웨스트팩은 비용 절반 절감">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-03/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-03/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 3일 (화)</div>
+    <h1>AI 비용의 시대: 감사 AI 등장, 웨스트팩은 비용 절반 절감</h1>
+    <p class="overview">빅테크는 AI 투자 부담이 신용평가와 요금 체계에 그대로 반영되는 국면에 들어섰고, 회계법인들도 토큰 과금 청구서에 놀라는 중임. 반면 웨스트팩(Westpac)과 감사 AI 스타트업 Clark처럼 절감액·보증 같은 &#39;숫자&#39;로 AI 효과를 증명하려는 움직임이 뚜렷해짐.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 20분 · 탐색 11회 · 검색어 54개 · 출처 54곳 → 후보 23건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. 웨스트팩, AI로 데이터 이전 비용 A$7천만→3,500만</div>
+<div class="r">멜버른 취업 시장의 핵심인 호주 4대 은행이 AI 절감액을 숫자로 공개한 사례라, IT·AI 기술과 재무적 ROI 감각을 함께 보여줄 포트폴리오 주제로 바로 이어짐.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧩 ChatGPT, 채팅·작업(Work) 탭 하나로 통합</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🤖 AI 4사, &#39;AI 학습 거부&#39; 신호 하나로 통일</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📉 S&amp;P, 메타 신용전망 &#39;부정적&#39;으로…AI 투자 부담</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧾 감사 AI 직원 &#39;Clerks&#39; 출시…정확도 100% 보증</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💸 회계법인 AI 비용 급증…구독제→토큰 과금 전환</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛡️ 금융위, AI 해킹 대응 회의…AI 공동 보안관제 검토</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 웨스트팩, AI로 데이터 이전 비용 A$7천만→3,500만</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧩 OpenAI</span>
+        <span>TechCrunch · 11/2</span>
+<span class="tag">#ChatGPT</span><span class="tag">#에이전트</span><span class="tag">#제품 업데이트</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" target="_blank" rel="noopener">ChatGPT, 채팅·작업(Work) 탭 하나로 통합</a></h3>
+<p class="orig">OpenAI is finally merging ChatGPT&#39;s Chat and Work tabs</p>      <p class="summary">OpenAI가 사용자 이메일로 ChatGPT 데스크톱 앱의 Chat 탭과 Work 탭을 하나로 합친다고 알림. 아이디어 구상부터 웹사이트·프레젠테이션 제작, 웹 작업 같은 에이전트형 실행까지 한 화면에서 이어지고, ChatGPT와 Codex는 같은 토큰 한도(token allowance)를 나눠 쓰게 됨.</p>
+      <ul class="points"><li>일부 사용자에게 먼저 공개해 피드백 받은 뒤 전체 확대 (일정 미공개)</li><li>ChatGPT·Codex 토큰 한도 통합, 일부는 한도 리셋을 더 자주 기다리게 될 수 있음</li><li>Codex는 데스크톱 앱 안에서 별도 경험으로 유지됨</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Anthropic이 9월 Claude chat과 Cowork를 합친 데 이어 OpenAI도 &#39;대화→실행&#39; 통합 UX로 따라붙은 것임. 한도를 공유한다는 건 무거운 에이전트 작업의 사용량·비용 관리가 핵심 과제가 됐다는 뜻임.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🤖 Anthropic · Google · Microsoft · OpenAI</span>
+        <span>IETF Datatracker · 10/30</span>
+<span class="tag">#robots.txt</span><span class="tag">#저작권</span><span class="tag">#AI 정책</span>      </div>
+      <h3><a href="https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/" target="_blank" rel="noopener">AI 4사, &#39;AI 학습 거부&#39; 신호 하나로 통일</a></h3>
+<p class="orig">draft-kelley-aipref-training-preference-signal</p>      <p class="summary">Anthropic·Google·Microsoft·OpenAI가 robots.txt 규칙 하나로 생성형 AI 학습 사용을 거부할 수 있는 공통 신호를 존중하기로 함. Anthropic의 Kevin Kelley가 낸 IETF 초안을 바탕으로 하며, 회사별 크롤러를 일일이 막던 방식이 규칙 하나로 단순해짐.</p>
+      <ul class="points"><li>정책 토큰 &#39;__usage_ai-training&#39;으로 학습 거부할 경로를 지정함</li><li>적용 시기: Microsoft 2027-02-01, Google 2027년 초, OpenAI 수개월 내</li><li>IETF가 승인한 표준이 아니고 강제력 없는 &#39;선호 신호&#39;임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 웹 콘텐츠를 AI 학습에 쓸지에 대한 동의 규칙이 처음으로 업계 공통 방식으로 모이는 것임. 다만 사적 계약이 우선하고 Meta는 참여 여부를 밝히지 않아 실효성은 지켜봐야 함.</p>      <div class="links">
+        <a href="https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://developers.google.com/search/blog/2026/10/ai-training-control" target="_blank" rel="noopener">Google Search Central 블로그 ↗</a><a href="https://thenextweb.com/news/ai-training-opt-out-robots-txt-google-openai-microsoft-anthropic" target="_blank" rel="noopener">The Next Web 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📉 Meta / S&amp;P Global Ratings</span>
+        <span>Reuters (KFGO 게재) · 10/30</span>
+<span class="tag">#Meta</span><span class="tag">#신용평가</span><span class="tag">#AI 투자</span>      </div>
+      <h3><a href="https://kfgo.com/2026/10/30/sp-global-revises-outlook-on-meta-to-negative-on-cashflow-concerns/" target="_blank" rel="noopener">S&amp;P, 메타 신용전망 &#39;부정적&#39;으로…AI 투자 부담</a></h3>
+<p class="orig">S&amp;P Global revises outlook on Meta to negative on cashflow concerns</p>      <p class="summary">S&amp;P가 메타의 신용등급 AA-는 유지하면서 전망(outlook)을 &#39;안정적&#39;에서 &#39;부정적&#39;으로 낮춤. AI 인프라 투자로 잉여영업현금흐름(FOCF)이 2026년 $390억, 2027년 $710억 적자일 것으로 봤고, 클라우드 임대 사업이 없는 메타는 경쟁사보다 AI 수익화 수단이 제한적이라고 평가함.</p>
+      <ul class="points"><li>2026년 설비투자(capex) 가이던스 $1,350억~$1,450억</li><li>레버리지 2025년 0.1배→2027년 1.0배 초과 가능 (AA- 기준선)</li><li>3분기 잉여현금흐름 -$21.2억, 메타는 &#39;동의하지 않는다&#39;고 반박</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 빅테크의 AI 투자가 신용평가에서 &#39;현금흐름 리스크&#39;로 공식 반영되기 시작함. 오라클 강등에 이어 메타까지 이어지면서, 투자금을 회수할 수 있느냐가 채권시장의 핵심 변수가 됨.</p>      <div class="links">
+        <a href="https://kfgo.com/2026/10/30/sp-global-revises-outlook-on-meta-to-negative-on-cashflow-concerns/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://thenextweb.com/news/meta-sp-outlook-negative-ai-spending" target="_blank" rel="noopener">The Next Web 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧾 Clark</span>
+        <span>PR Newswire · 11/2</span>
+<span class="tag">#감사 AI</span><span class="tag">#AI 에이전트</span><span class="tag">#투자 유치</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/clark-launches-autonomous-ai-employees-for-audit-and-raises-11m-seed-round-bringing-total-funding-to-16m-302925250.html" target="_blank" rel="noopener">감사 AI 직원 &#39;Clerks&#39; 출시…정확도 100% 보증</a></h3>
+<p class="orig">Clark Launches Autonomous AI Employees for Audit and Raises $11M Seed Round, Bringing Total Funding to $16M</p>      <p class="summary">뉴욕 스타트업 Clark(구 uiAgent)가 CPA 법인용 자율 감사 AI 직원 &#39;Clerks&#39;를 내놓고 $1,100만 시드 투자를 유치함. Clerk는 감사 건(engagement)마다 배정돼 문서 검토·테스트·감사조서(workpaper) 작성을 맡고, 판단과 감사의견 서명은 공인회계사가 함.</p>
+      <ul class="points"><li>CliftonLarsonAllen·Aprio 등 CPA 법인 35곳 이상이 사용 중</li><li>시드 $1,100만(Touring Capital 주도), 누적 투자 $1,600만</li><li>정확도 100% 보증·동료평가(peer review) 보증 제공</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감사 AI가 쓰는 &#39;도구&#39;에서 감사팀에 배정되는 &#39;직원&#39; 형태로 바뀌고, 벤더가 결과물 정확도를 돈으로 보증하는 모델까지 등장함. 주니어 감사인의 반복 업무 구조가 빠르게 바뀔 신호임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>감사 실무 경험이 있다면 &#39;PBC 요청→증빙대사→조서 작성&#39; 흐름을 에이전트로 재현하는 것이 가장 강력한 포트폴리오가 됨.</span></p>
+<ul><li>가짜 인보이스·은행 내역으로 증빙대사 에이전트 만들기</li><li>조서 수치마다 출처 인용(citation) 자동 첨부 구현</li><li>샘플링 로직을 감사 방법론대로 코드화해 보기</li></ul><div class="skills"><span class="skill">Agentic workflow</span><span class="skill">Document AI (OCR)</span><span class="skill">Audit sampling</span><span class="skill">RAG</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/clark-launches-autonomous-ai-employees-for-audit-and-raises-11m-seed-round-bringing-total-funding-to-16m-302925250.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.accountingtoday.com/news/clark-launches-clerks-ai-acts-as-24-7-audit-engagement-team-member" target="_blank" rel="noopener">Accounting Today 상세 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💸 Accounting Today (회계법인 조사)</span>
+        <span>Accounting Today · 11/2</span>
+<span class="tag">#AI 비용</span><span class="tag">#회계법인</span><span class="tag">#FinOps</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/news/tokenomics-firms-see-surging-ai-costs-compared-to-last-year" target="_blank" rel="noopener">회계법인 AI 비용 급증…구독제→토큰 과금 전환</a></h3>
+<p class="orig">Tokenomics: Firms see surging AI costs compared to last year</p>      <p class="summary">AI 공급사들이 좌석당 정액 구독에서 토큰 사용량 기반 과금으로 바꾸면서 회계법인 AI 비용이 1년 새 크게 늘었다는 기획 보도임. 월 비용이 출렁여 예측이 어려워졌지만, 법인들은 지출을 줄이기보다 거버넌스·예산 통제로 대응하는 중임.</p>
+      <ul class="points"><li>IPA 조사: 회계법인 70%가 지난 1년간 AI 예산을 늘림</li><li>LBMC: 헤비 유저 월 약 $500, 기본 $20의 약 25배</li><li>같은 프롬프트에 모델 간 비용이 약 50배 차이 난 사례도 있음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 도입의 다음 과제가 &#39;얼마나 쓰나&#39;에서 &#39;얼마나 드나&#39;로 넘어감. 사용량 기반 원가 배분·예측은 재무 부서가 맡아야 할 새 업무가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 비용 관리(AI FinOps)는 회계·FP&amp;A 출신이 AI 지식만 더하면 곧바로 강점을 낼 수 있는 빈 영역임.</span></p>
+<ul><li>토큰 사용량 기반 월별 AI 비용 예측 모델 만들기</li><li>같은 과제로 모델 3개 비용·정확도 비교표 작성</li><li>부서별 AI 비용 배분(chargeback) 규칙 설계해 보기</li></ul><div class="skills"><span class="skill">FinOps</span><span class="skill">Token economics</span><span class="skill">Cost allocation</span><span class="skill">Budget forecasting</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/news/tokenomics-firms-see-surging-ai-costs-compared-to-last-year" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://insidepublicaccounting.com/2026/07/13/ipa-data-dive-ai-spending-is-rising-while-measurable-results-lag/" target="_blank" rel="noopener">IPA: AI 지출은 늘고 성과는 뒤처져 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛡️ 금융위원회 / 금융감독원</span>
+        <span>파이낸셜뉴스 (뉴시스) · 11/1</span>
+<span class="tag">#금융보안</span><span class="tag">#AI 해킹</span><span class="tag">#한국 규제</span>      </div>
+      <h3><a href="https://www.fnnews.com/news/202611011400496077" target="_blank" rel="noopener">금융위, AI 해킹 대응 회의…AI 공동 보안관제 검토</a></h3>
+<p class="orig">금융당국, AI 해킹 확산에 대응책 촉구…내주 보안대책 회의</p>      <p class="summary">9월 말 시중은행에서 시작된 해킹 피해가 2금융권·보험·증권·가상자산거래소로 번지자 금융위원회가 11월 5일 전 금융권 대응 회의를 염. AI 해킹 대비책과 AI 기반 보이스피싱 탐지·대응 고도화가 안건이며, 업권 협회 중심의 AI 공동 보안관제 구축도 검토 중인 것으로 보도됨.</p>
+      <ul class="points"><li>11월 5일 이억원 위원장 주재, 금감원·금융보안원·경찰청 등 참석</li><li>AI 보이스피싱 탐지·대응 체계 고도화가 핵심 안건</li><li>신한·KB국민·하나·BNK→미래에셋생명·대신증권·빗썸까지 피해</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;AI 공격엔 AI 방어&#39; 기조가 구호를 넘어 업권 공동 관제 같은 제도 논의로 넘어가는 단계임. 망분리 완화와 맞물려 금융사 AI 보안 투자가 늘어날 가능성이 큼.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>한국 금융권 취업을 생각한다면 규제가 밀어주는 &#39;AI 이상거래탐지(FDS)·보안관제&#39;가 수요가 커질 직무임.</span></p>
+<ul><li>공개 사기거래 데이터셋으로 이상탐지 모델 실습</li><li>11/5 회의 후 금융위 보도자료로 세부 대책 확인</li></ul><div class="skills"><span class="skill">FDS (Fraud Detection)</span><span class="skill">Anomaly detection</span><span class="skill">Security operations (SOC)</span></div>      </div>
+      <div class="links">
+        <a href="https://www.fnnews.com/news/202611011400496077" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 Westpac</span>
+        <span>Westpac (FY26 실적 발표 자료) · 11/2</span>
+<span class="tag">#Westpac</span><span class="tag">#데이터 마이그레이션</span><span class="tag">#호주 은행</span>      </div>
+      <h3><a href="https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/aw/ic/wbc-full-year-presentation-and-IDP-2026.pdf" target="_blank" rel="noopener">웨스트팩, AI로 데이터 이전 비용 A$7천만→3,500만</a></h3>
+<p class="orig">Westpac 2026 Full Year Results – Presentation and Investor Discussion Pack</p>      <p class="summary">웨스트팩이 FY26 실적 발표에서 St.George 레거시 데이터웨어하우스를 Azure 기반 데이터 플랫폼 &#39;Adapt&#39;로 옮기는 작업에 AI를 써서 비용을 절반으로 줄였다고 공개함. AI가 코드 변환·테스트·문서화 속도를 높여 계획보다 2년 넘게 일찍 끝났고, 이 방식을 다른 이전 작업에도 다시 쓸 예정임.</p>
+      <ul class="points"><li>St.George 데이터웨어하우스→Azure 기반 &#39;Adapt&#39;로 이전</li><li>예산 A$7,000만→약 A$3,500만, 계획보다 2년 이상 조기 완료</li><li>FY27부터 연 약 A$1,500만 직접 효익 반영, 구 시스템 폐기 예정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 4대 은행이 기술 프로젝트를 실적 발표 슬라이드에 올리고 AI 절감액을 숫자로 밝힌 드문 사례임. 레거시 시스템 현대화가 은행 AI 활용의 가장 확실한 ROI 영역이라는 걸 보여줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>레거시 SQL·ETL 코드를 AI로 변환·테스트·문서화하는 &#39;AI 데이터 마이그레이션&#39;은 멜버른 은행권에서 수요가 확인된 기술 조합임.</span></p>
+<ul><li>레거시 SQL→PySpark AI 변환+자동 테스트 데모</li><li>Azure/Fabric 데이터 엔지니어 자격 경로 확인</li><li>Westpac 데이터·AI 채용 공고 키워드 정리</li></ul><div class="skills"><span class="skill">Data migration</span><span class="skill">Azure</span><span class="skill">LLM code conversion</span><span class="skill">Data warehouse</span></div>      </div>
+      <div class="links">
+        <a href="https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/aw/ic/wbc-full-year-presentation-and-IDP-2026.pdf" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.itnews.com.au/news/westpac-reveals-ai-cut-data-warehouse-migration-cost-from-70m-to-35m-630064" target="_blank" rel="noopener">iTnews 보도 ↗</a><a href="https://www.westpac.com.au/content/dam/public/wbc/documents/pdf/aw/ic/wbc-DDAI-Update-Sep26.pdf" target="_blank" rel="noopener">Westpac Data, Digital and AI Update (2026년 9월) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 뉴스는 모두 &#39;AI 비용&#39;을 다룸. S&amp;P는 메타의 AI 투자를 현금흐름 리스크로 평가했고, 회계법인들은 토큰 과금 청구서에 놀라는 중임. 반대로 웨스트팩은 A$3,500만 절감이라는 결과를, Clark는 정확도 보증이라는 약속을 숫자로 내놓음. 결국 시장이 원하는 사람은 AI를 만들 줄 알면서 그 비용과 효익을 재무제표 언어로 증명할 수 있는 인재이고, 재무·회계 경력과 AI 전공을 함께 가진 독자에게 딱 맞는 자리임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>웨스트팩 FY26 실적 PDF의 AI 슬라이드 읽기</li><li>모델 3개로 같은 과제 비용·정확도 비교하기</li><li>증빙대사(vouching) 에이전트 설계도 그려 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">소비 기반 과금 (Consumption-based pricing)</span> — 쓴 만큼(토큰 수) 돈을 내는 AI 요금 방식임. 좌석당 정액 구독과 달리 사용량에 따라 월 비용이 크게 달라져 예산 편성과 비용 예측이 어려워짐.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/5</span><span>금융위원회, 전 금융권 해킹·AI 보안 대응 회의 (이억원 위원장 주재)</span></li></ul></section><div class="hashtags">#FinAI #AI감사 #Westpac #AI비용 #금융보안 #OpenAI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-03 · 검색 1시간 20분 · 탐색 11회 · 검색어 54개 · 출처 54곳 → 후보 23건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
