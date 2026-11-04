@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-05</title>
+<meta name="description" content="AI 에이전트는 빨라졌지만 M&amp;A 실사 성공은 아직 0/25">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 5일 (목)">
+<meta property="og:description" content="AI 에이전트는 빨라졌지만 M&amp;A 실사 성공은 아직 0/25">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-05/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-05/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 5일 (목)</div>
+    <h1>AI 에이전트는 빨라졌지만 M&amp;A 실사 성공은 아직 0/25</h1>
+    <p class="overview">Anthropic과 Google이 API를 손보며 에이전트 운영 환경이 빠르게 바뀌고 있고, 팔란티어 실적은 기업 AI 수요가 실제 매출로 이어지고 있음을 보여 줌. 반면 재무 쪽에서는 실제 M&amp;A 데이터룸 과제에서 최신 모델이 25번 모두 완수하지 못했고, 업계는 데이터 연결과 사람 승인(통제)을 붙여 이 빈틈을 메우는 중임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 71개 · 출처 75곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. AI 에이전트, 실제 M&amp;A 실사 과제 25회 모두 실패</div>
+<div class="r">실제 M&amp;A 데이터룸에서 AI가 어떤 회계 판단(순차입금, 오너 비용 정상화)을 틀리는지 구체적으로 보여 줘, 재무 경력과 AI 평가 역량을 엮는 포트폴리오 주제로 곧바로 이어짐.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧵 Claude API 메시지 스레드 베타…첫 응답 35% 단축</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🔁 Gemini 2.5 Pro·Flash 지원 종료…12월 1일 자동 전환</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📈 팔란티어 3분기 매출 96%↑, 美 민간이 정부 추월</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧮 AI 에이전트, 실제 M&amp;A 실사 과제 25회 모두 실패</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">📊 Gemini Enterprise에 S&amp;P Global 데이터 검색 연결</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 Aion, 지급·청구·결산 돕는 기업금융 AI 에이전트</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🦘 AustralianSuper, AI 조정장에도 인프라 투자 유지</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧵 Anthropic</span>
+        <span>Claude (claude.com) · 11/2</span>
+<span class="tag">#Claude API</span><span class="tag">#에이전트</span><span class="tag">#지연시간</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/message-threads" target="_blank" rel="noopener">Claude API 메시지 스레드 베타…첫 응답 35% 단축</a></h3>
+<p class="orig">Make long-running agents faster with message threads</p>      <p class="summary">Anthropic이 Messages API에 &#39;메시지 스레드(message threads)&#39; 기능을 공개 베타로 출시함. 이제 에이전트가 매 턴 전체 대화를 다시 보내지 않고 새 메시지와 직전 응답 ID만 보내면 되며, 50만~100만 토큰 규모 요청에서는 첫 토큰까지 걸리는 시간(TTFT)이 중앙값 기준 약 35% 줄어듦.</p>
+      <ul class="points"><li>thread 파라미터: 첫 요청만 전체 대화, 이후엔 새 메시지+응답 ID만 보냄</li><li>50만~100만 토큰 요청에서 TTFT 중앙값 약 35% 감소(Claude Code)</li><li>스레드는 메모리에 암호화 보관, 마지막 요청 5분 뒤 만료</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 토큰 사용량과 요금은 그대로지만, 오래 돌아가는 에이전트 작업의 속도 병목을 API 차원에서 줄인 인프라 개선임. AWS·Microsoft Foundry·Google Cloud에서도 함께 제공돼 기업용 에이전트 개발에 바로 영향을 줌.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/message-threads" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Releasebot: Claude 릴리스 노트 모음 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🔁 Google</span>
+        <span>Google AI Studio – Gemini API changelog · 11/2</span>
+<span class="tag">#Gemini API</span><span class="tag">#모델 지원 종료</span><span class="tag">#마이그레이션</span>      </div>
+      <h3><a href="https://aistudio.google.com/docs/changelog" target="_blank" rel="noopener">Gemini 2.5 Pro·Flash 지원 종료…12월 1일 자동 전환</a></h3>
+<p class="orig">Gemini API changelog (November 2, 2026): gemini-2.5-pro and gemini-2.5-flash deprecation</p>      <p class="summary">Google이 gemini-2.5-pro와 gemini-2.5-flash를 지원 종료(deprecated) 처리하고 AI Studio의 모델 선택 목록에서도 뺌. 2026년 12월 1일부터는 기존 모델명으로 보낸 요청이 각각 gemini-3.8-flash와 gemini-3.5-flash-lite로 자동 연결(라우팅)되고 새 모델 요금으로 과금됨.</p>
+      <ul class="points"><li>2.5 Pro는 3.8 Flash로, 2.5 Flash는 3.5 Flash-Lite로 자동 연결</li><li>12월 1일부터 연결된 새 모델 단가로 과금 변경</li><li>thinking_budget→thinking_level 교체, 샘플링 파라미터·프리필 삭제</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 코드를 한 줄도 안 바꿔도 모델·비용·출력이 달라지는 사실상 강제 마이그레이션이라, 운영 중인 서비스는 회귀 테스트(regression test)가 필요함. 모델 수명주기 관리(model lifecycle)가 AI 운영의 핵심 리스크임을 보여 줌.</p>      <div class="links">
+        <a href="https://aistudio.google.com/docs/changelog" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://releasebot.io/updates/google" target="_blank" rel="noopener">Releasebot: Google 업데이트 모음 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📈 Palantir</span>
+        <span>SEC EDGAR · 11/2</span>
+<span class="tag">#엔터프라이즈 AI</span><span class="tag">#실적</span><span class="tag">#팔란티어</span>      </div>
+      <h3><a href="https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm" target="_blank" rel="noopener">팔란티어 3분기 매출 96%↑, 美 민간이 정부 추월</a></h3>
+<p class="orig">Palantir Q3 2026 Earnings Press Release (Form 8-K, Exhibit 99.1)</p>      <p class="summary">팔란티어의 2026년 3분기 매출이 23.13억 달러로 전년보다 96% 늘었고, 연간 매출 가이던스도 85.30억~85.34억 달러로 올림. 미국 민간(commercial) 매출 9.84억 달러(+148%)가 처음으로 미국 정부 매출 9.53억 달러를 넘어섬.</p>
+      <ul class="points"><li>매출 $23.13억(+96%), GAAP 순이익 $11.28억</li><li>美 민간 $9.84억(+148%)이 美 정부 $9.53억을 추월함</li><li>美 민간 TCV $14.63억, 직전 분기 $21.3억에서 감소(TechCrunch)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 기업용 AI 플랫폼 수요가 실제 매출로 찍히고 있다는 신호임. 다만 총계약가치(TCV)와 계약 기간이 줄어든 점은 고객이 장기 약정 대신 단기 시험 도입에 머물고 있을 가능성을 보여 줌.</p>      <div class="links">
+        <a href="https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/" target="_blank" rel="noopener">TechCrunch: Hiding inside Palantir&#39;s skyrocketing quarter is a foreboding signal ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧮 SemiAnalysis</span>
+        <span>SemiAnalysis · 11/2</span>
+<span class="tag">#벤치마크</span><span class="tag">#M&amp;A 실사</span><span class="tag">#QoE</span>      </div>
+      <h3><a href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities" target="_blank" rel="noopener">AI 에이전트, 실제 M&amp;A 실사 과제 25회 모두 실패</a></h3>
+<p class="orig">GDPx: Measuring Frontier Model Capabilities</p>      <p class="summary">SemiAnalysis가 금융·법률·반도체 등 11개 분야를 14개 파트너사와 함께 만든 에이전트 벤치마크 GDPx를 공개했는데, 최고 모델의 전체 점수도 약 12%에 그침. 실제 사모펀드(PE) 인수 거래를 약 4,000개 파일로 재구성한 재무 과제에서는 이익의 질(QoE) 데이터북 작성을 25번 시도해 완전히 성공한 적이 한 번도 없었음.</p>
+      <ul class="points"><li>재무 과제 24개, PE의 지분 약 62% 인수($8.8억+언아웃) 재구성</li><li>QoE 과제 체크 11개 중 최고 8개, 평균은 GPT 6.1 Sol 5.6개</li><li>15회는 성공보수를 순차입금에 포함, 17회는 무근무 가족 급여 유지</li></ul>
+<p class="why"><b>💡 왜 중요?</b> OpenAI의 GDPval처럼 프롬프트에 정보를 다 넣어 주는 방식이 아니라 실제 데이터룸에서 일하게 하자 성능이 크게 떨어짐. 정상화 조정(normalization adjustment)처럼 회계 판단이 필요한 영역은 아직 사람 몫이라는 점을 수치로 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>재무 실사·결산 경험이 있으면 &#39;AI가 틀리는 지점&#39;을 잡아내는 평가셋(eval)을 설계할 수 있고, 이게 곧 강력한 경쟁력임.</span></p>
+<ul><li>공개 과제 Bellwood-QoE 구조 읽고 체크리스트 정리</li><li>QoE 조정 10문항 평가셋 만들어 LLM 테스트하기</li><li>결과·오류 분석을 GitHub 포트폴리오로 공개하기</li></ul><div class="skills"><span class="skill">Quality of Earnings</span><span class="skill">LLM Evaluation</span><span class="skill">Agentic AI</span><span class="skill">Financial Due Diligence</span></div>      </div>
+      <div class="links">
+        <a href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=216936" target="_blank" rel="noopener">AI타임스 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">📊 Google Cloud · S&amp;P Global</span>
+        <span>Google Cloud – Gemini Enterprise release notes · 10/30</span>
+<span class="tag">#금융 데이터</span><span class="tag">#RAG</span><span class="tag">#Gemini Enterprise</span>      </div>
+      <h3><a href="https://docs.cloud.google.com/gemini/enterprise/docs/release-notes" target="_blank" rel="noopener">Gemini Enterprise에 S&amp;P Global 데이터 검색 연결</a></h3>
+<p class="orig">S&amp;P Global - Adaptive Retrieval data store (Public Preview)</p>      <p class="summary">Google이 Gemini Enterprise에 &#39;S&amp;P Global - Adaptive Retrieval&#39; 데이터 스토어를 공개 프리뷰로 추가함. 자연어로 질문하면 계정이 구독 권한(entitlement)을 가진 S&amp;P Global 데이터 에이전트로 질문이 넘어가고, 기업 재무 수치·공시·실적 발표(어닝콜) 녹취록 등에서 답을 가져옴.</p>
+      <ul class="points"><li>계정 권한(entitlement) 범위 안의 S&amp;P Global 데이터만 조회</li><li>재무 수치(정형 데이터)와 공시·어닝콜 녹취록(문서) 함께 포괄</li><li>global·us·eu 리전만 지원, 정식 출시 전(Pre-GA) 약관 적용</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 금융 AI의 관건인 &#39;유료 라이선스 데이터를 권한대로 안전하게 연결하는 문제&#39;를 플랫폼 커넥터로 푸는 흐름임. 11월 3일 Salesforce 연합(federated) 데이터 스토어도 정식 출시(GA)돼, 데이터를 복사하지 않고 원천에서 바로 검색하는 방식이 확산 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>애널리스트 업무를 AI로 옮길 때 승부처는 모델이 아니라 &#39;권한 있는 데이터를 출처와 함께 연결하는 설계&#39;라는 점을 보여 줌.</span></p>
+<ul><li>SEC EDGAR 10-K로 미니 재무 RAG 만들어 보기</li><li>답변마다 출처 문단을 인용하도록 설계하기</li><li>대학 도서관의 S&amp;P Capital IQ 접근 여부 확인</li></ul><div class="skills"><span class="skill">RAG</span><span class="skill">Data Entitlement</span><span class="skill">Financial Data</span><span class="skill">Enterprise Search</span></div>      </div>
+      <div class="links">
+        <a href="https://docs.cloud.google.com/gemini/enterprise/docs/release-notes" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://docs.cloud.google.com/gemini/enterprise/docs/connectors/s_p_global_adaptive_retrieval" target="_blank" rel="noopener">Google Cloud 문서: S&amp;P Global Adaptive Retrieval 커넥터 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Aion</span>
+        <span>EIN Presswire (보도자료) · 11/2</span>
+<span class="tag">#AP/AR 자동화</span><span class="tag">#월말 결산</span><span class="tag">#휴먼 인 더 루프</span>      </div>
+      <h3><a href="https://www.einpresswire.com/article/952937606/aion-launches-an-ai-agent-that-handles-the-work-of-business-finance-across-banking-payments-cards-and-credit" target="_blank" rel="noopener">Aion, 지급·청구·결산 돕는 기업금융 AI 에이전트</a></h3>
+<p class="orig">Aion launches an AI agent that handles the work of business finance across banking, payments, cards, and credit</p>      <p class="summary">성장기업용 금융 플랫폼 Aion이 뱅킹·결제·카드·신용 전반의 반복 업무를 처리하는 &#39;Aion Agent&#39;를 출시하고 모든 고객에게 제공함. 대금 지급, 청구서 독촉, 월말 결산용 보고서 준비를 맡지만, 모든 지급·제출·서명은 고객사 담당자가 승인해야 실행됨.</p>
+      <ul class="points"><li>대금 지급(AP)·청구 독촉(AR)·월말 결산 보고서 준비 수행</li><li>QuickBooks·Xero·NetSuite와 양방향 동기화</li><li>모든 송금은 사람 승인 필수, 에이전트는 로그인 정보 못 봄</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 계좌·카드·신용 한도를 가진 플랫폼이 에이전트를 직접 붙여, 자동화가 &#39;돈이 실제로 움직이는 곳&#39;까지 확장됨. 다만 성과 지표와 가격은 공개되지 않아 효과는 아직 검증 전임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AP/AR 실무 경험을 살려 &#39;어디까지 자동, 어디서 사람 승인&#39;인지 통제 설계를 보여 주면 핀테크·재무자동화 포트폴리오로 바로 쓸 수 있음.</span></p>
+<ul><li>AP 프로세스의 승인 지점(maker-checker) 도식화</li><li>Xero 데모 회사로 청구 독촉 자동화 실습하기</li><li>에이전트 권한·감사로그 통제 매트릭스 작성하기</li></ul><div class="skills"><span class="skill">Human-in-the-loop</span><span class="skill">Internal Controls</span><span class="skill">AP/AR Automation</span><span class="skill">Xero API</span></div>      </div>
+      <div class="links">
+        <a href="https://www.einpresswire.com/article/952937606/aion-launches-an-ai-agent-that-handles-the-work-of-business-finance-across-banking-payments-cards-and-credit" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cpapracticeadvisor.com/2026/11/02/aion-launches-ai-agent-for-business-finance-banking-payments-cards-credit/193022/" target="_blank" rel="noopener">CPA Practice Advisor 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🦘 AustralianSuper</span>
+        <span>Reuters (via Yahoo Finance) · 11/3</span>
+<span class="tag">#슈퍼애뉴에이션</span><span class="tag">#AI 투자</span><span class="tag">#Anthropic IPO</span>      </div>
+      <h3><a href="https://ca.finance.yahoo.com/news/australiansuper-digs-down-ai-picks-011823345.html" target="_blank" rel="noopener">AustralianSuper, AI 조정장에도 인프라 투자 유지</a></h3>
+<p class="orig">AustralianSuper digs down on AI &#39;picks and shovels&#39; to ride out global AI upheaval</p>      <p class="summary">호주 최대 연금펀드 AustralianSuper(자산 약 A$4,300억)가 AI 주식 매도세 속에서도 칩 제조사·데이터센터 같은 AI 인프라, 이른바 &#39;곡괭이와 삽(picks and shovels)&#39; 투자를 이어 가겠다고 밝힘. Anthropic의 상장 전(pre-IPO) 투자자이지만 이번 공모 참여 여부는 밝히지 않음.</p>
+      <ul class="points"><li>자산 약 A$4,300억, 엔비디아 약 A$30.5억 보유(밸런스드 옵션)</li><li>MS·알파벳 각 약 A$23억, SK하이닉스·마이크론도 보유</li><li>AI 관련주가 글로벌 주식시장의 약 40%라고 추정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 퇴직연금(super) 자금이 AI 사이클에 깊게 노출돼 있어, AI 밸류에이션 변동이 곧 호주 가계 노후자산의 리스크가 됨. 대형 펀드가 IPO를 통해 LLM 기업의 재무 전망을 더 투명하게 볼 수 있길 기대한다는 점도 눈여겨볼 대목임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>AI 기업의 단위경제(unit economics)를 재무제표로 읽어 내는 능력은 호주 슈퍼펀드·자산운용사 리서치 직무에서 바로 통하는 강점임.</span></p>
+<ul><li>Anthropic S-1에서 매출 대비 컴퓨트 비용률 계산</li><li>AustralianSuper 연차보고서에서 AI 노출 확인</li><li>슈퍼펀드 데이터·투자 직무 공고 키워드 수집</li></ul><div class="skills"><span class="skill">Equity Research</span><span class="skill">Unit Economics</span><span class="skill">Portfolio Exposure</span><span class="skill">Superannuation</span></div>      </div>
+      <div class="links">
+        <a href="https://ca.finance.yahoo.com/news/australiansuper-digs-down-ai-picks-011823345.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46G0O9:0-australiansuper-digs-down-on-ai-picks-and-shovels-to-ride-out-global-ai-upheaval/" target="_blank" rel="noopener">Reuters 원문 (TradingView) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 Anthropic과 Google의 업데이트는 모두 에이전트를 더 빠르고 싸게 오래 돌리는 &#39;운영 인프라&#39; 쪽 변화임. 그런데 GDPx 결과를 보면, 같은 최신 모델도 실제 데이터룸에서 성공보수를 순차입금에 넣거나 원장 메모 속 오너 비용을 놓치는 등 회계 판단에서 무너짐. 그래서 Aion처럼 사람 승인을 필수로 두고, S&amp;P Global 커넥터처럼 권한 있는 데이터를 출처와 함께 연결하는 설계가 금융 AI의 실제 경쟁력이 되고 있음. 재무 실무 감각으로 평가셋과 통제 지점을 설계할 수 있는 사람이 지금 시장에서 가장 희소한 인재임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>GDPx 공개 QoE 과제 구조를 읽고 메모하기</li><li>EDGAR 10-K로 출처 인용 RAG 만들어 보기</li><li>내 프로젝트 속 gemini-2.5 모델명 점검하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">이익의 질 (Quality of Earnings, QoE)</span> — 장부상 이익이 반복되는 &#39;진짜 이익&#39;인지 따져 보는 분석임. M&amp;A 실사에서 일회성 비용, 오너 개인 비용, 무근무 가족 급여 같은 항목을 걸러 EBITDA를 정상화(normalize)해 인수가격 산정의 기준으로 씀.</p></section><div class="hashtags">#FinAI #AIAgents #QualityOfEarnings #Claude #Gemini #AustralianSuper </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-05 · 검색 1시간 1분 · 탐색 17회 · 검색어 71개 · 출처 75곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
