@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-06</title>
+<meta name="description" content="AI 에이전트에 안전장치 거는 금융당국, 검증 기술도 경쟁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 6일 (금)">
+<meta property="og:description" content="AI 에이전트에 안전장치 거는 금융당국, 검증 기술도 경쟁">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-06/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-06/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 6일 (금)</div>
+    <h1>AI 에이전트에 안전장치 거는 금융당국, 검증 기술도 경쟁</h1>
+    <p class="overview">OpenAI는 해킹급 보안 모델을, Anthropic은 &#39;어느 모델이 답했는지&#39; 증명하는 기술을 내놓으며 AI 신뢰·검증이 핵심 화두로 떠오름. 금융권에서는 미 OCC와 한국 금융위가 AI 감독·보안 체계를 손보는 가운데, Claude가 은행계좌 연동 개인 재무 기능을 출시함.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 99개 · 출처 78곳 → 후보 31건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 미 OCC, 은행 AI·에이전트 첫 감독 프레임워크</div>
+<div class="r">OCC의 &#39;실패 결과·자율성 기준&#39; 위험 분류는 재무 내부통제 경험을 AI 거버넌스 역량으로 바꾸는 가장 직접적인 틀이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🛡️ OpenAI, 보안 특화 &#39;GPT-6 Cyber&#39; 제한 공개</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🔏 Anthropic, 출력 모델 증명 &#39;FlashProve&#39; 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🧪 구글, Antigravity에 화학정보 에이전트 스킬 추가</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 미 OCC, 은행 AI·에이전트 첫 감독 프레임워크</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💳 Claude, 은행계좌 연동 &#39;개인 재무&#39; 베타 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🔐 금융위, 망분리 전면해제 TF…&#39;AI엔 AI로 방어&#39;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🎓 CISI 호주·뉴질랜드 출범…금융인 AI 윤리 교육</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🛡️ OpenAI</span>
+        <span>OpenAI · 11/5</span>
+<span class="tag">#사이버보안</span><span class="tag">#OpenAI</span><span class="tag">#Daybreak</span>      </div>
+      <h3><a href="https://openai.com/index/introducing-gpt-6-cyber/" target="_blank" rel="noopener">OpenAI, 보안 특화 &#39;GPT-6 Cyber&#39; 제한 공개</a></h3>
+<p class="orig">Introducing GPT-6 Cyber</p>      <p class="summary">OpenAI가 공격형 보안 연구용 모델 GPT-6 Cyber를 보안 프로그램 최상위 등급인 Daybreak Red 승인 고객에게만 공개함. 리눅스 커널 취약점 분석에 쓰인 모델이며, 핵심 인프라 방어 인력을 지원하는 $10억 규모 이니셔티브도 함께 발표함.</p>
+      <ul class="points"><li>Daybreak Red 승인 고객만 API·Codex로 사용, 가격·일반 공개 미정</li><li>ExploitGym 48.5%, GPT-5.6 Cyber 대비 상대 약 51% 향상(자체 발표)</li><li>Firefox 신규 취약점 81건 발견·패치, 리눅스 커널 잠재 이슈 948건</li></ul>
+<p class="why"><b>💡 왜 중요?</b> OpenAI가 자체 대비 프레임워크(Preparedness Framework)에서 사이버 위험 &#39;Critical&#39; 등급을 매길 만큼 공격 능력이 강해져, 접근 통제 방식이 업계 표준 논쟁으로 번지는 중임.</p>      <div class="links">
+        <a href="https://openai.com/index/introducing-gpt-6-cyber/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/" target="_blank" rel="noopener">TechCrunch: Is that enough? ↗</a><a href="https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/" target="_blank" rel="noopener">Fortune 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🔏 Anthropic</span>
+        <span>Anthropic Research · 11/2</span>
+<span class="tag">#영지식증명</span><span class="tag">#AI 검증</span><span class="tag">#오픈소스</span>      </div>
+      <h3><a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener">Anthropic, 출력 모델 증명 &#39;FlashProve&#39; 공개</a></h3>
+<p class="orig">Provable inference: FlashProve</p>      <p class="summary">Anthropic이 특정 답변이 &#39;공개 약속된 바로 그 모델&#39;에서 나왔음을 암호학적으로 증명하는 오픈소스 프로토타입 FlashProve를 공개함. 가중치(weights)를 숨긴 채 누구나 증명을 검증할 수 있어, 모델 몰래 바꿔치기나 변조를 잡아낼 수 있게 됨.</p>
+      <ul class="points"><li>zkSNARK(영지식증명) 기반, 모델 가중치를 짧은 &#39;약속값&#39;으로 공개</li><li>Llama 4 Maverick(400B MoE) 기준 H100 1장 약 110토큰/초</li><li>vLLM 대비 GPU 시간 70~95배, 검증은 CPU 약 17초, 배포 계획 없음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 결과물의 출처(provenance)를 제3자가 검증하는 길이 열려, 규제·감사에서 &#39;어떤 모델을 썼나&#39;를 증명하는 기반 기술이 될 수 있음.</p>      <div class="links">
+        <a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://github.com/anthropics/FlashProve" target="_blank" rel="noopener">GitHub: anthropics/FlashProve ↗</a><a href="https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🧪 Google DeepMind</span>
+        <span>Google DeepMind blog · 11/3</span>
+<span class="tag">#Antigravity</span><span class="tag">#AI 과학</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/" target="_blank" rel="noopener">구글, Antigravity에 화학정보 에이전트 스킬 추가</a></h3>
+<p class="orig">Agentic cheminformatics with Google Antigravity</p>      <p class="summary">Google DeepMind가 에이전트 플랫폼 Antigravity에 화학정보학(cheminformatics) 스킬을 추가해 신약 연구용 워크벤치로 확장함. LLM은 작업 흐름·추론을 맡고 RDKit 등 결정론적 도구가 계산을 맡는 구조로, 며칠 걸리던 분석을 약 1시간에 끝냈다고 밝힘.</p>
+      <ul class="points"><li>RDKit 기반, ChEMBL·PubChem 데이터베이스 커넥터 내장</li><li>폐암 약물 사례: 화합물 568개 선별→예측모델→신규 설계 제안</li><li>과학자 1만 명에게 최고 사용 등급 6개월 무료 제공(선정제)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;LLM은 오케스트레이션, 계산은 검증된 도구&#39;라는 설계가 전문 영역 에이전트의 표준 패턴으로 굳어지고 있음.</p>      <div class="links">
+        <a href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 OCC (미국 통화감독청)</span>
+        <span>OCC · 11/4</span>
+<span class="tag">#AI 감독</span><span class="tag">#에이전틱 AI</span><span class="tag">#은행 규제</span>      </div>
+      <h3><a href="https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-54.html" target="_blank" rel="noopener">미 OCC, 은행 AI·에이전트 첫 감독 프레임워크</a></h3>
+<p class="orig">Super Intelligence: Supervisory Framework (OCC Bulletin 2026-54)</p>      <p class="summary">미국 통화감독청(OCC)이 은행의 AI(문서상 &#39;Super Intelligence, SI&#39;) 활용을 검사관이 평가할 때 쓰는 첫 감독 프레임워크(Bulletin 2026-54)를 발표함. 모델이 얼마나 똑똑한지가 아니라 실패 시 결과, 권한 위임(transfer of agency) 정도, 사람의 감독 수준으로 위험을 분류하도록 기준을 바꿈.</p>
+      <ul class="points"><li>검사관용 가이드로, 은행에 새 의무·강제 기준을 만들지 않음</li><li>위험 분류 기준: 실패 결과·권한 위임·인간 감독, 기술 수준은 제외</li><li>자율 결제 에이전트·실시간 신용심사가 4단계 중 최고 위험군</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전틱 AI를 별도 위험이 아닌 기존 모델위험·운영위험 체계 안에서 보라는 신호로, 은행들이 에이전트 권한·한도·긴급중단 장치를 갖추는 기준점이 될 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>내부통제 경험에 &#39;AI 위험등급·통제 설계&#39;를 얹으면 AI 거버넌스 직무로 바로 연결됨.</span></p>
+<ul><li>가상 재무팀 AI 업무 10개를 4단계로 등급화하기</li><li>에이전트 로그로 의사결정 재구성 데모 만들기</li><li>APRA CPS 230과 OCC 기준 비교표 작성하기</li></ul><div class="skills"><span class="skill">AI Governance</span><span class="skill">Model Risk Management(MRM)</span><span class="skill">Internal Control</span><span class="skill">Agentic AI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-54.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://decrypt.co/382560/us-bank-regulator-issues-first-ai-framework-banks-battle-rogue-agents" target="_blank" rel="noopener">Decrypt: 22쪽 가이드·위험 4단계 ↗</a><a href="https://www.forvismazars.us/forsights/2026/11/occ-ai-framework-consequences-not-sophistication-drive-scrutiny" target="_blank" rel="noopener">Forvis Mazars 해설 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💳 Anthropic</span>
+        <span>TechCrunch · 11/5</span>
+<span class="tag">#개인재무</span><span class="tag">#Plaid</span><span class="tag">#Claude</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/" target="_blank" rel="noopener">Claude, 은행계좌 연동 &#39;개인 재무&#39; 베타 출시</a></h3>
+<p class="orig">Claude can now analyze your spending with its new Personal Finance tool</p>      <p class="summary">Anthropic이 은행·신용카드 계좌를 Plaid로 연결해 Claude가 지출을 분석하는 Personal Finance 기능을 미국 Pro·Max·Ultra 구독자 대상 베타로 출시함. 읽기 전용(read-only)으로 잔액·한도·최대 2년 거래내역을 보고 카테고리 분류·이상 청구 탐지까지 해 줌.</p>
+      <ul class="points"><li>미국 Pro·Max·Ultra 베타, Plaid 통한 읽기 전용 연결</li><li>잔액·신용한도·최대 2년 거래내역 분석, 송금·투자는 불가</li><li>중복결제·예상외 수수료 탐지, 대화 학습 미사용·광고 없음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> OpenAI(2026년 5월)에 이어 Anthropic도 소비자 금융 데이터에 진입해, 거래 데이터 분석이 범용 AI의 기본 기능이 되어 가는 흐름임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>거래 분류·중복결제 탐지는 AP 중복지급 점검과 같은 로직이라 포트폴리오로 직결됨.</span></p>
+<ul><li>Plaid Sandbox 데이터로 거래 자동 분류 데모 만들기</li><li>중복결제 탐지 로직을 AP 중복지급 점검에 적용하기</li><li>호주 CDR(오픈뱅킹) 데이터 범위와 비교하기</li></ul><div class="skills"><span class="skill">Plaid API</span><span class="skill">Transaction Categorization</span><span class="skill">Anomaly Detection</span><span class="skill">Open Banking(CDR)</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🔐 금융위원회 (FSC)</span>
+        <span>뉴스핌 · 11/5</span>
+<span class="tag">#망분리</span><span class="tag">#금융보안</span><span class="tag">#한국</span>      </div>
+      <h3><a href="https://www.newspim.com/news/view/20261105000068" target="_blank" rel="noopener">금융위, 망분리 전면해제 TF…&#39;AI엔 AI로 방어&#39;</a></h3>
+<p class="orig">금융위, 망분리 전면해제 TF 이달 가동…&#39;AI 공격은 AI로 방어&#39; 보안체계 내년 1분기 마련</p>      <p class="summary">금융위원회가 11월 5일 전 금융권 간담회에서 망분리(network separation) 규제 전면 해제를 논의할 TF를 이달 가동하고, &#39;AI 공격은 AI로 방어&#39; 원칙의 새 보안체계를 2027년 1분기까지 마련한다고 밝힘. 지난주 예고된 보안대책 회의의 실제 결과로, 580여 개 금융사 외부접점 점검 기한과 취약점 점검 강화안이 구체화됨.</p>
+      <ul class="points"><li>9/30~11/3 37개사 40건 침해, 약 47.3만 건 유출·약 10억원 탈취</li><li>580여 개사 외부접점 점검: 등록분 11/30, 미등록·내부통제 12/31</li><li>취약점 점검 연 1→2회, 자산 2조·임직원 300명 이상부터 시작</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 망분리가 풀리면 금융권의 SaaS·생성형 AI 도입 장벽이 크게 낮아지는 대신, AI 기반 상시 보안 점검이 새 기준이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>망분리 해제는 한국 금융권 AI 도입의 최대 걸림돌 제거라 국내 금융 AI 채용과 직결됨.</span></p>
+<ul><li>이달 나올 전자금융감독규정 개정 예고안 읽기</li><li>호주 APRA CPS 234와 보안 접근법 비교하기</li></ul><div class="skills"><span class="skill">Network Separation</span><span class="skill">FinSec</span><span class="skill">RegTech</span><span class="skill">AI Security Testing</span></div>      </div>
+      <div class="links">
+        <a href="https://www.newspim.com/news/view/20261105000068" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.fnnews.com/news/202611050500533191" target="_blank" rel="noopener">파이낸셜뉴스 보도 ↗</a><a href="https://www.news1.kr/finance/general-finance/6343200" target="_blank" rel="noopener">뉴스1 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🎓 CISI (Chartered Institute for Securities &amp; Investment)</span>
+        <span>IT Brief Australia · 11/5</span>
+<span class="tag">#금융 자격</span><span class="tag">#AI 윤리</span><span class="tag">#호주</span>      </div>
+      <h3><a href="https://itbrief.com.au/story/cisi-launches-in-australia-new-zealand-with-ai-push" target="_blank" rel="noopener">CISI 호주·뉴질랜드 출범…금융인 AI 윤리 교육</a></h3>
+<p class="orig">CISI launches in Australia &amp; New Zealand with AI push</p>      <p class="summary">영국 증권투자협회(CISI)가 FINSIA 회원 5,000여 명을 넘겨받아 호주·뉴질랜드에 공식 출범하고, 금융 전문가 대상 AI 교육을 전면에 내세움. AI 윤리 자격증(Certificate in Ethical AI)과 금융서비스 AI 거버넌스 워크숍을 현지에서 제공함.</p>
+      <ul class="points"><li>FINSIA 회원 5,000여 명 승계, ANZ 자문위 의장 PwC 호주 David R Cox</li><li>Certificate in Ethical AI, 60여 개국 7,000명 이상 등록</li><li>금융서비스 AI 거버넌스 4회 가상 워크숍, 학습자료 2,000개+</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 금융업계 전문단체가 AI 거버넌스·윤리를 핵심 역량으로 공식화해, 금융권 채용에서 AI 이해도가 기본 요건으로 자리 잡는 흐름임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>Master of IT(AI)에 금융권 AI 윤리 자격을 더하면 호주 금융사 &#39;AI+재무&#39; 포지션 차별점이 됨.</span></p>
+<ul><li>Certificate in Ethical AI 비용·학생 할인 확인하기</li><li>AI 거버넌스 워크숍 일정 확인해 신청하기</li><li>CISI 멘토링으로 호주 금융권 인맥 만들기</li></ul><div class="skills"><span class="skill">AI Ethics</span><span class="skill">AI Governance</span><span class="skill">Financial Services</span><span class="skill">Professional Networking</span></div>      </div>
+      <div class="links">
+        <a href="https://itbrief.com.au/story/cisi-launches-in-australia-new-zealand-with-ai-push" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽 뉴스(GPT-6 Cyber의 접근 통제, FlashProve의 출처 증명)와 금융 쪽 뉴스(OCC 감독틀, 금융위 보안체계)는 모두 &#39;AI를 얼마나 믿고, 어떻게 증명할 것인가&#39;라는 같은 질문을 다룸. 특히 OCC는 모델 성능이 아니라 실패 시 결과·권한 위임·사람의 감독으로 위험을 나누는데, 이는 재무에서 익숙한 위험평가·통제설계(RCM)와 구조가 같음. Claude 개인 재무 기능처럼 거래 데이터 분석 자체는 빠르게 범용 기능이 되는 만큼, 차별점은 &#39;분석&#39;보다 &#39;통제·감사 증적(audit trail)&#39;에 있음. 회계 실무 경험에 AI 위험 분류와 로그 기반 검증 능력을 더하면 AI assurance·AI 거버넌스 직무에서 강한 프로필이 됨.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>OCC Bulletin 2026-54 읽고 위험 기준 3개 정리하기</li><li>재무 AI 업무 10개를 4단계 위험등급으로 나눠 보기</li><li>Plaid Sandbox로 중복결제 탐지 데모 만들기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">영지식증명 (Zero-Knowledge Proof, ZKP)</span> — 비밀은 숨긴 채 &#39;사실임&#39;만 증명하는 암호 기술임. FlashProve는 이를 써서 모델 가중치를 공개하지 않고도 &#39;이 답은 약속된 그 모델이 만들었다&#39;를 누구나 검증하게 함.</p></section><div class="hashtags">#AI거버넌스 #에이전틱AI #금융규제 #OCC #망분리 #FinAI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-06 · 검색 1시간 1분 · 탐색 17회 · 검색어 99개 · 출처 78곳 → 후보 31건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
