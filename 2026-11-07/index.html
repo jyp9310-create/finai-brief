@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-07</title>
+<meta name="description" content="은행 AI 에이전트 실전 투입, 기업 AI 지출은 숨 고르기">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 7일 (토)">
+<meta property="og:description" content="은행 AI 에이전트 실전 투입, 기업 AI 지출은 숨 고르기">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-07/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-07/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 7일 (토)</div>
+    <h1>은행 AI 에이전트 실전 투입, 기업 AI 지출은 숨 고르기</h1>
+    <p class="overview">NAB·NH농협은행이 여신심사·AML·크레딧 메모 같은 핵심 은행 업무에 AI 에이전트를 넣기 시작했고, Anthropic은 기업용 Claude에 통제·감사 기능을 강화함. 한편 Ramp 결제 데이터에서는 토큰 단가 하락으로 기업 AI 지출 성장이 둔화돼 &#39;AI 비용 관리&#39;가 새 화두로 떠오름.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 67개 · 출처 70곳 → 후보 31건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. NAB, Anthropic 기반 사내 AI &#39;Ruby&#39; 4만 명 배포</div>
+<div class="r">멜버른 본사 NAB가 크레딧 메모·대출 심사에 AI를 실제 적용 중이라 재무 경력과 AI 전공을 바로 연결할 수 있는 현지 취업 시장 신호임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🛡️ Claude Enterprise, 보안센터·추론 훅 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🎞️ ChatGPT Images 2.6, GIF·SVG 내보내기 지원</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🎬 Gemini Omni 1.2 Flash, 15초 영상·30% 인하</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 NH농협은행, 금융 특화 AI 에이전트 10종 공개</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🧾 QX TaxReady, AI+세무 인력 500명 세무대행</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📉 Ramp 데이터: 기업 AI 토큰 지출 성장 둔화</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 NAB, Anthropic 기반 사내 AI &#39;Ruby&#39; 4만 명 배포</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🛡️ Anthropic</span>
+        <span>Claude (Anthropic) · 11/5</span>
+<span class="tag">#Claude</span><span class="tag">#기업보안</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/claude-enterprise-security-updates" target="_blank" rel="noopener">Claude Enterprise, 보안센터·추론 훅 출시</a></h3>
+<p class="orig">Claude Enterprise security and admin controls</p>      <p class="summary">Anthropic이 Claude Enterprise에 보안 센터(베타), 추론 훅(Inference hooks, GA), 중앙 관리 콘솔 등 보안·관리 기능 7종을 추가함. 프롬프트와 도구 호출을 사내 보안 도구로 먼저 검사할 수 있고, 감사인(auditor)에게 낼 설정 점검 보고서도 내려받을 수 있게 됨.</p>
+      <ul class="points"><li>추론 훅 GA: 프롬프트 훅·도구 호출 전(pre-tool-call) 훅 2종</li><li>보안 센터(베타): 권장 설정 대비 점검, 감사인용 보고서 다운로드</li><li>admin.claude.com 콘솔로 SSO·SCIM·Compliance API 키 통합 관리</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 금융·감사 같은 규제 산업이 AI 에이전트를 도입할 때 요구하는 통제와 증적(evidence)을 벤더가 기본 기능으로 넣기 시작함. 이제 기업용 AI는 성능만큼 &#39;감사할 수 있느냐&#39;로도 경쟁함.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/claude-enterprise-security-updates" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">Claude 릴리스 노트 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🎞️ OpenAI</span>
+        <span>OpenAI Developer Community · 11/4</span>
+<span class="tag">#OpenAI</span><span class="tag">#이미지생성</span><span class="tag">#API</span>      </div>
+      <h3><a href="https://community.openai.com/t/images-upgraded-introducing-chatgpt-images-2-6/1412901" target="_blank" rel="noopener">ChatGPT Images 2.6, GIF·SVG 내보내기 지원</a></h3>
+<p class="orig">Images upgraded: Introducing ChatGPT Images 2.6</p>      <p class="summary">OpenAI가 ChatGPT Images 2.6을 공개해 움직이는 GIF 생성, 참조 이미지 저장, 이미지 마크업·SVG 내보내기를 추가함. API에는 빠른 gpt-image-2.6-flare와 고품질 gpt-image-2.6-sunburst 두 모델이 &#39;곧&#39; 나오며, 생성 속도 50% 향상을 내세움.</p>
+      <ul class="points"><li>GIF 생성: 속도 조절·프레임 편집·반복 재생 설정 가능</li><li>Flare는 최소 약 6초 생성, Sunburst는 편집 간 일관성 강화</li><li>개발자들, 저·중간 품질에서 출력 토큰 과금 증가 지적(비공식)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 이미지 모델 경쟁이 화질에서 속도·편집 워크플로·벡터(SVG) 출력 같은 실무 활용성으로 옮겨가고 있음. 다만 API 출시일·가격 수치는 아직 공개되지 않았음.</p>      <div class="links">
+        <a href="https://community.openai.com/t/images-upgraded-introducing-chatgpt-images-2-6/1412901" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://aiweekly.co/alerts/openai-ships-chatgpt-images-26-with-gifs-and-faster-api-models" target="_blank" rel="noopener">AI Weekly 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🎬 Google</span>
+        <span>Google Blog · 11/5</span>
+<span class="tag">#Google</span><span class="tag">#영상생성</span><span class="tag">#Gemini API</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank" rel="noopener">Gemini Omni 1.2 Flash, 15초 영상·30% 인하</a></h3>
+<p class="orig">Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips</p>      <p class="summary">구글이 영상 생성·편집 모델 Gemini Omni 1.2 Flash를 내놓아 클립 길이를 10초에서 15초로 늘리고 가격을 Omni 1.1 대비 30% 낮춤. Gemini API·Google Cloud에서 정식(GA) 제공되며 Google Vids·Flow·Google Ads에도 들어감.</p>
+      <ul class="points"><li>클립 길이 10초→15초, 3~15초를 1초 단위로 설정</li><li>720p 초당 $0.07, Omni 1.1 대비 30% 저렴</li><li>멀티턴 대화형 편집 지원, 결과물에 SynthID 워터마크</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 영상 생성 단가가 내려가고 Workspace·광고 도구에 기본 탑재되면서, 마케팅·사내 교육 영상 제작 비용 구조가 바뀌기 시작함.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/" target="_blank" rel="noopener">Google Vids 적용 안내 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 NH농협은행 / 애자일소다</span>
+        <span>ZDNet Korea · 11/5</span>
+<span class="tag">#AI에이전트</span><span class="tag">#은행</span><span class="tag">#AML</span>      </div>
+      <h3><a href="https://zdnet.co.kr/view/?no=20261105085542" target="_blank" rel="noopener">NH농협은행, 금융 특화 AI 에이전트 10종 공개</a></h3>
+<p class="orig">NH농협은행, 애자일소다와 금융업무 특화 AI 에이전트 10종 공개</p>      <p class="summary">NH농협은행이 7월 인수한 AI 기업 애자일소다와 함께 핵심 은행 업무용 AI 에이전트 프로토타입 10종을 공개함. 9월 초 착수해 한 달여 만에 구현했고, 11월 4~6일 임직원 시연 후 피드백을 반영해 적용 범위를 넓힐 계획임.</p>
+      <ul class="points"><li>7월 애자일소다 인수 → 9월 착수, 한 달여 만에 10종 구현</li><li>컴플라이언스(AML)·여신심사·상품추천·카드·해외송금에 적용</li><li>11/4~6 &#39;AX My Room&#39; 시연, 전 계열사 임직원으로 확대 계획</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행이 AI 기업을 직접 인수해 기술을 내재화하면 업무용 에이전트 개발 주기를 한 달 수준으로 줄일 수 있음을 보여 줌. 다만 아직 시제품 단계라 정확도·효과 수치는 공개되지 않았음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>여신심사·AML처럼 &#39;규칙+판단&#39;이 섞인 업무가 은행 에이전트의 첫 타깃이라는 점이 포트폴리오 주제 선정의 힌트임.</span></p>
+<ul><li>AML 거래 모니터링 에이전트 미니 프로젝트 기획</li><li>여신심사 체크리스트로 평가셋(eval set) 만들기</li><li>애자일소다 채용·기술 블로그 확인하기</li></ul><div class="skills"><span class="skill">AI Agent</span><span class="skill">AML</span><span class="skill">Credit Risk</span><span class="skill">LLM Orchestration</span></div>      </div>
+      <div class="links">
+        <a href="https://zdnet.co.kr/view/?no=20261105085542" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://biz.heraldcorp.com/article/10926866" target="_blank" rel="noopener">헤럴드경제 보도 ↗</a><a href="https://www.asiatoday.co.kr/kn/view.php?key=20261105010002190" target="_blank" rel="noopener">아시아투데이 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🧾 QX Global Group</span>
+        <span>Accounting Today · 11/4</span>
+<span class="tag">#세무</span><span class="tag">#에이전틱AI</span><span class="tag">#아웃소싱</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/news/qx-taxready-combines-ai-and-humans-to-manage-tax-prep-for-firms" target="_blank" rel="noopener">QX TaxReady, AI+세무 인력 500명 세무대행</a></h3>
+<p class="orig">QX TaxReady combines AI and humans to manage tax prep for firms</p>      <p class="summary">F&amp;A 아웃소싱 기업 QX Global Group이 미국 회계법인용 관리형 세무 신고 서비스 QX TaxReady를 출시함. 에이전틱 AI ROBO1040이 자료 접수·데이터 추출·조서 작성을 맡고, 500명 이상 세무 전문가가 검증·품질 검토를 한 뒤 회계법인이 최종 서명하는 구조임.</p>
+      <ul class="points"><li>AI ROBO1040: 자료 접수·데이터 추출·조서(working paper) 작성</li><li>신고서당 처리시간 40~50%↓, 비용 50%+↓(초기 도입 기준)</li><li>신고서 건당 가격, 별도 SW 라이선스 없음, 9월 영국 선출시</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 세무 아웃소싱 과금이 &#39;사람×시간&#39;에서 &#39;AI 처리+사람 검수&#39; 건당 과금으로 바뀌는 신호임. 성수기 인력에 의존하던 회계법인의 시즌 운영 모델에 직접 영향을 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI가 처리하고 사람이 검증·서명하는 human-in-the-loop 구조가 세무·회계 AI의 표준 설계가 되고 있음.</span></p>
+<ul><li>세금신고 서류로 OCR→추출→검증 파이프라인 구현</li><li>AI 결과의 검토 단계·증적 흐름도 그려 보기</li></ul><div class="skills"><span class="skill">Document AI</span><span class="skill">Human-in-the-loop</span><span class="skill">Tax Compliance</span><span class="skill">Workflow Automation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/news/qx-taxready-combines-ai-and-humans-to-manage-tax-prep-for-firms" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📉 Ramp</span>
+        <span>Ramp AI Index · 11/6</span>
+<span class="tag">#AI비용</span><span class="tag">#FinOps</span><span class="tag">#핀테크데이터</span>      </div>
+      <h3><a href="https://ramp.com/data/ai-index" target="_blank" rel="noopener">Ramp 데이터: 기업 AI 토큰 지출 성장 둔화</a></h3>
+<p class="orig">Ramp AI Index (via: Ramp data shows AI spending stalling just as Anthropic nears its IPO)</p>      <p class="summary">지출관리 핀테크 Ramp의 AI Index에 따르면 7월 42% 급증했던 기업 토큰(token) 지출이 8~9월 합산 1.5% 증가에 그쳤고, 10월 23일 주간에는 전월 대비 8.9% 반등함. 사용량은 37.1% 늘었지만 혼합 단가가 26.8% 떨어져 지출 증가가 제한되는 구조임.</p>
+      <ul class="points"><li>토큰 지출: 7월 +42% → 8~9월 +1.5% → 10월 주간 +8.9%</li><li>사용량 +37.1%인데 단가 26.8%↓(백만 토큰당 $0.56)</li><li>지출 점유율 Anthropic 60.5% vs OpenAI 35.1%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 미국 기업 8.5만여 곳의 카드·청구서·ACH 결제로 AI 비용을 추적한 지표로, 가격 인하가 AI 기업 매출 성장을 잠식하는 구간임을 보여 줌. IPO를 앞둔 AI 기업 가치평가와 기업 AI 예산 관리(FinOps) 논의의 근거가 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>거래 데이터로 &#39;AI 도입률·직원당 비용&#39;을 측정하는 방법론 자체가 재무 데이터 분석 포트폴리오의 좋은 본보기임.</span></p>
+<ul><li>Ramp AI Index 방법론 읽고 지표 정의 정리</li><li>가상 회사 AI 비용을 직원당·부서별로 대시보드화</li></ul><div class="skills"><span class="skill">FinOps</span><span class="skill">Spend Analytics</span><span class="skill">Unit Economics</span><span class="skill">Data Visualization</span></div>      </div>
+      <div class="links">
+        <a href="https://ramp.com/data/ai-index" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 National Australia Bank (NAB)</span>
+        <span>iTnews · 11/6</span>
+<span class="tag">#NAB</span><span class="tag">#Anthropic</span><span class="tag">#호주은행</span>      </div>
+      <h3><a href="https://www.itnews.com.au/news/nab-deploys-ai-for-staff-called-ruby-that-is-built-on-anthropic-630151" target="_blank" rel="noopener">NAB, Anthropic 기반 사내 AI &#39;Ruby&#39; 4만 명 배포</a></h3>
+<p class="orig">NAB deploys AI for staff called &#39;Ruby&#39; that is built on Anthropic</p>      <p class="summary">NAB가 FY26 실적 발표(11월 5일) 미디어 콜에서 Anthropic 플랫폼 기반 사내 AI 도구 &#39;Ruby&#39;를 직원 4만 명 이상에게 제공한다고 밝힘. 지난 1년간 꾸린 약 50개 AI 스쿼드가 Anthropic·AWS와 사업금융·예금·주택대출 과제를 추진 중이며, 에이전틱 AI로 기업대출 승인 시간을 20% 줄였다고 함.</p>
+      <ul class="points"><li>Ruby: Anthropic 기반, 직원 4만 명+ 개인 생산성용</li><li>약 50개 사업부 주도 스쿼드, Anthropic·AWS와 협업</li><li>기업대출 승인시간 20%↓, 변경 배포(change delivery) 주기 18%↑</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 빅4 은행이 AI를 전사 기본 도구로 깔면서 동시에 약 2,500명 감원(AFR 보도: 약 1,200명이 기술·AI팀)을 진행 중임. AI 역량 확대와 일자리 구조 변화가 한꺼번에 오고 있다는 신호이며, NAB는 경쟁 은행과 달리 AI 효과를 금액으로 제시하지 않았음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>기업대출 크레딧 메모(credit memo) 작성 지원처럼 &#39;재무 분석 문서 자동화&#39;가 호주 은행의 실제 AI 과제임. 재무 경력+AI 전공이 정확히 맞는 영역임.</span></p>
+<ul><li>재무제표로 크레딧 메모 초안 생성 데모 만들기</li><li>NAB·CBA 채용공고에서 AI 직무 키워드 정리</li><li>Claude로 대출 심사 요약 프롬프트 실험</li></ul><div class="skills"><span class="skill">Credit Analysis</span><span class="skill">Agentic AI</span><span class="skill">Claude API</span><span class="skill">Banking Ops</span></div>      </div>
+      <div class="links">
+        <a href="https://www.itnews.com.au/news/nab-deploys-ai-for-staff-called-ruby-that-is-built-on-anthropic-630151" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.nab.com.au/news/nab-updates/nab-announces-its-2026-full-year-results" target="_blank" rel="noopener">NAB FY26 실적 발표(공식) ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 흐름은 &#39;은행은 실전 투입, 벤더는 통제 강화, 시장은 비용 점검&#39;으로 정리됨. NAB와 NH농협은행은 여신심사·AML·크레딧 메모처럼 판단이 필요한 핵심 업무에 에이전트를 넣고 있고, Anthropic은 감사인용 보고서·추론 훅 같은 통제 기능을 기본 제공하기 시작함. 반면 Ramp 데이터는 토큰 단가가 떨어지며 기업 AI 지출이 숨 고르기에 들어갔음을 보여 줘, 이제 &#39;AI를 얼마에, 어떻게 검증하며 쓰느냐&#39;가 핵심 질문이 됨. 재무·회계 실무를 알고 AI를 다룰 줄 아는 사람은 바로 이 검증·통제·비용 설계를 맡을 수 있다는 점이 이 독자의 차별점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>재무제표 기반 크레딧 메모 생성 데모 만들기</li><li>NAB·CBA 채용공고에서 AI 직무 키워드 정리하기</li><li>Ramp AI Index 방법론 읽고 지표 정의 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">DLP (Data Loss Prevention, 데이터 유출 방지)</span> — 민감 정보가 회사 밖으로 새지 않게 막는 보안 도구임. Claude의 추론 훅은 프롬프트·도구 호출을 이런 DLP 도구로 먼저 보내 고객 정보나 재무 데이터가 섞였는지 검사하게 해 줌.</p></section><div class="hashtags">#FinAI #AIinFinance #AIAgent #NAB #농협은행 #Anthropic </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-07 · 검색 1시간 1분 · 탐색 17회 · 검색어 67개 · 출처 70곳 → 후보 31건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
