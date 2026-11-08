@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-09</title>
+<meta name="description" content="AI 가속 속 재무의 관건은 &#39;설명할 수 있는가&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 9일 (월)">
+<meta property="og:description" content="AI 가속 속 재무의 관건은 &#39;설명할 수 있는가&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-09/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-09/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 9일 (월)</div>
+    <h1>AI 가속 속 재무의 관건은 &#39;설명할 수 있는가&#39;</h1>
+    <p class="overview">METR이 Anthropic의 AI 역량 향상 속도를 약 2배로 추정했고, 자율 AI 해킹 도구는 한국 금융권 공격에까지 쓰임. 재무 쪽에서는 BDO·Flexera·ATO가 모두 AI 결과를 입증하고 설명할 책임을 짚음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 81개 · 출처 84곳 → 후보 28건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. ATO &#34;AI가 그랬다&#34;는 합리적 주의 아냐</div>
+<div class="r">호주 세무 실무와 AI 검증 기술이 만나는 주제로, 12월 초안 공개 전에 포트폴리오로 선점하기 좋음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">📈 METR &#34;Anthropic AI 발전 속도 약 2배&#34; 평가</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🧩 OpenAI, Codex 강화 위해 Pierre 인수</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🛡️ AI 해킹 도구 Artex 노출…한국 금융권 공격에도 사용</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🔍 BDO &#34;재무리더 99%, 감사 대상 추정에 AI 사용&#34;</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔄 Mondelēz·Accenture, 에이전틱 AI로 O2C 재설계</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📊 FTSE 100 중 AI 재무성과 공시 기업은 3%뿐</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🧾 ATO &#34;AI가 그랬다&#34;는 합리적 주의 아냐</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">📈 METR / Anthropic</span>
+        <span>METR · 11/5</span>
+<span class="tag">#AI 평가</span><span class="tag">#Anthropic</span><span class="tag">#AI R&amp;D</span>      </div>
+      <h3><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment" target="_blank" rel="noopener">METR &#34;Anthropic AI 발전 속도 약 2배&#34; 평가</a></h3>
+<p class="orig">METR independent assessment of AI R&amp;D acceleration at Anthropic</p>      <p class="summary">비영리 평가기관 METR이 Anthropic 내부 자료 검토와 직원 인터뷰를 거쳐 독립 평가 결과를 공개함. Anthropic의 역량 향상 속도가 2024년 3월~2025년 10월 대비 약 2배로 추정되나, 핵심 근거 상당수는 가려져 외부 검증이 어려움.</p>
+      <ul class="points"><li>벤치마크 지표 AECI 증가세 1.9배, 95% 신뢰구간 1.5–2.8배</li><li>현재 가속분의 약 80%가 AI 덕분이라고 METR이 주관적으로 추정함</li><li>타사 모델까지 포함하면 추정치가 1.4배로 낮아짐</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 AI 개발을 앞당긴다는 주장을 외부 기관이 수치로 제시한 사례임. 다만 지표가 잘 정의된 과제에 치우쳤을 수 있어 실제 영향은 별도로 따져 봐야 함.</p>      <div class="links">
+        <a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.wcax.com/2026/11/05/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says/" target="_blank" rel="noopener">WCAX 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🧩 OpenAI</span>
+        <span>OpenAI · 11/4</span>
+<span class="tag">#OpenAI</span><span class="tag">#Codex</span><span class="tag">#인수</span>      </div>
+      <h3><a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener">OpenAI, Codex 강화 위해 Pierre 인수</a></h3>
+<p class="orig">OpenAI to acquire Pierre</p>      <p class="summary">OpenAI가 Code Storage와 오픈소스 개발 도구를 만든 Pierre Computer Company 인수를 발표함. Code Storage 기능을 Codex에 통합해 Codex가 자체 Git 기반 저장 계층을 갖추게 됨.</p>
+      <ul class="points"><li>Trees·Diffs 라이브러리는 이미 Codex에서 사용 중임</li><li>인수 금액 비공개, 통상적 규제 승인 절차가 남아 있음</li><li>Pierre 오픈소스 프로젝트는 공개 유지, OpenAI도 계속 기여함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 코딩 에이전트 경쟁이 모델 성능을 넘어 코드 저장·협업 인프라로 넓어지고 있음을 보여 줌.</p>      <div class="links">
+        <a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.infoworld.com/article/4245719/openai-buys-tiny-software-developer-to-improve-codex.html" target="_blank" rel="noopener">InfoWorld 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🛡️ Censys / Artex</span>
+        <span>Censys (TechCrunch 보도) · 11/5</span>
+<span class="tag">#AI 보안</span><span class="tag">#에이전트</span><span class="tag">#한국 금융</span>      </div>
+      <h3><a href="https://censys.com/blog/artex-agentic-asbestos/" target="_blank" rel="noopener">AI 해킹 도구 Artex 노출…한국 금융권 공격에도 사용</a></h3>
+<p class="orig">Hundreds of Artex AI hacking tools found publicly exposed to the web</p>      <p class="summary">보안 검색 업체 Censys가 LLM 기반 자율 침투 테스트 도구 Artex의 콘솔 1,465대가 웹에 노출된 것을 확인함. 합법적 테스트용도 섞여 있지만 한국 은행과 ConnectWise 공격에 쓰인 사실이 알려졌고, 개발자의 비공개 전환 뒤에도 복제본이 유통 중임.</p>
+      <ul class="points"><li>노출 콘솔 1,465대, 동일 구성 묶음 제외 시 약 815대</li><li>CrowdStrike: 한국 은행 2곳 시스템 침해, 중국어 사용 행위자 추정</li><li>MS: Storm-0940이 ConnectWise 공격에 활용, 2,250여 테넌트 시도</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트형 공격 도구가 공개되면서 정찰부터 데이터 유출까지 사람 개입 없이 진행되는 공격이 현실화됨. 많은 사례가 약한 비밀번호와 MFA 부재를 노렸다는 점에서 기본 통제의 중요성도 커짐.</p>      <div class="links">
+        <a href="https://censys.com/blog/artex-agentic-asbestos/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/" target="_blank" rel="noopener">Microsoft 보안 블로그 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🔍 BDO USA</span>
+        <span>BDO · 11/4</span>
+<span class="tag">#감사</span><span class="tag">#회계추정</span><span class="tag">#AI 거버넌스</span>      </div>
+      <h3><a href="https://www.bdo.com/insights/press-releases/bdo-research-ai-moves-into-high-stakes-financial-judgments-raising-the-bar-for-governance" target="_blank" rel="noopener">BDO &#34;재무리더 99%, 감사 대상 추정에 AI 사용&#34;</a></h3>
+<p class="orig">BDO Research: AI Moves Into High-Stakes Financial Judgments, Raising the Bar for Governance</p>      <p class="summary">BDO 제3회 Audit Innovation Survey에서 미국 재무 임원 99%가 외부감사 대상 추정·판단 중 최소 1건에 AI를 쓴다고 답함. AI 활용은 고위험 판단 영역까지 들어왔지만, 결과를 모두 입증할 문서와 절차를 갖춘 곳은 49%에 그침.</p>
+      <ul class="points"><li>활용 분야: 현금흐름·이익 예측 62%, 세금충당·이연법인세 55%</li><li>에이전틱 AI는 47%가 시범·도입 중, 46%가 검토 중임</li><li>지속 감사(continuous auditing) 준비됐다는 응답은 6%뿐임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 보조 업무를 넘어 감사인이 검토하는 추정 영역으로 들어오면서 &#39;결과를 믿을 수 있는가&#39;가 핵심 쟁점이 됨. 기업과 감사인 모두 AI 산출물의 근거를 남기는 체계가 필요해짐.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>회계추정 경험에 AI 문서화 역량을 더하면 감사·리스크 AI 직무에서 바로 차별화됨.</span></p>
+<ul><li>기대신용손실(ECL) AI 추정용 감사조서 양식 만들기</li><li>입력·프롬프트·검토자 로그를 남기는 데모 구현</li><li>AASB 9·ASA 540 요구사항과 로그 항목 매핑</li></ul><div class="skills"><span class="skill">Audit Evidence</span><span class="skill">AI Governance</span><span class="skill">Data Lineage</span><span class="skill">Model Risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bdo.com/insights/press-releases/bdo-research-ai-moves-into-high-stakes-financial-judgments-raising-the-bar-for-governance" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cpapracticeadvisor.com/?p=193281" target="_blank" rel="noopener">CPA Practice Advisor 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔄 Mondelēz International / Accenture</span>
+        <span>Accenture Newsroom · 11/5</span>
+<span class="tag">#O2C</span><span class="tag">#에이전틱 AI</span><span class="tag">#운전자본</span>      </div>
+      <h3><a href="https://newsroom.accenture.com/news/2026/mondelez-international-and-accenture-transform-order-to-cash-with-ai" target="_blank" rel="noopener">Mondelēz·Accenture, 에이전틱 AI로 O2C 재설계</a></h3>
+<p class="orig">Mondelēz International and Accenture Transform Order-to-Cash With AI</p>      <p class="summary">Mondelēz와 Accenture가 주문부터 대금 회수까지의 주문-수금(Order-to-Cash, O2C) 전 과정을 에이전틱 AI로 재설계함. 새 글로벌 클라우드 ERP와 프로세스 인텔리전스 계층 위에서 고객 서비스, 공급망, 재무를 연결하며, 아직 측정된 성과는 공개되지 않음.</p>
+      <ul class="points"><li>연간 수백만 건 거래, 150개국 이상에서 운영되는 프로세스가 대상임</li><li>목표: 대금 회수 가속, 운전자본 개선, 이슈 해결 단축, 비용 절감</li><li>기반은 새 글로벌 클라우드 ERP + 프로세스 인텔리전스 계층임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전틱 AI 적용이 개별 업무를 넘어 부서를 가로지르는 재무 프로세스로 확대되는 사례임. ERP와 프로세스 데이터를 먼저 정비한 뒤 에이전트를 얹는 구조가 눈에 띄며, 실제 재무 효과는 앞으로 확인이 필요함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>매출채권(AR)·회수 실무 지식은 O2C 에이전트의 예외 처리 규칙을 설계할 때 바로 쓰임.</span></p>
+<ul><li>공개 인보이스 데이터로 연체 예측 모델 만들기</li><li>청구 분쟁 분류·회수 안내 에이전트 시제품 구현</li><li>프로세스 마이닝 기초를 익혀 O2C 병목 분석</li></ul><div class="skills"><span class="skill">Order-to-Cash</span><span class="skill">Process Mining</span><span class="skill">Agentic AI</span><span class="skill">Working Capital</span></div>      </div>
+      <div class="links">
+        <a href="https://newsroom.accenture.com/news/2026/mondelez-international-and-accenture-transform-order-to-cash-with-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://investingnews.com/mondel-z-international-and-accenture-transform-order-to-cash-with-ai/" target="_blank" rel="noopener">Investing News 게재본 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📊 Flexera</span>
+        <span>Flexera Blog · 11/4</span>
+<span class="tag">#기업공시</span><span class="tag">#AI ROI</span><span class="tag">#FTSE 100</span>      </div>
+      <h3><a href="https://www.flexera.com/blog/perspectives/ai-is-becoming-a-corporate-fixture/" target="_blank" rel="noopener">FTSE 100 중 AI 재무성과 공시 기업은 3%뿐</a></h3>
+<p class="orig">AI is becoming a corporate fixture</p>      <p class="summary">Flexera가 FTSE 100의 2025 연차보고서를 분석한 결과, 36%가 실질적 AI 도입을 밝혔지만 구체적 재무성과를 공시한 곳은 3%였음. AI를 중대 위험으로 꼽은 기업은 54%로, 위험 공시가 성과 공시를 크게 앞섬.</p>
+      <ul class="points"><li>AI를 구체적 사업 성과와 연결한 기업은 32%임</li><li>구체적 AI 지출액 공시 2%, 별도 예산·비용 구분 0%임</li><li>미국 Dow 30도 정량 성과 공시는 7%에 그침</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 투자는 커지는데 투자자가 비용과 효익을 확인할 공시 정보는 부족함을 수치로 보여 줌. 다만 공개 공시만 본 분석이라 기업의 내부 측정 능력까지 말해 주지는 않으며, 조사 주체도 IT 비용 관리 업체임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 비용·효익을 재무 언어로 정리하는 역량은 공시와 FP&amp;A 양쪽에서 찾는 틈새임.</span></p>
+<ul><li>ASX 상위 20사 연차보고서 AI 공시 비교하기</li><li>LLM으로 공시 문구 추출·분류 파이프라인 구축</li><li>AI 비용 배부·ROI 측정 템플릿 설계하기</li></ul><div class="skills"><span class="skill">Disclosure Analysis</span><span class="skill">NLP</span><span class="skill">AI ROI</span><span class="skill">FinOps</span></div>      </div>
+      <div class="links">
+        <a href="https://www.flexera.com/blog/perspectives/ai-is-becoming-a-corporate-fixture/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://accountancyage.com/2026/11/04/only-3-of-ftse-100-companies-disclose-financial-returns-from-ai/" target="_blank" rel="noopener">Accountancy Age 보도 ↗</a><a href="https://ffnews.com/news/only-2-of-ftse-100-firms-disclose-an-ai-spending-figure-a5036c40" target="_blank" rel="noopener">FF News 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🧾 Australian Taxation Office (ATO)</span>
+        <span>Accounting Times · 10/30</span>
+<span class="tag">#ATO</span><span class="tag">#세무 AI</span><span class="tag">#합리적 주의</span>      </div>
+      <h3><a href="https://www.accountingtimes.com.au/profession/you-can-t-just-say-ai-told-me-ato-lays-out-position-on-taxpayer-use-of-ai" target="_blank" rel="noopener">ATO &#34;AI가 그랬다&#34;는 합리적 주의 아냐</a></h3>
+<p class="orig">You can&#39;t &#39;just say AI told me&#39;: ATO lays out position on taxpayer use of AI</p>      <p class="summary">ATO의 Rajitha Srikhanta 부수석 조세법률고문(deputy chief tax counsel)이 납세자의 AI 사용은 허용하되 &#39;합리적 주의(reasonable care)&#39;의 책임은 그대로라고 밝힘. ATO는 MT 2008/1·MT 2008/2에 AI 적용 기준을 담는 초안과 안전 사용 안내문을 준비 중임.</p>
+      <ul class="points"><li>&#34;AI가 그랬다는 말만으로는 합리적 주의가 아님&#34;이라고 발언함</li><li>납세자와 회계사가 결과의 정확성에 계속 책임을 짐</li><li>초안은 12월 초쯤 공개될 수 있으며 현재 협의 단계임</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 세무 당국이 AI 활용을 막지 않되 가산세 판단 기준에 반영하려는 방향을 드러냄. 세무 AI 도구와 회계법인은 답변뿐 아니라 근거와 검토 과정까지 남겨야 함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>답변 근거를 법령·판례·ATO 지침까지 추적하는 세무 AI는 ATO 요구에 맞는 포트폴리오임.</span></p>
+<ul><li>ATO 공개 지침으로 인용형 세무 RAG 만들기</li><li>답변별 법령·판례 출처 검증 로그 추가하기</li><li>초안 공개되면 요건별 평가 체크리스트 작성</li></ul><div class="skills"><span class="skill">RAG</span><span class="skill">Tax Compliance</span><span class="skill">Reasonable Care</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtimes.com.au/profession/you-can-t-just-say-ai-told-me-ato-lays-out-position-on-taxpayer-use-of-ai" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.ato.gov.au/about-ato/ato-advice-and-guidance/advice-under-development-program/advice-under-development-administration-issues" target="_blank" rel="noopener">ATO Advice under development (개정 추진 목록) ↗</a><a href="https://www.ato.gov.au/law/view/document?docid=MXR%2FMT20081%2FNAT%2FATO%2F00001" target="_blank" rel="noopener">현행 MT 2008/1 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>METR 평가처럼 AI 역량은 빠르게 올라가지만, 핵심 근거가 가려지면 그 수치를 외부에서 검증하기는 어려움. 재무 현장도 같은 문제에 부딪혀, BDO 조사에서는 AI 결과를 모두 입증할 수 있는 기업이 49%에 그쳤고 ATO는 &#39;AI가 그랬다&#39;는 설명을 인정하지 않겠다고 밝힘. 모델을 잘 쓰는 사람은 늘어나도 그 결과를 회계·세무 기준으로 검증하고 문서화할 수 있는 사람은 아직 드묾. 재무회계 경력에 AI 전공을 더한 독자라면 &#39;근거를 추적하고 검증 로그를 남기는 시스템&#39;을 대표 프로젝트로 삼을 만함.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>ATO 공개 지침으로 인용형 RAG 시제품 만들기</li><li>BDO 지표로 AI 추정 감사 체크리스트 작성하기</li><li>ASX 상위 5사 AI 공시 문구 비교해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">합리적 주의 (Reasonable Care)</span> — 납세자가 신고할 때 기울여야 하는 주의 의무임. ATO는 MT 2008/1에서 이 개념을 다루며, AI를 썼을 때 어떻게 적용되는지 설명하는 개정 초안을 준비 중임.</p></section><div class="hashtags">#FinAI #AI감사 #세무AI #ATO #AgenticAI #AI거버넌스 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-09 · 검색 1시간 1분 · 탐색 17회 · 검색어 81개 · 출처 84곳 → 후보 28건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
