@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-10</title>
+<meta name="description" content="모델은 싸지고 에이전트는 늘지만, 금융의 숙제는 ROI 증명임">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 10일 (화)">
+<meta property="og:description" content="모델은 싸지고 에이전트는 늘지만, 금융의 숙제는 ROI 증명임">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-10/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-10/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 10일 (화)</div>
+    <h1>모델은 싸지고 에이전트는 늘지만, 금융의 숙제는 ROI 증명임</h1>
+    <p class="overview">Anthropic의 Fable 5.2 가격 인하와 Meta의 초저가 Muse Ember 출시로 &#39;큰 모델이 계획하고 작은 모델이 실행하는&#39; 구조가 표준이 되어 가는 중임. 금융권에서는 BMO처럼 상담 에이전트 도입이 이어지지만, Capgemini·Gartner 조사 모두 투자 대비 성과(ROI)를 증명하는 것이 아직 최대 과제라고 짚음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 2시간 35분 · 탐색 8회 · 검색어 46개 · 출처 51곳 → 후보 11건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-6">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">6. Gartner &#34;AI로 아낀 시간은 수익 아닌 자원&#34;</div>
+<div class="r">AI 절감 시간을 재무 KPI로 바꾸는 일은 재무·회계 경력과 AI 전공을 동시에 살릴 수 있는 가장 직접적인 커리어 포지션이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧠 Anthropic, Claude Fable 5.2 출시·가격 20% 인하</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🔥 Meta, 에이전트 실행용 초경량 모델 Muse Ember 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🕵️ 엔비디아 이사회, 젠슨 황 관련 독립 조사 착수</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">💳 BMO, 카드 상담원용 AI 에이전트 &#39;Agent Assist&#39; 도입</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">📊 Capgemini &#34;금융사 59% 멀티에이전트 도입, 완성은 10%&#34;</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">⏱️ Gartner &#34;AI로 아낀 시간은 수익 아닌 자원&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🎓 호주 대학 4곳, OpenAI와 &#39;AI 네이티브 졸업생&#39; 양성</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧠 Anthropic</span>
+        <span>Anthropic · 11/9</span>
+<span class="tag">#LLM</span><span class="tag">#Anthropic</span><span class="tag">#코딩·금융</span>      </div>
+      <h3><a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener">Anthropic, Claude Fable 5.2 출시·가격 20% 인하</a></h3>
+<p class="orig">Introducing Claude Fable 5.2 and Claude Mythos 5.2</p>      <p class="summary">Anthropic이 기술 작업용 최상위 모델 Claude Fable 5.2를 출시하고, 상위 모델 Mythos 5.2는 검증된 기관에만 제한적으로 공개함. Fable 5.2는 가격을 입력 $8·출력 $40(백만 토큰당)으로 20% 내렸고, 에이전트 코딩·컴퓨터 사용 벤치마크에서 이전 모델보다 크게 앞섬.</p>
+      <ul class="points"><li>FrontierCode 2.0 49.1%, Fable 5.1 32.4%·Opus 5.5 45.5% 상회</li><li>가격 $8/$40(백만 토큰), 기존 $10/$50 대비 20% 인하</li><li>사이버·바이오 질의는 하위 모델로 우회, Fallback API 설정 필요</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 최상위 모델 가격이 내려가면서 코딩·퀀트 금융 분석 같은 고난도 에이전트 작업의 단가가 낮아짐. 다만 수치는 모두 회사 자체 발표라 독립 검증이 필요함.</p>      <div class="links">
+        <a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://www.cnbc.com/2026/11/09/anthropic-claude-fable-5-2-mythos-5-2.html" target="_blank" rel="noopener">CNBC 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🔥 Meta Superintelligence Labs</span>
+        <span>TechCrunch · 11/9</span>
+<span class="tag">#경량모델</span><span class="tag">#Meta</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">Meta, 에이전트 실행용 초경량 모델 Muse Ember 공개</a></h3>
+<p class="orig">Meta releases Muse Ember, a new lightweight model for agent execution</p>      <p class="summary">Meta가 가장 가볍고 저렴한 모델 Muse Ember를 내놓음. 도구 호출·라우팅·정보 추출·긴 문서 파싱 같은 반복 업무를 맡기고, 큰 모델 Muse Wonder가 계획을 세우는 역할 분담 구조를 제시함.</p>
+      <ul class="points"><li>입력 백만 토큰당 $0.10, Muse 계열 네 번째 모델</li><li>Artificial Analysis 지수로 Haiku·Luna보다 우수 주장</li><li>텍스트·이미지·오디오 처리, 스캔 문서·차트도 직접 읽음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;큰 모델이 계획, 작은 모델이 대량 실행&#39;하는 구조가 업계 표준으로 굳어지는 신호임. 다만 접근 방식과 오픈웨이트 여부는 아직 공개되지 않음.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🕵️ NVIDIA</span>
+        <span>NVIDIA Newsroom · 11/8</span>
+<span class="tag">#엔비디아</span><span class="tag">#지배구조</span><span class="tag">#미중</span>      </div>
+      <h3><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" target="_blank" rel="noopener">엔비디아 이사회, 젠슨 황 관련 독립 조사 착수</a></h3>
+<p class="orig">Statement From NVIDIA Board of Directors</p>      <p class="summary">엔비디아 이사회가 CEO 젠슨 황이 외국 정보기관 공작의 표적이 됐다는 보도와 관련해 독립 조사에 착수함. 독립이사 위원회가 외부 법률 자문을 받아 조사하며, 황 CEO는 직원들에게 불륜 사실을 인정하고 사과함.</p>
+      <ul class="points"><li>독립이사 위원회+외부 독립 법률 자문단이 조사 감독</li><li>메모: 전 Megaspeed 임원 Alice Huang이 中 국가안전부에 포섭 주장</li><li>이사회 &#34;국가안보·회사 기밀 유출 근거 없다&#34; 밝힘</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 칩 1위 기업의 CEO 리스크가 미중 기술 안보 이슈와 얽힌 사례임. 이사회 주도 독립 조사는 기업 지배구조(Corporate Governance) 대응의 교과서적 절차임.</p>      <div class="links">
+        <a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://nvidianews.nvidia.com/news/a-message-to-our-company" target="_blank" rel="noopener">젠슨 황 직원 메시지 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">💳 BMO</span>
+        <span>FF News · 11/6</span>
+<span class="tag">#은행</span><span class="tag">#에이전틱AI</span><span class="tag">#콜센터</span>      </div>
+      <h3><a href="https://ffnews.com/news/bmo-using-agentic-ai-to-help-credit-card-clients-get-faster-answers-and-resoluti-95ecb64a" target="_blank" rel="noopener">BMO, 카드 상담원용 AI 에이전트 &#39;Agent Assist&#39; 도입</a></h3>
+<p class="orig">BMO using agentic AI to help credit card clients get faster answers and resolutions</p>      <p class="summary">캐나다 BMO가 신용카드 상담센터(Virtual Connect) 직원을 돕는 내부용 에이전틱 AI 도구 &#39;AI Agent Assist&#39;를 도입함. 거래 매칭·정책 검색·케이스 준비를 AI가 맡고, 최종 판단은 직원이 하는 사람 검토(human-in-the-loop) 구조임.</p>
+      <ul class="points"><li>연 50만 건 이상 카드 상담, 건당 평균 12~14분 소요</li><li>대상 상담 처리시간 20~30% 단축이 목표(실적 아님)</li><li>대상 환불 요청 약 40% 자동 처리, 당일 환급 가능성</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 고객 대면이 아닌 직원 보조형으로 시작해 리스크를 줄이는 은행권의 전형적 도입 경로임. BMO는 2030년까지 AI로 $10억 이상 성과를 목표로 함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>환불·거래 대사(matching) 업무는 회계의 매출채권·대사 업무와 구조가 같아 포트폴리오 주제로 딱 맞음.</span></p>
+<ul><li>가상 카드 거래로 환불 매칭 에이전트 데모 만들기</li><li>처리시간·자동처리율 KPI 대시보드 붙이기</li></ul><div class="skills"><span class="skill">Agentic AI</span><span class="skill">RAG</span><span class="skill">Transaction Matching</span><span class="skill">Human-in-the-loop</span></div>      </div>
+      <div class="links">
+        <a href="https://ffnews.com/news/bmo-using-agentic-ai-to-help-credit-card-clients-get-faster-answers-and-resoluti-95ecb64a" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.renascence.io/news/165160/bmo-launches-ai-agent-assist-to-speed-up-credit-card-customer-answers" target="_blank" rel="noopener">Renascence 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">📊 Capgemini Research Institute</span>
+        <span>Capgemini · 11/5</span>
+<span class="tag">#보고서</span><span class="tag">#멀티에이전트</span><span class="tag">#ROI</span>      </div>
+      <h3><a href="https://www.capgemini.com/news/press-releases/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value/" target="_blank" rel="noopener">Capgemini &#34;금융사 59% 멀티에이전트 도입, 완성은 10%&#34;</a></h3>
+<p class="orig">Financial institutions accelerate transition to multi-agent AI in drive for bottom-line value</p>      <p class="summary">Capgemini가 &#39;World Cloud Report for Financial Services 2027&#39;에서 14개 시장 금융사 임원 1,100명을 조사함. 59%가 멀티에이전트 AI를 시범·운영 중이지만, 전사적으로 자율 운영할 조율 체계(orchestration)를 갖춘 곳은 10%뿐임.</p>
+      <ul class="points"><li>약 절반은 에이전틱 AI ROI를 일관되게 입증 못 함</li><li>90%가 모델 라우팅으로 성능·토큰 비용 관리 중/계획</li><li>52%가 하이퍼스케일러를 멀티에이전트 거버넌스 파트너로 선호</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 도입률과 실제 가치 창출 사이의 격차가 숫자로 드러남. 앞으로 금융권 AI 예산은 &#39;효율&#39;보다 &#39;성과(outcome)&#39; 기준으로 배분될 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;도입했지만 ROI 증명 못 함&#39;이 절반 — 재무 배경으로 AI 성과 측정을 설계하는 역할에 기회가 있음.</span></p>
+<ul><li>보고서 수치로 AI 투자 ROI 모델 엑셀 만들기</li><li>모델 라우팅 비용 절감 시뮬레이션 해 보기</li></ul><div class="skills"><span class="skill">Multi-agent Orchestration</span><span class="skill">AI ROI</span><span class="skill">Model Routing</span><span class="skill">Cloud</span></div>      </div>
+      <div class="links">
+        <a href="https://www.capgemini.com/news/press-releases/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://ffnews.com/news/financial-institutions-shift-to-multi-agent-ai-to-drive-bottom-line-value" target="_blank" rel="noopener">FF News 보도 ↗</a><a href="https://itbrief.co.uk/story/banks-insurers-shift-to-multi-agent-ai-systems" target="_blank" rel="noopener">IT Brief UK 보도 ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-6">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">⏱️ Gartner</span>
+        <span>CPA Practice Advisor (Gartner 보도자료 전재) · 11/5</span>
+<span class="tag">#CFO</span><span class="tag">#생산성</span><span class="tag">#Gartner</span>      </div>
+      <h3><a href="https://www.cpapracticeadvisor.com/2026/11/05/gartner-identifies-three-steps-for-cfos-to-turn-ai-time-savings-into-business-value/193286/" target="_blank" rel="noopener">Gartner &#34;AI로 아낀 시간은 수익 아닌 자원&#34;</a></h3>
+<p class="orig">Gartner Identifies Three Steps for CFOs to Turn AI Time Savings into Business Value</p>      <p class="summary">Gartner가 CFO에게 AI를 인력 감축 수단으로만 보지 말고, AI로 생긴 여유 시간을 관리해야 할 자원으로 다루라고 권고함. 고위 기능 리더 1,303명 조사에서 AI로 인원이 줄었다는 답(23%)과 늘었다는 답(17%)이 함께 나옴.</p>
+      <ul class="points"><li>2026년 1~4월, 고위 기능 리더 1,303명 대상 조사</li><li>AI로 인원 감소 23%, 디지털 역할 추가로 증가 17%</li><li>3단계: 우선 성과 정의→성과관리 연동→재무 효과 측정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;AI로 몇 시간 아꼈나&#39;에서 &#39;그 시간으로 무엇을 벌었나&#39;로 CFO의 질문이 바뀌고 있음. 매출 성장·비용 회피·예측 정확도 같은 재무 지표와 연결하는 것이 핵심임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 절감 시간을 예측 정확도·결산 단축일 같은 재무 KPI로 바꾸는 일은 FP&amp;A 경력자가 가장 잘할 수 있는 영역임.</span></p>
+<ul><li>결산 업무별 AI 절감시간→재무지표 매핑표 작성</li><li>면접용 &#39;AI 가치 측정&#39; 사례 1개 정리</li></ul><div class="skills"><span class="skill">FP&amp;A</span><span class="skill">Value Realization</span><span class="skill">KPI Design</span><span class="skill">Workforce Planning</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cpapracticeadvisor.com/2026/11/05/gartner-identifies-three-steps-for-cfos-to-turn-ai-time-savings-into-business-value/193286/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.co.uk/story/gartner-urges-chief-financial-officers-to-govern-ai-gains" target="_blank" rel="noopener">IT Brief UK 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🎓 OpenAI · UNSW · La Trobe 등</span>
+        <span>OpenAI · 11/5</span>
+<span class="tag">#호주대학</span><span class="tag">#ChatGPT Edu</span><span class="tag">#AI 인재</span>      </div>
+      <h3><a href="https://openai.com/index/australian-universities-ai-native-graduates/" target="_blank" rel="noopener">호주 대학 4곳, OpenAI와 &#39;AI 네이티브 졸업생&#39; 양성</a></h3>
+<p class="orig">Australian universities are creating AI-native graduates</p>      <p class="summary">UNSW Sydney·University of Sydney·La Trobe(멜버른)·Adelaide University가 OpenAI와 손잡고 학생·교직원에게 ChatGPT Edu·Codex 등을 제공함. OpenAI가 의뢰한 호주 대학생 1,018명 조사에서 81%가 주 여러 번 AI를 쓴다고 답함.</p>
+      <ul class="points"><li>UNSW, 8만 명+에 ChatGPT Edu 단계적 확대·Codex 도입</li><li>La Trobe, AI MBA·AI 엔지니어링 학사 신설 계획</li><li>학생 61% &#34;AI 역량은 진로에 필수&#34;, 28%는 에이전트 제작 경험</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 대학이 AI를 커리큘럼·평가 체계에 정식 편입하면서 졸업생의 기본 AI 역량 기준선이 올라가고 있음. 단, 조사는 OpenAI 의뢰라 이해관계가 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>동기들도 AI를 기본으로 쓰는 만큼, 차별화는 &#39;AI+재무 도메인&#39; 조합에서 나옴 — 멜버른 La Trobe의 AI Business Studio(1,000명+ 대상 중소기업 AI 도입 컨설팅형 경험)가 좋은 벤치마크임.</span></p>
+<ul><li>재학 중 대학의 ChatGPT Edu·Claude 접근권 확인</li><li>중소기업 회계 AI 도입 컨설팅형 프로젝트 기획</li><li>AI 에이전트 1개 만들어 GitHub에 공개</li></ul><div class="skills"><span class="skill">ChatGPT Edu</span><span class="skill">Codex</span><span class="skill">AI Agent Building</span><span class="skill">Domain Consulting</span></div>      </div>
+      <div class="links">
+        <a href="https://openai.com/index/australian-universities-ai-native-graduates/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.com.au/story/openai-widens-ai-access-across-four-australian-universities" target="_blank" rel="noopener">IT Brief Australia 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽 흐름은 &#39;더 싸고 역할이 나뉜 모델&#39;임 — Fable 5.2는 가격을 20% 내렸고, Meta Ember는 백만 토큰당 $0.10로 대량 실행을 맡으며, Capgemini 조사에서도 금융사 90%가 모델 라우팅을 쓰거나 계획 중임. 그런데 금융 현장에서는 도입(59%)보다 조율 체계 완성(10%)과 ROI 증명(약 절반 실패)이 병목이고, BMO 수치도 아직 목표치에 머묾. Gartner 말대로 AI가 만든 시간은 &#39;수익이 아닌 자원&#39;이라, 이를 결산 단축일·예측 정확도 같은 재무 지표로 번역하는 사람이 필요함. 기술 구현과 재무 성과 측정을 둘 다 아는 이 독자에게 가장 큰 기회가 열리는 지점임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>결산 업무별 AI 절감시간→KPI 매핑표 만들기</li><li>Fable 5.2·Ember 단가로 송장 처리비 계산하기</li><li>가상 카드 거래로 환불 매칭 에이전트 만들기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">모델 라우팅 (Model Routing)</span> — 작업 난이도에 따라 알맞은 AI 모델로 나눠 보내는 기술임. 어려운 계획은 큰 모델(예: Muse Wonder)에, 반복 추출은 싼 경량 모델(예: Muse Ember)에 맡겨 성능과 토큰 비용을 함께 관리함.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/17</span><span>11th Annual FinTech &amp; Banking Awards 2026 (시드니, Macquarie Univ.) — 은행 AI 활용 부문 포함</span></li></ul></section><div class="hashtags">#FinAI #ClaudeFable #AgenticAI #CFO #AIinFinance #호주AI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-10 · 검색 2시간 35분 · 탐색 8회 · 검색어 46개 · 출처 51곳 → 후보 11건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
