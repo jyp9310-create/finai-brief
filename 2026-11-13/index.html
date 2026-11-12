@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-13</title>
+<meta name="description" content="젠슨 황 사임 충격 속, 금융권은 &#39;AI 리스크 관리&#39;에 집중">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 13일 (금)">
+<meta property="og:description" content="젠슨 황 사임 충격 속, 금융권은 &#39;AI 리스크 관리&#39;에 집중">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-13/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-13/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 13일 (금)</div>
+    <h1>젠슨 황 사임 충격 속, 금융권은 &#39;AI 리스크 관리&#39;에 집중</h1>
+    <p class="overview">AI 업계에선 엔비디아 CEO 교체로 리더십 공백이 생겼고, 구글과 OpenAI는 &#39;판단 전용 API&#39;와 &#39;기업 전용 에이전트&#39; 같은 실무형 기능을 내놓음. 금융 쪽에선 PwC의 판단력 교육, 오라클의 자금(Treasury) AI 분석, 한국·호주 당국의 AI 통제 논의까지 모두 &#39;AI를 쓰되 사람이 검증한다&#39;는 흐름으로 모이고 있음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 30분 · 탐색 14회 · 검색어 72개 · 출처 68곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. APRA &#34;프런티어 AI발 장애 불가피&#34;…2027년 AI 스트레스 테스트</div>
+<div class="r">멜버른에서 취업할 이 독자에게, APRA의 2027년 AI 스트레스 테스트 예고는 호주 금융권 AI 리스크·컴플라이언스 직무 수요와 바로 이어짐.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🔻 엔비디아 젠슨 황 사임, CFO 크레스가 임시 CEO</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🎯 구글 Gemini Decisions API, 글 대신 &#39;판단 점수&#39;를 줌</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🏪 ChatGPT에 기업 인증 프로필·전용 에이전트 베타</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧠 PwC, AI 시대 &#39;판단력&#39; 인증에 1억 달러+ 투자</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💧 오라클, 은행 자금·유동성 AI 분석 앱 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🛑 금융연 &#34;금융 AI에 책임임원·긴급정지권 둬야&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 APRA &#34;프런티어 AI발 장애 불가피&#34;…2027년 AI 스트레스 테스트</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🔻 NVIDIA</span>
+        <span>SEC EDGAR (Form 8-K) · 11/12</span>
+<span class="tag">#엔비디아</span><span class="tag">#CEO 교체</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener">엔비디아 젠슨 황 사임, CFO 크레스가 임시 CEO</a></h3>
+<p class="orig">NVIDIA Announces CEO Transition (Form 8-K)</p>      <p class="summary">11/10 이사회 성명 이후, 공동창업자 젠슨 황이 11/12 사장·CEO·이사직에서 즉시 사임했다는 8-K 공시가 나옴. CFO 콜레트 크레스(Colette Kress)가 CFO를 겸하면서 임시 CEO를 맡고, 하비 C. 존스(Harvey C. Jones)가 회사 첫 이사회 의장(Board Chair)으로 선임됨.</p>
+      <ul class="points"><li>11/12부로 즉시 사임, 사장·CEO·이사직 모두 내려놓음</li><li>크레스 CFO가 임시 CEO 겸직, 2013년 합류·Cisco·MS 재무 출신</li><li>Q3 FY2027 실적은 11/17(화) 예정대로 발표</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 칩 시장 1위 기업의 리더십이 갑자기 비면서 GPU 공급, 제품 로드맵, 대중국 수출 문제의 불확실성이 커짐. 이사회는 &#39;운영·고객 약속·로드맵은 차질 없이 이어진다&#39;고 강조함.</p>      <div class="links">
+        <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/" target="_blank" rel="noopener">TechCrunch: Colette Kress는 누구인가 ↗</a><a href="https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/" target="_blank" rel="noopener">TechCrunch: 황 퇴진이 AI 업계에 미칠 5가지 영향 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🎯 Google</span>
+        <span>Google Blog · 11/11</span>
+<span class="tag">#Gemini API</span><span class="tag">#분류·라우팅</span><span class="tag">#신규 모델</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener">구글 Gemini Decisions API, 글 대신 &#39;판단 점수&#39;를 줌</a></h3>
+<p class="orig">Gemini Decisions API: Fast, calibrated multimodal decisions</p>      <p class="summary">구글이 텍스트를 생성하지 않고 후보 선택지를 한 번의 계산(forward pass)으로 채점하는 gemini-decision-1 모델과 Decisions API를 출시함. 예/아니오, 객관식, 루브릭 점수 질문에 확률과 신뢰도(confidence)를 돌려줘서 분류·라우팅·정책 검사를 싸고 빠르게 처리할 수 있음.</p>
+      <ul class="points"><li>gemini-decision-1, 생성 없이 선택지 확률만 반환함</li><li>입력 100만 토큰당 $0.10, 출력 토큰은 과금 없음</li><li>지연 150-250ms, 요청당 질문 1,000개·입력 256K</li></ul>
+<p class="why"><b>💡 왜 중요?</b> LLM으로 &#39;분류만&#39; 하던 작업을 생성형 호출보다 훨씬 싸고 빠르게, 보정된 확률(calibration)까지 받아 처리할 수 있게 됨. 에이전트의 도구 선택, 모델 라우팅, 안전 필터 같은 판단 단계가 전용 API로 분리되는 흐름임.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://simonwillison.net/2026/Nov/11/gemini-decisions-api/" target="_blank" rel="noopener">Simon Willison 리뷰 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🏪 OpenAI</span>
+        <span>OpenAI · 11/10</span>
+<span class="tag">#ChatGPT</span><span class="tag">#Business Agents</span><span class="tag">#에이전트 커머스</span>      </div>
+      <h3><a href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener">ChatGPT에 기업 인증 프로필·전용 에이전트 베타</a></h3>
+<p class="orig">Introducing Businesses in ChatGPT</p>      <p class="summary">OpenAI가 기업이 Business Hub에서 ChatGPT 속 자사 정보를 인증·수정하고, 브랜드 전용 Business Agent를 만들 수 있는 &#39;Businesses in ChatGPT&#39; 베타를 시작함. ChatGPT 답변에 해당 기업이 등장하면 사용자가 바로 그 기업 에이전트와 대화할 수 있게 됨.</p>
+      <ul class="points"><li>Business Hub: 프로필 인증(파란 체크)·가격·재고 정보 수정</li><li>Business Agent는 미국 이커머스·온라인 서비스 기업만 우선 지원</li><li>에이전트 대화는 라벨이 붙고 본 대화와 분리됨</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 검색 결과 대신 AI 답변 안에서 고객을 만나는 &#39;AI 검색 마케팅&#39;이 공식 채널이 됨. ChatGPT Ads, Shopify 연동과 묶여 에이전트 커머스 경쟁이 본격화함.</p>      <div class="links">
+        <a href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://aiweekly.co/alerts/openai-launches-businesses-in-chatgpt-beta-with-verified-profiles-and-us-e" target="_blank" rel="noopener">AI Weekly 요약 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧠 PwC US</span>
+        <span>PwC US Newsroom · 11/9</span>
+<span class="tag">#Big 4</span><span class="tag">#감사</span><span class="tag">#인재 교육</span>      </div>
+      <h3><a href="https://www.pwc.com/us/en/about-us/newsroom/critical-thinking-and-judgment-certificate-program.html" target="_blank" rel="noopener">PwC, AI 시대 &#39;판단력&#39; 인증에 1억 달러+ 투자</a></h3>
+<p class="orig">PwC launches critical thinking and judgment certificate program</p>      <p class="summary">PwC US가 AI와 함께 일하는 파트너·직원 8.5만 명 이상의 비판적 사고·판단력을 기르는 인증 프로그램에 1억 달러 이상을 투자한다고 발표함. 진단 평가, 마스터클래스, 그리고 AI가 내린 결론을 직원이 반박하는 맞춤형 시뮬레이션이 들어감.</p>
+      <ul class="points"><li>$1억 이상 투자, 파트너·직원 8.5만 명 이상 대상</li><li>AI의 내부통제 평가에서 결함을 찾는 감사 시뮬레이션 포함</li><li>2026년 12월 미국·멕시코부터, 2027년 6월 완료 목표</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감사 초안을 AI가 쓰는 시대에 사람의 역할이 &#39;작성&#39;에서 &#39;검증·판단&#39;으로 옮겨 가고 있음을 Big 4가 대규모 투자로 보여 줌. 2027년 초 이 프레임워크를 대학에도 공개할 예정이라 채용 기준에도 반영될 가능성이 큼.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 결론을 의심하고 검증하는 &#39;전문가적 회의주의&#39;가 Big 4 신입의 핵심 역량이 되고 있음</span></p>
+<ul><li>AI 내부통제 평가를 반박하는 메모 써 보기</li><li>2027년 초 대학용 프레임워크 공개 여부 확인하기</li><li>면접용 &#39;AI 오류 잡은 사례&#39; 1개 정리하기</li></ul><div class="skills"><span class="skill">Professional Skepticism</span><span class="skill">Internal Controls (SOX)</span><span class="skill">Human-in-the-loop</span><span class="skill">AI Assurance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.pwc.com/us/en/about-us/newsroom/critical-thinking-and-judgment-certificate-program.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.big4news.com/p/pwc-critical-thinking-training-ai-audit" target="_blank" rel="noopener">Big4News 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💧 Oracle</span>
+        <span>PR Newswire (Oracle 보도자료) · 11/10</span>
+<span class="tag">#Treasury</span><span class="tag">#유동성 리스크</span><span class="tag">#BI·자연어 분석</span>      </div>
+      <h3><a href="https://finviz.com/news/419953/oracle-helps-financial-institutions-make-faster-more-informed-treasury-and-customer-decisions-with-ai-assisted-analytics" target="_blank" rel="noopener">오라클, 은행 자금·유동성 AI 분석 앱 출시</a></h3>
+<p class="orig">Oracle Helps Financial Institutions Make Faster, More Informed Treasury and Customer Decisions with AI-Assisted Analytics</p>      <p class="summary">오라클이 Financial Services Data Intelligence 제품군에 Treasury Analytics와 Customer Analytics를 추가하고 전 세계 정식 출시(GA)함. 자금·재무·리스크 부서가 자연어로 질문해 유동성, 자금조달, 현금흐름, 재무상태표(B/S), 시장위험을 한 화면에서 볼 수 있게 됨.</p>
+      <ul class="points"><li>Treasury·Customer Analytics 2종, 전 세계 GA</li><li>유동성·자금조달·현금흐름·B/S·시장위험을 통합 뷰로 제공</li><li>OAC AI Assistant 자연어 질의 + Auto Insights 패턴 탐지</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 자금부서(Treasury)의 AI 도입은 거창한 에이전트보다 &#39;정제된 데이터 위에 자연어 질의&#39;부터 시작되고 있음. 기존 온프레미스 OFSAA 고객의 클라우드 전환을 유도하는 전략이기도 함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>유동성·현금흐름 리포트에 자연어 질의를 붙이는 게 은행 재무 AI의 현실적인 첫 단계임</span></p>
+<ul><li>현금흐름 샘플로 text-to-SQL 대시보드 만들기</li><li>Treasury Analytics 문서의 지표 구성 살펴보기</li><li>LCR·자금조달 용어를 영어로 정리하기</li></ul><div class="skills"><span class="skill">Treasury / ALM</span><span class="skill">Liquidity Risk</span><span class="skill">Text-to-SQL</span><span class="skill">Oracle Analytics Cloud</span></div>      </div>
+      <div class="links">
+        <a href="https://finviz.com/news/419953/oracle-helps-financial-institutions-make-faster-more-informed-treasury-and-customer-decisions-with-ai-assisted-analytics" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.oracle.com/financial-services/banking/data-intelligence/" target="_blank" rel="noopener">Oracle FS Data Intelligence 제품 페이지 ↗</a><a href="https://docs.oracle.com/en/industries/financial-services/ofs-analytical-applications/treasury-analytics/index.html" target="_blank" rel="noopener">Treasury Analytics 공식 문서 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🛑 한국금융연구원 (KIF)</span>
+        <span>전자신문 · 11/12</span>
+<span class="tag">#한국 금융</span><span class="tag">#AI 거버넌스</span><span class="tag">#소비자보호</span>      </div>
+      <h3><a href="https://www.etnews.com/20261112000127" target="_blank" rel="noopener">금융연 &#34;금융 AI에 책임임원·긴급정지권 둬야&#34;</a></h3>
+<p class="orig">[22회 스마트금융컨퍼런스] 송민규 한국금융연구원 부원장 &#34;금융 AI, 소비자 신뢰 확보해야&#34;</p>      <p class="summary">송민규 한국금융연구원 부원장이 제22회 스마트금융컨퍼런스에서 금융 AI가 스스로 판단·실행하는 에이전트로 진화하면서 소비자보호 과제가 커진다고 진단함. 기획부터 폐기까지 단계별 책임, 독립 검증 조직, 소비자보호 부서의 출시 보류·AI 긴급정지(kill switch) 요청권을 묶은 통합 AI 관리 프로그램을 제안함.</p>
+      <ul class="points"><li>4대 쟁점: 이해상충·설명가능성·책임 공백·데이터 유출</li><li>책임 임원 지정, 개발팀과 독립된 조직이 검증</li><li>불완전판매·사기 징후 시 AI 모형 긴급정지 요청권</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 한국 금융권 AI 거버넌스가 원칙론을 넘어 &#39;누가 멈출 수 있나&#39;라는 구체적인 통제 장치 논의로 넘어가고 있음. 은행권 공동 표준과 원칙 중심 감독(principle-based supervision) 소통 창구 요구도 나옴.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 모델의 라이프사이클별 통제는 내부통제(ICFR) 설계와 같은 구조라서 회계 경력이 바로 강점이 됨</span></p>
+<ul><li>AI 모형 단계별 통제 매트릭스(RCM) 만들어 보기</li><li>대출 거절 사유 설명(XAI) 데모 만들기</li><li>비승인 AI 사용(섀도 AI) 점검 체크리스트 쓰기</li></ul><div class="skills"><span class="skill">Model Risk Management</span><span class="skill">Explainable AI (XAI)</span><span class="skill">Internal Control</span><span class="skill">Consumer Protection</span></div>      </div>
+      <div class="links">
+        <a href="https://www.etnews.com/20261112000127" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 APRA</span>
+        <span>APRA · 11/12</span>
+<span class="tag">#APRA</span><span class="tag">#사이버 리스크</span><span class="tag">#스트레스 테스트</span>      </div>
+      <h3><a href="https://www.apra.gov.au/news-and-publications/apras-latest-system-risk-outlook-warns-rising-threats-financial-stability" target="_blank" rel="noopener">APRA &#34;프런티어 AI발 장애 불가피&#34;…2027년 AI 스트레스 테스트</a></h3>
+<p class="orig">APRA&#39;s latest System Risk Outlook warns of rising threats to financial stability</p>      <p class="summary">APRA가 11/12 System Risk Outlook(2026년 11월호)에서 불안정한 글로벌 환경과 빠르게 커지는 AI 리스크를 금융안정의 주요 위협으로 꼽음. 존 론스데일(John Lonsdale) 의장은 브리핑에서 대형 금융사의 대비가 아직 부족하다며 &#39;장애와 문제가 생길 것이라고 봐야 한다&#39;고 말했고, 2027년부터 첫 AI 리스크 스트레스 테스트를 하겠다고 밝힘(ABC 보도).</p>
+      <ul class="points"><li>Anthropic·OpenAI 프런티어 모델의 취약점 탐지·악용 능력 경고</li><li>규제 대상 기관의 핵심 서비스 공급사 상위 100곳 중 80곳이 해외 기반</li><li>2027년부터 가상의 극단적 AI 시나리오로 첫 스트레스 테스트</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 은행·보험·연금(super)의 AI 리스크가 &#39;거버넌스 권고&#39;에서 스트레스 테스트라는 정량 감독 대상으로 올라감. 패치할 시간이 짧아지고 소수 해외 공급사 의존이 커진 점이 시스템 리스크로 공식화됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>2027년 APRA AI 스트레스 테스트를 앞두고 호주 금융사에서 AI 리스크·운영복원력(CPS 230) 인력 수요가 커질 것임</span></p>
+<ul><li>CPS 230·CPS 234 요건을 AI 관점으로 요약하기</li><li>AI 공급사 장애 시나리오로 영향 분석 써 보기</li><li>Big 4 호주 Tech Risk 채용공고 키워드 모으기</li></ul><div class="skills"><span class="skill">Operational Resilience (CPS 230)</span><span class="skill">Cyber Risk (CPS 234)</span><span class="skill">Scenario Analysis</span><span class="skill">Third-party Risk</span></div>      </div>
+      <div class="links">
+        <a href="https://www.apra.gov.au/news-and-publications/apras-latest-system-risk-outlook-warns-rising-threats-financial-stability" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.abc.net.au/news/2026-11-13/regulator-apra-warns-of-interruptions-as-frontier-ai-evolves/107378944" target="_blank" rel="noopener">ABC News 보도 (론스데일 발언) ↗</a><a href="https://www.capitalbrief.com/briefing/apra-flags-market-volatility-ai-risks-to-financial-stability-e65e6c54-8210-44ed-b98e-ade1bd542f56/" target="_blank" rel="noopener">Capital Brief 요약 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사들의 공통점은 &#39;AI가 판단하고 사람이 검증한다&#39;는 구조임. 구글은 신뢰도 점수를 주는 판단 전용 API를 내놨고, PwC는 AI 결론을 반박하는 훈련에 1억 달러를 쓰며, 한국 금융연과 호주 APRA는 책임임원·긴급정지권·스트레스 테스트 같은 통제 장치를 요구함. 재무·회계 출신 AI 전공자에게는 &#39;모델을 만드는 능력&#39;만큼 &#39;모델 결과에 통제와 검증을 설계하는 능력&#39;이 경쟁력이 됨. 내부통제(RCM)와 감사 경험을 AI 거버넌스 언어로 옮기면 호주 Big 4·은행 Tech Risk 직무에서 강점이 될 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Gemini Decisions로 송장 계정 분류 실험하기</li><li>APRA 11월 System Risk Outlook 원문 읽기</li><li>AI 모형 통제 매트릭스(RCM) 초안 만들기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">보정(Calibration)</span> — AI가 말한 확신도가 실제 정답률과 맞는 정도임. 예를 들어 &#39;80% 확신&#39;이라고 한 답이 실제로 80%쯤 맞으면 잘 보정된 모델이고, 그래야 일정 신뢰도 미만은 사람 검토로 넘기는 규칙을 믿고 쓸 수 있음.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/17</span><span>엔비디아 Q3 FY2027 실적 발표 (크레스 임시 CEO 첫 실적)</span></li></ul></section><div class="hashtags">#FinAI #APRA #AI리스크 #PwC #GeminiAPI #엔비디아 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-13 · 검색 30분 · 탐색 14회 · 검색어 72개 · 출처 68곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
