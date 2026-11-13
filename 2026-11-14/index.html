@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-14</title>
+<meta name="description" content="AI 에이전트는 싸지고 빨라짐, 이제 승부는 &#39;통제&#39;와 &#39;데이터&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 14일 (토)">
+<meta property="og:description" content="AI 에이전트는 싸지고 빨라짐, 이제 승부는 &#39;통제&#39;와 &#39;데이터&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-14/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-14/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 14일 (토)</div>
+    <h1>AI 에이전트는 싸지고 빨라짐, 이제 승부는 &#39;통제&#39;와 &#39;데이터&#39;</h1>
+    <p class="overview">구글은 저가·고속 모델 Gemini 4 Hydrogen을, Anthropic은 고객사 환경에서 직접 돌리는 자체 호스팅(self-hosted) 에이전트를 내놓았음. 금융 쪽에서는 KPMG·ANZ가 에이전트 관리 계층을 앞세웠고, EY 설문은 가장 큰 병목이 &#39;AI-ready 데이터&#39;라고 짚었음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 81개 · 출처 68곳 → 후보 39건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. ANZ, AI 에이전트 통제하는 &#39;컨트롤 플레인&#39; 도입</div>
+<div class="r">멜버른에서 취업할 호주 빅4 은행이 에이전트 통제 체계를 직접 만들고 있어, 재무 내부통제 경력과 AI 전공을 가장 직접 연결할 수 있는 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">⚡ 구글, Flash 후속 &#39;Gemini 4 Hydrogen&#39; 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🔐 Claude 에이전트, 고객사 서버에서 직접 운영 가능</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">💰 OpenAI 분기 매출 첫 100억 달러 돌파 (보도)</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">💳 ChatGPT Wallet 출시, AI 에이전트가 대신 결제</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🏢 KPMG, 27.6만 명에 Copilot·Agent 365 확대</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📊 EY &#34;세무·재무 AI의 최대 병목은 데이터&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🏦 ANZ, AI 에이전트 통제하는 &#39;컨트롤 플레인&#39; 도입</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">⚡ Google</span>
+        <span>Google Blog · 11/12</span>
+<span class="tag">#Gemini</span><span class="tag">#LLM</span><span class="tag">#가격</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">구글, Flash 후속 &#39;Gemini 4 Hydrogen&#39; 출시</a></h3>
+<p class="orig">Introducing Gemini 4 Hydrogen</p>      <p class="summary">구글이 Flash 계열을 대체하는 &#39;Gemini 4 Hydrogen&#39;을 공개했고, 구글 검색 전체와 Gemini 앱, API에 바로 배포했음. Gemini 3.8 Flash보다 작업을 약 2.5배 빨리 끝내고, 1M 토큰 구간 전체에 같은 가격을 적용함.</p>
+      <ul class="points"><li>3.8 Flash 대비 약 2.5배 빠르고 파트너 테스트 기준 토큰 12~23% 절감</li><li>API 가격 100만 토큰당 입력 $1.50 / 출력 $7.50, 입출력 각 최대 1M 토큰</li><li>Vals Tax Agent Bench 52.3%로 1위, Terminal-Bench 4.1 57%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;일상용&#39; 저가 모델이 상위 모델 Argon과 비슷한 지능 지수(51 vs 50)를 내면서 에이전트 업무의 단가가 크게 내려감. 세무·법률 벤치마크를 앞세운 점을 보면 전문 업무 시장을 직접 노리고 있음.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity" target="_blank" rel="noopener">Antigravity 블로그: Hydrogen·Orchestrator ↗</a><a href="https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/" target="_blank" rel="noopener">9to5Google 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🔐 Anthropic</span>
+        <span>Claude · 11/12</span>
+<span class="tag">#Claude</span><span class="tag">#에이전트</span><span class="tag">#보안</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank" rel="noopener">Claude 에이전트, 고객사 서버에서 직접 운영 가능</a></h3>
+<p class="orig">Operate Claude Managed Agents inside your security perimeter</p>      <p class="summary">Anthropic이 Claude Managed Agents의 자체 호스팅(self-hosted) 버전을 비공개 베타로 내놓았음. 하네스(harness)·샌드박스·자격증명·세션 기록까지 서비스 전체를 고객사 클라우드나 온프레미스(on-premise)에서 돌릴 수 있게 됨.</p>
+      <ul class="points"><li>서버·DB·작업 워커를 모두 고객이 운영하고 세션 기록은 자체 DB에 저장</li><li>모델 호출 경로 선택: Anthropic, Bedrock, Google Agent Platform, Foundry</li><li>도구 호출 등 모든 단계를 OpenTelemetry로 내보냄, 계정팀 통해 신청</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행처럼 데이터가 내부망 밖으로 나가면 안 되는 규제 산업이 에이전트를 도입할 때 가장 큰 걸림돌을 줄여 줌. 이제 에이전트 경쟁은 모델 성능만이 아니라 배포 방식과 통제권으로도 벌어짐.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://claude.com/blog" target="_blank" rel="noopener">Claude 블로그 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">💰 OpenAI</span>
+        <span>TechCrunch (Bloomberg 인용) · 11/11</span>
+<span class="tag">#OpenAI</span><span class="tag">#매출</span><span class="tag">#AI산업</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank" rel="noopener">OpenAI 분기 매출 첫 100억 달러 돌파 (보도)</a></h3>
+<p class="orig">OpenAI&#39;s quarterly revenue reportedly crosses $10B for the first time</p>      <p class="summary">Bloomberg는 익명 소식통을 인용해 OpenAI의 3분기 매출이 처음으로 $10B를 넘었다고 보도했음. 2분기보다 거의 50% 늘었지만 조정 영업이익률은 여전히 -109%로 적자 구조가 이어지고 있음.</p>
+      <ul class="points"><li>3분기 매출 $10B 이상, 2분기 $6.7B 대비 약 50% 증가</li><li>조정 영업이익률(adjusted operating margin)은 -150%에서 -109%로 개선</li><li>연환산 매출(run rate) 약 $50B, Anthropic은 10월 말 $81B</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 매출 성장은 가파르지만 매출보다 비용이 더 큰 구조여서, IPO를 앞둔 AI 기업들의 수익성 검증이 핵심 쟁점이 됨. 두 회사는 run rate 계산 방식이 달라 단순 비교는 어려움.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">💳 OpenAI</span>
+        <span>OpenAI · 11/13</span>
+<span class="tag">#에이전트결제</span><span class="tag">#핀테크</span><span class="tag">#토큰화</span>      </div>
+      <h3><a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener">ChatGPT Wallet 출시, AI 에이전트가 대신 결제</a></h3>
+<p class="orig">Introducing ChatGPT Wallet</p>      <p class="summary">OpenAI가 ChatGPT의 에이전트(&#39;dots&#39;)가 상품을 고르고 결제까지 끝내는 ChatGPT Wallet을 출시했음. 실제 카드번호 대신 결제 토큰(payment token)을 쓰고, 결제할 때마다 Face ID나 지문으로 사용자 승인을 받음.</p>
+      <ul class="points"><li>미국 발급 Visa·Mastercard·Amex 카드 지원, 카드번호는 에이전트·가맹점에 미노출</li><li>결제 전 품목·총액·카드를 확인하고 생체 인증으로 승인, 거래 기록 생성</li><li>출시 시점엔 미국 18세 이상 일부 Pro 사용자만, 지출 한도 기능은 추후 제공</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 빅테크가 &#39;에이전트 커머스(agentic commerce)&#39; 결제 레일을 직접 쥐려는 움직임으로, 카드사·PG·은행의 승인·사기탐지·분쟁 처리 방식이 바뀔 수 있음. 다만 아마존 등 일부 대형 유통사는 AI 에이전트를 차단하고 있어 가맹점 확보가 과제임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>에이전트 결제의 핵심은 모델이 아니라 토큰화·승인 한도·거래 기록 같은 통제 설계이고, 이건 내부통제 경험과 바로 이어짐</span></p>
+<ul><li>OpenAI Commerce Playbook 구조 훑어보기</li><li>에이전트 결제 통제항목(한도·승인·로그) 표 작성</li></ul><div class="skills"><span class="skill">Tokenization</span><span class="skill">Agentic Commerce</span><span class="skill">Payment Controls</span></div>      </div>
+      <div class="links">
+        <a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://developers.openai.com/commerce" target="_blank" rel="noopener">OpenAI Commerce Partner Playbook ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🏢 KPMG / Microsoft</span>
+        <span>Microsoft Source Asia · 11/12</span>
+<span class="tag">#Big4</span><span class="tag">#감사AI</span><span class="tag">#에이전트거버넌스</span>      </div>
+      <h3><a href="https://news.microsoft.com/source/asia/2026/11/12/kpmg-scale-trusted-enterprise-ai-in-thailand-through-microsoft-copilot-and-microsoft-agent-365" target="_blank" rel="noopener">KPMG, 27.6만 명에 Copilot·Agent 365 확대</a></h3>
+<p class="orig">KPMG scales trusted enterprise AI in Thailand through Microsoft Copilot and Microsoft Agent 365</p>      <p class="summary">KPMG 회원사들이 전 세계 276,000명 이상에게 Microsoft Copilot을 확대하고, Microsoft Agent 365로 AI 에이전트의 배포·모니터링·보안·업데이트를 관리하기로 했음. 첫 Copilot 도입 2년 만의 확대이며, Microsoft Foundry 기반 KPMG Workbench가 감사·세무·자문 업무의 여러 에이전트를 조율함.</p>
+      <ul class="points"><li>전 세계 276,000명+ 직원에 Copilot 확대 (태국 포함)</li><li>Agent 365로 에이전트 배포·모니터링·보안·업데이트 전 과정 관리</li><li>KPMG Workbench(Microsoft Foundry 기반)로 감사·세무·자문 멀티에이전트 조율</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Big 4의 감사·세무 현장이 &#39;범용 Copilot + 에이전트 관리 계층 + 자체 플랫폼&#39; 구조로 표준화되고 있음을 보여 줌. KPMG 태국 CEO가 말했듯 이제 과제는 기술 접근이 아니라 거버넌스와 인력 준비도임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>Big 4 감사·세무 실무가 Microsoft 에이전트 스택 위로 옮겨 가는 중이라, 이 스택을 다뤄 본 재무 출신은 경쟁력이 큼</span></p>
+<ul><li>Microsoft Foundry로 감사 증빙 요약 에이전트 시제품 만들기</li><li>Copilot in Excel로 계정 조정표(reconciliation) 실습</li></ul><div class="skills"><span class="skill">Microsoft Foundry</span><span class="skill">Agent 365</span><span class="skill">Audit analytics</span><span class="skill">Copilot</span></div>      </div>
+      <div class="links">
+        <a href="https://news.microsoft.com/source/asia/2026/11/12/kpmg-scale-trusted-enterprise-ai-in-thailand-through-microsoft-copilot-and-microsoft-agent-365" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📊 EY</span>
+        <span>EY Global Newsroom · 11/11</span>
+<span class="tag">#세무AI</span><span class="tag">#데이터</span><span class="tag">#설문</span>      </div>
+      <h3><a href="https://www.ey.com/en_gl/newsroom/2026/11/ai-ambition-outpaces-data-readiness-in-tax-and-finance-functions-ey-study-finds" target="_blank" rel="noopener">EY &#34;세무·재무 AI의 최대 병목은 데이터&#34;</a></h3>
+<p class="orig">AI ambition outpaces data readiness in tax and finance functions, EY study finds</p>      <p class="summary">EY의 &#39;2026 Tax and Finance Operations Survey&#39;(30개 관할권 CFO·세무 리더 1,600명)에 따르면 세무·재무 조직은 AI 실험 단계를 지나 측정 가능한 성과를 요구받고 있음. 하지만 64%가 &#39;AI에 쓸 수 있는 데이터(AI-ready data) 부족&#39;을 최대 장애물로 꼽았음.</p>
+      <ul class="points"><li>64%가 AI-ready 데이터 부족을 최대 장애물로 지목</li><li>데이터 접근·활용을 &#39;매우 잘한다&#39;는 세무 조직은 16%뿐</li><li>AI 에이전트가 세무에 도움 될 것이란 응답 77% (1년 전 21%)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트에 대한 기대는 1년 새 3배 이상 뛰었지만 71%가 아직 초기·탐색 단계에 머물러 있어 기대와 실행 사이 간극이 큼. 결국 세무·재무 AI 프로젝트의 성패는 데이터 정비와 거버넌스에서 갈림.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>기업이 막힌 곳은 모델이 아니라 세무·재무 데이터 정리라서, 회계 데이터 구조를 아는 AI 인력이 가장 귀함</span></p>
+<ul><li>세무 신고·결산 데이터 정제 파이프라인 포트폴리오화</li><li>면접용으로 &#39;64% vs 16%&#39; 수치 스토리 준비</li></ul><div class="skills"><span class="skill">Data governance</span><span class="skill">Tax technology</span><span class="skill">Data quality</span><span class="skill">Agentic AI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.ey.com/en_gl/newsroom/2026/11/ai-ambition-outpaces-data-readiness-in-tax-and-finance-functions-ey-study-finds" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://futurumgroup.com/insights/ey-survey-data-gaps-are-stalling-enterprise-ai-in-tax-and-finance/" target="_blank" rel="noopener">Futurum 분석 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🏦 ANZ</span>
+        <span>ANZ Newsroom · 11/9</span>
+<span class="tag">#호주은행</span><span class="tag">#AI거버넌스</span><span class="tag">#에이전트</span>      </div>
+      <h3><a href="https://www.anz.com.au/newsroom/media/2026/november/anz-ceo-nuno-matos-remarks-investor-briefing-anz-2026-full-year-results/" target="_blank" rel="noopener">ANZ, AI 에이전트 통제하는 &#39;컨트롤 플레인&#39; 도입</a></h3>
+<p class="orig">ANZ CEO Nuno Matos remarks – Investor Briefing – ANZ 2026 Full Year Results</p>      <p class="summary">ANZ CEO Nuno Matos가 FY26 실적 발표에서 AI 에이전트를 중앙에서 관리하는 &#39;Enterprise AI Control Plane&#39; 도입을 밝혔음. 사용자·모델·에이전트·도구·비용·플랫폼 전반을 통제하고 의사결정을 추적하며, 정해진 한도를 벗어난 에이전트 활동은 중지시킴.</p>
+      <ul class="points"><li>기존 AI 게이트웨이·거버넌스 위원회 위에 에이전트 한도 통제 계층 추가</li><li>주요 사례: 기업금융 뱅커용 AI CRM, 콜센터 혁신, AI 코딩으로 개발 역량 약 2배</li><li>FY26 현금이익 A$7.59B(+31%), 그룹 생산성 효과 A$902M</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Westpac·NAB에 이어 ANZ까지 약 일주일 새 호주 빅4 은행 중 세 곳이 실적 발표에서 AI를 내세웠음. ANZ는 성과 숫자보다 &#39;사람이 통제권을 유지한다&#39;는 거버넌스를 강조해 은행 AI의 다음 단계를 보여 줌.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 은행들이 에이전트 &#39;한도·추적·중지&#39; 체계를 만들고 있어, 내부통제 감각과 AI 기술을 함께 갖춘 사람이 가장 바로 쓰일 수 있음</span></p>
+<ul><li>LangSmith·OpenTelemetry로 에이전트 로그 추적 데모 만들기</li><li>ANZ·Westpac·NAB AI 사례 비교표 작성</li><li>APRA CPS 230과 에이전트 통제 연결해 정리</li></ul><div class="skills"><span class="skill">AI governance</span><span class="skill">Agent observability</span><span class="skill">Model risk management</span><span class="skill">APRA CPS 230</span></div>      </div>
+      <div class="links">
+        <a href="https://www.anz.com.au/newsroom/media/2026/november/anz-ceo-nuno-matos-remarks-investor-briefing-anz-2026-full-year-results/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.itnews.com.au/news/anz-stands-up-an-enterprise-ai-control-plane-630221" target="_blank" rel="noopener">iTnews: ANZ stands up an &#39;enterprise AI control plane&#39; ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 뉴스는 모델이 싸지고 빨라지는 흐름(Gemini 4 Hydrogen)과, 그 에이전트를 어떻게 가둬 두고 관리할지(Claude 자체 호스팅, KPMG Agent 365, ANZ 컨트롤 플레인)가 동시에 진행된다는 점을 보여 줌. 금융권에서는 이제 &#39;어떤 모델을 쓰나&#39;보다 &#39;에이전트에 어떤 권한과 한도를 주고 무엇을 기록하나&#39;가 핵심 질문이 됨. 이건 재무 실무의 승인 권한표, 직무 분리(SoD), 감사 추적(audit trail)과 똑같은 논리임. EY 설문처럼 병목이 데이터라는 점까지 생각하면, 회계 데이터 구조와 내부통제를 알고 에이전트 로그·한도를 설계할 줄 아는 사람이 호주 금융권에서 가장 희소한 인재임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Hydrogen API로 분개 초안 에이전트 테스트하기</li><li>ANZ CEO 실적 연설 AI 부분 읽고 요약하기</li><li>에이전트 승인 한도·로그 항목표 설계하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">AI 컨트롤 플레인 (AI Control Plane)</span> — AI 에이전트를 한곳에서 감시하고 제한하는 관리 계층임. 누가 어떤 모델·도구를 얼마나 썼는지 추적하고, 정해진 한도를 넘는 행동은 자동으로 멈추게 해서 재무의 승인 권한표와 비슷한 역할을 함.</p></section><div class="hashtags">#AI에이전트 #재무AI #AI거버넌스 #Gemini4 #호주은행 #핀테크 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-14 · 검색 1시간 1분 · 탐색 17회 · 검색어 81개 · 출처 68곳 → 후보 39건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
