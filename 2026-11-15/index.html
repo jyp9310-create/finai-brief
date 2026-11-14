@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-15</title>
+<meta name="description" content="에이전트 확산 다음 과제는 통제·비용·사람">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 15일 (일)">
+<meta property="og:description" content="에이전트 확산 다음 과제는 통제·비용·사람">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-15/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-15/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 15일 (일)</div>
+    <h1>에이전트 확산 다음 과제는 통제·비용·사람</h1>
+    <p class="overview">Anthropic의 제조업 플러그인, LangChain의 $3억 투자 유치를 보면 AI 에이전트(agent)가 업종별 실무 도구와 운영 플랫폼으로 빠르게 자리 잡는 중임. 반면 BCG·Capgemini 보고서와 호주 정부 지침은 통제 체계, 비용 관리, 직원 협의가 아직 이 속도를 따라가지 못한다는 점을 보여 줌.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 2분 · 탐색 17회 · 검색어 79개 · 출처 92곳 → 후보 32건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. 대기업 59%, AI 비용 예산 초과…CFO 개입 늘어</div>
+<div class="r">AI 비용 예측·통제는 FP&amp;A·결산 경험을 AI 역량과 바로 연결할 수 있는, 지금 막 생기는 직무 영역이기 때문임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🏭 앤트로픽, 제조업용 Claude 플러그인 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🔐 딥마인드 AlphaProof Code, Signal 코드 형식검증</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🦜 LangChain, $3억 유치…기업가치 $30억</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🏦 BCG: 은행 73% 에이전트 운영, 통제 체계는 8%</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💸 대기업 59%, AI 비용 예산 초과…CFO 개입 늘어</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🧮 Xero, 회계법인용 AI 워크플로 FDE팀 출범</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 정부, 직장 내 AI 도입 모범지침 초안 공개</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🏭 Anthropic</span>
+        <span>Claude (claude.com) · 11/12</span>
+<span class="tag">#Anthropic</span><span class="tag">#산업별 AI</span><span class="tag">#ERP 연동</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/claude-for-manufacturing" target="_blank" rel="noopener">앤트로픽, 제조업용 Claude 플러그인 출시</a></h3>
+<p class="orig">Claude for Manufacturing</p>      <p class="summary">Anthropic이 공장 현장 업무용 플러그인 &#39;Claude for Manufacturing&#39;을 내놓음. 견적 산정부터 멈춘 설비 진단까지 스킬 17개와 Oracle NetSuite 같은 ERP 커넥터로 처리하는 산업별 패키지임.</p>
+      <ul class="points"><li>영업·품질·운영·공급망·설계·셋업 등 스킬(skill) 17개 탑재</li><li>Autodesk Fusion·Infor·Microsoft 365·Oracle NetSuite 커넥터 4종</li><li>Infor 플러그인은 사용자 승인 후 구매주문(PO) 발행·생산 일정 조정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 범용 LLM이 이제 업종별 워크플로 패키지 형태로 팔리기 시작했고, OpenAI와의 산업별 시장 경쟁도 커지는 중임. ERP 연동과 &#39;사람 승인 후 실행&#39; 구조는 재무 업무 자동화에도 그대로 쓰이는 설계 패턴임.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/claude-for-manufacturing" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.aitimes.com/news/articleView.html?idxno=217361" target="_blank" rel="noopener">AI타임스 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🔐 Google DeepMind</span>
+        <span>Google DeepMind Blog · 11/10</span>
+<span class="tag">#Google DeepMind</span><span class="tag">#형식 검증</span><span class="tag">#보안</span>      </div>
+      <h3><a href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener">딥마인드 AlphaProof Code, Signal 코드 형식검증</a></h3>
+<p class="orig">Introducing AlphaProof Code: a breakthrough in verifying complex software at depth</p>      <p class="summary">Google DeepMind가 AI 에이전트로 소프트웨어의 수학적 안전성을 증명하는 형식 검증(formal verification) 프레임워크 AlphaProof Code를 공개함. Signal 암호 프로토콜을 설계 단계를 넘어 실제 기기에서 돌아가는 컴파일 코드 수준까지 4주 만에 검증함.</p>
+      <ul class="points"><li>Gemini Carbon 기반 에이전트가 Lean 증명 600만 줄 이상 작성</li><li>사람 검토가 필요한 부분은 코드베이스의 약 1%만 표시됨</li><li>버그 2개를 다시 넣은 테스트에서 &#39;안전하지 않음&#39;을 기계 증명함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 결과물을 &#39;믿어 달라&#39;가 아니라 기계가 확인할 수 있는 증명으로 검증하는 방식이 실제 대형 코드에서 통함을 보여 줌. 수년이 걸리던 전문가 검증 작업이 몇 주로 줄어듦.</p>      <div class="links">
+        <a href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://google-deepmind.github.io/code-verification" target="_blank" rel="noopener">검증 산출물(오픈소스) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🦜 LangChain</span>
+        <span>LangChain Blog · 11/13</span>
+<span class="tag">#투자</span><span class="tag">#AI 에이전트</span><span class="tag">#LangSmith</span>      </div>
+      <h3><a href="https://www.langchain.com/blog/series-c" target="_blank" rel="noopener">LangChain, $3억 유치…기업가치 $30억</a></h3>
+<p class="orig">LangChain Raises $300M to Enable Every Company to Own Its Intelligence</p>      <p class="summary">에이전트 개발·운영 플랫폼 LangChain이 CapitalG 주도로 Series C $3억을 유치했고 기업가치는 $30억으로 평가됨. 약 1년 전 $12.5억 대비 2배 이상이며, 오픈소스 라이브러리에서 에이전트 운영·평가·거버넌스 플랫폼으로 무게를 옮기는 중임.</p>
+      <ul class="points"><li>CapitalG 주도, GIC·DFJ Growth 신규, IVP·Sapphire 등 참여</li><li>LangSmith 이용 조직 7,000곳 이상, Harvey·NVIDIA·Toyota 등</li><li>Workday, 에이전트 배포 기간을 5개월에서 1일 미만으로 단축</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 투자자 돈이 에이전트를 &#39;만드는&#39; 도구보다 &#39;운영·감시·통제&#39;하는 인프라로 몰리고 있음. 특정 모델에 묶이지 않는 관측(observability)·평가 도구 수요가 커지는 신호임.</p>      <div class="links">
+        <a href="https://www.langchain.com/blog/series-c" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🏦 BCG</span>
+        <span>BCG · 11/13</span>
+<span class="tag">#은행</span><span class="tag">#AI 거버넌스</span><span class="tag">#에이전트 리스크</span>      </div>
+      <h3><a href="https://www.bcg.com/publications/2026/ai-governance-banking-benchmark" target="_blank" rel="noopener">BCG: 은행 73% 에이전트 운영, 통제 체계는 8%</a></h3>
+<p class="orig">Why Operationalizing Governance Gives Banks an Advantage in Scaling AI (AI Safety and Governance in Banking 2026)</p>      <p class="summary">BCG가 시스템적 중요 은행(SIB) 26곳을 조사한 결과, 73%가 일부 업무에서 AI 에이전트의 실제 운영(production)을 허용함. 하지만 에이전트까지 포괄하는 표준화된 모니터링·통제 프레임워크를 갖춘 곳은 8%뿐이었음.</p>
+      <ul class="points"><li>73% 에이전트 운영 허용, 88%는 에이전트 비중 포트폴리오 10% 이하</li><li>전용 AI 정책 보유 77%, 중앙 AI 인벤토리 보유는 절반 미만</li><li>리스크 관리 성숙도 상위 1/3 은행이 선도 도입 확률 2.5배</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행에서 AI 도입을 가로막는 것은 기술보다 통제 체계라는 점이 숫자로 확인됨. 리스크 관리가 성숙한 은행일수록 AI도 빨리 확산한다는 결과는 거버넌스가 비용이 아니라 경쟁력이라는 뜻임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>에이전트 모니터링·통제 설계는 감사·리스크 실무와 AI 기술이 정확히 만나는 빈자리임</span></p>
+<ul><li>에이전트용 통제 매트릭스(RCM)를 직접 작성하기</li><li>LangSmith로 에이전트 로그·평가 대시보드 만들기</li><li>APRA CPS 230 요건과 에이전트 리스크를 매핑하기</li></ul><div class="skills"><span class="skill">AI Governance</span><span class="skill">Model Risk Management</span><span class="skill">Agent Observability</span><span class="skill">Internal Controls</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bcg.com/publications/2026/ai-governance-banking-benchmark" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.prnewswire.com/news-releases/operationalizing-ai-governance-gives-banks-an-advantage-in-scaling-ai-302938342.html" target="_blank" rel="noopener">BCG 보도자료 (PR Newswire) ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💸 Capgemini Research Institute</span>
+        <span>Capgemini · 11/12</span>
+<span class="tag">#AI 비용</span><span class="tag">#CFO</span><span class="tag">#FinOps</span>      </div>
+      <h3><a href="https://www.capgemini.com/news/press-releases/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected/" target="_blank" rel="noopener">대기업 59%, AI 비용 예산 초과…CFO 개입 늘어</a></h3>
+<p class="orig">Most organizations plan to adopt a multi-model AI strategy as nearly six in ten faced significantly higher AI costs than expected</p>      <p class="summary">Capgemini가 매출 $10억 이상 기업 임원 500명에게 물은 결과, 59%가 지난 12개월 AI 지출이 예상·예산을 크게 넘었다고 답함. 초과한 기업은 평균 24%를 더 썼고, 그 3분의 2가 잉여현금흐름(FCF) 감소 같은 재무 타격을 입었음.</p>
+      <ul class="points"><li>초과 기업 평균 24% 초과, 21%는 30% 넘게 초과</li><li>주요 AI 투자 승인에 CFO 참여 52%로 상승 (전년 42%)</li><li>AI Yield(검증된 성과 가치−총비용)를 계산하는 기업은 5곳 중 1곳</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI가 실험 예산을 벗어나 현금흐름에 영향을 주는 규모가 되면서, AI 비용 예측·배분이 재무 조직의 핵심 업무로 들어옴. 대응책은 예산 통제에서 업무별로 모델을 고르는 멀티모델 전략과 &#39;작업당 비용&#39; 지표로 옮겨 가는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>AI 비용 예측·배분(AI FinOps)은 FP&amp;A 경험이 그대로 통하는 새 직무 영역임</span></p>
+<ul><li>토큰 단가×사용량으로 AI 비용 예측 모델 만들기</li><li>보고서의 AI Yield 공식으로 가상 사례 계산하기</li><li>FinOps Foundation의 FOCUS 스펙 훑어보기</li></ul><div class="skills"><span class="skill">FinOps</span><span class="skill">FP&amp;A</span><span class="skill">Unit Economics</span><span class="skill">Cost Allocation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.capgemini.com/news/press-releases/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.cfodive.com/news/cfos-confront-cash-flow-risks-ai-costs-rise/874554/" target="_blank" rel="noopener">CFO Dive 보도 (Genpact 조사 포함) ↗</a><a href="https://www.capgemini.com/wp-content/uploads/2026/11/AI_Economics.pdf" target="_blank" rel="noopener">Capgemini 보고서 PDF ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🧮 Xero</span>
+        <span>Xero Blog · 11/12</span>
+<span class="tag">#Xero</span><span class="tag">#회계법인</span><span class="tag">#FDE</span>      </div>
+      <h3><a href="https://blog.xero.com/news-events/xforce-by-xero-ai-workflows/" target="_blank" rel="noopener">Xero, 회계법인용 AI 워크플로 FDE팀 출범</a></h3>
+<p class="orig">Xforce by Xero: AI workflows built around your practice</p>      <p class="summary">Xero가 현장 파견 엔지니어(FDE)와 파트너 컨설턴트가 회계법인마다 맞춤형 AI 워크플로를 만들어 주는 서비스 &#39;Xforce by Xero&#39;를 베타로 발표함. 5월에 나온 에이전트 빌더 XeroForce, Xero API, Xero OS를 써서 법인 업무 방식에 맞춘 반복 가능한 자동화를 구축함.</p>
+      <ul class="points"><li>호주 Liston Newton Advisory, 영국 Azets 등이 디자인 파트너</li><li>AU·NZ·UK 디자인 파트너 5곳과 베타 개발 중</li><li>워크플로가 접근할 고객·데이터를 법인이 직접 선택함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 엔지니어링 인력이 없는 중소 회계법인에는 도구만 줘서는 도입이 안 된다는 판단으로, 회계 SW 업체가 사람을 붙여 직접 구축해 주는 방식으로 바뀌는 중임. Anthropic·OpenAI의 FDE 모델이 회계 소프트웨어 업계로 번진 사례임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>회계 실무와 AI 엔지니어링을 함께 하는 FDE는 이 독자 프로필에 딱 맞는 호주 내 직무임</span></p>
+<ul><li>Xero Developer 데모 회사에 API 연결하기</li><li>은행거래 대사 자동화 데모를 포트폴리오로 만들기</li><li>Xero·Intuit의 FDE·솔루션 직무 공고 분석하기</li></ul><div class="skills"><span class="skill">Xero API</span><span class="skill">Workflow Automation</span><span class="skill">Forward-Deployed Engineering</span><span class="skill">Bank Reconciliation</span></div>      </div>
+      <div class="links">
+        <a href="https://blog.xero.com/news-events/xforce-by-xero-ai-workflows/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.com.au/story/xero-launches-xeroforce-ai-agent-builder-for-finance" target="_blank" rel="noopener">IT Brief: XeroForce 소개 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 Australian Government (DEWR)</span>
+        <span>Minister for Employment and Workplace Relations · 11/12</span>
+<span class="tag">#호주 정부</span><span class="tag">#일자리</span><span class="tag">#AI 도입</span>      </div>
+      <h3><a href="https://ministers.dewr.gov.au/rishworth/draft-best-practice-guide-ai-adoption-workplace-released" target="_blank" rel="noopener">정부, 직장 내 AI 도입 모범지침 초안 공개</a></h3>
+<p class="orig">Draft Best Practice Guide on the Adoption of AI in the Workplace released</p>      <p class="summary">연방정부가 직장 내 AI 도입에 관한 자율 모범지침 초안을 공개하고 의견수렴에 들어감. 도입 전 직원과 직접 협의하고, 역할이 바뀌는 직원에게는 재교육과 대체 직무를 제시하라는 것이 핵심임.</p>
+      <ul class="points"><li>Plan·Enable·Embed 3개 주제, 8개 실천 원칙으로 구성</li><li>Microsoft·CBA·Kmart·Telstra·노조와 라운드테이블로 마련</li><li>Qantas 850명 해외이전 발표와 같은 주에 공개, 강제력 없음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Qantas 등이 AI를 이유로 감원하며 &#39;AI 워싱(AI washing)&#39; 논란이 커진 가운데, 정부가 &#39;AI 도입은 직원과 함께&#39;를 기본 원칙으로 내놓음. 강제력은 없지만 기업들의 AI 전환 계획에 직원 협의와 재교육을 넣으라는 압력이 될 것임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 도입에서 직원 협의·재교육이 표준이 되면 변화관리까지 아는 AI 인재가 우대받음</span></p>
+<ul><li>지침 초안 읽고 consultation hub에 의견 내기</li><li>프로젝트에 직원 영향·재교육 계획 섹션 추가하기</li><li>재무팀 AI 도입 계획서를 8개 원칙에 맞춰 써 보기</li></ul><div class="skills"><span class="skill">Change Management</span><span class="skill">Responsible AI</span><span class="skill">Workforce Planning</span></div>      </div>
+      <div class="links">
+        <a href="https://ministers.dewr.gov.au/rishworth/draft-best-practice-guide-ai-adoption-workplace-released" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.indailysa.com.au/news/just-in/2026/11/12/labor-unveils-first-workplace-ai-plan" target="_blank" rel="noopener">InDaily(AAP) 보도 ↗</a><a href="https://kfgo.com/2026/11/11/australian-companies-face-ai-washing-claims-after-wave-of-job-cuts-offshoring/" target="_blank" rel="noopener">Reuters: 호주 &#39;AI 워싱&#39; 논란 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 AI 쪽 흐름은 Claude 제조업 플러그인, LangSmith 같은 &#39;에이전트를 업무에 넣고 운영하는 도구&#39;의 확산임. 그런데 재무 쪽 데이터는 은행 73%가 에이전트를 운영하면서도 통제 체계는 8%뿐이고, 대기업 59%가 AI 비용 예산을 넘겼다는 것, 즉 통제와 비용이 따라가지 못한다는 이야기임. 이 빈틈이 바로 재무·회계 실무 경험이 있는 AI 인재가 들어갈 자리이고, Xero의 FDE 모델처럼 &#39;회계를 아는 엔지니어&#39; 수요로 이미 나타나고 있음. 포트폴리오도 에이전트를 만드는 데서 끝내지 말고 통제 매트릭스·비용 예측·사람 승인 흐름까지 갖춘 &#39;감사 가능한 에이전트&#39;로 차별화하길 권함.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>LangSmith 무료 계정으로 에이전트 로그 추적하기</li><li>AI 토큰 비용 예측 엑셀 모델 만들어 보기</li><li>Xero 데모 회사에 API 연결해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">FDE (Forward-Deployed Engineer)</span> — 고객 현장에 들어가 직접 솔루션을 구축해 주는 엔지니어임. 도구만 파는 대신 고객의 업무 방식을 파악해 맞춤 자동화를 만들어 주며, Xero의 Xforce가 이 모델을 회계법인에 적용한 사례임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/17</span><span>Anthropic, Claude for Manufacturing 기술 웨비나 (11:00 a.m. ET)</span></li><li><span class="d">11/20</span><span>LangChain, LangSmith 신기능 발표 이벤트</span></li></ul></section><div class="hashtags">#AI에이전트 #AI거버넌스 #FinOps #Xero #호주AI정책 #재무AI </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-15 · 검색 1시간 2분 · 탐색 17회 · 검색어 79개 · 출처 92곳 → 후보 32건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
