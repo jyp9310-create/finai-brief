@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-16</title>
+<meta name="description" content="AI 에이전트가 결산·은행 창구로…통제·승인 설계가 관건">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 16일 (월)">
+<meta property="og:description" content="AI 에이전트가 결산·은행 창구로…통제·승인 설계가 관건">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-16/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-16/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 16일 (월)</div>
+    <h1>AI 에이전트가 결산·은행 창구로…통제·승인 설계가 관건</h1>
+    <p class="overview">구글이 에이전트형 최상위 모델 Gemini 4 Carbon을 내놓았고, AI 인프라 쪽에서는 Nebius의 자금조달 구조와 엔비디아 CEO 퇴진에 따른 투자 공백이 주목받고 있음. 재무 분야에서는 수익인식 전용 에이전트, 은행 세션 속 AI 에이전트 식별, AI 시대 은행 수익 구조 분석이 나왔고, 호주 RBA는 AI가 청년 고용에 주는 초기 신호를 짚었음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 82개 · 출처 85곳 → 후보 40건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. RightRev, 수익인식 전용 AI 에이전트 7종 출시</div>
+<div class="r">수익인식·Flux·대사처럼 독자가 실무에서 해 본 결산 업무를 MCP 에이전트로 쪼갠 구조라서, 그대로 포트폴리오 설계도로 쓸 수 있음.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">💎 구글 최상위 모델 Gemini 4 Carbon 출시</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🏗️ Nebius, 2027년 400억달러 투자…MS 계약 지연</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">💸 젠슨 황 퇴진에 AI 스타트업 투자 공백 우려</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧾 RightRev, 수익인식 전용 AI 에이전트 7종 출시</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🕵️ Feedzai, 은행 세션 속 AI 에이전트 식별</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 베인 &#34;AI 시대 은행 수익은 시장 1위가 가져간다&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">📉 RBA, AI가 청년 고용에 주는 초기 신호 포착</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">💎 Google DeepMind</span>
+        <span>Google Blog · 11/10</span>
+<span class="tag">#Gemini</span><span class="tag">#에이전트</span><span class="tag">#LLM 가격</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">구글 최상위 모델 Gemini 4 Carbon 출시</a></h3>
+<p class="orig">Gemini 4 Carbon is now available</p>      <p class="summary">구글이 &#39;가장 강력한 모델&#39; Gemini 4 Carbon을 API와 AI Ultra 구독자용으로 공개했음. 오래 걸리는 에이전트 작업, 코딩, 보안에 초점을 맞췄고, 다중 에이전트 기능 /swarm을 프리뷰로 넣었으며, 처음에는 저가로 판매하다가 11월 30일 이후 가격을 2배로 올림.</p>
+      <ul class="points"><li>입력/출력 100만 토큰당 $2/$10, 11/30 이후 $4/$20로 인상</li><li>CursorBench 4.0·Zapier AutomationBench 1위라고 구글이 발표</li><li>에이전트 정직성 벤치마크 375개 과제 통과율 92%(Argon은 70%)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 모델 경쟁의 축이 &#39;작업당 비용&#39;과 장기 에이전트 작업 신뢰성으로 옮겨가고 있음. Hebbia·Balyasny의 금융 리서치 평가에서도 최상위권을 기록해 금융 분야 수요를 직접 겨냥함.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🏗️ Nebius</span>
+        <span>Nebius IR (Q3 2026) / TechCrunch · 11/12</span>
+<span class="tag">#AI 인프라</span><span class="tag">#네오클라우드</span><span class="tag">#자금조달</span>      </div>
+      <h3><a href="https://assets.nebius.com/assets/e2ac679c-fc62-4799-ba0e-6611e59c6863/Nebius-2026-Q3.pdf" target="_blank" rel="noopener">Nebius, 2027년 400억달러 투자…MS 계약 지연</a></h3>
+<p class="orig">Nebius tests the neocloud playbook with $40 billion in planned spending</p>      <p class="summary">GPU 임대 클라우드(네오클라우드) Nebius가 3분기 매출 $981M(전년 대비 +571%)를 발표하고, 2027년 설비투자(capex) $40~45B 계획을 내놓았음. 다만 MS 계약 물량을 공급할 뉴저지 부지가 몇 달 늦어져 2026년 매출 전망을 $3B로 낮췄고, 주가는 17% 떨어졌음.</p>
+      <ul class="points"><li>2027 capex의 최대 85%를 선수금·계약담보 대출로 조달 계획</li><li>MS 계약 최대 $19.4B, 잔여 물량은 2027년 2분기로 지연</li><li>3분기 매출의 약 1/3은 일회성 지급, 2027 매출 목표 $12~13B</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 인프라 확장이 고객 계약을 담보로 한 자산담보 금융(asset-backed financing)에 크게 기대고 있다는 점이 드러남. 공급이 늦어지면 위약금이나 계약 해지로 이어질 수 있어 신용 리스크가 커짐.</p>      <div class="links">
+        <a href="https://assets.nebius.com/assets/e2ac679c-fc62-4799-ba0e-6611e59c6863/Nebius-2026-Q3.pdf" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">💸 Nvidia</span>
+        <span>TechCrunch · 11/13</span>
+<span class="tag">#Nvidia</span><span class="tag">#VC</span><span class="tag">#스타트업</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener">젠슨 황 퇴진에 AI 스타트업 투자 공백 우려</a></h3>
+<p class="orig">Jensen Huang&#39;s departure blasts big hole in AI startup funding, VCs and founders say</p>      <p class="summary">11/13에 전한 CEO 교체 공시 이후 새로 나온 내용은 AI 스타트업 투자에 미칠 영향임. VC들은 CFO 출신 임시 CEO 콜레트 크레스 체제의 엔비디아가 투자를 더 까다롭게 고르고 투자 금액도 줄일 것으로 봄.</p>
+      <ul class="points"><li>PitchBook 기준 올해 엔비디아 참여 투자 라운드 105건</li><li>허깅페이스 $13B 인수는 2027년 종결 예정</li><li>구글·아마존·MS·AMD가 빈자리를 노릴 것이라는 관측</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 그동안 엔비디아가 투자자 명단(cap table)에 있으면 다른 VC도 안심하고 들어왔는데, 그 신호가 약해지면 AI 인프라 스타트업의 기업가치와 자금 조달이 흔들릴 수 있음. 반대로 경쟁 칩 업체에는 기회가 될 수 있음.</p>      <div class="links">
+        <a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener">Musk 등 황 복귀 청원 (TechCrunch) ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧾 RightRev</span>
+        <span>CPA Practice Advisor · 11/13</span>
+<span class="tag">#수익인식</span><span class="tag">#ASC 606</span><span class="tag">#MCP</span>      </div>
+      <h3><a href="https://www.cpapracticeadvisor.com/2026/11/13/rightrev-releases-suite-of-ai-agents-dedicated-solely-to-the-revenue-number/193875/" target="_blank" rel="noopener">RightRev, 수익인식 전용 AI 에이전트 7종 출시</a></h3>
+<p class="orig">RightRev Releases Suite of AI Agents &#39;Dedicated Solely to the Revenue Number&#39;</p>      <p class="summary">수익인식(revenue recognition) 자동화 업체 RightRev가 재무팀 감독 아래 일하는 AI 에이전트 7종 &#39;RightAgents&#39;를 내놓았음. 모든 분개(journal entry)를 계약·데이터·규칙까지 거슬러 추적할 수 있고, 사람이 승인해야 총계정원장(GL)에 반영되며, MCP를 통해 Claude·ChatGPT에서도 실행할 수 있음.</p>
+      <ul class="points"><li>Anomalies·Contract Checklist·Flux·Reconciliation 등 7종</li><li>Contract Checklist는 계약을 ASC 606 체크리스트와 대조</li><li>GL 반영 전 재무팀 승인 필수, 가격·출시일·고객사 미공개</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 결산 AI의 표준이 &#39;자동 전기&#39;가 아니라 &#39;근거 추적 + 사람 승인&#39; 구조로 굳어지고 있음. 감사 대응(audit file)까지 염두에 둔 설계라서 회계 통제(internal control) 관점에서 참고할 만한 사례임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>회계 실무 경험 + MCP 에이전트 = 이 분야에서 가장 바로 써먹을 수 있는 포트폴리오 조합임</span></p>
+<ul><li>샘플 계약으로 AASB 15 체크리스트 추출 에이전트 만들기</li><li>전기 대비 매출 변동(Flux) 설명 초안 자동 생성 데모</li><li>MCP 서버로 엑셀 원장 대사(reconciliation) 연결</li></ul><div class="skills"><span class="skill">ASC 606 / AASB 15</span><span class="skill">MCP</span><span class="skill">Human-in-the-loop</span><span class="skill">Reconciliation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cpapracticeadvisor.com/2026/11/13/rightrev-releases-suite-of-ai-agents-dedicated-solely-to-the-revenue-number/193875/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🕵️ Feedzai</span>
+        <span>PR Newswire (Feedzai) · 11/12</span>
+<span class="tag">#사기탐지</span><span class="tag">#에이전트 커머스</span><span class="tag">#인증</span>      </div>
+      <h3><a href="https://www.prnewswire.com/news-releases/your-next-bank-customer-might-not-be-human-feedzai-helps-banks-spot-ai-agents-at-the-front-door-302937139.html" target="_blank" rel="noopener">Feedzai, 은행 세션 속 AI 에이전트 식별</a></h3>
+<p class="orig">Your Next Bank Customer Might Not Be Human: Feedzai Helps Banks Spot AI Agents at the Front Door</p>      <p class="summary">사기 방지 업체 Feedzai가 Digital Trust 솔루션을 확장해, 은행이 접속 세션의 주인이 사람인지, 고객의 개인 AI 에이전트인지, 사기범인지 구분할 수 있게 했음. 기기 지문(device fingerprinting), 네트워크 위험점수, 암호화 기기 바인딩, 행동 신호를 결합하는 방식임.</p>
+      <ul class="points"><li>최고위험 0.1% 세션에서 사기 탐지 44%↑, 오탐(false positive)은 그대로</li><li>로그인 100만 건당 불필요한 인증 요구 6,000건 감소</li><li>SMS 일회용 비밀번호(OTP) 41% 감소, 수치는 벤더 자체 발표</li></ul>
+<p class="why"><b>💡 왜 중요?</b> ChatGPT Wallet 같은 에이전트 결제가 등장하면서 은행 인증이 &#39;고객 확인&#39;에서 &#39;고객을 대신하는 에이전트 확인&#39;까지 넓어지고 있음. 사기 탐지와 고객 경험(인증 마찰)을 함께 개선했다는 수치는 은행이 도입 여부를 판단하는 핵심 근거임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전트 식별은 사기탐지(fraud)·AML 직무에서 바로 쓰이는 새 역량임</span></p>
+<ul><li>Kaggle 사기 데이터로 이상탐지 모델 만들기</li><li>정밀도·오탐률 지표로 결과 보고서 작성</li></ul><div class="skills"><span class="skill">Fraud detection</span><span class="skill">Anomaly detection</span><span class="skill">Behavioral biometrics</span></div>      </div>
+      <div class="links">
+        <a href="https://www.prnewswire.com/news-releases/your-next-bank-customer-might-not-be-human-feedzai-helps-banks-spot-ai-agents-at-the-front-door-302937139.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://thepaypers.com/fraud-and-fincrime/news/feedzai-expands-digital-trust-to-detect-ai-agents-in-bank-accounts" target="_blank" rel="noopener">The Paypers 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Bain &amp; Company</span>
+        <span>Bain &amp; Company · 11/12</span>
+<span class="tag">#은행</span><span class="tag">#ROE</span><span class="tag">#전략</span>      </div>
+      <h3><a href="https://www.bain.com/about/media-center/press-releases/2026/ai-could-reshape-where-banks-make-money-market-leadership-positions-will-decide-who-keeps-it-bain-company" target="_blank" rel="noopener">베인 &#34;AI 시대 은행 수익은 시장 1위가 가져간다&#34;</a></h3>
+<p class="orig">AI could reshape where banks make money. Market leadership positions will decide who keeps it</p>      <p class="summary">베인이 &#39;Future of Banking&#39; 보고서에서 AI가 앞으로 5년간 은행의 수익원을 바꿔 놓을 것이라고 분석했음. 수익률 회복의 핵심은 비용 효율화보다 사업 부문별 시장 리더십을 지키거나 새로 만드는 데 있다고 봄.</p>
+      <ul class="points"><li>자산 상위 30개 은행 중 1위·근접 2위 사업부 ROE 15%, 나머지 9%</li><li>고객 관성(inertia)에 기댄 수익원이 가장 취약하다고 지적</li><li>대응 3가지: 공격 확장·방어 심화·참여 재검토</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI로 고객이 은행을 갈아타기 쉬워지면, 예금 금리 차처럼 고객이 무심해서 생기던 이익이 줄어듦. &#39;AI = 비용 절감&#39;이라는 통념을 넘어, 어느 사업에서 이길지 고르는 전략 문제로 논의를 옮겼다는 의미가 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>FP&amp;A·전략 면접에서 AI 효과를 ROE 분해로 설명하면 차별화됨</span></p>
+<ul><li>호주 4대 은행 사업부별 ROE 비교표 만들기</li><li>전환 비용이 낮아질 때 예대마진 민감도 분석해 보기</li></ul><div class="skills"><span class="skill">ROE 분석</span><span class="skill">Banking strategy</span><span class="skill">FP&amp;A</span></div>      </div>
+      <div class="links">
+        <a href="https://www.bain.com/about/media-center/press-releases/2026/ai-could-reshape-where-banks-make-money-market-leadership-positions-will-decide-who-keeps-it-bain-company" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">📉 Reserve Bank of Australia</span>
+        <span>Reserve Bank of Australia · 11/9</span>
+<span class="tag">#RBA</span><span class="tag">#노동시장</span><span class="tag">#청년 고용</span>      </div>
+      <h3><a href="https://www.rba.gov.au/publications/insights/australian-economy/2026/monitoring-early-effects-of-ai-on-the-labour-market.html" target="_blank" rel="noopener">RBA, AI가 청년 고용에 주는 초기 신호 포착</a></h3>
+<p class="orig">Monitoring Early Effects of AI on the Labour Market</p>      <p class="summary">RBA 이코노미스트 Mike Major가 Jobs and Skills Australia의 자동화 노출도(automation exposure)로 직업을 5개 구간으로 나눠, ChatGPT 출시(2022년 11월) 이후 AI가 노동시장에 준 영향을 추적했음. 아직 전체적인 충격은 미미하지만, AI 노출이 큰 직업에서 청년 고용이 약해지는 조짐이 보인다고 밝혔음.</p>
+      <ul class="points"><li>노출 최상위 구간에 소프트웨어 개발·사무·행정직 포함</li><li>AI 언급 구인광고: SEEK 2% 돌파, Indeed 약 7%(2026 초)</li><li>20~24세 학사 학위자 실업률 약 6%, 저학력층보다 고용 더 감소</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 중앙은행이 AI의 고용 영향을 정기적으로 지켜보기 시작했다는 점에서, 앞으로 통화정책 판단에 쓰일 지표가 될 수 있음. 다만 인과관계가 아닌 현상을 기술한 분석이고, 직업별 데이터는 2026년 2월까지만 반영됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>신입 사무·개발직은 경쟁이 세지고, AI 관련 구인은 늘어남 — &#39;AI+회계&#39; 조합이 진입 무기임</span></p>
+<ul><li>SEEK에서 &#39;AI accounting&#39; 공고 20개 요구역량 정리</li><li>이력서에 자동화 프로젝트 성과를 수치로 기재</li><li>졸업 전 Big 4·은행 그래드 지원 일정 점검</li></ul><div class="skills"><span class="skill">Labour market data</span><span class="skill">AI finance automation</span><span class="skill">Career positioning</span></div>      </div>
+      <div class="links">
+        <a href="https://www.rba.gov.au/publications/insights/australian-economy/2026/monitoring-early-effects-of-ai-on-the-labour-market.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.hcamag.com/au/news/general/graduate-hiring-and-ai-rba-spots-early-warning-signs-for-young-workers/596590" target="_blank" rel="noopener">HRD(HC Mag) 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>Gemini 4 Carbon은 정직성 벤치마크를 내세웠고, RightRev는 사람 승인과 분개 추적을, Feedzai는 에이전트 식별을 강조했음. 오늘 소식의 공통 주제는 &#39;AI가 직접 행동할 때 어떻게 통제하나&#39;임. 모델 성능이 평준화될수록 재무 분야의 가치는 감사 추적(audit trail), 승인 단계, 오탐 관리 같은 통제 설계에서 나오는데, 이것이 바로 회계 실무자가 강점을 가진 영역임. RBA 자료처럼 신입 사무직 진입 장벽은 높아지고 있으니, &#39;에이전트를 만들 줄 아는 회계 전문가&#39;라는 포지션을 결과물로 증명하는 것이 가장 확실한 전략임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>AI Studio로 연차보고서 요약 테스트하기</li><li>AASB 15 계약 체크리스트 에이전트 설계하기</li><li>SEEK AI 재무 공고 요구역량 정리하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">플럭스 분석 (Flux analysis)</span> — 기간별 계정 잔액이 왜 바뀌었는지 설명하는 분석임. 결산 때 전월·전년 대비 큰 변동을 찾아 원인을 적는 작업으로, RightRev의 Flux 에이전트는 변동을 계약 단위까지 연결해 설명 초안을 써 줌.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/30</span><span>Gemini 4 Carbon 할인가($2/$10) 마지막 날, 이후 $4/$20로 인상</span></li></ul></section><div class="hashtags">#AI에이전트 #재무자동화 #Gemini4 #수익인식 #RBA #핀테크 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-16 · 검색 1시간 1분 · 탐색 17회 · 검색어 82개 · 출처 85곳 → 후보 40건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
