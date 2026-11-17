@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-18</title>
+<meta name="description" content="GPT-6.2·Gemini Tasks 출시, 재무 실무는 에이전트로 재편">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 18일 (수)">
+<meta property="og:description" content="GPT-6.2·Gemini Tasks 출시, 재무 실무는 에이전트로 재편">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-18/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-18/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 18일 (수)</div>
+    <h1>GPT-6.2·Gemini Tasks 출시, 재무 실무는 에이전트로 재편</h1>
+    <p class="overview">OpenAI는 더 싸고 강한 GPT-6.2를 내놨고, 구글은 결제까지 하는 에이전트를 한국·호주에 무료로 풀었음. 엔비디아는 CEO 공백 속에서도 매출이 103% 늘었음. 재무 쪽에서는 IB 모델링, 감사 공시 점검, 은행 통제 설계가 모두 &#39;AI가 작성하고 사람이 검토·승인하는&#39; 구조로 이동 중임.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 74개 · 출처 83곳 → 후보 33건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-7">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">7. 콴타스, 재무·HR 등 850개 직무 감축…AI·오프쇼어링</div>
+<div class="r">멜버른에서 재무+AI 커리어를 준비하는 독자에게 호주 재무 백오피스 일자리가 어떻게 재편되는지, 어떤 역할이 남는지를 가장 직접적으로 보여 주는 사례임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🧠 OpenAI, GPT-6.2 Astra·Sol 출시…Astra API 20% 인하</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">🛒 구글 Gemini Tasks 무료 확대…한국·호주 포함</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">📈 엔비디아 3분기 매출 $1,158억…전년비 103%↑</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">💼 Model ML, $2.5억 유치…IB 주니어 업무 AI 자동화</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🔍 독일 dnl, AI 에이전트 US GAAP 공시 체크리스트 출시</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 딜로이트 2027 은행 전망: 74% &#39;자체 AI 인프라&#39;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">✈️ 콴타스, 재무·HR 등 850개 직무 감축…AI·오프쇼어링</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🧠 OpenAI</span>
+        <span>OpenAI · 11/17</span>
+<span class="tag">#OpenAI</span><span class="tag">#LLM</span><span class="tag">#API 가격</span>      </div>
+      <h3><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank" rel="noopener">OpenAI, GPT-6.2 Astra·Sol 출시…Astra API 20% 인하</a></h3>
+<p class="orig">Introducing GPT-6.2 Astra and Sol</p>      <p class="summary">OpenAI가 고난도 연구·코딩용 프리미엄 모델 GPT-6.2 Astra와 일상 업무용 저가 모델 GPT-6.2 Sol을 ChatGPT Work·Codex와 API에 공개함. Astra API 가격은 이전 세대보다 20% 낮은 입력 100만 토큰당 $8, 출력 $40이며, Sol은 $2/$10으로 동결됨.</p>
+      <ul class="points"><li>Astra API $8/$40(입력/출력, 100만 토큰), 이전 대비 20% 인하</li><li>Sol은 $2/$10 동결, FrontierCode 2.0서 Astra와 0.5점 차</li><li>Astra, 대비 프레임워크상 자기개선 &#39;High&#39; 도달한 첫 공개 모델</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어급 성능이 빠르게 싸지면서 &#39;거의 같은 성능의 저가 모델&#39;(Sol)이 실무 기본값이 되는 흐름임. 동시에 사이버·자기개선 위험 등급이 올라가 안전장치 논쟁도 커지고 있음.</p>      <div class="links">
+        <a href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531" target="_blank" rel="noopener">OpenAI 개발자 커뮤니티 공지 ↗</a><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">The Decoder 벤치마크 정리 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">🛒 Google</span>
+        <span>Google Blog · 11/17</span>
+<span class="tag">#Google</span><span class="tag">#AI 에이전트</span><span class="tag">#결제</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener">구글 Gemini Tasks 무료 확대…한국·호주 포함</a></h3>
+<p class="orig">Tasks in Gemini: free for everyone, plus new features</p>      <p class="summary">구글이 전화 예약, 공과금 청구서 분석, Google Pay 결제까지 대신 처리하는 에이전트 기능 Tasks in Gemini를 Gemini 4 Hydrogen 기반으로 미국·일본·한국·캐나다·호주·인도에서 무료로 제공하기 시작함. 이전에는 테스터와 미국 AI Ultra 구독자 전용이었으며, 이번 확대와 함께 결제 전 확인, 지출 한도, 격리 VM 같은 안전장치가 함께 제공됨.</p>
+      <ul class="points"><li>미국·일본·한국·캐나다·호주·인도 무료, Gemini 4 Hydrogen 기반</li><li>Google Pay·AP2로 결제, &#39;Buy&#39; 전 확인·지출 상한 설정 가능</li><li>작업마다 계정 전용 격리 VM(Agent Compute Engine)에서 실행</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트가 &#39;돈을 쓰는&#39; 단계까지 대중화됨. 이제는 결제 승인, 한도, 프롬프트 인젝션 방어 같은 통제 설계가 핵심 경쟁 요소임.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">📈 NVIDIA</span>
+        <span>GlobeNewswire (NVIDIA) · 11/17</span>
+<span class="tag">#NVIDIA</span><span class="tag">#실적</span><span class="tag">#AI 인프라</span>      </div>
+      <h3><a href="https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" target="_blank" rel="noopener">엔비디아 3분기 매출 $1,158억…전년비 103%↑</a></h3>
+<p class="orig">NVIDIA Announces Financial Results for Third Quarter Fiscal 2027</p>      <p class="summary">엔비디아가 젠슨 황 퇴진 후 첫 실적에서 FY2027 3분기(10월 25일 마감) 매출 $1,158억을 발표함. 전년 대비 103% 증가했고 데이터센터 매출은 $1,076억임. 4분기 매출 가이던스는 $1,300억(±3%)이며, 중국 데이터센터 매출은 0으로 가정함.</p>
+      <ul class="points"><li>매출 $1,158억(+103% YoY), 데이터센터 $1,076억(+110%)</li><li>GAAP 매출총이익률 74.8%, 희석 EPS $2.70</li><li>4Q 가이던스 $1,300억±3%, 중국 데이터센터 매출 0 가정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> CEO 공백과 칩 우회 수출 조사 속에서도 AI 인프라 수요가 꺾이지 않았음을 보여 줌. AI 투자 사이클이 계속될지 가늠하는 바로미터임.</p>      <div class="links">
+        <a href="https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.stocktitan.net/news/NVDA/nvidia-announces-financial-results-for-third-quarter-fiscal-fpx9dw5egxqa.html" target="_blank" rel="noopener">StockTitan 실적 요약 ↗</a><a href="https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/" target="_blank" rel="noopener">TechCrunch 실적 전 쟁점 정리 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">💼 Model ML</span>
+        <span>TechCrunch · 11/17</span>
+<span class="tag">#투자은행</span><span class="tag">#AI 에이전트</span><span class="tag">#펀딩</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/" target="_blank" rel="noopener">Model ML, $2.5억 유치…IB 주니어 업무 AI 자동화</a></h3>
+<p class="orig">Model ML raises $250M to automate investment banking grunt work</p>      <p class="summary">런던 스타트업 Model ML이 General Atlantic·QED Investors 공동 주도로 $2.5억 시리즈 B를 유치하며 기업가치 $15억을 인정받음. AI 에이전트가 Excel·PowerPoint 안에서 재무 모델·피치덱·실사 보고서를 만들고, 딜 상황이 바뀌면 자동으로 업데이트함.</p>
+      <ul class="points"><li>시리즈 B $2.5억, 기업가치 $15억, 시리즈 A($7,500만) 후 약 1년</li><li>Excel·PPT 연동 에이전트가 재무모델·피치덱·실사보고서 작성</li><li>오픈소스 모델로 프런티어 모델 대비 약 2% 비용 주장</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 투자은행·컨설팅의 주니어 분석 업무(모델링·자료 작성)가 AI 에이전트의 첫 타깃이 되고 있음. Rogo($20억), Hebbia, Anthropic·OpenAI와 경쟁하는 시장이 빠르게 커지는 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>재무 모델링 실무 경험에 AI 구현 능력을 더한 사람이 바로 이런 회사들이 찾는 인재상임</span></p>
+<ul><li>3-statement 모델을 LLM이 갱신하는 데모 만들기</li><li>Rogo·Model ML 채용공고 요구 역량 정리하기</li><li>오픈소스 LLM vs GPT 비용·정확도 비교하기</li></ul><div class="skills"><span class="skill">Financial Modeling</span><span class="skill">Excel 자동화(openpyxl)</span><span class="skill">Agentic AI</span><span class="skill">Open-source LLM</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🔍 dnl</span>
+        <span>Accounting Today · 11/16</span>
+<span class="tag">#감사</span><span class="tag">#공시</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://www.accountingtoday.com/news/berlin-based-dsl-enters-u-s-market-with-ai-driven-gaap-checklist-for-auditors" target="_blank" rel="noopener">독일 dnl, AI 에이전트 US GAAP 공시 체크리스트 출시</a></h3>
+<p class="orig">Germany&#39;s dnl enters U.S. with AI-driven GAAP Checklist</p>      <p class="summary">베를린의 감사·회계 솔루션 기업 dnl이 AI 에이전트 기반 US GAAP 공시 체크리스트(Disclosure Checklist)로 미국 시장에 진출함. 에이전트가 공시 누락과 수치 정합성을 점검하고, 확신이 없는 항목은 감사인에게 제안으로 넘김. 회사는 감사인이 평가하면 AI 답변을 감사 증거(AU-C 500, SAS 142)로 쓸 수 있다고 주장함.</p>
+      <ul class="points"><li>공시 요건·합계·주석·전기 비교수치를 PDF·Excel 전반서 점검</li><li>모든 답변에 근거 페이지 링크, 수락·검토자 기록(AU-C 230)</li><li>US GAAP 비상장사·ASC 958 비영리·지방정부 보고 지원</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감사에서 반복 업무인 공시 체크리스트 점검이 에이전트로 넘어가면서 &#39;AI 산출물을 감사 증거로 쓸 수 있나&#39;가 실무 쟁점이 됨. Caseware·DataSnipper 등도 비슷한 제품으로 경쟁 중임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>&#39;공시 체크리스트 + 근거 링크 + 사람 검토&#39; 구조는 감사·결산 경험을 살려 포트폴리오로 그대로 재현할 수 있음</span></p>
+<ul><li>AASB/IFRS 공시 10항목으로 RAG 점검 데모 만들기</li><li>답변마다 근거 페이지 인용을 강제하기</li><li>ASA 500(감사 증거) 요건 1장으로 정리하기</li></ul><div class="skills"><span class="skill">RAG</span><span class="skill">Document AI(PDF 파싱)</span><span class="skill">Audit Evidence</span><span class="skill">IFRS/AASB</span></div>      </div>
+      <div class="links">
+        <a href="https://www.accountingtoday.com/news/berlin-based-dsl-enters-u-s-market-with-ai-driven-gaap-checklist-for-auditors" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Deloitte</span>
+        <span>Deloitte Insights · 11/12</span>
+<span class="tag">#은행</span><span class="tag">#AI 거버넌스</span><span class="tag">#보고서</span>      </div>
+      <h3><a href="https://www.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html" target="_blank" rel="noopener">딜로이트 2027 은행 전망: 74% &#39;자체 AI 인프라&#39;</a></h3>
+<p class="orig">2027 Banking and Capital Markets Outlook</p>      <p class="summary">딜로이트 금융서비스센터는 &#39;2027 은행·자본시장 전망&#39;에서 미국 은행이 2027년을 탄탄하게 시작하지만 AI 투자 성과를 증명해야 하는 시험대에 섰다고 진단함. 설문에 응한 은행 기술 리더의 74%가 2028년까지 자체(private) AI 인프라 운영을 예상했으며, 딜로이트는 에이전틱 AI에 고유 ID·최소 권한·거래 한도 같은 통제를 둘 것을 권고함.</p>
+      <ul class="points"><li>기술 리더 74%, 2028년까지 private AI 인프라 운영 예상</li><li>자체 &#39;AI 팩토리&#39;, API 대비 3년간 50% 넘는 비용 절감 가능</li><li>AI 네이티브 상품, 2030년 기관금융 매출 $750억+ 추정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 AI가 &#39;API 빌려 쓰기&#39;에서 &#39;자체 인프라와 통제 체계&#39;로 넘어가고 있다는 신호임. 에이전트의 권한·한도 관리가 리스크·컴플라이언스의 새 영역이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>에이전틱 AI 통제(고유 ID·최소 권한·거래 한도)는 내부통제(ICFR·SoD)와 그대로 겹쳐 재무 출신이 강점을 살릴 수 있는 영역임</span></p>
+<ul><li>에이전트 권한·한도를 SoD 매트릭스로 그려 보기</li><li>AI 팩토리 vs API 3년 TCO 엑셀 모델 만들기</li></ul><div class="skills"><span class="skill">AI Governance</span><span class="skill">Internal Controls(SoD)</span><span class="skill">TCO 분석</span><span class="skill">Private LLM Hosting</span></div>      </div>
+      <div class="links">
+        <a href="https://www.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://fintechmagazine.com/news/deloitte-2027-ai-returns-lending-and-cyber-test-us-banks" target="_blank" rel="noopener">FinTech Magazine 요약 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-7">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">✈️ Qantas</span>
+        <span>Region Canberra · 11/10</span>
+<span class="tag">#호주</span><span class="tag">#재무 백오피스</span><span class="tag">#일자리</span>      </div>
+      <h3><a href="https://region.com.au/qantas-to-slash-850-back-office-jobs-as-part-of-offshoring-and-ai-partnership/1014827/" target="_blank" rel="noopener">콴타스, 재무·HR 등 850개 직무 감축…AI·오프쇼어링</a></h3>
+<p class="orig">Qantas to slash 850 back-office jobs as part of offshoring and AI partnership</p>      <p class="summary">콴타스가 Accenture와 백오피스 시스템·프로세스·데이터를 현대화하는 전략 파트너십을 맺었고, 이로 인해 재무·조달·인사·마케팅 등 약 850개 직무가 향후 수년간 영향을 받는다고 밝힘. 업무는 주로 인도의 Accenture 팀으로 넘어간 뒤 자동화·AI로 추가 전환될 예정이며, 첫 변화는 2027년 중반까지 시행됨.</p>
+      <ul class="points"><li>약 850개 직무(재무·조달·인사·마케팅), 1차 변화는 2027년 중반</li><li>Accenture 팀(주로 인도)이 맡은 뒤 자동화·AI로 단계 전환</li><li>레거시 앱 1,000개+ 정리가 명분, 노조는 &#39;AI는 연막&#39; 반발</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 호주 대기업의 재무 백오피스가 &#39;오프쇼어링 → AI 자동화&#39; 2단계로 재편되는 전형적인 사례임. ABC는 이를 Atlassian·WiseTech 등 AI와 연결된 감원 흐름과 함께 다룸.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>단순 처리형 재무 직무는 줄고, 이관·자동화를 설계하고 감독하는 &#39;AI+재무&#39; 역할이 남는다는 신호임</span></p>
+<ul><li>Accenture·Big4 호주 Finance Transformation 공고 분석</li><li>결산 프로세스 하나를 자동화 설계서로 문서화</li><li>&#39;AI 감독·통제&#39; 경험을 이력서 성과로 표현하기</li></ul><div class="skills"><span class="skill">Finance Transformation</span><span class="skill">Process Mining</span><span class="skill">Agentic AI/RPA</span><span class="skill">Change Management</span></div>      </div>
+      <div class="links">
+        <a href="https://region.com.au/qantas-to-slash-850-back-office-jobs-as-part-of-offshoring-and-ai-partnership/1014827/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.abc.net.au/listen/programs/abc-news-top-stories/is-qantas-the-tip-of-the-ai-job-loss-iceberg/107380378" target="_blank" rel="noopener">ABC News Top Stories: Is Qantas the tip of the AI job loss iceberg? ↗</a><a href="https://www.itnews.com.au/news/qantas-taps-accenture-for-major-it-and-data-modernisation-630243" target="_blank" rel="noopener">iTnews: Qantas taps Accenture for IT and data modernisation ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>OpenAI·구글은 더 싸고 강한 모델과 결제까지 하는 에이전트를 내놨고, 재무 쪽에서는 IB 모델링(Model ML), 감사 공시 점검(dnl), 은행 통제(딜로이트)가 같은 방향으로 움직이고 있음. 공통점은 AI가 &#39;작성·점검&#39;을 맡고 사람은 &#39;근거 검토·승인·한도 설정&#39;을 맡는 구조라는 점임. 콴타스 사례처럼 단순 처리형 재무 직무는 줄어들지만, 이 통제 구조를 설계하고 감독할 사람은 오히려 부족해지고 있음. 재무 실무 경험에 RAG·에이전트 구현 능력을 더해 &#39;근거가 남는 자동화&#39;를 보여 주는 포트폴리오가 호주 취업 시장에서 차별점이 될 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>GPT-6.2 Sol로 재무제표 주석 요약 테스트하기</li><li>IFRS 공시 10항목으로 RAG 점검 데모 만들기</li><li>Big4 호주 Finance Transformation 공고 3개 분석하기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">공시 체크리스트(Disclosure Checklist)</span> — 재무제표에 필요한 공시가 빠짐없이 들어갔는지 확인하는 점검표임. 감사·결산 때 수백 개 항목을 사람이 일일이 대조해 왔기 때문에 AI 에이전트 자동화의 대표 타깃이 되고 있음.</p></section><div class="hashtags">#GPT62 #GeminiTasks #엔비디아실적 #AI감사 #재무자동화 #콴타스 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-18 · 검색 1시간 1분 · 탐색 17회 · 검색어 74개 · 출처 83곳 → 후보 33건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
