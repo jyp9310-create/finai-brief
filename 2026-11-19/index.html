@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-19</title>
+<meta name="description" content="앤트로픽 상장일, 금융 AI의 화두는 &#39;통제와 책임&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 19일 (목)">
+<meta property="og:description" content="앤트로픽 상장일, 금융 AI의 화두는 &#39;통제와 책임&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-19/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-19/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 19일 (목)</div>
+    <h1>앤트로픽 상장일, 금융 AI의 화두는 &#39;통제와 책임&#39;</h1>
+    <p class="overview">앤트로픽은 공모가 $83 보도가 나온 가운데 오늘 나스닥에 상장함. MS는 자체 MAI 모델로 OpenAI·앤트로픽과 가격 경쟁에 나섬. 금융 쪽에서는 BlackLine의 사람 승인 통제, 신한은행의 자체 평가셋, 미국 은행 약관, ASIC 집행 우선순위가 모두 &#39;AI를 어떻게 검증하고 누가 책임지나&#39;를 다룸.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 86개 · 출처 79곳 → 후보 46건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-5">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">5. 신한은행, 은행업무 LLM 평가셋 K-BankEval 발표</div>
+<div class="r">재무·회계 문항으로 평가셋을 만들어 LLM을 비교하는, 바로 따라 할 수 있는 포트폴리오 설계도를 은행 실사례로 보여 줌.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">📈 앤트로픽 공모가 $83 보도…오늘 나스닥 상장</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">💻 MS, 자체 코딩모델 MAI Code 2 등 7종 공개</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🔒 구글, Gemini 기록 꺼도 대화 약 2개월 보관</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧾 BlackLine, OpenAI로 &#39;통제되는&#39; 결산 에이전트</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">🏦 신한은행, 은행업무 LLM 평가셋 K-BankEval 발표</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">⚠️ 美 은행들 &#39;AI 에이전트 해킹 손실도 고객 책임&#39;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">⚖️ ASIC, 2027 집행 우선순위에 &#39;AI 소비자 피해&#39;</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">📈 Anthropic</span>
+        <span>Yahoo Finance (Bloomberg 인용) · 11/18</span>
+<span class="tag">#IPO</span><span class="tag">#Anthropic</span><span class="tag">#AI 투자</span>      </div>
+      <h3><a href="https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-set-to-price-stock-between-70-and-78-as-trading-starts-thursday-174130523.html" target="_blank" rel="noopener">앤트로픽 공모가 $83 보도…오늘 나스닥 상장</a></h3>
+<p class="orig">Anthropic IPO live: Company said to price stock at $83, begin trading Thursday</p>      <p class="summary">Bloomberg 보도에 따르면 앤트로픽이 IPO 공모가를 희망 범위($70–78)보다 높은 주당 $83로 정했고, 미국 시간 11월 19일부터 나스닥에서 &#39;ANT&#39;로 거래됨. 앞서 11월 17일 공시에서는 상장 후 지분이 아마존 약 14.7%, 구글 약 13.7%라는 점과 칩·클라우드 파트너 대상 $260억 사모 배정 계획이 공개됨.</p>
+      <ul class="points"><li>공모가 $83(보도), 희망범위 $70–78 상회, 청약 약 6배 몰림</li><li>Class A 8.25억 주, 나스닥 &#39;ANT&#39;, 주관사 골드만·모건스탠리</li><li>상장 후 아마존 ~14.7%·구글 ~13.7%, AWS에 10년간 $1,000억+ 지출 약정</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 AI 랩의 첫 대형 상장임. 앞으로 AI 기업 가치평가와 공시(고객 집중도, 클라우드 장기 약정)의 기준점이 됨.</p>      <div class="links">
+        <a href="https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-set-to-price-stock-between-70-and-78-as-trading-starts-thursday-174130523.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/" target="_blank" rel="noopener">TechCrunch: 아마존·구글 상장 후 지분 약 30% ↗</a><a href="https://www.bloomberg.com/news/articles/2026-11-18/anthropic-said-to-be-weighing-ipo-price-as-high-as-85-per-share" target="_blank" rel="noopener">Bloomberg: 공모가 최대 $85 검토 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">💻 Microsoft</span>
+        <span>Microsoft AI · 11/17</span>
+<span class="tag">#Microsoft</span><span class="tag">#코딩 모델</span><span class="tag">#Ignite</span>      </div>
+      <h3><a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/" target="_blank" rel="noopener">MS, 자체 코딩모델 MAI Code 2 등 7종 공개</a></h3>
+<p class="orig">MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices</p>      <p class="summary">MS가 Ignite 2026에서 자체 코딩 모델 MAI Code 2·Code 2 Flash를 비롯한 MAI 모델 7종과 2세대 AI 칩 Maia 200을 공개함. MS는 OpenAI·앤트로픽 모델과 비슷한 성능을 훨씬 낮은 가격에 낸다고 주장하며(자체 측정), 파트너 모델 의존을 줄이는 중임.</p>
+      <ul class="points"><li>MAI Code 2: GPT-6.1 Sol 성능의 98%를 가격 40%에 냄(자체 벤치)</li><li>Claude Opus 5.5 대비 성능 96%·가격 5%, 50% 프로모션가 기준</li><li>Decision 1.1은 79배 저렴, Maia 200은 와트당 토큰 1.7배</li></ul>
+<p class="why"><b>💡 왜 중요?</b> MS가 OpenAI·앤트로픽의 고객이면서 경쟁자가 됨. &#39;충분히 좋은 성능 + 저가&#39; 경쟁이 본격화되면서 기업의 모델 선택과 라우팅이 비용 관리의 핵심이 됨.</p>      <div class="links">
+        <a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank" rel="noopener">Microsoft AI: Ignite 2026 모델 7종 발표 ↗</a><a href="https://www.axios.com/2026/11/17/microsoft-ai-models-openai-anthropic-ignite" target="_blank" rel="noopener">Axios 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🔒 Google</span>
+        <span>Google Blog · 11/16</span>
+<span class="tag">#Gemini</span><span class="tag">#개인정보</span><span class="tag">#데이터 거버넌스</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/" target="_blank" rel="noopener">구글, Gemini 기록 꺼도 대화 약 2개월 보관</a></h3>
+<p class="orig">We&#39;re updating controls in the Gemini app</p>      <p class="summary">구글이 Gemini 앱의 &#39;Keep Activity&#39; 설정을 채팅 기록과 AI 학습 허용, 두 가지로 나눔. 대신 기록을 끈 채팅의 보관 기간은 72시간에서 약 2개월로 늘어나며, 앞으로 몇 주 동안 전 세계에 순차 적용됨.</p>
+      <ul class="points"><li>기록 OFF 채팅 보관: 72시간 → 약 2개월로 연장</li><li>채팅 기록과 AI 학습 동의를 별도 설정으로 분리</li><li>보관 데이터는 안전·보안 목적이며 모델 학습엔 안 씀(구글 설명)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> &#39;기록 끔&#39;이 곧바로 삭제된다는 뜻이 아니게 됨. 민감 데이터를 다루는 기업은 AI 도구별 보관 정책을 다시 따져 봐야 함. OpenAI·앤트로픽의 임시 채팅 보관 기간은 30일임.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a><a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener">Gemini Apps Privacy Hub ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card" id="item-4">
+      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧾 BlackLine / OpenAI</span>
+        <span>GlobeNewswire (BlackLine 보도자료) · 11/17</span>
+<span class="tag">#결산 자동화</span><span class="tag">#에이전틱 AI</span><span class="tag">#내부통제</span>      </div>
+      <h3><a href="https://www.globenewswire.com/news-release/2026/11/17/3404542/0/en/blackline-to-bring-governed-agentic-ai-to-the-office-of-the-cfo-with-openai.html" target="_blank" rel="noopener">BlackLine, OpenAI로 &#39;통제되는&#39; 결산 에이전트</a></h3>
+<p class="orig">BlackLine to Bring Governed Agentic AI to the Office of the CFO with OpenAI</p>      <p class="summary">결산·계정조정 소프트웨어 기업 BlackLine이 자사 Agentic Financial Operations Platform에 OpenAI 프런티어 모델을 넣어 회계 예외(exception) 분석과 리스크 예측 에이전트를 지원함. 또 Finance Control Console을 OpenAI와 연동해 재무팀이 에이전트 활동을 모니터링하고, 행동 한도를 정하고, 민감한 작업에는 사람 승인을 요구할 수 있게 함. 이 정책들은 감사 추적이 가능함.</p>
+      <ul class="points"><li>고객사 4,300여 곳이 쓰는 결산 플랫폼에 OpenAI 모델 탑재</li><li>Finance Control Console로 에이전트 한도·사람 승인 설정</li><li>출시일·가격은 미공개, OpenAI 글로벌 컨트롤러도 코멘트함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 회계 AI 경쟁의 초점이 &#39;얼마나 정확한가&#39;에서 &#39;얼마나 통제되고 감사 가능한가&#39;로 옮겨 가는 중임. 감사인이 납득할 만한 통제 설계가 제품 차별점이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>결산 실무 경험에 에이전트 통제 설계를 더한 조합이 지금 가장 수요가 큰 역량임.</span></p>
+<ul><li>계정조정 에이전트에 승인 단계 넣은 데모 만들기</li><li>SOX 통제 관점으로 에이전트 로그 설계해 보기</li></ul><div class="skills"><span class="skill">Account reconciliation</span><span class="skill">Human-in-the-loop</span><span class="skill">Internal controls (SOX)</span><span class="skill">Agent governance</span></div>      </div>
+      <div class="links">
+        <a href="https://www.globenewswire.com/news-release/2026/11/17/3404542/0/en/blackline-to-bring-governed-agentic-ai-to-the-office-of-the-cfo-with-openai.html" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.stocktitan.net/news/BL/black-line-to-bring-governed-agentic-ai-to-the-office-of-the-cfo-2m0s0rjenpcs.html" target="_blank" rel="noopener">StockTitan 보도자료 전문 ↗</a>      </div>
+    </article>
+    <article class="card is-pick" id="item-5">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">🏦 신한은행</span>
+        <span>파이낸셜뉴스 · 11/16</span>
+<span class="tag">#LLM 평가</span><span class="tag">#은행 AI</span><span class="tag">#AI 에이전트</span>      </div>
+      <h3><a href="https://www.fnnews.com/news/202611161400551053" target="_blank" rel="noopener">신한은행, 은행업무 LLM 평가셋 K-BankEval 발표</a></h3>
+<p class="orig">신한은행, ICAIF 2026서 은행 업무 LLM 평가 &#39;K-BankEval&#39;·AI 에이전트 검증 &#39;Agent Foundry&#39; 발표</p>      <p class="summary">신한은행이 11월 15일 이탈리아 밀라노에서 열린 ICAIF 2026 워크숍에서 논문 2편을 발표함. 하나는 은행 업무용 LLM 벤치마크 K-BankEval이고, 다른 하나는 에이전트 검증 플랫폼 Agent Foundry임. 6개 LLM을 비교한 결과, 범용 성능이 높다고 은행 실무 성능도 높은 것은 아니었음.</p>
+      <ul class="points"><li>K-BankEval: 5,000문항·6개 영역(RAG, tool calling 등)</li><li>6개 LLM 비교 결과, 범용 성능과 은행 실무 성능이 다름</li><li>Agent Foundry: 최종 답뿐 아니라 툴 실행 로그·과정까지 검증</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 금융사가 공개 리더보드가 아니라 자체 업무 평가셋으로 모델을 고르는 흐름임. 평가(eval) 설계와 과정 검증이 금융 AI 팀의 핵심 역량이 되고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>결산·세무 문항으로 &#39;K-BankEval 축소판&#39;을 만들면 차별화된 포트폴리오가 됨.</span></p>
+<ul><li>결산·IFRS 문항 100개 평가셋 만들기</li><li>LLM 3종 점수 비교 후 GitHub에 공개하기</li></ul><div class="skills"><span class="skill">LLM evaluation</span><span class="skill">Benchmark design</span><span class="skill">RAG</span><span class="skill">Tool calling</span></div>      </div>
+      <div class="links">
+        <a href="https://www.fnnews.com/news/202611161400551053" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.newspim.com/news/view/20261116000814" target="_blank" rel="noopener">뉴스핌 보도 ↗</a><a href="https://www.businesskorea.co.kr/news/articleView.html?idxno=281388" target="_blank" rel="noopener">BusinessKorea (영문) ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">⚠️ Citibank · Citizens · PNC</span>
+        <span>TechCrunch · 11/18</span>
+<span class="tag">#에이전틱 뱅킹</span><span class="tag">#약관</span><span class="tag">#책임 소재</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/" target="_blank" rel="noopener">美 은행들 &#39;AI 에이전트 해킹 손실도 고객 책임&#39;</a></h3>
+<p class="orig">More banks say customers using AI agents are on their own — even if they get hacked</p>      <p class="summary">씨티은행이 온라인 이용약관을 바꿔, 외부 AI 에이전트에 계좌 접근 권한을 준 고객이 그 에이전트의 행위와 해킹으로 인한 손실까지 책임지게 함. PNC도 11월 18일 약관을 바꿨고 Citizens는 고객에게 이메일로 경고했음. JPMorgan·BofA는 10월에 비슷한 정책을 발표함.</p>
+      <ul class="points"><li>Citi: 외부 AI 에이전트 행위와 해킹 손실은 고객 책임</li><li>PNC는 11/18 약관 변경, Citizens는 고객 이메일로 경고</li><li>은행 자체 AI 에이전트를 쓰면 추가 책임 없음 → 이중 기준</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 에이전트가 대신 금융거래를 하는 시대의 책임 소재를 은행이 약관으로 먼저 정하고 있음. 에이전트 결제·자산관리 서비스에서는 권한·보안 설계가 진입장벽이 됨.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AI 에이전트 금융 서비스의 핵심 쟁점은 기술보다 권한과 책임 설계임.</span></p>
+<ul><li>읽기전용 vs 실행권한 리스크 표 정리하기</li><li>호주 CDR(오픈뱅킹) 규정과 비교해 보기</li></ul><div class="skills"><span class="skill">Agentic payments</span><span class="skill">Liability</span><span class="skill">Consumer Data Right</span><span class="skill">Access control</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">⚖️ ASIC</span>
+        <span>ASIC Media Release · 11/18</span>
+<span class="tag">#ASIC</span><span class="tag">#AI 규제</span><span class="tag">#호주 금융</span>      </div>
+      <h3><a href="https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-286mr-asic-to-target-cost-of-living-and-tech-related-consumer-harm-in-2027" target="_blank" rel="noopener">ASIC, 2027 집행 우선순위에 &#39;AI 소비자 피해&#39;</a></h3>
+<p class="orig">26-286MR ASIC to target cost of living and tech-related consumer harm in 2027</p>      <p class="summary">ASIC이 연례 포럼(Annual Forum)에서 2027년 9대 집행(enforcement) 우선순위를 발표함. 4번째 항목은 &#39;AI·자동화 시스템 등 부실하게 구현된 기술로 인한 소비자 피해&#39;임. 오해 소지가 있는 정보 제공, 부적절한 자동 결정, 고객 지원 차단 같은 심각한 실패를 집중 단속하겠다는 것임.</p>
+      <ul class="points"><li>9대 우선순위 중 4번: AI·자동화 시스템으로 인한 소비자 피해</li><li>민원·사기 대응·보험청구에선 사람 검토(human review) 강조</li><li>감사인 등 게이트키퍼 위법, 재무보고 의무 위반도 목록에 포함</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Sarah Court 의장의 말처럼 &#34;기술은 새로워도 책임은 그대로&#34;임. 호주 금융사에게 AI는 이제 혁신 과제이자 집행 리스크이기도 함. 그래서 모델 검증과 사람 검토 체계를 설계할 인력의 수요가 커짐.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>호주 금융권 면접에서 &#39;ASIC 2027 우선순위 4번&#39;을 근거로 AI 통제 설계를 설명할 수 있으면 차별화됨.</span></p>
+<ul><li>ASIC 9대 우선순위 원문 읽고 요약하기</li><li>챗봇 프로젝트에 사람 검토 이관 기능 넣기</li></ul><div class="skills"><span class="skill">AI governance</span><span class="skill">Regulatory compliance</span><span class="skill">Human review</span><span class="skill">RegTech</span></div>      </div>
+      <div class="links">
+        <a href="https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-286mr-asic-to-target-cost-of-living-and-tech-related-consumer-harm-in-2027" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.asic.gov.au/about-asic/news-centre/speeches/asic-annual-forum-2026-enforcement-priorities" target="_blank" rel="noopener">ASIC Annual Forum 2026: Enforcement priorities 연설 ↗</a><a href="https://financemagnates.com/forex/bots-dont-get-a-pass-asic-adds-ai-failures-to-2027-enforcement-list" target="_blank" rel="noopener">Finance Magnates 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>모델 성능 차이는 줄고(MS 주장: 성능 98%·가격 40%) 가격은 내려가고 있음. 그래서 금융 현장의 경쟁력은 &#39;어떤 모델을 쓰나&#39;보다 &#39;어떻게 검증하고 통제하나&#39;로 옮겨 가는 중임. 신한의 K-BankEval, BlackLine의 Finance Control Console, ASIC의 사람 검토 강조, 미국 은행의 책임 약관이 모두 같은 방향을 가리킴. 재무·회계 실무를 아는 AI 전공자에게는 결산·감사 통제(승인 워크플로, 감사 추적)를 에이전트 설계로 옮기는 능력이 가장 희소한 강점이고, 포트폴리오도 단순 챗봇보다 &#39;평가셋과 승인 로그를 갖춘 에이전트&#39;가 훨씬 설득력 있음.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>결산 실무 문항 50개로 LLM 평가셋 초안 만들기</li><li>ASIC 26-286MR 9대 우선순위 읽고 정리하기</li><li>Copilot에서 MAI Code 2로 과제 코드 리뷰해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">휴먼 인 더 루프 (Human-in-the-loop)</span> — AI가 중요한 결정을 실행하기 전에 사람이 검토·승인하는 구조임. BlackLine의 사람 승인 정책이나 ASIC의 사람 검토 강조처럼, 금융 AI 통제의 기본 장치로 쓰임.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/19</span><span>앤트로픽 나스닥 &#39;ANT&#39; 거래 시작 (미국 시간 기준)</span></li></ul></section><div class="hashtags">#Anthropic #AgenticAI #FinanceAI #ASIC #LLMEvaluation #BlackLine </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-19 · 검색 1시간 1분 · 탐색 17회 · 검색어 86개 · 출처 79곳 → 후보 46건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
