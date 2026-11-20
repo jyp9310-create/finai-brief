@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-20</title>
+<meta name="description" content="앤트로픽 상장·Gemini 4 Neon, AI가 회계 장부 안으로">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 20일 (금)">
+<meta property="og:description" content="앤트로픽 상장·Gemini 4 Neon, AI가 회계 장부 안으로">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-20/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-20/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 20일 (금)</div>
+    <h1>앤트로픽 상장·Gemini 4 Neon, AI가 회계 장부 안으로</h1>
+    <p class="overview">AI 쪽에서는 앤트로픽이 나스닥 상장 첫날 33% 올랐고, 구글은 세무·회계 벤치마크 1위를 내세운 Gemini 4 Neon을 내놓음. 재무 쪽에서는 ChatGPT가 Xero·QuickBooks 장부에 직접 연결되고 EY는 매출채권(AR) 에이전트 사업을 키우는 반면, 연준은 AI 에이전트발 뱅크런을 경고하면서 &#39;도입&#39;과 &#39;통제&#39;가 함께 화두가 됨.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 4시간 1분 · 탐색 17회 · 검색어 74개 · 출처 74곳 → 후보 35건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. ChatGPT for Accounting 출시…Xero·QuickBooks 연동</div>
+<div class="r">호주 중소기업 표준인 Xero와 QuickBooks에 ChatGPT가 직접 붙는 변화라서, 회계 실무 경험과 AI 스킬을 가장 직접적으로 연결해 볼 수 있는 소식임.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">💎 구글 Gemini 4 Neon 출시…세무·법률 벤치 1위</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">📈 앤트로픽 나스닥 상장 첫날 33% 급등</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🔍 OpenAI, 외부 안전평가 4곳 내부 상주 허용</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">🧾 ChatGPT for Accounting 출시…Xero·QuickBooks 연동</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💵 EY, Stuut와 AI 매출채권 관리 제휴</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">🏦 美 연준 Barr &#34;AI 에이전트가 뱅크런 가속&#34;</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🇦🇺 ANZ, AI로 1.7PB 데이터 AWS 이전 6개월 만에</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">💎 Google DeepMind</span>
+        <span>Google Blog · 11/18</span>
+<span class="tag">#Gemini</span><span class="tag">#LLM</span><span class="tag">#가격</span>      </div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">구글 Gemini 4 Neon 출시…세무·법률 벤치 1위</a></h3>
+<p class="orig">Introducing Gemini 4 Neon</p>      <p class="summary">Google DeepMind가 최상위 Carbon과 경량 Hydrogen 사이에 들어가는 중간급 프런티어 모델 Gemini 4 Neon을 공개함. 가격은 100만 토큰당 입력 $3·출력 $15, 컨텍스트는 1M 토큰이며, 기본 high thinking 모드에서 작업당 비용이 Carbon보다 32% 낮다고 밝힘.</p>
+      <ul class="points"><li>Artificial Analysis 지능지수 3위(xhigh 61점), Vals Index 2위</li><li>Tax Agent Bench·Legal Research Bench 모두 1위</li><li>입력 $3·캐시 입력 $0.15·출력 $15(100만 토큰당), 1M 컨텍스트</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 세무·법률·재무 모델링 벤치마크를 앞세운 점에서 전문직 업무가 모델 경쟁의 핵심 전장이 됐음을 보여줌. 중간 티어에서 가성비 경쟁이 본격화함.</p>      <div class="links">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://x.com/koraykv/status/2123167638050541626" target="_blank" rel="noopener">Koray Kavukcuoglu X 발표 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">📈 Anthropic</span>
+        <span>Anthropic · 11/19</span>
+<span class="tag">#IPO</span><span class="tag">#Anthropic</span><span class="tag">#나스닥</span>      </div>
+      <h3><a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering" target="_blank" rel="noopener">앤트로픽 나스닥 상장 첫날 33% 급등</a></h3>
+<p class="orig">Anthropic prices initial public offering</p>      <p class="summary">앤트로픽이 11/18 공모가를 희망 밴드($70~78)보다 높은 $83로 확정하고 11/19 나스닥(티커 ANT)에서 거래를 시작함. 지난 브리핑에서 다룬 공모가 확정 이후 새로 나온 소식은 첫날 주가로, TechCrunch에 따르면 첫 거래가 약 $111.50(+33%)에 체결되며 시가총액이 $2조를 넘었음.</p>
+      <ul class="points"><li>공모가 $83(밴드 $70~78), Class A 9.8억 주, 티커 ANT</li><li>첫 거래 약 $111.50, 공모가 대비 약 +33%, 시총 $2조 이상</li><li>조달액 $810억 이상, 보유 현금 약 $2,200억 예상</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 사상 최대급 IPO로, 이제 AI 연구소도 분기 공시와 감사받은 재무제표로 평가받게 됨. 거래 종결(closing)은 11/20 예정임.</p>      <div class="links">
+        <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/" target="_blank" rel="noopener">TechCrunch: 나스닥 첫 거래 $111 ↗</a><a href="https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/" target="_blank" rel="noopener">TechCrunch: 아모데이 상장일 발언 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🔍 OpenAI</span>
+        <span>OpenAI · 11/16</span>
+<span class="tag">#AI 안전</span><span class="tag">#외부 평가</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://openai.com/index/our-first-phase-of-embedded-assessments/" target="_blank" rel="noopener">OpenAI, 외부 안전평가 4곳 내부 상주 허용</a></h3>
+<p class="orig">Our first phase of embedded assessments</p>      <p class="summary">OpenAI가 Apollo Research·METR·Transluce·Goodfire 4개 외부 기관 연구자를 회사 안에 상주시키는 &#39;임베디드 평가(embedded assessments)&#39; 1단계를 발표함. 학습 코드와 강화학습(RL) 기록 일부를 볼 수 있게 했지만 접근 대상과 공개 범위에 제약이 있어, &#39;직원 수준 접근&#39;이라는 약속에는 못 미친다는 비판이 나옴.</p>
+      <ul class="points"><li>Apollo: 모델이 개발자를 몰래 거스르는지(subversion) 검증</li><li>Apollo·Goodfire는 유료, METR·Transluce는 무보수(크레딧 가능)</li><li>OpenAI가 공개 증거 제한 가능, 안전보안위원회는 원본 보고서 검토</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 프런티어 AI에도 외부 감사(assurance)와 비슷한 체계가 생기기 시작함. 다만 독립성·접근 범위·보수 구조가 쟁점인 점은 회계감사와 똑같음.</p>      <div class="links">
+        <a href="https://openai.com/index/our-first-phase-of-embedded-assessments/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/" target="_blank" rel="noopener">TechCrunch: Apollo 상주 평가 세부 조건 ↗</a><a href="https://www.kuow.org/npr-news/2026-11-18/openai-announces-new-ai-safety-program-researchers-worry-it-wont-be-enough" target="_blank" rel="noopener">NPR: 연구자들 &#39;충분치 않다&#39; 우려 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">🧾 OpenAI</span>
+        <span>OpenAI · 11/18</span>
+<span class="tag">#회계 자동화</span><span class="tag">#ChatGPT</span><span class="tag">#플러그인</span>      </div>
+      <h3><a href="https://openai.com/business/solutions/accounting/" target="_blank" rel="noopener">ChatGPT for Accounting 출시…Xero·QuickBooks 연동</a></h3>
+<p class="orig">ChatGPT for Accounting</p>      <p class="summary">OpenAI가 회계 전용 Accounting 플러그인에 QuickBooks·Xero·NetSuite 등 8개 파트너 플러그인을 묶은 ChatGPT for Accounting을 공개함. ChatGPT 데스크톱 앱에서 회계 장부 데이터를 바로 불러와 송장(invoice) 처리, 은행 대사(bank reconciliation), 손익·현금흐름 보고서 작업을 할 수 있게 됨.</p>
+      <ul class="points"><li>파트너 8곳: QuickBooks·Xero·NetSuite·BILL·FreshBooks 등</li><li>Xero·BILL·FreshBooks는 읽기 전용, QuickBooks·Campfire는 쓰기 가능</li><li>NetSuite는 MCP로 연결되며 기존 사용자 권한(role)을 그대로 따름</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 범용 AI가 회계 소프트웨어의 &#39;입구&#39; 역할을 차지하려는 움직임으로, 회계 SaaS 벤더와의 협업·경쟁 구도가 바뀌게 됨. 다만 가격·지원 국가는 공개되지 않았고, 일부 연결은 관리자 승인이 필요함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>Xero는 호주 중소기업·회계법인의 사실상 표준이라, Xero와 AI 연동 경험은 호주 회계·핀테크 취업에서 바로 내세울 수 있는 스킬임</span></p>
+<ul><li>Xero 데모 회사로 AR 에이징·손익 질의 테스트하기</li><li>플러그인별 읽기/쓰기 권한과 통제 포인트 표로 정리하기</li><li>간단한 MCP 서버로 시산표 CSV 연결해 보기</li></ul><div class="skills"><span class="skill">MCP(Model Context Protocol)</span><span class="skill">Xero API</span><span class="skill">내부통제(Internal Control)</span><span class="skill">은행 대사(Bank Reconciliation)</span></div>      </div>
+      <div class="links">
+        <a href="https://openai.com/business/solutions/accounting/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://pasqualepillitteri.it/en/news/34932/openai-launches-chatgpt-for-accounting-with-quickbooks-and-xero" target="_blank" rel="noopener">ChatGPT for Accounting 정리 기사 ↗</a><a href="https://x.com/ChatGPT/status/2123159134963196357" target="_blank" rel="noopener">ChatGPT 공식 X 발표 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💵 EY · Stuut</span>
+        <span>EY Newsroom · 11/16</span>
+<span class="tag">#Big 4</span><span class="tag">#Order-to-Cash</span><span class="tag">#에이전틱 AI</span>      </div>
+      <h3><a href="https://www.ey.com/en_gl/newsroom/2026/11/ey-announces-alliance-with-stuut-to-help-organizations-modernize-order-to-cash-processes" target="_blank" rel="noopener">EY, Stuut와 AI 매출채권 관리 제휴</a></h3>
+<p class="orig">EY announces alliance with Stuut to help organizations modernize order-to-cash processes</p>      <p class="summary">EY US가 주문부터 수금까지(order-to-cash) 처리하는 AI 플랫폼 Stuut와 제휴해, 매출채권(AR) 업무에 에이전틱 AI를 넣는 재무 혁신 서비스를 키우기로 함. 프로세스 재설계·구현·변화관리는 EY가, 플랫폼 구성·기술 지원·제품 개발은 Stuut가 맡음.</p>
+      <ul class="points"><li>목표: DSO(매출채권 회수기간) 단축, 수금·분쟁 관리 간소화</li><li>Stuut 고객 150곳 이상(Honeywell·ZoomInfo·PerkinElmer 등)</li><li>자사 주장: DSO 47% 감소, 플랫폼 처리액 $30억 이상</li></ul>
+<p class="why"><b>💡 왜 중요?</b> Big 4가 AI 스타트업 플랫폼을 컨설팅에 묶어 파는 모델이 수금(O2C)까지 퍼지고 있음. 성과를 DSO·현금흐름처럼 P&amp;L에 바로 보이는 숫자로 내세움(단, 측정 방식은 공개되지 않음).</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>AR·수금 실무 경험에 에이전트 설계 능력을 더하면 Big 4 재무 혁신(Finance Transformation) 직무와 딱 맞는 조합이 됨</span></p>
+<ul><li>공개 송장 데이터로 연체 예측 모델 만들기</li><li>DSO 계산하고 수금 우선순위 정하는 에이전트 데모 만들기</li><li>EY 호주 Finance Transformation 공고 키워드 수집하기</li></ul><div class="skills"><span class="skill">Order-to-Cash</span><span class="skill">DSO</span><span class="skill">연체 예측(Payment Prediction)</span><span class="skill">에이전틱 AI</span></div>      </div>
+      <div class="links">
+        <a href="https://www.ey.com/en_gl/newsroom/2026/11/ey-announces-alliance-with-stuut-to-help-organizations-modernize-order-to-cash-processes" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://thenextweb.com/news/stuut-52-5m-series-b-ai-order-to-cash" target="_blank" rel="noopener">TNW: Stuut 시리즈 B $52.5M ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">🏦 Federal Reserve</span>
+        <span>Federal Reserve Board · 11/16</span>
+<span class="tag">#금융안정</span><span class="tag">#리스크</span><span class="tag">#규제</span>      </div>
+      <h3><a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">美 연준 Barr &#34;AI 에이전트가 뱅크런 가속&#34;</a></h3>
+<p class="orig">Some Potential Financial Stability Implications of Artificial Intelligence</p>      <p class="summary">미 연준 Michael Barr 이사가 밀라노에서 열린 ACM 금융 AI 국제학회(ICAIF) 연설에서, AI 에이전트가 예금을 곧바로 옮기면 뱅크런이 &#39;수 분 만에&#39; 벌어질 수 있다고 경고함. 비슷한 모델끼리 같은 방향으로 움직이는 동조화(herding)와 고객 계좌에서 승인받지 않은 에이전트 행위도 위험으로 꼽으며, 인증·동의 확인 같은 안전장치를 주문함.</p>
+      <ul class="points"><li>예금 유출이 수 분 만에 일어나면 유동성 관리·감독 대응이 못 따라감</li><li>대형 은행들, 고객 계좌에서 진위 확인이 안 되는 AI 에이전트 행위 감지</li><li>권고: 행위별 인증·명시적 동의, 에이전트 권한의 기술적 제한</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 감독당국이 유동성 리스크의 시간 단위 자체가 바뀔 수 있다고 본 것임. 은행 리스크·컴플라이언스 부서에 &#39;에이전트 고객&#39; 관리가 새 과제로 떠오름(연준 공식 입장이 아닌 Barr 개인 견해임).</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>유동성 스트레스 테스트에 &#39;에이전트 속도의 예금 유출&#39; 시나리오를 넣으면 리스크 데이터 분석 포트폴리오에서 차별화됨</span></p>
+<ul><li>연설 원문 읽고 리스크 유형 5개로 요약하기</li><li>유출 속도별 LCR 시뮬레이션 노트북 만들기</li><li>APRA 운영리스크 기준 CPS 230과 비교해 보기</li></ul><div class="skills"><span class="skill">유동성 리스크(Liquidity Risk)</span><span class="skill">LCR</span><span class="skill">모델 리스크(Model Risk)</span><span class="skill">에이전트 인증(Agent Authentication)</span></div>      </div>
+      <div class="links">
+        <a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.americanbanker.com/external-article/fed-s-barr-says-ai-agents-could-fuel-future-bank-runs" target="_blank" rel="noopener">American Banker(Bloomberg) 보도 ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🇦🇺 ANZ</span>
+        <span>iTnews · 11/18</span>
+<span class="tag">#호주 은행</span><span class="tag">#데이터 이전</span><span class="tag">#AWS</span>      </div>
+      <h3><a href="http://www.itnews.com.au/news/anz-uses-ai-to-move-17pb-data-platform-to-aws-630399" target="_blank" rel="noopener">ANZ, AI로 1.7PB 데이터 AWS 이전 6개월 만에</a></h3>
+<p class="orig">ANZ uses AI to move 1.7PB data platform to AWS</p>      <p class="summary">ANZ가 사내 빅데이터 플랫폼(1.7PB)을 사내 서버(온프레미스) Cloudera Hadoop에서 Amazon EMR로 옮기는 데 예상했던 18개월이 아닌 6개월 만에 끝냄. 코딩 에이전트와 Amazon Bedrock 기반 트러블슈팅 어시스턴트 덕분에 이전 작업량이 약 35% 줄었고 결함·재작업은 절반가량 줄었다고 밝힘.</p>
+      <ul class="points"><li>3억 파일·14.2만 테이블·4,500 자동 워크플로를 이전함</li><li>고객 민감 데이터 약 80TB 토큰화, 초기 방식보다 7배 빠름</li><li>토큰화 비용: 하루 US$1만 이상 → 한 달 US$3천 미만</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 은행 레거시 시스템 이전처럼 큰 IT 프로젝트에서 AI 보조 엔지니어링 효과를 숫자로 보여준 사례임. 호주 대형 은행의 AI 활용이 고객 서비스를 넘어 데이터 인프라로 넓어지고 있음.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>호주 은행 Data &amp; AI 팀은 &#39;AI로 데이터 엔지니어링 생산성 높이기&#39; 경험을 찾고 있음. 대학원 프로젝트를 AWS EMR·Bedrock으로 해 두면 면접에서 바로 쓸 소재가 됨</span></p>
+<ul><li>AWS Skill Builder로 EMR·Bedrock 실습하기</li><li>개인정보(PII) 토큰화 파이프라인 미니 프로젝트 만들기</li><li>ANZ Data &amp; AI 채용 공고 요구 스킬 정리하기</li></ul><div class="skills"><span class="skill">Amazon EMR</span><span class="skill">Amazon Bedrock</span><span class="skill">데이터 토큰화(Tokenisation)</span><span class="skill">Data Migration</span></div>      </div>
+      <div class="links">
+        <a href="http://www.itnews.com.au/news/anz-uses-ai-to-move-17pb-data-platform-to-aws-630399" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://proactiveinvestors.com/companies/news/1101970/tech-bytes-anz-cuts-ai-data-migration-time-by-12-months-as-automation-delivers-major-savings-1101970.html" target="_blank" rel="noopener">Proactive Investors: ANZ 이전 기간 12개월 단축 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 구글은 세무·회계 벤치마크 1위를 내세웠고, OpenAI는 Xero·QuickBooks 장부에 ChatGPT를 연결했으며, EY는 매출채권 에이전트를 컨설팅 상품으로 묶었음. AI 경쟁의 전장이 회계 장부 안으로 들어온 셈임. 반면 연준 Barr 이사는 에이전트발 뱅크런을, OpenAI 외부 평가 논란은 AI 감사의 독립성 문제를 보여 주며 &#39;누가 어떤 권한으로 무엇을 하나&#39;가 핵심 쟁점이 됐음. 읽기/쓰기 권한, 마감 기간 잠금, 인증·동의 같은 통제를 설계할 줄 아는 재무 출신 AI 인력이 앞으로 더 귀해질 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>ChatGPT 회계 플러그인 권한 구조 표로 정리하기</li><li>Barr 연설 원문 읽고 리스크 5개 요약하기</li><li>Gemini 4 Neon로 세무 질의 10개 비교해 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">MCP (Model Context Protocol)</span> — AI가 외부 앱·데이터에 접속하는 표준 연결 규격임. ChatGPT for Accounting은 NetSuite를 MCP로 연결해 사용자의 기존 권한(role)을 그대로 따르도록 했음.</p></section><section><h2>📅 주목할 일정</h2>
+      <ul class="watch"><li><span class="d">11/20</span><span>앤트로픽 IPO 거래 종결(closing) 예정</span></li></ul></section><div class="hashtags">#FinAI #ChatGPTforAccounting #Gemini4Neon #AnthropicIPO #AgenticAI #ANZ </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-20 · 검색 4시간 1분 · 탐색 17회 · 검색어 74개 · 출처 74곳 → 후보 35건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
