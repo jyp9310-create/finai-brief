@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinAI 모닝 브리핑 · 2026-11-25</title>
+<meta name="description" content="AI가 코드 승인·투자·재무 조언까지… 관건은 &#39;통제 설계&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FinAI 모닝 브리핑 · 2026년 11월 25일 (수)">
+<meta property="og:description" content="AI가 코드 승인·투자·재무 조언까지… 관건은 &#39;통제 설계&#39;">
+<meta property="og:image" content="https://jyp9310-create.github.io/finai-brief/2026-11-25/card.png">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://jyp9310-create.github.io/finai-brief/2026-11-25/"><style>
+:root {
+  --bg: #f5f6fa; --surface: #ffffff; --surface-2: #f0f2f8; --text: #171b26; --muted: #5f6678;
+  --border: #e2e5ee; --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8;
+  --me: #9a5b00; --me-bg: #fff8e8; --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 6px 20px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+    --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+    --au: #fb923c; --au-soft: #3a2214;
+    --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1016; --surface: #151a23; --surface-2: #1c2330; --text: #e9ecf3; --muted: #9ba3b4;
+  --border: #283041; --ai: #9496ff; --ai-soft: #222546; --fin: #3fd3a8; --fin-soft: #10302a;
+  --au: #fb923c; --au-soft: #3a2214;
+  --me: #fcc54a; --me-bg: #29220f; --me-border: #a77a1e; --mark: #6a5312; --pick: #fbbf24; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", "Segoe UI", sans-serif;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+a { color: inherit; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 28px 16px 56px; }
+
+/* header */
+.masthead { padding: 4px 2px 18px; }
+.brand { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--muted); }
+.date { font-size: 14px; color: var(--muted); margin-top: 2px; }
+h1 { font-size: 27px; line-height: 1.35; margin: 14px 0 10px; letter-spacing: -.01em; }
+.overview { color: var(--muted); margin: 0 0 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 10px; background: var(--text); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+/* pick + toc */
+.pick { display: block; text-decoration: none; margin: 20px 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--me-bg); border: 1px solid var(--me-border); }
+.pick .label { font-size: 12.5px; font-weight: 800; color: var(--me); letter-spacing: .03em; }
+.pick .t { font-weight: 700; font-size: 17px; margin-top: 2px; }
+.pick .r { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.toc { list-style: none; margin: 0 0 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.toc li { display: flex; gap: 10px; padding: 5px 0; font-size: 14.5px; }
+.toc li + li { border-top: 1px dashed var(--border); }
+.toc a { text-decoration: none; }
+.toc .n { flex: none; width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 800; display: grid; place-items: center; color: #fff; }
+.toc .n.ai { background: var(--ai); } .toc .n.finance { background: var(--fin); } .toc .n.au { background: var(--au); }
+
+/* sections */
+.section-head { display: flex; align-items: baseline; gap: 10px; margin: 34px 2px 12px; }
+.section-head h2 { font-size: 19px; margin: 0; }
+.section-head .bar { flex: 1; height: 2px; background: var(--accent); opacity: .35; border-radius: 2px; }
+.section.ai { --accent: var(--ai); --accent-soft: var(--ai-soft); }
+.section.finance { --accent: var(--fin); --accent-soft: var(--fin-soft); }
+.section.au { --accent: var(--au); --accent-soft: var(--au-soft); }
+
+/* cards */
+.card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 18px 18px 14px; margin-bottom: 14px; box-shadow: var(--shadow); break-inside: avoid; }
+.card.is-pick { border-color: var(--me-border); }
+.ribbon { position: absolute; top: -10px; right: 14px; font-size: 12px; font-weight: 800; padding: 3px 10px;
+  border-radius: 999px; background: var(--pick); color: #fff; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; font-size: 13px; color: var(--muted); }
+.num { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800;
+  font-size: 14px; color: #fff; background: var(--accent); }
+.org { font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+.tag { color: var(--muted); }
+.card h3 { font-size: 19px; line-height: 1.4; margin: 10px 0 2px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.orig { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.summary { margin: 0 0 10px; }
+.points { list-style: none; padding: 0; margin: 0 0 12px; }
+.points li { position: relative; padding-left: 18px; margin: 4px 0; font-size: 15px; }
+.points li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.why { font-size: 14.5px; background: var(--surface-2); border-radius: 10px; padding: 9px 12px; margin: 0 0 12px; }
+.why b { color: var(--accent); }
+.me { border: 1.5px solid var(--me-border); background: var(--me-bg); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.me-head { display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 800; color: var(--me); }
+.dots { letter-spacing: 2px; font-size: 12px; }
+.me-point { font-weight: 700; font-size: 16px; margin: 6px 0 6px; }
+.me-point span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+.me ul { margin: 0; padding: 0; list-style: none; }
+.me li { font-size: 14.5px; padding-left: 20px; position: relative; margin: 3px 0; }
+.me li::before { content: "↳"; position: absolute; left: 2px; color: var(--me); font-weight: 700; }
+.skills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.skill { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--me-border); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* closing */
+.closing { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-top: 30px; break-inside: avoid; }
+.closing h2 { font-size: 17px; margin: 0 0 6px; }
+.closing section + section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.closing p { margin: 0; }
+.todo { list-style: none; padding: 0; margin: 0; }
+.todo li { padding-left: 26px; position: relative; margin: 6px 0; }
+.todo li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--fin); }
+.term { font-weight: 800; color: var(--ai); }
+.watch { list-style: none; padding: 0; margin: 0; }
+.watch li { display: flex; gap: 10px; margin: 4px 0; }
+.watch .d { flex: none; font-weight: 700; color: var(--me); min-width: 74px; }
+.hashtags { color: var(--muted); font-size: 13px; margin-top: 18px; }
+footer { color: var(--muted); font-size: 12.5px; margin-top: 26px; text-align: center; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 23px; }
+  .card { padding: 16px 14px 12px; }
+  .card h3 { font-size: 17.5px; }
+}
+@page { size: A4; margin: 12mm 11mm; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --surface-2: #f3f4f8; --text: #171b26; --muted: #5f6678; --border: #dfe2ea;
+    --ai: #4f46e5; --ai-soft: #eef0ff; --fin: #0a8a66; --fin-soft: #e6f6f0; --au: #c2410c; --au-soft: #fff1e8; --me: #9a5b00; --me-bg: #fff8e8;
+    --me-border: #f2b23a; --mark: #ffe28a; --pick: #d97706; --shadow: none; }
+  body { font-size: 12.5px; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .actions { display: none; }
+  h1 { font-size: 21px; margin: 8px 0 6px; }
+  .pick { margin: 12px 0 8px; padding: 10px 14px; }
+  .toc li { padding: 3px 0; font-size: 13px; }
+  .section-head { margin: 18px 2px 8px; break-after: avoid; }
+  /* let cards flow across pages (no half-empty pages) but keep each block whole */
+  .card { break-inside: auto; padding: 14px 16px 10px; margin-bottom: 10px; }
+  .card-top, .card h3, .orig { break-after: avoid; }
+  .card h3 { font-size: 15.5px; margin-top: 6px; }
+  .summary, .points, .why, .me, .links, .closing section { break-inside: avoid; }
+  .points li, .why, .me li { font-size: 12px; }
+  .me { padding: 10px 12px; }
+  .me-point { font-size: 13px; }
+  .closing { break-inside: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">☀️ FINAI 모닝 브리핑</div>
+    <div class="date">2026년 11월 25일 (수)</div>
+    <h1>AI가 코드 승인·투자·재무 조언까지… 관건은 &#39;통제 설계&#39;</h1>
+    <p class="overview">AI 쪽에서는 앤트로픽이 코드 &#39;승인&#39;까지 맡는 에이전트를 내놨음. 구글 딥마인드와 OpenAI는 각각 양자 알고리즘과 단백질 설계에서 AI가 실제 과학 문제를 푼 결과를 공개함. 재무 쪽에서는 CFO들이 AI 역량 확보와 AI 비용 통제를 동시에 고민하고 있음. 구글 Wallet·Supertake·호주 CALI 사례 모두 &#39;AI에게 돈과 조언을 어디까지 맡길지&#39;를 묻고 있음.</p>
+    <div class="chips">
+      <span class="chip">🔎 검색 1시간 1분 · 탐색 17회 · 검색어 77개 · 출처 84곳 → 후보 34건</span>
+      <span class="chip">✨ 엄선 7건</span>
+    </div>
+    <div class="actions">
+<a class="btn" href="brief.pdf" download>📄 PDF 다운로드</a><a class="btn ghost" href="../">🗂 지난 브리핑</a>    </div>
+  </header>
+
+  <a class="pick" href="#item-4">
+    <div class="label">🏆 오늘의 PICK · 나에게 가장 중요한 1건</div>
+    <div class="t">4. 가트너: CFO 2027년 1순위는 비용 최적화, 2위 AI 역량</div>
+<div class="r">CFO들이 &#39;재무팀 AI 역량&#39;과 &#39;AI 비용 통제&#39;를 핵심 과제로 꼽아, 재무 실무와 AI 전공을 함께 가진 독자의 취업 포지셔닝과 바로 이어짐.</div>  </a>
+
+  <ol class="toc">
+    <li><span class="n ai">1</span><a href="#item-1">🚢 앤트로픽, PR 리뷰·수정·승인 에이전트 &#39;Claude Ship&#39;</a></li>
+    <li><span class="n ai">2</span><a href="#item-2">⚛️ 딥마인드, Gemini 4 에이전트로 양자 알고리즘 개선</a></li>
+    <li><span class="n ai">3</span><a href="#item-3">🧬 OpenAI, GPT-6로 단백질 설계 능력 실험 입증</a></li>
+    <li><span class="n finance">4</span><a href="#item-4">📊 가트너: CFO 2027년 1순위는 비용 최적화, 2위 AI 역량</a></li>
+    <li><span class="n finance">5</span><a href="#item-5">💳 구글 AI 모드, Wallet 연결해 지출·카드 혜택 분석</a></li>
+    <li><span class="n finance">6</span><a href="#item-6">📈 Supertake, 시장 전망을 포트폴리오로… $20M 시드</a></li>
+    <li><span class="n au">7</span><a href="#item-7">🛡️ 호주 생명보험 조언, AI 의존 80% 급증 경고</a></li>
+  </ol>
+
+  <div class="section ai">
+    <div class="section-head"><h2>🤖 PART 1 · AI 기술·업계</h2><span class="bar"></span></div>
+    <article class="card" id="item-1">
+      <div class="card-top">
+        <span class="num">1</span>
+        <span class="org">🚢 Anthropic</span>
+        <span>Claude (Anthropic) · 11/23</span>
+<span class="tag">#Claude</span><span class="tag">#코딩 에이전트</span><span class="tag">#거버넌스</span>      </div>
+      <h3><a href="https://claude.com/resources/articles/introducing-claude-ship" target="_blank" rel="noopener">앤트로픽, PR 리뷰·수정·승인 에이전트 &#39;Claude Ship&#39;</a></h3>
+<p class="orig">Introducing Claude Ship</p>      <p class="summary">앤트로픽이 풀 리퀘스트(PR)를 리뷰하고, 고치고, 팀 정책에 따라 병합 승인 여부까지 판단하는 제품군 Claude Ship을 공개함. 이제 &#39;코드 작성&#39;을 넘어 &#39;검토·승인&#39; 단계까지 AI가 정책 기반으로 맡는 구조가 됨.</p>
+      <ul class="points"><li>Code Review는 정식(GA), PR Steward·Claude Approvals는 베타</li><li>Team·Enterprise 플랜, GitHub 저장소 대상, 토큰 기반 과금</li><li>Enterprise는 최소 $10,000 크레딧, 2027-01-15까지 신청</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 승인 정책을 파일로 명시해 AI가 집행하는 방식은 감사 추적성(audit trail)과 통제 설계가 핵심인 금융권 개발 조직에 특히 의미가 큼. 다만 ZDR·HIPAA·고객관리키(CMK) 환경에서는 쓸 수 없어 규제 산업은 도입에 제약이 있음.</p>      <div class="links">
+        <a href="https://claude.com/resources/articles/introducing-claude-ship" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-2">
+      <div class="card-top">
+        <span class="num">2</span>
+        <span class="org">⚛️ Google DeepMind</span>
+        <span>Google DeepMind Blog · 11/23</span>
+<span class="tag">#Gemini 4</span><span class="tag">#양자컴퓨팅</span><span class="tag">#형식 검증</span>      </div>
+      <h3><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank" rel="noopener">딥마인드, Gemini 4 에이전트로 양자 알고리즘 개선</a></h3>
+<p class="orig">Finding faster quantum algorithms with agents and formal verification</p>      <p class="summary">Gemini 4 에이전트 팀들이 잘 알려진 양자 알고리즘들을 개선했고, 모든 결과를 정리 증명기 Lean으로 정확성을 증명함. 실험으로 검증하기 어려운 분야에서 &#39;AI가 제안하고 수학적 증명이 보증하는&#39; 연구 방식을 보여 줌.</p>
+      <ul class="points"><li>핵융합 시뮬레이션 비용 11.8배 절감(큐비트 5,650→4,338)</li><li>P450 효소 2.5배 개선(481→333큐비트), arcsin 루틴 290배</li><li>모든 결과 Lean으로 검증, 라이브러리·해법 GitHub 공개</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 결과물의 신뢰성을 형식 검증(formal verification)으로 담보하는 방식이어서, 검증 가능한 AI라는 흐름의 대표 사례가 됨. 다만 개선된 회로도 초기 오류정정 양자컴퓨터가 제공할 자원보다는 여전히 큼.</p>      <div class="links">
+        <a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://arxiv.org/abs/2611.09822" target="_blank" rel="noopener">arXiv 논문 2611.09822 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-3">
+      <div class="card-top">
+        <span class="num">3</span>
+        <span class="org">🧬 OpenAI</span>
+        <span>OpenAI · 11/24</span>
+<span class="tag">#GPT-6</span><span class="tag">#단백질 설계</span><span class="tag">#AI for Science</span>      </div>
+      <h3><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/" target="_blank" rel="noopener">OpenAI, GPT-6로 단백질 설계 능력 실험 입증</a></h3>
+<p class="orig">GPT-6 models demonstrate intrinsic protein-design capabilities</p>      <p class="summary">OpenAI가 GPT-6 계열 모델이 전용 생물학 모델 없이 추론과 코드만으로 단백질 구조·서열을 설계할 수 있다고 발표함. 파트너 Onava와 진행한 습식 실험(wet lab)에서 실제 표적 결합까지 확인함.</p>
+      <ul class="points"><li>미니바인더 322개 중 35개(10.9%) 표적 결합 확인</li><li>MDM2 재설계 88개 중 75개(85%) 초기 스크린 결합</li><li>모티프 스캐폴딩 43.7% vs RFdiffusion 27.8%(예비)</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 범용 LLM이 전문 도메인 모델의 영역까지 들어가고 있음을 보여 줌. 다만 후보 선별에 전문 구조 모델(Boltz-2 등)을 썼고, 구조 예측은 TM-score 0.38(ESMFold2 0.93)로 여전히 약함.</p>      <div class="links">
+        <a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI News ↗</a>      </div>
+    </article>
+  </div>
+  <div class="section finance">
+    <div class="section-head"><h2>💰 PART 2 · AI × 재무·금융</h2><span class="bar"></span></div>
+    <article class="card is-pick" id="item-4">
+<span class="ribbon">🏆 PICK</span>      <div class="card-top">
+        <span class="num">4</span>
+        <span class="org">📊 Gartner</span>
+        <span>CFO Dive · 11/23</span>
+<span class="tag">#CFO</span><span class="tag">#Gartner</span><span class="tag">#AI 비용</span>      </div>
+      <h3><a href="https://www.cfodive.com/news/cfos-prioritize-cost-control-efficiency-for-2027-ai-gartner/875536/" target="_blank" rel="noopener">가트너: CFO 2027년 1순위는 비용 최적화, 2위 AI 역량</a></h3>
+<p class="orig">CFOs prioritize cost control, efficiency for 2027: Gartner</p>      <p class="summary">가트너가 CFO 100명을 조사해 2027년 상반기 최우선 과제를 발표함. 1위는 비용 최적화(17%), 2위는 재무팀의 디지털·AI 역량 구축(12%)이었음. 이사회가 AI 투자의 측정 가능한 성과를 요구하면서 CFO의 고민이 &#39;AI 도입&#39;에서 &#39;AI 비용 통제와 ROI 입증&#39;으로 옮겨 가고 있음.</p>
+      <ul class="points"><li>CFO 100명·14개 과제 조사, 비용 최적화 1순위 17%</li><li>재무팀 디지털·AI 역량 12%, 계획 고도화(FP&amp;A) 11%</li><li>35%가 AI 비용의 급증·예측 불가를 실행 과제로 꼽음</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 재무 조직이 AI를 &#39;비용을 줄이는 수단&#39;이자 &#39;관리해야 할 비용&#39;으로 동시에 보기 시작했다는 신호임. 벤더 스택 최적화는 24%로 14개 중 최하위였는데, 가트너는 이를 더 높은 우선순위로 둬야 한다고 지적함.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 5/5">●●●●●</span></div>
+        <p class="me-point"><span>CFO들이 2순위로 꼽은 &#39;재무팀 AI 역량&#39;이 바로 재무 실무 + AI 전공 조합이 노릴 자리임</span></p>
+<ul><li>LLM 토큰 비용을 원가 배분하는 대시보드 만들기</li><li>AI 도입 ROI 계산 템플릿(Excel/Python) 작성하기</li><li>면접용으로 &#39;AI 비용 통제&#39; 사례 답변 준비하기</li></ul><div class="skills"><span class="skill">FinOps</span><span class="skill">FP&amp;A</span><span class="skill">AI ROI</span><span class="skill">Cost Allocation</span></div>      </div>
+      <div class="links">
+        <a href="https://www.cfodive.com/news/cfos-prioritize-cost-control-efficiency-for-2027-ai-gartner/875536/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://itbrief.com.au/story/cfos-prioritise-efficiency-cost-as-ai-reshapes-finance" target="_blank" rel="noopener">IT Brief 보도 ↗</a><a href="https://www.gartner.com/en/webinar/1027344/2008571-the-top-cfo-priorities-shaping-2027" target="_blank" rel="noopener">Gartner 웨비나: Top CFO Priorities 2027 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-5">
+      <div class="card-top">
+        <span class="num">5</span>
+        <span class="org">💳 Google</span>
+        <span>Google Blog · 11/23</span>
+<span class="tag">#Google</span><span class="tag">#개인재무</span><span class="tag">#AI Mode</span>      </div>
+      <h3><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener">구글 AI 모드, Wallet 연결해 지출·카드 혜택 분석</a></h3>
+<p class="orig">A more tailored Google Search that&#39;s uniquely yours</p>      <p class="summary">구글 검색 AI 모드의 개인화 기능(Personal Intelligence)에 Google Wallet 연결이 11월 23일부터 배포되기 시작했고, Drive와 Gemini 앱 연결도 몇 주 안에 추가될 예정임. AI가 카드·계좌 정보를 읽고 지출 절감과 카드 혜택 활용을 조언하지만, 돈을 옮기거나 투자하는 기능은 없음.</p>
+      <ul class="points"><li>Wallet 연결 11-23부터 배포, Drive·Gemini 앱은 수주 내</li><li>카드 캐시백·여행 혜택·포인트 최적화와 지출 절감 제안</li><li>읽기 전용: 이체·관리·투자 불가, 옵트인 방식</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 검색 플랫폼이 개인 재무관리(PFM) 영역에 &#39;읽기 전용&#39; 권한으로 들어온 사례임. 은행·카드사의 고객 접점이 AI 비서로 넘어갈 수 있다는 점에서 금융사 입장에선 경쟁 위협임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 3/5">●●●○○</span></div>
+        <p class="me-point"><span>&#39;읽기 전용 vs 실행 권한&#39; 구분은 금융 AI 제품 설계의 기본 통제 포인트임</span></p>
+<ul><li>거래내역 CSV 읽기 전용 지출분석 챗봇 만들기</li><li>ChatGPT Wallet과 권한 범위 비교표 작성하기</li></ul><div class="skills"><span class="skill">PFM</span><span class="skill">Permission Design</span><span class="skill">Agentic Finance</span></div>      </div>
+      <div class="links">
+        <a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" target="_blank" rel="noopener">TechCrunch 보도 ↗</a>      </div>
+    </article>
+    <article class="card" id="item-6">
+      <div class="card-top">
+        <span class="num">6</span>
+        <span class="org">📈 Supertake</span>
+        <span>TechCrunch · 11/23</span>
+<span class="tag">#핀테크</span><span class="tag">#트레이딩 에이전트</span><span class="tag">#가드레일</span>      </div>
+      <h3><a href="https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/" target="_blank" rel="noopener">Supertake, 시장 전망을 포트폴리오로… $20M 시드</a></h3>
+<p class="orig">Supertake raises $20M to let AI agents turn your market predictions into stock portfolios</p>      <p class="summary">Supertake가 Adjacent 주도, Coinbase Ventures·USV 참여로 $20M 시드 투자를 유치함. 사용자가 자연어로 시장 전망을 말하면 AI 에이전트가 이를 투자 가능한 &#39;테이크(take)&#39;로 다듬어 주식 포트폴리오로 실행하는 구조임.</p>
+      <ul class="points"><li>$20M 시드(Adjacent 주도, Coinbase Ventures·USV)</li><li>Coinbase·Robinhood 연동, 현재 베타·대기자 명단 운영</li><li>입출금 동의 필수, 드리프트·거래 한도, 이상 거래 감시</li></ul>
+<p class="why"><b>💡 왜 중요?</b> AI 에이전트가 실제 증권 계좌에서 매매까지 하는 단계로 가면서, 경쟁력의 핵심이 모델보다 &#39;권한·한도 통제&#39; 설계로 옮겨 가고 있음. 공동창업진은 Coinbase에서 AI 제품·엔지니어링을 이끌던 인물들임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>Supertake의 가드레일은 내부통제(한도·승인·모니터링)를 에이전트용으로 옮긴 것임</span></p>
+<ul><li>가드레일을 내부통제 항목(COSO)과 매핑해 보기</li><li>모의계좌 트레이딩 에이전트에 한도 통제 구현하기</li></ul><div class="skills"><span class="skill">Agent Guardrails</span><span class="skill">Internal Controls</span><span class="skill">Portfolio Construction</span></div>      </div>
+      <div class="links">
+        <a href="https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="section au">
+    <div class="section-head"><h2>🇦🇺 PART 3 · 호주 소식</h2><span class="bar"></span></div>
+    <article class="card" id="item-7">
+      <div class="card-top">
+        <span class="num">7</span>
+        <span class="org">🛡️ Council of Australian Life Insurers (CALI)</span>
+        <span>CALI · 11/18</span>
+<span class="tag">#호주</span><span class="tag">#생명보험</span><span class="tag">#AI 금융조언</span>      </div>
+      <h3><a href="https://cali.org.au/surge-in-ai-advice-raises-alarms-as-cali-presses-government-for-reform/" target="_blank" rel="noopener">호주 생명보험 조언, AI 의존 80% 급증 경고</a></h3>
+<p class="orig">Surge in AI advice raises alarms as CALI presses government for reform</p>      <p class="summary">호주생명보험협회(CALI)의 Life Insurance Sentiment Tracker에서 생명보험 조언을 받은 사람 중 AI로 재무 조언을 구한 비율이 80% 늘어 거의 3명 중 1명이 됨. CALI는 검증되지 않은 AI 답변이 가족에게 &#39;잘못된 확신&#39;을 줄 수 있다고 경고하고, 정부에 &#39;New Class of Adviser&#39; 제도의 실행을 촉구함.</p>
+      <ul class="points"><li>AI 조언 이용 15%→27%(4~9월, 80%↑), 거의 3명 중 1명</li><li>조언을 고려·탐색한 사람은 절반, 실제 수령은 12%뿐</li><li>55%는 &#39;사람과 대화&#39;가 매우 중요, 비교 사이트 19%→25%</li></ul>
+<p class="why"><b>💡 왜 중요?</b> 전문가 조언을 받기 어렵고 비싼 &#39;조언 격차(advice gap)&#39;를 AI가 메우고 있어, 규제된 AI 조언 채널을 누가 만드느냐가 호주 보험·슈퍼(연금) 업계의 과제가 됨. 정부가 8월에 확정한 New Class of Adviser(생명보험사·APRA 규제 슈퍼펀드용 신규 자문인 제도)와 맞물려 AI 기반 조언 도구 수요가 커질 전망임.</p>      <div class="me">
+        <div class="me-head"><span>🎯 나에게 적용</span><span class="dots" title="적합도 4/5">●●●●○</span></div>
+        <p class="me-point"><span>&#39;조언 격차&#39;를 메울 규제 준수형 AI 조언 도구가 호주 보험·슈퍼 업계의 다음 수요임</span></p>
+<ul><li>보험 PDS 대상 출처 표시형 RAG 챗봇 만들기</li><li>New Class of Adviser 진행 상황 조사해 보기</li><li>멜버른 슈퍼펀드 AI·데이터 채용공고 확인하기</li></ul><div class="skills"><span class="skill">RAG</span><span class="skill">Financial Advice Regulation</span><span class="skill">Insurance</span><span class="skill">Explainability</span></div>      </div>
+      <div class="links">
+        <a href="https://cali.org.au/surge-in-ai-advice-raises-alarms-as-cali-presses-government-for-reform/" target="_blank" rel="noopener">원문 보기 ↗</a>
+<a href="https://www.insurancebusinessmag.com/au/news/life-insurance/ai-advice-use-among-life-insurance-clients-nearly-doubles-597992.aspx" target="_blank" rel="noopener">Insurance Business: 15%→27% 수치·조사 방법 ↗</a><a href="https://riskinfonz.co.nz/2026/11/24/warning-on-growing-use-of-ai-for-risk-advice/" target="_blank" rel="noopener">RiskInfo NZ 보도 ↗</a>      </div>
+    </article>
+  </div>
+
+  <div class="closing">
+<section><h2>💬 오늘의 코멘트</h2><p>오늘 기사를 꿰는 키워드는 &#39;AI에게 어디까지 권한을 줄 것인가&#39;임. Claude Ship은 승인 정책 파일로, Supertake는 거래 한도와 이상 거래 감시로, 구글은 읽기 전용 권한으로 AI의 행동 범위를 제한함. CALI는 통제 없는 AI 조언의 위험을 경고했고, 가트너 조사에서는 CFO들이 AI 역량 확보와 AI 비용 통제를 동시에 요구받고 있음. 결국 회계에서 익힌 내부통제·승인 체계 감각을 AI 에이전트 설계에 옮길 수 있는 사람이 가장 희소한 인재가 될 것임.</p></section><section><h2>✅ 오늘 해 볼 것</h2>
+      <ul class="todo"><li>Supertake 가드레일을 COSO 통제와 매핑하기</li><li>LLM 토큰 비용 원가 배분 모델 설계하기</li><li>보험 PDS 1개로 출처 표시형 RAG 만들어 보기</li></ul></section><section><h2>📖 오늘의 용어</h2>
+      <p><span class="term">가드레일(Guardrails)</span> — AI가 할 수 있는 행동 범위를 미리 제한하는 안전장치임. 거래 한도, 허용·금지 목록, 사람 승인 단계처럼 회계의 내부통제(internal controls)와 같은 역할을 함.</p></section><div class="hashtags">#FinAI #ClaudeShip #CFO #AI재무 #에이전트금융 #호주보험 </div>  </div>
+
+  <footer>
+    FinAI 모닝 브리핑 · 2026-11-25 · 검색 1시간 1분 · 탐색 17회 · 검색어 77개 · 출처 84곳 → 후보 34건 → 엄선 7건<br>
+    Claude 구독으로 자동 검색·요약 · 수치와 세부 내용은 원문 링크에서 꼭 확인하세요.
+  </footer>
+</div>
+</body>
+</html>
